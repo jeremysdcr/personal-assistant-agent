@@ -9,8 +9,11 @@ You are generating the morning briefing for Jeremy Rosmarin, who runs Sidecar Ca
 
 ## Steps
 
+### 0. Boot-sync
+Before generating the brief, run the boot-sync sequence from `prompts/boot-sync.md`: pull, drain `vault/cloud-actions.jsonl` into Notion via MCP, resync cache if stale. This ensures cloud-captured state changes from Jeremy's phone/web sessions are reflected in today's brief.
+
 ### 1. Load State
-Clone the repo. Read `vault/task-cache.json` and `vault/key-relationships.md`.
+Clone the repo (already done by step 0 if routine; otherwise clone now). Read `vault/task-cache.json` and `vault/key-relationships.md`.
 
 ### 2. Today's Calendar
 Use `gcal_list_events` for today (timeMin: today 00:00 ET, timeMax: today 23:59 ET).

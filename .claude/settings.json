@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo 'PA boot-sync reminder: before any catch-up or user-facing work, run prompts/boot-sync.md — git pull, drain vault/cloud-actions.jsonl into Notion via MCP, re-sync Notion→cache if cache is stale (>15 min) or any actions were processed. If Notion MCP is unavailable, preserve the queue and tell Jeremy how many actions are pending.'"
+          }
+        ]
+      }
+    ]
+  }
+}

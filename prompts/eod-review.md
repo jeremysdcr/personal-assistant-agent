@@ -9,6 +9,9 @@ You are generating the end-of-day review for Jeremy Rosmarin (Sidecar Capital Pa
 
 ## Steps
 
+### 0. Boot-sync
+Run the boot-sync sequence from `prompts/boot-sync.md` before counting completions or carrying items forward — otherwise "completed today" counts can miss state changes made from cloud surfaces.
+
 ### 1. Load State
 Clone repo. Read `vault/daily/{YYYY-MM-DD}.md` (today's accumulated journal). Read `vault/task-cache.json`.
 

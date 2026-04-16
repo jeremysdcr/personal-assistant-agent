@@ -28,6 +28,7 @@ The complete extraction rules, classification guidance, few-shot examples, and o
 
 ### Part A: Obligation Extraction
 
+0. **Boot-sync.** Run the boot-sync sequence from `prompts/boot-sync.md`: pull, drain `vault/cloud-actions.jsonl` into Notion, resync cache if stale. Ensures any cloud-captured state is reflected before dedup.
 1. Clone repo. Read `vault/task-cache.json` for dedup. Read `vault/key-relationships.md`.
 2. Read scan timestamp from Notion: Query PA Tracker (database `3d5f82fd5c4b41bdbbf437402b18390c`, data source `collection://b3e39150-8cf2-491f-b65f-f13f38fae886`) for Type = config, Title = "Last Scan Marker". Parse ISO timestamp from Notes field.
 3. Load HubSpot deal context: `search_crm_objects` (objectType: "deals", active deals). Build contact email -> deal lookup.
