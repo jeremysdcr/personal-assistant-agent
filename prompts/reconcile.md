@@ -57,6 +57,8 @@ For each parsed entry, in order:
   - `synced_at`: current UTC ISO timestamp
   - `items`: array built from the query result, mapping each page's properties into the cache schema (see CLAUDE.md schema table)
 
+**Output discipline (critical — prior runs have timed out here):** Build the cache JSON in memory and emit it via a single `Write` call. Do not enumerate, list, narrate, or describe individual items in your response text. Do not pause to verify item counts or reconcile discrepancies between the query result length and your own count — trust the tool result. The output of this step is the file write, not commentary. If you find yourself writing prose like "Continuing through the items: PA-X, PA-Y…" or "I'm getting N items but the query returned M…", stop and write the file.
+
 ### 6. Commit and push
 If any files changed in steps 4 or 5:
 - `git add vault/cloud-actions.jsonl vault/cloud-actions-archive/ vault/task-cache.json`
