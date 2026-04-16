@@ -200,7 +200,7 @@ Jeremy will say things like:
 
 ## State Files
 
-- `vault/task-cache.json` — read-only Notion snapshot (active items only). Only written by Surface A / C. Never edit from Surface B.
+- `vault/task-cache.json` — read-only Notion snapshot of active items, slimmed to 9 briefing/dedup-relevant fields per item: `item_id`, `title`, `type`, `status`, `priority`, `due_date`, `person`, `notion_page_id`, `source_ref`. Schema is defined authoritatively in `prompts/reconcile.md` step 5. For fields not in the slim schema (`notes`, `source_subject`, `source`, `created`, `updated`), query Notion live via MCP. Only written by Surface A / C. Never edit from Surface B.
 - `vault/cloud-actions.jsonl` — append-only log of state-change intents from Surface B (cloud interactive). Drained by the reconciler routine and by CLI boot-sync.
 - `vault/cloud-actions-archive/YYYY-MM.jsonl` — archived successfully-processed entries, one file per month
 - `vault/daily/{YYYY-MM-DD}.md` — daily journal with briefs, scans, reviews
