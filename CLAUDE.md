@@ -57,6 +57,19 @@ Jeremy uses this agent from three distinct execution contexts. Each has differen
 - **Write path:** Same as Surface A — Notion first, cache second, commit third
 - The `reconcile` routine in particular drains the cloud-actions log; see `prompts/reconcile.md`
 
+#### Registering routines: reference, don't paste
+The prompt body in the routines UI should be a short pointer that reads the canonical file from this repo at runtime — do **not** paste prompt file contents into the UI:
+```
+Execute the PA <name> routine. Read prompts/<name>.md and follow the steps in order. Project conventions and surface rules are in CLAUDE.md.
+```
+Pasting creates drift between the registered routine and the source file every time a prompt is tuned. Reference keeps the repo as the single source of truth.
+
+#### Routines platform constraints (Anthropic, Max 20x as of 2026-04)
+- **Cron minimum interval: 1 hour.** Sub-hourly schedules (e.g. `*/30 * * * *`) are rejected by the routines UI. Plan multi-trigger or push-driven patterns when sub-hourly cadence is needed.
+- **Run quota: 15 runs per rolling 24 hours** on Max 20x (Pro=5, Team/Enterprise=25). Counts every fire — cron, GitHub webhook, manual trigger — pooled across all routines. Audit the daily total before adding a new scheduled routine.
+- **GitHub webhook events** are also subject to undisclosed per-account hourly caps during research preview. If pushes stop triggering, suspect the webhook cap.
+- Routines are in research preview; re-check these limits quarterly, they may shift.
+
 ### Detecting the surface
 - Try any Notion MCP tool (e.g. `notion-fetch` on a known page). If it's available → Surface A or C.
 - If you're in a routine context, the trigger metadata makes it obvious (`prompts/reconcile.md`, scheduled fire).
