@@ -1,0 +1,3 @@
+{"ts":"2026-04-16T23:30:30Z","surface":"cloud","intent":"mark_done","item_id":"PA-60","narrative":"Carole and Samara responded with INQ legal entity + signatory; question resolved."}
+{"ts":"2026-04-16T23:30:30Z","surface":"cloud","intent":"mark_done","item_id":"PA-10","narrative":"VCP contract sent to INQ Law (Carole/Samara) following their entity/signatory response."}
+{"ts":"2026-04-16T23:30:30Z","surface":"cloud","intent":"add_task","narrative":"Waiting on Carole/Samara reply (markup or signature) on VCP contract just sent. Nudge Tue Apr 21 if no reply.","title":"Carole/Samara to reply on VCP contract sent","type":"follow_up","status":"waiting","priority":"high","due_date":"2026-04-21","person":"Carole Piovesan / Samara Starkman","source":"manual"}
