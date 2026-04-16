@@ -1,7 +1,7 @@
 {
-  "synced_at": "2026-04-16T18:01:00Z",
+  "synced_at": "2026-04-16T18:20:00Z",
   "items": [
-    {"item_id": "PA-36", "title": "Schedule chiropractor", "type": "task", "status": "open", "priority": "medium", "due_date": "2026-04-16", "person": "", "notion_page_id": "3441e69629d181e5bd30c65b32a9f734", "source_ref": ""},
+    {"item_id": "PA-36", "title": "Schedule chiropractor", "type": "task", "status": "open", "priority": "medium", "due_date": "2026-04-17", "person": "", "notion_page_id": "3441e69629d181e5bd30c65b32a9f734", "source_ref": ""},
     {"item_id": "PA-57", "title": "Pick up printing from AAE Printing", "type": "task", "status": "open", "priority": "high", "due_date": "2026-04-17", "person": "Lee (AAE Printing)", "notion_page_id": "3441e69629d181b6bda8df9d49efb798", "source_ref": ""},
     {"item_id": "PA-40", "title": "Return iPhone before refund deadline expires", "type": "task", "status": "open", "priority": "urgent", "due_date": "2026-04-18", "person": "Leore", "notion_page_id": "3441e69629d1810b823fea3eaf700373", "source_ref": ""},
     {"item_id": "PA-38", "title": "Email Dr. Rezmovitz re: Propecia and chiro symptoms", "type": "task", "status": "open", "priority": "medium", "due_date": "2026-04-18", "person": "", "notion_page_id": "3441e69629d1810fb950e6d5c5322667", "source_ref": ""},
