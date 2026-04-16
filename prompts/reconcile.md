@@ -1,6 +1,6 @@
 # PA Reconciler Routine Prompt
 
-**Trigger:** GitHub push event on main (primary), plus cron `0 22 * * *` (10pm ET daily backup sweep)
+**Trigger:** Cron `0 7,12,18,22 * * *` (4 sweeps daily at 7am, noon, 6pm, 10pm ET)
 **Model:** Sonnet
 **Connectors required:** Notion (mandatory), Gmail, HubSpot, Google Calendar (optional — for enriching actions that reference counterparties)
 
@@ -81,4 +81,4 @@ If any entries stayed in the queue with `error_flag`, create a Notion comment on
 
 - Enable "Allow unrestricted branch pushes" for `jeremysdcr/personal-assistant-agent`
 - Connectors: Notion (required), Gmail + HubSpot + Google Calendar (kept for enrichment, remove if routine latency becomes an issue)
-- Triggers: GitHub push on main (primary), cron `0 22 * * *` (daily 10pm ET backup sweep — Anthropic routines require ≥1 hour cron interval)
+- Trigger: cron `0 7,12,18,22 * * *` (4 sweeps daily at 7am, noon, 6pm, 10pm ET). No GitHub event trigger — see CLAUDE.md "Routines platform constraints" for why.
