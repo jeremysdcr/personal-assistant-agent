@@ -16,9 +16,14 @@ Reconciliation is also triggered from the CLI boot sequence, so you may find the
 
 ## Steps
 
-### 1. Pull latest
-- `git pull --rebase origin main`
-- If nothing to do (empty log, cache fresh <15min): exit 0 silently, no commit
+### 1. Pull latest (and pivot to main)
+
+Routine workspaces may start the session on an auto-generated working branch (e.g. `claude/friendly-tesla-5kFqB`). Pivot to `main` explicitly before doing any work, so step 6's `git push origin main` lands on `main` rather than whatever side branch the workspace started on:
+
+- `git fetch origin main`
+- `git checkout -B main origin/main` — forces local `main` to match `origin/main`, creating or resetting the branch as needed
+
+If nothing to do (empty log, cache fresh <15min): exit 0 silently, no commit.
 
 ### 2. Read the cloud-actions log
 - Read `vault/cloud-actions.jsonl`
