@@ -16,7 +16,7 @@ Run the boot-sync sequence from `prompts/boot-sync.md` before counting completio
 Clone repo. Read `vault/daily/{YYYY-MM-DD}.md` (today's accumulated journal). Read `vault/task-cache.json`.
 
 ### 2. Calendar Review
-Use `gcal_list_events` for today. Note which meetings happened. Cross-reference with open items — were any items related to today's meetings completed?
+Use `gcal_list_events` for today. Note which meetings happened. Cross-reference with open items — were any items related to today's meetings completed? Also note any HARD OVERLAPs or TIGHT TRANSITIONs that actually occurred today (retrospective pattern signal — useful for catching recurring conflict types).
 
 ### 3. Day Summary
 From the Notion PA Tracker, count:
@@ -33,7 +33,8 @@ Find items where due_date = today AND status != done:
 ### 5. Tomorrow Preview
 Use `gcal_list_events` for tomorrow.
 Query Notion for items due tomorrow.
-List tomorrow's meetings and due items.
+Also query Notion for open conflict items (Source = `calendar`, Source Ref starts with `conflict:`, Status in (open, in_progress, waiting, stale)) with Due Date = tomorrow. Do NOT run a fresh conflict sweep — the morning brief is the sole creator; this step only surfaces already-tracked conflicts so Jeremy sees them the night before instead of at 7am.
+List tomorrow's meetings, conflicts, and due items.
 
 ### 6. False Positive Check
 Count items created today that were already cancelled (status = cancelled AND Created = today).
@@ -54,7 +55,7 @@ Append to `vault/daily/{YYYY-MM-DD}.md`:
 {Items due today but not done — with new due dates}
 
 ### Tomorrow Preview
-{Tomorrow's calendar + items due tomorrow}
+{Tomorrow's calendar + items due tomorrow + any open conflict items due tomorrow}
 
 ### Stats
 - Completed: {N}

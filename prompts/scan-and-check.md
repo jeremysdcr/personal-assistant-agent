@@ -51,6 +51,7 @@ The complete extraction rules, classification guidance, few-shot examples, and o
 | due_date within 2 days AND priority < high | Bump priority to high |
 | No due_date AND status = open AND created > 7 days ago AND no updates in 5 days | Set status to stale |
 | type = commitment_theirs AND open > 5 days | Draft follow-up nudge via `gmail_create_draft` with threadId (if source_ref is Gmail), add note "Follow-up draft created {today}" |
+| source = calendar AND source_ref starts with `conflict:` | Re-check the event pair via `gcal_list_events` using the two event IDs in the source_ref. If either event is gone, declined, marked transparent, or the pair no longer overlaps / is no longer a tight transition, set status = `done` and append to Notes: `Auto-resolved {YYYY-MM-DD}: conflict cleared`. Do NOT create new conflict items here — creation happens only in the morning brief sweep. |
 
 13. Update flagged items in Notion via `notion-update-page`.
 

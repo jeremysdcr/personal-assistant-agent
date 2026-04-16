@@ -14,7 +14,7 @@ When Jeremy opens a conversation here, start by running the boot sequence before
    - If Notion MCP is unavailable, do NOT drain the queue — tell Jeremy "X cloud actions pending, can't reach Notion" and proceed with cached data
 2. Read `vault/daily/{today's date YYYY-MM-DD}.md` and the freshly-synced `vault/task-cache.json`.
 3. **Stale state check:** If the daily journal doesn't exist for today, tell Jeremy and offer to run a fresh scan: "No journal for today yet — want me to scan your email?"
-4. Summarize: today's schedule, attention-required items, new items since last check, crack-check flags, draft replies waiting in Gmail. **Only surface items with status=open, in_progress, waiting, or stale** — never include done or cancelled items in a briefing, even if they appear in the cache.
+4. Summarize: today's schedule, calendar conflicts in the next 7 days, attention-required items, new items since last check, crack-check flags, draft replies waiting in Gmail. **Only surface items with status=open, in_progress, waiting, or stale** — never include done or cancelled items in a briefing, even if they appear in the cache.
 5. If Jeremy says "catch me up," "what's going on," or similar — this is the flow.
 
 ## Email
@@ -140,7 +140,7 @@ All connectors are configured at the account level and available in Surface A (C
 | Due Date | Date | ISO date or null |
 | Person | Rich Text | Full name of counterparty |
 | Source | Select | email, calendar, manual, meeting_notes |
-| Source Ref | Rich Text | Gmail message ID or calendar event ID |
+| Source Ref | Rich Text | Gmail message ID, calendar event ID, or `conflict:{eventA_id}:{eventB_id}` for auto-managed calendar conflicts |
 | Source Subject | Rich Text | Email subject or meeting title |
 | Notes | Rich Text | Context. Config entries store values here. |
 | Item ID | Unique ID | Auto-generated, prefix PA |
@@ -149,6 +149,9 @@ All connectors are configured at the account level and available in Surface A (C
 
 ### Cache query
 Use `notion-query-database-view` with the Active Items view to sync the cache. This filters to active, non-config items and matches what the user sees in Notion.
+
+### Auto-managed calendar conflicts
+Items with Source = `calendar` and Source Ref starting with `conflict:` are created and resolved automatically by the conflict detector. The morning brief sweep (`prompts/morning-brief.md` Step 2.5) scans 7 days ahead and creates one item per detected conflict pair; scan-and-check (`prompts/scan-and-check.md` Part B) auto-resolves items whose underlying events no longer conflict. Jeremy can dismiss a conflict early by marking the item `done` — the source_ref dedup ensures it will not be recreated.
 
 ## Natural Language Commands
 
@@ -164,6 +167,8 @@ Jeremy will say things like:
 | "mark [item] done" | Update status in Notion + cache |
 | "scan my email" | Run obligation extraction interactively against recent Gmail |
 | "what's on my calendar [today/tomorrow/this week]" | Query Google Calendar |
+| "any conflicts" / "what conflicts this week" / "check my schedule" | Query Notion for open items with Source = calendar AND Source Ref starting `conflict:`, group by due date |
+| "dismiss conflict [description]" | Find the matching open conflict item in Notion, mark Status = done with note "Dismissed by Jeremy {YYYY-MM-DD}" |
 | "draft a reply to [person/subject]" | Find email thread, create draft via gmail_create_draft with threadId |
 | "nudge [person] about [topic]" | Find thread, draft a follow-up in Gmail |
 | "reschedule [item] to [date]" | Update due_date in Notion |
