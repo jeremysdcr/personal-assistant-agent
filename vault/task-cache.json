@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-04-16T17:45:00Z",
+  "synced_at": "2026-04-16T18:01:00Z",
   "items": [
     {"item_id": "PA-36", "title": "Schedule chiropractor", "type": "task", "status": "open", "priority": "medium", "due_date": "2026-04-16", "person": "", "notion_page_id": "3441e69629d181e5bd30c65b32a9f734", "source_ref": ""},
     {"item_id": "PA-57", "title": "Pick up printing from AAE Printing", "type": "task", "status": "open", "priority": "high", "due_date": "2026-04-17", "person": "Lee (AAE Printing)", "notion_page_id": "3441e69629d181b6bda8df9d49efb798", "source_ref": ""},
@@ -31,7 +31,6 @@
     {"item_id": "PA-5", "title": "Review Bezede's Project Elevate answers and decide on EOI", "type": "task", "status": "open", "priority": "high", "due_date": "2026-04-25", "person": "Robert Bezede", "notion_page_id": "3441e69629d18184bc27f46739cccc1a", "source_ref": "19d93258acd33a40"},
     {"item_id": "PA-31", "title": "File personal taxes for Jeremy and Leore — deadline April 30", "type": "task", "status": "open", "priority": "urgent", "due_date": "2026-04-30", "person": "Leore", "notion_page_id": "3441e69629d1817eaa00c0bb140fd930", "source_ref": ""},
     {"item_id": "PA-39", "title": "Buy suit for Shelley and Mitch's wedding (May 10)", "type": "task", "status": "open", "priority": "medium", "due_date": "2026-05-01", "person": "", "notion_page_id": "3441e69629d18145acf5ff629857cbe2", "source_ref": ""},
-    {"item_id": "PA-58", "title": "Reconciler smoke test", "type": "task", "status": "open", "priority": "low", "due_date": null, "person": "", "notion_page_id": "3441e69629d181239b6ec6598a3b37b8", "source_ref": ""},
     {"item_id": "PA-44", "title": "Confirm Leore's visa transactions and statements on RBC portal", "type": "task", "status": "open", "priority": "low", "due_date": null, "person": "Leore", "notion_page_id": "3441e69629d1810ab31eecd62e780a7b", "source_ref": ""},
     {"item_id": "PA-34", "title": "Finalize personal budget 2026; share with Leore", "type": "task", "status": "open", "priority": "medium", "due_date": null, "person": "Leore", "notion_page_id": "3441e69629d181569348d2e1fbac4839", "source_ref": ""},
     {"item_id": "PA-48", "title": "Book weekly dates with Leore", "type": "task", "status": "open", "priority": "low", "due_date": null, "person": "Leore", "notion_page_id": "3441e69629d181578adbdeae1379124b", "source_ref": ""},
