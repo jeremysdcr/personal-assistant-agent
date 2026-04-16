@@ -15,9 +15,38 @@ Before generating the brief, run the boot-sync sequence from `prompts/boot-sync.
 ### 1. Load State
 Clone the repo (already done by step 0 if routine; otherwise clone now). Read `vault/task-cache.json` and `vault/key-relationships.md`.
 
-### 2. Today's Calendar
-Use `gcal_list_events` for today (timeMin: today 00:00 ET, timeMax: today 23:59 ET).
-For each event, note: time, title, attendees, location/link.
+### 2. Calendar Fetch (today + next 7 days)
+Use `gcal_list_events` with timeMin: today 00:00 ET, timeMax: today + 7 days 23:59 ET.
+For each event, note: time, title, attendees, location/link, response status, transparency.
+Keep today's subset for the schedule section; keep the full 7-day list for Step 2.5.
+
+### 2.5. Conflict Sweep (7-day window)
+Detect conflicts across the full 7-day event list, then reconcile against existing Notion conflict items.
+
+**Conflict rules:**
+- **HARD OVERLAP** — two non-all-day events whose times intersect (`A.start < B.end AND B.start < A.end`). Exclude events Jeremy declined or with `transparency: transparent`.
+- **TIGHT TRANSITION** — <5 min gap between consecutive events where at least one has a physical location AND the locations differ (physical↔virtual counts; two different physical addresses count).
+- Ignore all-day events.
+
+**For each detected conflict pair:**
+1. Build stable `source_ref` = `conflict:{eventA_id}:{eventB_id}` (sort IDs lexically).
+2. Query Notion for a PA Tracker item with this Source Ref (any status).
+3. Apply dedup:
+   - **No match** → `notion-create-pages` with:
+     - Title: `Conflict: {MM/DD HH:MM} — {event A title} ↔ {event B title}`
+     - Type: `follow_up`, Status: `open`, Source: `calendar`
+     - Priority: `high` if HARD OVERLAP within 48h, `medium` if HARD OVERLAP beyond 48h, `low` if TIGHT TRANSITION
+     - Due Date: date of the conflicting events
+     - Source Ref: the `conflict:...` key above
+     - Notes: conflict type, both event titles/times, attendees, locations
+   - **Match with status in (open, in_progress, waiting, stale)** → skip; already tracked.
+   - **Match with status in (done, cancelled)** → skip; Jeremy dismissed it — do not recreate.
+
+**Resolution pass (after dedup):**
+4. Query Notion for all PA Tracker items where Source = `calendar` AND Source Ref starts with `conflict:` AND Status in (open, in_progress, waiting, stale).
+5. For each, re-check whether the pair still conflicts under the rules above (event IDs still exist, still overlap/tight, not declined). If the conflict no longer exists, `notion-update-page` to set Status = `done` and append to Notes: `Auto-resolved {YYYY-MM-DD}: conflict cleared`.
+
+Track which items are newly created this sweep — the journal and push notification use that to flag `(new)`.
 
 ### 3. Calendar-to-Task Correlation
 For each meeting attendee:
@@ -64,6 +93,9 @@ Write `vault/daily/{YYYY-MM-DD}.md`:
 ## Today's Schedule
 {Calendar items with times, attendees, deal context, Drive docs, and correlated open items}
 
+## Calendar Conflicts (next 7 days)
+{All open conflict items (source_ref starts with `conflict:`), sorted by due date. Flag newly created ones with `(new)`. Omit this section entirely if no open conflict items exist.}
+
 ## Deal Pipeline Snapshot
 {Active deals by stage, recent stage changes}
 
@@ -93,6 +125,7 @@ Write `vault/daily/{YYYY-MM-DD}.md`:
 ### 10. Push Notification
 Create a Notion comment on the Daily Brief page (ID: `3441e696-29d1-815b-9a43-c156cad7fc34`) via `notion-create-comment`:
 - 3-5 bullet points: schedule highlights, deal updates, attention items, key emails
+- **If any HARD OVERLAP was newly created this sweep within the next 48h, lead with it.** (e.g. "⚠️ New conflict: Tue 2pm Acme ↔ Tue 2:30pm Smith")
 - Keep it concise — this is what Jeremy sees on his phone lock screen
 
 ### 11. Gmail Draft
