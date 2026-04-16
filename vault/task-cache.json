@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-04-16T18:20:00Z",
+  "synced_at": "2026-04-16T18:32:00Z",
   "items": [
     {"item_id": "PA-59", "title": "Conflict: 04/17 13:00 — Weekly Call: Gershon ↔ AI Friday: Anthropic Tools", "type": "follow_up", "status": "open", "priority": "high", "due_date": "2026-04-17", "person": "", "notion_page_id": "3441e69629d181038485da910d98a0d5", "source_ref": "conflict:4410cfd9a17641968ba2fd5c9cc0e63d_20260417T170000Z:t1hur20u8bquna185fu5dsr4t0"},
     {"item_id": "PA-60", "title": "Carole/Samara to confirm INQ legal entity + signatory for VCP contract", "type": "commitment_theirs", "status": "open", "priority": "high", "due_date": "2026-04-17", "person": "Carole Piovesan / Samara Starkman", "notion_page_id": "3441e69629d18190a463d8961c8ff7a5", "source_ref": "19d976b6053a09a4"},
