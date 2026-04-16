@@ -25,7 +25,7 @@ Skip this step if ALL of:
 - No actions were processed in step 2
 - `synced_at` in `vault/task-cache.json` is within the last 15 minutes
 
-Otherwise: query `notion-query-database-view` on `view://3441e696-29d1-81ac-84aa-000cd656c691`, overwrite `vault/task-cache.json` with `synced_at: <now UTC ISO>` and the current active items.
+Otherwise: query `notion-query-database-view` on `view://3441e696-29d1-81ac-84aa-000cd656c691`, overwrite `vault/task-cache.json` using the slim schema defined in `prompts/reconcile.md` step 5 (single source of truth).
 
 ### 4. Commit changes (if any)
 If step 2 or 3 modified files:

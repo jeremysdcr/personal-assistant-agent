@@ -53,11 +53,20 @@ For each parsed entry, in order:
 
 ### 5. Re-sync cache from Notion
 - Query `notion-query-database-view` against the Active Items view `view://3441e696-29d1-81ac-84aa-000cd656c691`
-- Overwrite `vault/task-cache.json` with:
-  - `synced_at`: current UTC ISO timestamp
-  - `items`: array built from the query result, mapping each page's properties into the cache schema (see CLAUDE.md schema table)
+- Write `vault/task-cache.json` with this exact slim schema:
 
-**Output discipline (critical — prior runs have timed out here):** Build the cache JSON in memory and emit it via a single `Write` call. Do not enumerate, list, narrate, or describe individual items in your response text. Do not pause to verify item counts or reconcile discrepancies between the query result length and your own count — trust the tool result. The output of this step is the file write, not commentary. If you find yourself writing prose like "Continuing through the items: PA-X, PA-Y…" or "I'm getting N items but the query returned M…", stop and write the file.
+```json
+{
+  "synced_at": "<current UTC ISO timestamp>",
+  "items": [
+    {"item_id": "PA-1", "title": "<text>", "type": "<type>", "status": "<status>", "priority": "<priority>", "due_date": "<ISO date or null>", "person": "<text>", "notion_page_id": "<32-char hex no dashes>", "source_ref": "<text>"}
+  ]
+}
+```
+
+Per-item fields: exactly these 9 — `item_id`, `title`, `type`, `status`, `priority`, `due_date`, `person`, `notion_page_id`, `source_ref`. Do not include Notion fields outside this list (`source`, `source_subject`, `notes`, `created`, `updated`) — consumers query Notion live for those when needed.
+
+**Critical — prior runs timed out at this step:** emit the entire cache JSON in a single `Write` tool call. Do not describe, enumerate, count, or comment on the items in your response text. Do not self-verify item counts or reconcile discrepancies between tool output and your own count. Trust the query result. The output of this step is the file write and nothing else. If your response text contains any reference to specific items during this step, you've violated the output discipline — stop and write the file.
 
 ### 6. Commit and push
 If any files changed in steps 4 or 5:
