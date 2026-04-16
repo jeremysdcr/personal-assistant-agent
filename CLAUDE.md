@@ -65,9 +65,10 @@ Execute the PA <name> routine. Read prompts/<name>.md and follow the steps in or
 Pasting creates drift between the registered routine and the source file every time a prompt is tuned. Reference keeps the repo as the single source of truth.
 
 #### Routines platform constraints (Anthropic, Max 20x as of 2026-04)
-- **Cron minimum interval: 1 hour.** Sub-hourly schedules (e.g. `*/30 * * * *`) are rejected by the routines UI. Plan multi-trigger or push-driven patterns when sub-hourly cadence is needed.
+- **Cron minimum interval: 1 hour.** Sub-hourly schedules (e.g. `*/30 * * * *`) are rejected by the routines UI.
+- **Cron is UTC-only.** No timezone picker in the routines UI. ET schedules must be translated (e.g., 7am ET = 11:00 UTC during EDT, 12:00 UTC during EST). Set a calendar reminder to flip every routine's cron at each DST boundary (Mar / Nov); otherwise sweeps land an hour off for half the year.
 - **Run quota: 15 runs per rolling 24 hours** on Max 20x (Pro=5, Team/Enterprise=25). Counts every fire — cron, GitHub webhook, manual trigger — pooled across all routines. Audit the daily total before adding a new scheduled routine.
-- **GitHub webhook events** are also subject to undisclosed per-account hourly caps during research preview. If pushes stop triggering, suspect the webhook cap.
+- **GitHub event triggers don't fit our flow.** The routines UI only offers `pull_request opened`, `pull_request merged`, and `release published` — no raw `push` event. Surface B commits directly to `main` without a PR, so none of these would fire on Surface B activity. All routines in this project use cron-only triggers; reconciliation latency is bounded by cron cadence (currently 4x/day = ≤6h worst case) plus instant CLI boot-sync drain when Jeremy opens a desktop session. If a future routine needs PR-driven behavior, that's the only GitHub trigger surface available.
 - Routines are in research preview; re-check these limits quarterly, they may shift.
 
 ### Detecting the surface
