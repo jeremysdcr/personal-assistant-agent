@@ -143,6 +143,10 @@ Jeremy will say things like:
 - `prompts/` — prompt templates for routines (reference only, routines embed them)
 - Scan timestamp lives in Notion (config page), not in repo
 
+## Standing Instructions
+
+- **Loyalty Markets weekly meetings:** Jeremy does not need agenda review or prep tasks created for recurring weekly Loyalty Markets team meetings. Do not extract these as obligations during email scans.
+
 ## Conventions
 
 - **Write order:** Update Notion first, then update the local cache, then commit and push
