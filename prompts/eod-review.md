@@ -72,8 +72,16 @@ Append to `vault/daily/{YYYY-MM-DD}.md`:
 Update carried-forward items in Notion. Snapshot active items to `vault/task-cache.json`.
 
 ### 9. Commit and Push
-Commit and push to main.
-Message: `eod review: {YYYY-MM-DD}`
+
+You should already be on `main` from step 0's boot-sync. Run these three commands exactly:
+
+```bash
+git add vault/daily/ vault/task-cache.json
+git commit -m "eod review: {YYYY-MM-DD}"
+git push origin main
+```
+
+Substitute `{YYYY-MM-DD}` with today's date from step 0 (e.g. `2026-04-16`). Keep the commit message plain single-line — **do NOT** wrap it in a heredoc (`$(cat <<'EOF' ... EOF)`), add Claude Code attribution, or include any session link. The routine's author identity (`Claude <noreply@anthropic.com>`) is the audit trail.
 
 ## Setup Requirements
 - Enable "Allow unrestricted branch pushes" for jeremysdcr/personal-assistant-agent
