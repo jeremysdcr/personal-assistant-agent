@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-04-16T19:48:00Z",
+  "synced_at": "2026-04-16T22:08:00Z",
   "items": [
     {"item_id": "PA-59", "title": "Conflict: 04/17 13:00 — Weekly Call: Gershon ↔ AI Friday: Anthropic Tools", "type": "follow_up", "status": "open", "priority": "high", "due_date": "2026-04-17", "person": "", "notion_page_id": "3441e69629d181038485da910d98a0d5", "source_ref": "conflict:4410cfd9a17641968ba2fd5c9cc0e63d_20260417T170000Z:t1hur20u8bquna185fu5dsr4t0"},
     {"item_id": "PA-60", "title": "Carole/Samara to confirm INQ legal entity + signatory for VCP contract", "type": "commitment_theirs", "status": "open", "priority": "high", "due_date": "2026-04-17", "person": "Carole Piovesan / Samara Starkman", "notion_page_id": "3441e69629d18190a463d8961c8ff7a5", "source_ref": "19d976b6053a09a4"},
@@ -39,7 +39,7 @@
     {"item_id": "PA-48", "title": "Book weekly dates with Leore", "type": "task", "status": "open", "priority": "low", "due_date": null, "person": "Leore", "notion_page_id": "3441e69629d181578adbdeae1379124b", "source_ref": ""},
     {"item_id": "PA-47", "title": "Book camp site for summer", "type": "task", "status": "open", "priority": "low", "due_date": null, "person": "", "notion_page_id": "3441e69629d181678941c466627638c3", "source_ref": ""},
     {"item_id": "PA-50", "title": "Create LinkedIn recurring task automations", "type": "task", "status": "open", "priority": "low", "due_date": null, "person": "", "notion_page_id": "3441e69629d18172864ccb428b117b9a", "source_ref": ""},
-    {"item_id": "PA-49", "title": "Update Ayala's and Eden's MP3 player with ABBA", "type": "task", "status": "open", "priority": "low", "due_date": null, "person": "", "notion_page_id": "3441e69629d181888409c8230ee0c114", "source_ref": ""},
+    {"item_id": "PA-49", "title": "Update Ayala's and Eden's MP3 player with ABBA", "type": "task", "status": "open", "priority": "low", "due_date": null, "person": "Leore", "notion_page_id": "3441e69629d181888409c8230ee0c114", "source_ref": ""},
     {"item_id": "PA-43", "title": "Get back to Alyssa Banach re: will questions", "type": "task", "status": "open", "priority": "medium", "due_date": null, "person": "Alyssa Banach", "notion_page_id": "3441e69629d18190a6ceccfc63debadf", "source_ref": ""},
     {"item_id": "PA-42", "title": "Research IRAP/SRED eligibility for Sidecar activities", "type": "task", "status": "open", "priority": "low", "due_date": null, "person": "", "notion_page_id": "3441e69629d18197827fde6a2f391bf3", "source_ref": ""},
     {"item_id": "PA-53", "title": "Confirm whether Backstreet Boys ticket was paid last summer", "type": "task", "status": "open", "priority": "low", "due_date": null, "person": "", "notion_page_id": "3441e69629d181ab8dc9d65b2721836c", "source_ref": ""},
@@ -50,7 +50,7 @@
     {"item_id": "PA-11", "title": "Watch for Mauro Folco response re: Leadout Capital intro offer", "type": "follow_up", "status": "open", "priority": "low", "due_date": null, "person": "Mauro Folco", "notion_page_id": "3441e69629d181449622ed674debf361", "source_ref": "19d9312fed6b504f"},
     {"item_id": "PA-10", "title": "Update VCP contract wording and send to INQ Law for review", "type": "commitment_mine", "status": "open", "priority": "high", "due_date": null, "person": "Samara Starkman / Carole Piovesan", "notion_page_id": "3441e69629d181a58992e71f1ff2da08", "source_ref": "19d8eeaf73f85d99"},
     {"item_id": "PA-4", "title": "John Furtado to share progress on 8 acquisition targets", "type": "commitment_theirs", "status": "open", "priority": "medium", "due_date": null, "person": "John Furtado", "notion_page_id": "3441e69629d181be982dfdfe70672ca3", "source_ref": "19d9238829ec627b"},
-    {"item_id": "PA-7", "title": "Assess Project Link CIM — tuck-in for Staff Relief", "type": "task", "status": "open", "priority": "high", "due_date": null, "person": "Robert Handelman", "notion_page_id": "3441e69629d181cfb238ffd054f3179d", "source_ref": "19d92b221b8c81be"},
+    {"item_id": "PA-7", "title": "Review Project Link CIM and send assessment back to Rob", "type": "task", "status": "open", "priority": "high", "due_date": null, "person": "Robert Handelman", "notion_page_id": "3441e69629d181cfb238ffd054f3179d", "source_ref": "19d92b221b8c81be"},
     {"item_id": "PA-6", "title": "Bezede to provide CFO answers on Q6 and Q15 (Project Elevate)", "type": "commitment_theirs", "status": "open", "priority": "high", "due_date": null, "person": "Robert Bezede", "notion_page_id": "3441e69629d181f59461c8d49121af9a", "source_ref": "19d93258acd33a40"}
   ]
 }
