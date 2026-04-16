@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-04-16T18:32:00Z",
+  "synced_at": "2026-04-16T19:40:00Z",
   "items": [
     {"item_id": "PA-59", "title": "Conflict: 04/17 13:00 — Weekly Call: Gershon ↔ AI Friday: Anthropic Tools", "type": "follow_up", "status": "open", "priority": "high", "due_date": "2026-04-17", "person": "", "notion_page_id": "3441e69629d181038485da910d98a0d5", "source_ref": "conflict:4410cfd9a17641968ba2fd5c9cc0e63d_20260417T170000Z:t1hur20u8bquna185fu5dsr4t0"},
     {"item_id": "PA-60", "title": "Carole/Samara to confirm INQ legal entity + signatory for VCP contract", "type": "commitment_theirs", "status": "open", "priority": "high", "due_date": "2026-04-17", "person": "Carole Piovesan / Samara Starkman", "notion_page_id": "3441e69629d18190a463d8961c8ff7a5", "source_ref": "19d976b6053a09a4"},
@@ -23,6 +23,7 @@
     {"item_id": "PA-22", "title": "Email Dan Israelsohn re: Loyalty", "type": "task", "status": "open", "priority": "medium", "due_date": "2026-04-18", "person": "Dan Israelsohn", "notion_page_id": "3441e69629d181e3863cffa27ff3f385", "source_ref": ""},
     {"item_id": "PA-30", "title": "AHS tuition past-due — clear payment", "type": "task", "status": "open", "priority": "urgent", "due_date": "2026-04-18", "person": "Leore", "notion_page_id": "3441e69629d181eb869df697bd18a3c1", "source_ref": ""},
     {"item_id": "PA-23", "title": "Reply to Anthony Marotta (M-Squared Advisory)", "type": "task", "status": "open", "priority": "low", "due_date": "2026-04-18", "person": "Anthony Marotta", "notion_page_id": "3441e69629d181f1b702e5e7376720be", "source_ref": ""},
+    {"item_id": "PA-62", "title": "Complete Phase 3 — dry-run and register scan-and-check routine", "type": "task", "status": "open", "priority": "high", "due_date": "2026-04-20", "person": "", "notion_page_id": "3441e69629d18187a12acce4a0201895", "source_ref": ""},
     {"item_id": "PA-21", "title": "J2J Expo prep — finalize materials and logistics", "type": "task", "status": "open", "priority": "high", "due_date": "2026-04-20", "person": "Rob Handelman / Yossi Braun", "notion_page_id": "3441e69629d1816783fdeda0b5eba831", "source_ref": ""},
     {"item_id": "PA-17", "title": "Probe John Furtado on Casey pass — look for a wedge to reopen", "type": "task", "status": "open", "priority": "medium", "due_date": "2026-04-21", "person": "John Furtado", "notion_page_id": "3441e69629d1817fb086f0fc951f9d38", "source_ref": ""},
     {"item_id": "PA-3", "title": "Prep for John Furtado meeting — M&A target criteria discussion", "type": "task", "status": "open", "priority": "medium", "due_date": "2026-04-21", "person": "John Furtado", "notion_page_id": "3441e69629d1814fb031f67d45eb9a0d", "source_ref": "19d93d8be8352599"},
