@@ -11,9 +11,13 @@ The authoritative reconciliation logic lives in `prompts/reconcile.md` (used by 
 ### 0. Get real time
 Run `TZ="America/New_York" date "+%Y-%m-%d %H:%M %Z"` to establish the actual Eastern time. Do not rely on the injected `currentDate`.
 
-### 1. Pull latest
-- `git pull --rebase origin main` — gets any recent cloud commits or routine reconciles
-- If pull fails with conflict: prefer remote (`git checkout --theirs`) for state files like `task-cache.json`; investigate anything else
+### 1. Pull latest (and pivot to main)
+
+Routine workspaces may start the session on an auto-generated working branch (e.g. `claude/quirky-knuth-rGvoh`). Pivot to `main` explicitly so any later `git push` lands on `main` rather than a side branch:
+
+- `git fetch origin main`
+- `git checkout -B main origin/main` — forces local `main` to match `origin/main`, creating or resetting the branch as needed
+- If you see conflicts later when writing state files: prefer remote (`git checkout --theirs`) for `task-cache.json`; investigate anything else
 
 ### 2. Drain `vault/cloud-actions.jsonl` (if non-empty)
 Apply each entry to Notion via MCP. Follow the mapping in `prompts/reconcile.md` Step 3. Archive successful entries to `vault/cloud-actions-archive/YYYY-MM.jsonl` and rewrite the live file with only errored entries.
