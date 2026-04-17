@@ -68,10 +68,18 @@ Append to `vault/daily/{YYYY-MM-DD}.md`:
 {False positive notes if any, otherwise "No same-day cancellations."}
 ```
 
-### 8. Update Notion and Cache
+### 8. Push Notification
+Create a Notion comment on the Daily Brief page (ID: `3441e696-29d1-815b-9a43-c156cad7fc34`) via `notion-create-comment`. This is what Jeremy sees on his phone lock screen as the day wraps — keep it tight (3-5 lines):
+
+- Lead with completion count + 1-2 highlights (e.g. "✅ 2 done today — PA-9 (Yossi booth), PA-30 (AHS tuition)")
+- Carry-forward count if non-zero (e.g. "↪️ 1 carried to tomorrow: PA-36")
+- Tomorrow's top 1-2 items + any calendar conflict (e.g. "Fri: PA-60 (INQ entity) + PA-57 (AAE pickup 5pm)")
+- **If step 5 surfaced a new conflict for tomorrow, lead with it** (e.g. "⚠️ New Fri conflict: 10am Aucctus Board ↔ 11:20am Endo")
+
+### 9. Update Notion and Cache
 Update carried-forward items in Notion. Snapshot active items to `vault/task-cache.json`.
 
-### 9. Commit and Push
+### 10. Commit and Push
 
 You should already be on `main` from step 0's boot-sync. Run these three commands exactly:
 
