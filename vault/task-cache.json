@@ -1,6 +1,17 @@
 {
-  "synced_at": "2026-04-17T20:54:00Z",
+  "synced_at": "2026-04-17T21:14:00Z",
   "items": [
+    {
+      "item_id": "PA-82",
+      "title": "Ask Ian about exact Simchat Bat start time on our call",
+      "type": "follow_up",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-04-24",
+      "person": "Ian Kessler",
+      "notion_page_id": "3451e69629d1817bae16e7cf962c97e0",
+      "source_ref": ""
+    },
     {
       "item_id": "PA-81",
       "title": "Ian Kessler to pick call time from proposed slots",
