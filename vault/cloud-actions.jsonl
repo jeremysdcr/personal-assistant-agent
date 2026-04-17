@@ -1,1 +1,3 @@
-
+{"ts":"2026-04-17T23:20:00Z","surface":"cloud","intent":"reschedule","item_id":"PA-52","due_date":"2026-04-20","narrative":"Jeremy wants PA-52 Eterna invoice follow-up on his plate for Monday 4/20."}
+{"ts":"2026-04-17T23:20:00Z","surface":"cloud","intent":"other","item_id":"PA-52","narrative":"Set Priority to high. Jeremy flagged this as high-priority follow-up for Monday."}
+{"ts":"2026-04-17T23:20:00Z","surface":"cloud","intent":"other","item_id":"PA-61","narrative":"Change Type from follow_up to commitment_mine. Jeremy confirmed Richard Roos is waiting on HIM (reply to Richard's Thu 4/16 evening email — accept NDA offer for Loyalty growth-plan review, confirm GrowthSpan takeaways, respond on format). Not a wait-on-them item."}
