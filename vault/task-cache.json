@@ -1,6 +1,9 @@
 {
-  "synced_at": "2026-04-17T02:41:00Z",
+  "synced_at": "2026-04-17T03:45:00Z",
   "items": [
+    {"item_id": "PA-68", "title": "Ask Leore about taking JSN protector course", "type": "task", "status": "open", "priority": "medium", "due_date": "2026-05-08", "person": "Leore", "notion_page_id": "3451e69629d1810ba782ccc1ba002991", "source_ref": ""},
+    {"item_id": "PA-67", "title": "Get JSN protector course information", "type": "task", "status": "open", "priority": "medium", "due_date": "2026-04-24", "person": "", "notion_page_id": "3451e69629d18113b8a8e5438d55ff57", "source_ref": ""},
+    {"item_id": "PA-66", "title": "Email Ash at Climate Door re: potential PE intros — send investment criteria", "type": "task", "status": "open", "priority": "high", "due_date": null, "person": "Ash (Climate Door)", "notion_page_id": "3451e69629d18115a367f7c994430b70", "source_ref": ""},
     {"item_id": "PA-65", "title": "Confirm 10pm reconcile drained pending queue", "type": "task", "status": "open", "priority": "medium", "due_date": "2026-04-17", "person": "", "notion_page_id": "3451e69629d18156899ef8d583798499", "source_ref": ""},
     {"item_id": "PA-59", "title": "Conflict: 04/17 13:00 — Weekly Call: Gershon ↔ AI Friday: Anthropic Tools", "type": "follow_up", "status": "open", "priority": "high", "due_date": "2026-04-17", "person": "", "notion_page_id": "3441e69629d181038485da910d98a0d5", "source_ref": "conflict:4410cfd9a17641968ba2fd5c9cc0e63d_20260417T170000Z:t1hur20u8bquna185fu5dsr4t0"},
     {"item_id": "PA-57", "title": "Pick up printing from AAE Printing", "type": "task", "status": "open", "priority": "high", "due_date": "2026-04-17", "person": "Lee (AAE Printing)", "notion_page_id": "3441e69629d181b6bda8df9d49efb798", "source_ref": ""},
