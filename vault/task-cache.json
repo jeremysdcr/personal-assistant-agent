@@ -704,6 +704,17 @@
       "person": "Josh",
       "notion_page_id": "3451e696-29d1-8106-b66c-da77947d977b",
       "source_ref": null
+    },
+    {
+      "item_id": "PA-84",
+      "title": "Message Mike and Lior (ConnectCPA) re: referral, book quick fit call",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-04-20",
+      "person": "Mike and Lior (ConnectCPA)",
+      "notion_page_id": "3451e696-29d1-8158-b324-f06ab328fe36",
+      "source_ref": null
     }
   ]
 }
