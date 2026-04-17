@@ -181,7 +181,7 @@ Jeremy will say things like:
 | "catch me up" / "what's going on" | Read today's journal + cache, give briefing (with stale-state check) |
 | "what's urgent" | Filter cache/Notion for urgent + overdue items |
 | "what do I owe [person]" | Query Notion for commitment_mine items matching person |
-| "what am I waiting on" | Query Notion for commitment_theirs + follow_up items |
+| "what am I waiting on" | Split into two buckets: (A) counterparty owes Jeremy — commitment_theirs + follow_up; (B) Jeremy's tasks currently blocked on someone else (status=waiting OR title/notes indicate a dependency). Label each bucket explicitly so nudge-vs-park is clear. |
 | "add task: [description]" | Create in Notion PA Tracker, source = manual |
 | "mark [item] done" | Update status in Notion + cache |
 | "scan my email" | Run obligation extraction interactively against recent Gmail |
