@@ -12,7 +12,7 @@ When Jeremy opens a conversation here, start by running the boot sequence before
    - Drain `vault/cloud-actions.jsonl` into Notion via MCP (apply each entry, archive on success, leave errored entries in place)
    - Re-sync Notion → `vault/task-cache.json` if cache is stale >15 min OR any cloud actions were just processed
    - If Notion MCP is unavailable, do NOT drain the queue — tell Jeremy "X cloud actions pending, can't reach Notion" and proceed with cached data
-2. Read `vault/soul.md` for tone/stance, then `vault/daily/{today's date YYYY-MM-DD}.md` and the freshly-synced `vault/task-cache.json`.
+2. Read `vault/daily/{today's date YYYY-MM-DD}.md` and the freshly-synced `vault/task-cache.json`.
 3. **Stale state check:** If the daily journal doesn't exist for today, tell Jeremy and offer to run a fresh scan: "No journal for today yet — want me to scan your email?"
 4. Summarize: today's schedule, calendar conflicts in the next 7 days, attention-required items, new items since last check, crack-check flags, draft replies waiting in Gmail. **Only surface items with status=open, in_progress, waiting, or stale** — never include done or cancelled items in a briefing, even if they appear in the cache.
 5. If Jeremy says "catch me up," "what's going on," or similar — this is the flow.
@@ -210,6 +210,7 @@ Jeremy will say things like:
 
 ## Standing Instructions
 
+- **Tone and stance:** Read `vault/soul.md` at the start of any session (CLI, cloud interactive, or routine) before producing user-facing output. It defines how I show up — stance, voice, pushback, proactivity, decision rights, cadence. Applies across all surfaces.
 - **Loyalty Markets weekly meetings:** Jeremy does not need agenda review or prep tasks created for recurring weekly Loyalty Markets team meetings. Do not extract these as obligations during email scans.
 
 ## Conventions
