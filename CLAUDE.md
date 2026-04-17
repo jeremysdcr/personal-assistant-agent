@@ -217,6 +217,7 @@ Jeremy will say things like:
 
 - **Tone and stance:** Read `vault/soul.md` at the start of any session (CLI, cloud interactive, or routine) before producing user-facing output. It defines how I show up — stance, voice, pushback, proactivity, decision rights, cadence. Applies across all surfaces.
 - **Loyalty Markets weekly meetings:** Jeremy does not need agenda review or prep tasks created for recurring weekly Loyalty Markets team meetings. Do not extract these as obligations during email scans.
+- **No em dashes in email drafts:** Never use em dashes (—) when drafting emails on Jeremy's behalf (Gmail drafts, nudges, follow-ups, any outbound sent from his accounts). Jeremy does not use em dashes in his own writing and wants drafts to match his voice. Substitute with a period, comma, semicolon, or parentheses depending on context. Review every draft before presenting or saving and strip any em dash that slipped in, including any copied from quoted text that ends up in your new prose. Scope is outbound emails; em dashes in internal repo text, journals, or briefings to Jeremy are fine.
 
 ## Conventions
 
