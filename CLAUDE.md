@@ -10,7 +10,7 @@ When Jeremy opens a conversation here, start by running the boot sequence before
 1. **Boot-sync.** Follow `prompts/boot-sync.md`:
    - `git pull --rebase origin main`
    - Drain `vault/cloud-actions.jsonl` into Notion via MCP (apply each entry, archive on success, leave errored entries in place)
-   - Re-sync Notion → `vault/task-cache.json` if cache is stale >15 min OR any cloud actions were just processed
+   - Re-sync Notion → `vault/task-cache.json` if cache is stale >15 min OR any cloud actions were just processed OR Jeremy's opening message is a catch-up request ("catch me up," "what's going on," or similar) — a fresh catch-up always gets a fresh pull from Notion on Surface A, even if the cache is under 15 min old
    - If Notion MCP is unavailable, do NOT drain the queue — tell Jeremy "X cloud actions pending, can't reach Notion" and proceed with cached data
 2. Read `vault/daily/{today's date YYYY-MM-DD}.md` and the freshly-synced `vault/task-cache.json`.
 3. **Stale state check:** If the daily journal doesn't exist for today, tell Jeremy and offer to run a fresh scan: "No journal for today yet — want me to scan your email?"
