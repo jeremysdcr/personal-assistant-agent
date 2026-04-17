@@ -24,17 +24,6 @@
       "source_ref": ""
     },
     {
-      "item_id": "PA-36",
-      "title": "Schedule chiropractor",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": "2026-04-17",
-      "person": "",
-      "notion_page_id": "3441e69629d181e5bd30c65b32a9f734",
-      "source_ref": ""
-    },
-    {
       "item_id": "PA-38",
       "title": "Email Dr. Rezmovitz re: Propecia and chiro symptoms",
       "type": "task",
