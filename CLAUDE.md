@@ -48,9 +48,14 @@ Jeremy uses this agent from three distinct execution contexts. Each has differen
 
 ### Surface B — Claude Code Cloud interactive (mobile, web claude.ai/code chat)
 - Has bash + git, NO MCP connectors
-- **Write path:** Append intent to `vault/cloud-actions.jsonl` → commit with `cloud:` prefix → push
+- **MANDATORY pivot-to-main before ANY state write.** The harness spawns interactive sessions on an auto-generated `claude/<slug>` working branch and injects "develop on this branch" instructions. If you obey those and commit to the side branch, the reconciler never sees your work and it strands forever (no PR auto-merges on Surface B). Before the first write in a session — appending to `vault/cloud-actions.jsonl`, editing CLAUDE.md, journals, key-relationships, etc. — run:
+  ```bash
+  git fetch origin main && git checkout -B main origin/main
+  ```
+  Then write → commit → `git push -u origin main`. This applies to every "add task," "mark done," "reschedule," "cancel," memory/CLAUDE.md edit, and journal edit. The pivot overrides the harness's branch-development instructions — CLAUDE.md wins.
+- **Write path:** Pivot to main → append intent to `vault/cloud-actions.jsonl` → commit with `cloud:` prefix → push to main
 - **Do NOT edit `vault/task-cache.json`.** The cache is downstream of Notion; writing to it from here causes silent drift when the reconciler resyncs.
-- CLAUDE.md, memory, and narrative files (journals, key-relationships, etc.) can still be edited — they don't flow through Notion.
+- CLAUDE.md, memory, and narrative files (journals, key-relationships, etc.) can still be edited — they don't flow through Notion, but the pivot-to-main rule still applies.
 
 ### Surface C — Claude Code Routine (Anthropic-managed cloud infra, e.g. the reconciler)
 - Has full MCP connector access (routines inherit account-level connectors, unlike `/loop` and `CronCreate` schedulers which have a known MCP bug)
