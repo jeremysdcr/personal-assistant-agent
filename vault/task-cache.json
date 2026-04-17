@@ -134,17 +134,6 @@
       "source_ref": ""
     },
     {
-      "item_id": "PA-77",
-      "title": "Email intro: Daniel Cashman (fleet maintenance) ↔ Gershon",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": "2026-04-20",
-      "person": "Daniel Cashman / Gershon Hurwen",
-      "notion_page_id": "3451e69629d1819b9939e0bede3f6b4f",
-      "source_ref": "3451e69629d181be9e33dbab21e49879"
-    },
-    {
       "item_id": "PA-72",
       "title": "Analyze Bezede's Project Elevate responses (1-hr block)",
       "type": "task",
