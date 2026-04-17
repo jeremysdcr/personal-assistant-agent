@@ -7,7 +7,7 @@ When the extraction prompt encounters an email from a key relationship,
 treat even soft signals ("sounds good", "let's touch base") as follow-up items.
 
 ## Partners / Inner Circle
-- **Robert (Rob) Handelman** — Co-GP with Jeremy on virtually all current investments. Also CEO of Staff Relief Healthcare (active M&A deal for tuck-ins). Co-GP of Loyalty Markets. HH Capital Partners. YPO member. Highest-priority contact — treat all emails as actionable.
+- **Robert (Rob) Handelman** — Co-GP with Jeremy on virtually all current investments. Also CEO of Staff Relief Healthcare (active M&A deal for tuck-ins). Co-GP of Loyalty Markets. HH Capital Partners (`robert@hhcapitalpartners.net` — note `.net`, not `.com`). Also reachable at `r_handelman@yahoo.ca`. YPO member. Highest-priority contact — treat all emails as actionable.
 
 ## Active Deals
 - **John Furtado** — President/CEO, Precise Commercial Solutions (precisecsolutions.com). Active partner deal. Growing via M&A (building acquisition target list). Casey LOI fell through; pivoting to new targets. **Not to be confused with John Chidiac** (Loyalty Markets board member) — different person, different company.
