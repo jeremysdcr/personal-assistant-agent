@@ -2,6 +2,17 @@
   "synced_at": "2026-04-17T20:54:00Z",
   "items": [
     {
+      "item_id": "PA-81",
+      "title": "Ian Kessler to pick call time from proposed slots",
+      "type": "commitment_theirs",
+      "status": "waiting",
+      "priority": "medium",
+      "due_date": "2026-04-20",
+      "person": "Ian Kessler",
+      "notion_page_id": "3451e69629d181369a58c407c1003e59",
+      "source_ref": ""
+    },
+    {
       "item_id": "PA-69",
       "title": "Conflict: 04/17 08:45 — Breakfast with Adam ↔ Aucctus Board Meeting",
       "type": "follow_up",
