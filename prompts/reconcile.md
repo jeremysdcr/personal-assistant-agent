@@ -56,6 +56,21 @@ For each parsed entry, in order:
 - Append each successfully processed entry to `vault/cloud-actions-archive/YYYY-MM.jsonl` (current month)
 - Rewrite `vault/cloud-actions.jsonl` with only the unprocessed (errored or skipped) entries — if none, write an empty file (just a trailing newline)
 
+### 4.5. Commit drain + push (durable checkpoint)
+
+**Run this BEFORE Step 5.** The drain must land on `origin/main` before the cache resync is attempted, because Step 5 has historically failed mid-turn (stream idle timeout) — and when it does, any uncommitted Step 4 work is lost, even though Notion already has the effects. Committing first ensures the next reconcile run sees an empty queue and won't re-drain.
+
+If Step 4 modified any file:
+- `git add vault/cloud-actions.jsonl vault/cloud-actions-archive/`
+- Commit with:
+  - All successful: `reconcile: drained {N} cloud actions`
+  - Partial errors: `reconcile: drained {N}, {M} errors remain in queue`
+- `git push origin main`
+
+If Step 4 wrote nothing (empty queue from the start): skip this step entirely.
+
+Everything after this point is best-effort. A Step 5 failure will NOT undo the drain.
+
 ### 5. Re-sync cache from Notion
 - Query `notion-query-database-view` against the Active Items view `view://3441e696-29d1-81ac-84aa-000cd656c691`
 - Write `vault/task-cache.json` with this exact slim schema:
@@ -71,16 +86,32 @@ For each parsed entry, in order:
 
 Per-item fields: exactly these 9 — `item_id`, `title`, `type`, `status`, `priority`, `due_date`, `person`, `notion_page_id`, `source_ref`. Do not include Notion fields outside this list (`source`, `source_subject`, `notes`, `created`, `updated`) — consumers query Notion live for those when needed.
 
-**Critical — prior runs timed out at this step:** emit the entire cache JSON in a single `Write` tool call. Do not describe, enumerate, count, or comment on the items in your response text. Do not self-verify item counts or reconcile discrepancies between tool output and your own count. Trust the query result. The output of this step is the file write and nothing else. If your response text contains any reference to specific items during this step, you've violated the output discipline — stop and write the file.
+**Step 5 output discipline (hard rules — prior runs have violated these and hit `Stream idle timeout - partial response received`):**
 
-### 6. Commit and push
-If any files changed in steps 4 or 5:
-- `git add vault/cloud-actions.jsonl vault/cloud-actions-archive/ vault/task-cache.json`
-- Commit message format:
-  - All successful: `reconcile: applied {N} cloud actions, cache resynced`
-  - Partial errors: `reconcile: applied {N}, {M} errors remain in queue`
-  - Just a cache resync (no actions): `reconcile: cache resynced`
+1. After the MCP query tool-result arrives, the **very next thing** in your response must be the `Write` tool call for `vault/task-cache.json`. No text before it. No reasoning. No count. No narration like "Now I'll write the cache" or "The query returned N items."
+2. Do **not** paste the raw query response into any other file. Do **not** write an intermediate file. Transform into the slim schema inline and emit one `Write` call.
+3. Do **not** re-read the file you just wrote. The `Write` tool's success acknowledgement is sufficient. Self-verification burns the remaining turn budget and has caused idle timeouts.
+4. If you find yourself generating prose between the MCP tool-result and the `Write` call, you are violating this rule — stop and emit the `Write` call immediately.
+
+The transform is mechanical: take each object in `results`, extract exactly `{item_id, title, type, status, priority, due_date, person, notion_page_id, source_ref}` — prefix `Item ID` with `PA-`; map `date:Due Date:start` → `due_date` with null fallback; strip dashes from the 32-char hex in the page URL for `notion_page_id`. Emit `{"synced_at": "<current UTC ISO>", "items": [...]}`. One `Write` call. That's it.
+
+### 6. Commit cache resync + push
+If Step 5 wrote `vault/task-cache.json`:
+- `git add vault/task-cache.json`
+- Commit with: `reconcile: cache resynced`
 - `git push origin main` (using the unrestricted push permission configured on the routine)
+
+If Step 5 didn't run (idempotent early-exit from the contract below): skip this step entirely.
+
+**Commit-message matrix across both commits:**
+
+| Scenario | Step 4.5 commit | Step 6 commit |
+|---|---|---|
+| Drain + successful cache resync | `reconcile: drained {N} cloud actions` | `reconcile: cache resynced` |
+| Drain + partial errors + cache resync | `reconcile: drained {N}, {M} errors remain in queue` | `reconcile: cache resynced` |
+| Drain succeeded, Step 5 failed mid-turn | `reconcile: drained {N} cloud actions` | — (next run retries cache) |
+| No drain (empty queue), stale cache | — | `reconcile: cache resynced` |
+| Nothing to do (empty queue, fresh cache) | — | — |
 
 ### 7. Notify Jeremy (only on errors)
 If any entries stayed in the queue with `error_flag`, create a Notion comment on the Daily Brief page `3441e696-29d1-815b-9a43-c156cad7fc34`:
@@ -92,6 +123,7 @@ If any entries stayed in the queue with `error_flag`, create a Notion comment on
 - If the log is empty and the cache is less than 15 minutes old (`synced_at`): exit 0 with no commit.
 - If another session has already drained the log between the time of your trigger and your pull: you'll see an empty file; just do a cache resync (if stale) and exit.
 - Never delete entries you didn't process; always prefer leaving in the queue over guessing.
+- If a prior run committed a drain but failed Step 5 (a `reconcile: drained N cloud actions` commit landed on `origin/main` without a subsequent `reconcile: cache resynced` commit), the cache is stale but consistent with Notion as of pre-drain. The next run sees an empty queue, finds the cache stale (>15 min), and runs Step 5 alone — emitting a `reconcile: cache resynced` commit. No special handling needed.
 
 ## Setup Requirements
 
