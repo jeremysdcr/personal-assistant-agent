@@ -1,49 +1,16 @@
 {
-  "synced_at": "2026-04-17T21:14:00Z",
+  "synced_at": "2026-04-18T02:54:25Z",
   "items": [
     {
-      "item_id": "PA-82",
-      "title": "Ask Ian about exact Simchat Bat start time on our call",
-      "type": "follow_up",
-      "status": "open",
-      "priority": "medium",
-      "due_date": "2026-04-24",
-      "person": "Ian Kessler",
-      "notion_page_id": "3451e69629d1817bae16e7cf962c97e0",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-81",
-      "title": "Ian Kessler to pick call time from proposed slots",
-      "type": "commitment_theirs",
-      "status": "waiting",
-      "priority": "medium",
-      "due_date": "2026-04-20",
-      "person": "Ian Kessler",
-      "notion_page_id": "3451e69629d181369a58c407c1003e59",
-      "source_ref": ""
-    },
-    {
       "item_id": "PA-69",
-      "title": "Conflict: 04/17 08:45 \u2014 Breakfast with Adam \u2194 Aucctus Board Meeting",
+      "title": "Conflict: 04/17 08:45 — Breakfast with Adam ↔ Aucctus Board Meeting",
       "type": "follow_up",
       "status": "open",
       "priority": "high",
-      "due_date": "2026-04-17",
+      "due_date": "2026-04-18",
       "person": "",
       "notion_page_id": "3451e69629d1819da733dcf62606a331",
       "source_ref": "conflict:4a5s0kve6cumb7f93io08vg7r4:71453810182e4508b5e0e2c2375cb6a2"
-    },
-    {
-      "item_id": "PA-40",
-      "title": "Return iPhone before refund deadline expires",
-      "type": "task",
-      "status": "open",
-      "priority": "urgent",
-      "due_date": "2026-04-19",
-      "person": "Leore",
-      "notion_page_id": "3441e69629d1810b823fea3eaf700373",
-      "source_ref": ""
     },
     {
       "item_id": "PA-38",
@@ -58,7 +25,7 @@
     },
     {
       "item_id": "PA-16",
-      "title": "Email Jordan (JNH Capital) \u2014 stale 25 days at Offer stage",
+      "title": "Email Jordan (JNH Capital) — stale 25 days at Offer stage",
       "type": "task",
       "status": "open",
       "priority": "high",
@@ -69,7 +36,7 @@
     },
     {
       "item_id": "PA-24",
-      "title": "Reply to Sunny Ray \u2014 decide on podcast appearance",
+      "title": "Reply to Sunny Ray — decide on podcast appearance",
       "type": "task",
       "status": "open",
       "priority": "low",
@@ -80,7 +47,7 @@
     },
     {
       "item_id": "PA-27",
-      "title": "Email Danielle \u2014 follow through on commitment",
+      "title": "Email Danielle — follow through on commitment",
       "type": "commitment_mine",
       "status": "open",
       "priority": "medium",
@@ -134,6 +101,50 @@
       "source_ref": ""
     },
     {
+      "item_id": "PA-85",
+      "title": "Give Max access to Meeting Notes database in Notion and wire it up as a new surface",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-04-20",
+      "person": "",
+      "notion_page_id": "3461e69629d1813faad3e162e5f9d133",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-86",
+      "title": "Give Max a path to read personal email",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-04-20",
+      "person": "",
+      "notion_page_id": "3461e69629d181548bf9f76068351d74",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-84",
+      "title": "Message Mike and Lior (ConnectCPA) re: referral, book quick fit call",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-04-20",
+      "person": "Mike and Lior (ConnectCPA)",
+      "notion_page_id": "3451e69629d18158b324f06ab328fe36",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-81",
+      "title": "Ian Kessler to pick call time from proposed slots",
+      "type": "commitment_theirs",
+      "status": "waiting",
+      "priority": "medium",
+      "due_date": "2026-04-20",
+      "person": "Ian Kessler",
+      "notion_page_id": "3451e69629d181369a58c407c1003e59",
+      "source_ref": ""
+    },
+    {
       "item_id": "PA-80",
       "title": "Jen Hennings to post Loyalty Markets team announcement to Sidecar website",
       "type": "commitment_theirs",
@@ -142,6 +153,17 @@
       "due_date": "2026-04-20",
       "person": "Jennifer Hennings",
       "notion_page_id": "3451e69629d181bbabfad8690c0a2c68",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-76",
+      "title": "Set up invoicing + Plooto mid-month PAD for SCP advisory fees (Loyalty Markets)",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-20",
+      "person": "Gershon Hurwen",
+      "notion_page_id": "3451e69629d18122ac6dd107b23bca90",
       "source_ref": ""
     },
     {
@@ -157,35 +179,13 @@
     },
     {
       "item_id": "PA-66",
-      "title": "Email Ash at Climate Door re: potential PE intros \u2014 send investment criteria",
+      "title": "Email Ash at Climate Door re: potential PE intros — send investment criteria",
       "type": "task",
       "status": "open",
       "priority": "high",
       "due_date": "2026-04-20",
       "person": "Ash (Climate Door)",
       "notion_page_id": "3451e69629d18115a367f7c994430b70",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-62",
-      "title": "Complete Phase 3 \u2014 dry-run and register scan-and-check routine",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-22",
-      "person": "",
-      "notion_page_id": "3441e69629d18187a12acce4a0201895",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-57",
-      "title": "Pick up printing from AAE Printing",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-20",
-      "person": "Lee (AAE Printing)",
-      "notion_page_id": "3441e69629d181b6bda8df9d49efb798",
       "source_ref": ""
     },
     {
@@ -201,7 +201,7 @@
     },
     {
       "item_id": "PA-28",
-      "title": "Send Operational Partner Database \u2014 committed to multiple people",
+      "title": "Send Operational Partner Database — committed to multiple people",
       "type": "commitment_mine",
       "status": "open",
       "priority": "high",
@@ -222,19 +222,8 @@
       "source_ref": ""
     },
     {
-      "item_id": "PA-33",
-      "title": "CDA filings \u2014 check status JR PQMLP Holdings 2025; notify MNP re 2026",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": "2026-04-22",
-      "person": "",
-      "notion_page_id": "3441e69629d181638d63f752ae1eb866",
-      "source_ref": ""
-    },
-    {
       "item_id": "PA-21",
-      "title": "J2J Expo prep \u2014 finalize materials and logistics",
+      "title": "J2J Expo prep — finalize materials and logistics",
       "type": "task",
       "status": "open",
       "priority": "high",
@@ -255,19 +244,19 @@
       "source_ref": "19d8cf2c7b37d10a"
     },
     {
-      "item_id": "PA-76",
-      "title": "Set up invoicing + Plooto mid-month PAD for SCP advisory fees (Loyalty Markets)",
-      "type": "task",
+      "item_id": "PA-52",
+      "title": "Eterna — confirm invoice payment received",
+      "type": "follow_up",
       "status": "open",
-      "priority": "medium",
+      "priority": "high",
       "due_date": "2026-04-20",
-      "person": "Gershon Hurwen",
-      "notion_page_id": "3451e69629d18122ac6dd107b23bca90",
+      "person": "Eterna",
+      "notion_page_id": "3441e69629d181dcb829c5a43de9de6d",
       "source_ref": ""
     },
     {
       "item_id": "PA-70",
-      "title": "Conflict: 04/21 10:45 \u2014 J2J Expo 2026 \u2194 Prospecting and Prospect Follow-Ups",
+      "title": "Conflict: 04/21 10:45 — J2J Expo 2026 ↔ Prospecting and Prospect Follow-Ups",
       "type": "follow_up",
       "status": "open",
       "priority": "medium",
@@ -289,7 +278,7 @@
     },
     {
       "item_id": "PA-17",
-      "title": "Probe John Furtado on Casey pass \u2014 look for a wedge to reopen",
+      "title": "Probe John Furtado on Casey pass — look for a wedge to reopen",
       "type": "task",
       "status": "open",
       "priority": "medium",
@@ -300,7 +289,7 @@
     },
     {
       "item_id": "PA-3",
-      "title": "Prep for John Furtado meeting \u2014 M&A target criteria discussion",
+      "title": "Prep for John Furtado meeting — M&A target criteria discussion",
       "type": "task",
       "status": "open",
       "priority": "medium",
@@ -321,15 +310,26 @@
       "source_ref": ""
     },
     {
-      "item_id": "PA-61",
-      "title": "Follow up with Richard Roos \u2014 post-meeting actions",
-      "type": "follow_up",
+      "item_id": "PA-62",
+      "title": "Complete Phase 3 — dry-run and register scan-and-check routine",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-22",
+      "person": "",
+      "notion_page_id": "3441e69629d18187a12acce4a0201895",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-33",
+      "title": "CDA filings — check status JR PQMLP Holdings 2025; notify MNP re 2026",
+      "type": "task",
       "status": "open",
       "priority": "medium",
-      "due_date": "2026-04-23",
-      "person": "Richard Roos",
-      "notion_page_id": "3441e69629d181409ad7c7a0d22b8595",
-      "source_ref": "19d9725126d8056d"
+      "due_date": "2026-04-22",
+      "person": "",
+      "notion_page_id": "3441e69629d181638d63f752ae1eb866",
+      "source_ref": ""
     },
     {
       "item_id": "PA-15",
@@ -351,6 +351,28 @@
       "due_date": "2026-04-23",
       "person": "Mario",
       "notion_page_id": "3441e69629d181b086d3c1339002240e",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-87",
+      "title": "Ship Download as PDF button on Sidecar Capital Partners blog posts",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-04-24",
+      "person": "",
+      "notion_page_id": "3461e69629d18155bb61e298ee3c745e",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-82",
+      "title": "Ask Ian about exact Simchat Bat start time on our call",
+      "type": "follow_up",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-04-24",
+      "person": "Ian Kessler",
+      "notion_page_id": "3451e69629d1817bae16e7cf962c97e0",
       "source_ref": ""
     },
     {
@@ -399,7 +421,7 @@
     },
     {
       "item_id": "PA-26",
-      "title": "Bad Timing re-engagement \u2014 pick 2 from Royal Fire, Atlantic Growth, ConnectCPA",
+      "title": "Bad Timing re-engagement — pick 2 from Royal Fire, Atlantic Growth, ConnectCPA",
       "type": "task",
       "status": "open",
       "priority": "low",
@@ -410,7 +432,7 @@
     },
     {
       "item_id": "PA-19",
-      "title": "Predictive Success \u2014 final outreach or close lost",
+      "title": "Predictive Success — final outreach or close lost",
       "type": "task",
       "status": "open",
       "priority": "low",
@@ -421,7 +443,7 @@
     },
     {
       "item_id": "PA-41",
-      "title": "Book Disney trip \u2014 August family vacation",
+      "title": "Book Disney trip — August family vacation",
       "type": "task",
       "status": "open",
       "priority": "medium",
@@ -443,7 +465,7 @@
     },
     {
       "item_id": "PA-31",
-      "title": "File personal taxes for Jeremy and Leore \u2014 deadline April 30",
+      "title": "File personal taxes for Jeremy and Leore — deadline April 30",
       "type": "task",
       "status": "open",
       "priority": "urgent",
@@ -475,6 +497,17 @@
       "source_ref": ""
     },
     {
+      "item_id": "PA-83",
+      "title": "Work with Josh to prepare Loyalty Markets board package",
+      "type": "commitment_mine",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-06-10",
+      "person": "Josh",
+      "notion_page_id": "3451e69629d18106b66cda77947d977b",
+      "source_ref": ""
+    },
+    {
       "item_id": "PA-74",
       "title": "Circulate agenda for Loyalty Markets board meeting (Wed 6/24)",
       "type": "task",
@@ -487,7 +520,7 @@
     },
     {
       "item_id": "PA-73",
-      "title": "Flip all routine crons EDT\u2192EST (DST ends Nov 1, 2026)",
+      "title": "Flip all routine crons EDT→EST (DST ends Nov 1, 2026)",
       "type": "task",
       "status": "open",
       "priority": "medium",
@@ -640,17 +673,6 @@
       "source_ref": ""
     },
     {
-      "item_id": "PA-52",
-      "title": "Eterna \u2014 confirm invoice payment received",
-      "type": "follow_up",
-      "status": "open",
-      "priority": "medium",
-      "due_date": null,
-      "person": "Eterna",
-      "notion_page_id": "3441e69629d181dcb829c5a43de9de6d",
-      "source_ref": ""
-    },
-    {
       "item_id": "PA-11",
       "title": "Watch for Mauro Folco response re: Leadout Capital intro offer",
       "type": "follow_up",
@@ -693,28 +715,6 @@
       "person": "Robert Bezede",
       "notion_page_id": "3441e69629d181f59461c8d49121af9a",
       "source_ref": "19d93258acd33a40"
-    },
-    {
-      "item_id": "PA-83",
-      "title": "Work with Josh to prepare Loyalty Markets board package",
-      "type": "commitment_mine",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-06-10",
-      "person": "Josh",
-      "notion_page_id": "3451e696-29d1-8106-b66c-da77947d977b",
-      "source_ref": null
-    },
-    {
-      "item_id": "PA-84",
-      "title": "Message Mike and Lior (ConnectCPA) re: referral, book quick fit call",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": "2026-04-20",
-      "person": "Mike and Lior (ConnectCPA)",
-      "notion_page_id": "3451e696-29d1-8158-b324-f06ab328fe36",
-      "source_ref": null
     }
   ]
 }
