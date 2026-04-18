@@ -6,6 +6,18 @@ The authoritative reconciliation logic lives in `prompts/reconcile.md` (used by 
 
 ---
 
+## Applies to
+
+Surface A (CLI desktop extension) and Surface C (routines) — both have Notion MCP. **If you are on Surface B (cloud interactive, no MCP), short-circuit and skip the rest of this prompt.** Without MCP, boot-sync cannot drain `vault/cloud-actions.jsonl` or re-sync the cache, so running it is a no-op at best and misleading at worst.
+
+Surface B short-circuit procedure:
+1. Peek at `vault/cloud-actions.jsonl`. If non-empty, tell Jeremy "N cloud actions pending — next reconciler run or CLI boot will drain." If empty, no mention needed.
+2. Proceed to user-facing work under Surface B's write rules (see CLAUDE.md → Surfaces and Write Rules): pivot to main before any state write, append intents to the cloud-actions log, never edit `vault/task-cache.json`.
+
+Surface detection: try any Notion MCP tool (e.g. `notion-fetch` on the Daily Brief page). If it errors with "tool not available" or equivalent, you are on Surface B — stop here.
+
+---
+
 ## Steps
 
 ### 0. Get real time
