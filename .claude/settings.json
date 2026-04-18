@@ -9,6 +9,16 @@
           }
         ]
       }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd /Users/Jrosmarin/personal-assistant-agent && UNPUSHED=$(git log origin/main..HEAD --oneline 2>/dev/null); if [ -n \"$UNPUSHED\" ]; then N=$(echo \"$UNPUSHED\" | wc -l | tr -d ' '); echo \"⚠ $N unpushed commit(s) on local main — run: git push origin main\"; echo \"$UNPUSHED\"; fi"
+          }
+        ]
+      }
     ]
   }
 }

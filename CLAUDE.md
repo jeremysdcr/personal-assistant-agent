@@ -42,7 +42,7 @@ Jeremy uses this agent from three distinct execution contexts. Each has differen
 
 ### Surface A — Claude Code CLI (desktop extension)
 - Has full MCP connector access (Notion, Gmail, HubSpot, Calendar, Drive)
-- **Write path:** Notion first → cache → commit (the standard convention)
+- **Write path:** Notion first → cache → commit → push (the standard convention; see Conventions)
 - On boot: run boot-sync to drain any pending cloud actions (see Quick Start)
 
 ### Surface B — Claude Code Cloud interactive (mobile, web claude.ai/code chat)
@@ -91,6 +91,14 @@ Pasting creates drift between the registered routine and the source file every t
 Supported `intent` values: `mark_done`, `cancel`, `add_task`, `update_status`, `reschedule`, `update_notes`, `other`. See `prompts/reconcile.md` Step 3 for the mapping to Notion writes.
 
 When writing an entry from Surface B, always include a `narrative` field — it's the fallback signal the reconciler uses to resolve anything the structured intent misses.
+
+### Same-session prompt staleness (known trap)
+
+Prompts (`CLAUDE.md`, `prompts/*`) are loaded into context when a session spawns. Edits made during a running session do **not** re-load — the session keeps following whatever version it loaded at spawn, even after the fix is on disk and pushed to `origin/main`. Consequence: to verify a prompt-level fix, open a **new** session; don't re-test in the session that shipped it.
+
+Symptoms of misdiagnosis: "I just fixed this but the behavior is unchanged" in the same chat. If you catch yourself writing that sentence, the fix is probably live on disk — spawn a fresh session and re-test there before concluding the fix didn't work.
+
+Corollary for Surface B: if you ship a boot-sync change mid-session, the current cloud session's workspace snapshot is still stale *and* its in-memory instructions are still old. Both gaps close only on the next spawn. For the same reason, a cloud session that shipped a fix cannot self-verify it — ask Jeremy to open a new cloud tab to confirm.
 
 ---
 
@@ -220,7 +228,7 @@ Jeremy will say things like:
 
 ## Conventions
 
-- **Write order (Surface A / C):** Update Notion first, then update the local cache, then commit and push
+- **Write order (Surface A / C):** Update Notion first, then update the local cache, then `git commit` and `git push origin main`. After push, print `pushed N commits to origin/main at <sha>` in Jeremy-facing output (N from `git rev-list --count <pre-sha>..HEAD`). The explicit push + confirmation is non-optional — silent local commits are how cross-surface staleness starts.
 - **Write order (Surface B):** Append to `vault/cloud-actions.jsonl` only. Do not edit the cache. See Surfaces and Write Rules above.
 - **Never delete items** — mark them as cancelled instead
 - **Timezone:** America/New_York (Eastern)

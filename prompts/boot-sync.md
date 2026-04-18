@@ -67,7 +67,7 @@ Otherwise: query `notion-query-database-view` on `view://3441e696-29d1-81ac-84aa
 
 If step 6 or 7 modified files:
 - `git add vault/` and commit with message `boot-sync: applied {N} cloud actions` (or `boot-sync: cache resynced` if actions count = 0).
-- Do not push — the commit will go out with whatever work comes next.
+- **Push immediately:** `git push origin main`. The boot-sync commit is self-contained state and should ship on its own turn; deferring creates strand risk if the session ends without another state-change turn (the session Stop hook in `.claude/settings.json` will flag any unpushed commits as a safety net, but pushing here is the clean invariant).
 
 ### 9. Queue peek (Surface B only)
 
