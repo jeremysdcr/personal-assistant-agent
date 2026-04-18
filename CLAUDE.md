@@ -12,8 +12,9 @@ When Jeremy opens a conversation here, start by running the boot sequence before
    - **Phase B (Surface A/C only):** drain `vault/cloud-actions.jsonl` into Notion via MCP, then re-sync Notion → `vault/task-cache.json` if cache is stale >15 min OR any cloud actions were just processed OR Jeremy's opening message is a catch-up request. Surface B skips Phase B and peeks at the queue instead: if non-empty, tell Jeremy "X cloud actions pending — next reconciler run or CLI boot will drain."
 2. Read `vault/daily/{today's date YYYY-MM-DD}.md` and the freshly-synced `vault/task-cache.json`.
 3. **Stale state check:** If the daily journal doesn't exist for today, tell Jeremy and offer to run a fresh scan: "No journal for today yet — want me to scan your email?"
-4. Summarize: today's schedule, calendar conflicts in the next 7 days, attention-required items, new items since last check, crack-check flags, draft replies waiting in Gmail. **Only surface items with status=open, in_progress, waiting, or stale** — never include done or cancelled items in a briefing, even if they appear in the cache.
-5. If Jeremy says "catch me up," "what's going on," or similar — this is the flow.
+4. **Source-of-truth precedence.** The journal is a point-in-time morning snapshot; the cache (and Notion behind it) is live. When a task appears in both, **cache wins for `status`, `due_date`, `priority`, and `type`** — these fields drift the moment Jeremy reschedules, reclassifies, or closes something mid-day, and the journal does not get rewritten. Use the journal only for narrative context (hidden constraints, tone, reasoning, "coordinate passcode with Leore first," etc.). If cache and journal disagree on a status-sensitive field, surface the disagreement ("journal said today, cache says Monday — cache wins") rather than silently picking one.
+5. Summarize: today's schedule, calendar conflicts in the next 7 days, attention-required items, new items since last check, crack-check flags, draft replies waiting in Gmail. **Only surface items with status=open, in_progress, waiting, or stale** — never include done or cancelled items in a briefing, even if they appear in the cache.
+6. If Jeremy says "catch me up," "what's going on," or similar — this is the flow.
 
 ## Email
 
