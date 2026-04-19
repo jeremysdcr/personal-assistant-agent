@@ -61,7 +61,7 @@ Skip this step if ALL of:
 - `synced_at` in `vault/task-cache.json` is within the last 15 minutes
 - Phase A did not pull any new commits (if it did, main may have newer cache state worth reading but not re-querying)
 
-Otherwise: query `notion-query-database-view` on `view://3441e696-29d1-81ac-84aa-000cd656c691`, overwrite `vault/task-cache.json` using the slim schema defined in `prompts/reconcile.md` step 5 (single source of truth).
+Otherwise: call `notion-query-database-view` with `view_url: https://www.notion.so/3441e69629d1815b9a43c156cad7fc34?v=3441e69629d181ac84aa000cd656c691` (the Active Items view — use this exact URL string; `notion://...` and `view://...` shorthands are rejected with `validation_error`), overwrite `vault/task-cache.json` using the slim schema defined in `prompts/reconcile.md` step 5 (single source of truth).
 
 **Output discipline (hard rules — prior runs have violated these and hit `Stream idle timeout - partial response received`; the canonical version lives in `prompts/reconcile.md` step 5):**
 

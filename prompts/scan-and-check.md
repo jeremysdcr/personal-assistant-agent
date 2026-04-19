@@ -12,6 +12,18 @@ This routine combines two functions:
 - **Part A:** Scan recent email and extract obligations, commitments, and follow-ups
 - **Part B:** Review all active items and flag what's overdue, stale, or approaching deadline
 
+## Output discipline (hard rules — prior runs on sibling routines have hit `Stream idle timeout - partial response received`)
+
+You run autonomously — Jeremy does not see your output. Emit tool calls, not explanations. Never narrate what you're about to do; do it. The reconciler's step 5 (`prompts/reconcile.md`) is the canonical version of this discipline; the steps below carry the same hazard and must be treated the same way:
+
+- **Step 8 (write new/updated items to Notion):** After the extraction output is produced, emit `notion-create-pages` / `notion-update-page` calls back to back. No prose enumerating what you're about to create. One call per item.
+- **Step 13 (update flagged items):** Same — emit the `notion-update-page` calls back to back after Step 12's evaluation. No narration between them.
+- **Step 15 (cache resync Write):** After `notion-query-database-view` returns, emit the `Write` on `vault/task-cache.json` immediately. No narration, no re-read, no intermediate file. Same transform as `prompts/reconcile.md` step 5.
+- **Step 16 (daily journal append):** The `Write` (or `Edit`) on `vault/daily/{YYYY-MM-DD}.md` is the very next thing after Step 15's cache write acknowledgement. No preview of the section text.
+- **Do NOT parallelize boot-sync's cache resync with Part A's email scan.** Boot-sync is a hard prerequisite; finish it (including its commit/push) before starting Part A.
+
+If you catch yourself generating prose between an upstream tool result and the next tool call for any of these steps, stop and emit the tool call.
+
 ## Full extraction framework
 
 The complete extraction rules, classification guidance, few-shot examples, and output schema are defined in `prompts/obligation-extract.md`. Embed that entire prompt inline when creating this routine trigger. The key sections:
@@ -42,7 +54,7 @@ The complete extraction rules, classification guidance, few-shot examples, and o
 
 ### Part B: Crack-Check
 
-11. Query all active items from Notion (Active Items view `3441e696-29d1-81ac-84aa-000cd656c691`).
+11. Query all active items from Notion: call `notion-query-database-view` with `view_url: https://www.notion.so/3441e69629d1815b9a43c156cad7fc34?v=3441e69629d181ac84aa000cd656c691` (the Active Items view — use this exact URL string; `notion://...` and `view://...` shorthands are rejected with `validation_error`).
 12. Evaluate each item:
 
 | Condition | Action |
@@ -64,7 +76,7 @@ The complete extraction rules, classification guidance, few-shot examples, and o
 
 ### Finalize
 
-15. Snapshot active items to `vault/task-cache.json` (query Active Items view).
+15. Snapshot active items to `vault/task-cache.json`: call `notion-query-database-view` with `view_url: https://www.notion.so/3441e69629d1815b9a43c156cad7fc34?v=3441e69629d181ac84aa000cd656c691` (same URL as Step 11) and write using the slim schema in `prompts/reconcile.md` step 5.
 16. Append to `vault/daily/{YYYY-MM-DD}.md`:
 
 ```markdown

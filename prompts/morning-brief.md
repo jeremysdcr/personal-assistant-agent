@@ -7,6 +7,16 @@
 
 You are generating the morning briefing for Jeremy Rosmarin, who runs Sidecar Capital Partners (growth equity) and a consulting business. Today's date is {today}.
 
+## Output discipline (hard rules — prior runs have hit `Stream idle timeout - partial response received`)
+
+You run autonomously — Jeremy does not see your output. Emit tool calls, not explanations. Never narrate what you're about to do; do it. The reconciler's step 5 (`prompts/reconcile.md`) is the canonical version of this discipline; the steps below carry the same hazard and must be treated the same way:
+
+- **Step 9 (daily journal Write):** After the last upstream read (gmail/gcal/HubSpot/Notion), the very next thing in your response must be the `Write` tool call for `vault/daily/{today}.md`. No preview of the brief, no enumerating items/meetings/attendees/deals in prose, no re-reading files first.
+- **Step 12 (cache resync Write):** After `notion-query-database-view` returns, emit the `Write` on `vault/task-cache.json` immediately. No narration, no re-read, no intermediate file. Same transform as `prompts/reconcile.md` step 5.
+- **Do NOT parallelize boot-sync's cache resync with Step 2's calendar fetch.** Boot-sync is a hard prerequisite; finish it (including its commit/push) before starting Step 1. Combining a failed cache resync with a 50KB+ calendar response in the same turn is the exact recovery scenario that blows the stream-idle budget.
+
+If you catch yourself generating prose between an upstream tool result and the next tool call for any of these steps, stop and emit the tool call.
+
 ## Steps
 
 ### 0. Boot-sync
@@ -76,7 +86,7 @@ Query HubSpot for active deals (`search_crm_objects`, objectType: "deals", filte
 Summarize: deal count by stage, any deals with recent stage changes.
 
 ### 8. Active Items from Notion
-Query PA Tracker using the Active Items view (`notion-query-database-view` with view `3441e696-29d1-81ac-84aa-000cd656c691`).
+Call `notion-query-database-view` with `view_url: https://www.notion.so/3441e69629d1815b9a43c156cad7fc34?v=3441e69629d181ac84aa000cd656c691` (the Active Items view — use this exact URL string; `notion://...` and `view://...` shorthands are rejected with `validation_error`).
 Group into:
 - Overdue (due_date < today)
 - Due today
@@ -135,7 +145,7 @@ Create a draft email to jeremy@sidecarcapitalpartners.com via `gmail_create_draf
 - This is a reference copy in Gmail (does not push-notify)
 
 ### 12. Update Cache
-Query Notion Active Items view, write to `vault/task-cache.json`.
+Call `notion-query-database-view` with `view_url: https://www.notion.so/3441e69629d1815b9a43c156cad7fc34?v=3441e69629d181ac84aa000cd656c691` (same URL as Step 8), write to `vault/task-cache.json` using the slim schema in `prompts/reconcile.md` step 5.
 
 ### 13. Commit and Push
 

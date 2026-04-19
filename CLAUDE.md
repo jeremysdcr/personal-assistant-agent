@@ -150,11 +150,21 @@ All connectors are configured at the account level and available in Surface A (C
 - **Config page (Last Scan Marker):** 3441e696-29d1-8184-a93f-ddcf3ffb4df3
 
 ### Views
-- **Active Items:** view://3441e696-29d1-81ac-84aa-000cd656c691
-- **My Commitments:** view://3441e696-29d1-811f-ad05-000ccce4ee3e
-- **Waiting On:** view://3441e696-29d1-8123-a925-000cdf63c592
-- **Board:** view://3441e696-29d1-8160-ae6e-000c6ae0670a
-- **Due This Week:** view://3441e696-29d1-8151-b657-000c885b6a05
+- **Active Items:** view id `3441e696-29d1-81ac-84aa-000cd656c691`
+- **My Commitments:** view id `3441e696-29d1-811f-ad05-000ccce4ee3e`
+- **Waiting On:** view id `3441e696-29d1-8123-a925-000cdf63c592`
+- **Board:** view id `3441e696-29d1-8160-ae6e-000c6ae0670a`
+- **Due This Week:** view id `3441e696-29d1-8151-b657-000c885b6a05`
+
+**`notion-query-database-view` URL format (required — the tool rejects `notion://...` and `view://...` shorthands with `validation_error`):**
+
+The `view_url` parameter must be a full Notion URL: `https://www.notion.so/{page_or_db_id_no_dashes}?v={view_id_no_dashes}`. For the Active Items view, the proven-working URL is:
+
+```
+https://www.notion.so/3441e69629d1815b9a43c156cad7fc34?v=3441e69629d181ac84aa000cd656c691
+```
+
+Use this exact string whenever a prompt says "query the Active Items view." For other views, substitute the view ID (no dashes) after `?v=`.
 
 ### Schema
 | Field | Type | Values |

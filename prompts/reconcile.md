@@ -72,7 +72,7 @@ If Step 4 wrote nothing (empty queue from the start): skip this step entirely.
 Everything after this point is best-effort. A Step 5 failure will NOT undo the drain.
 
 ### 5. Re-sync cache from Notion
-- Query `notion-query-database-view` against the Active Items view `view://3441e696-29d1-81ac-84aa-000cd656c691`
+- Call `notion-query-database-view` with `view_url: https://www.notion.so/3441e69629d1815b9a43c156cad7fc34?v=3441e69629d181ac84aa000cd656c691` (the Active Items view — use this exact URL string; `notion://...` and `view://...` shorthands are rejected with `validation_error`)
 - Write `vault/task-cache.json` with this exact slim schema:
 
 ```json
