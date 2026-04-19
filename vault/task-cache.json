@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-04-19T18:19:30Z",
+  "synced_at": "2026-04-19T20:08:00Z",
   "items": [
     {"item_id": "PA-101", "title": "Confirm meeting date with Leore (during the day, week of 4/20)", "type": "task", "status": "open", "priority": "high", "due_date": "2026-04-20", "person": "Leore", "notion_page_id": "3471e69629d18159a993fb0be3ded29e", "source_ref": ""},
     {"item_id": "PA-98", "title": "Resolve morning-brief + eod-review routine timeouts (stream idle)", "type": "task", "status": "open", "priority": "high", "due_date": "2026-04-20", "person": "", "notion_page_id": "3471e69629d18143b92edea5e90e0fd7", "source_ref": ""},
@@ -36,6 +36,7 @@
     {"item_id": "PA-14", "title": "Mario (EFI) to revert with proposed terms", "type": "commitment_theirs", "status": "open", "priority": "high", "due_date": "2026-04-23", "person": "Mario", "notion_page_id": "3441e69629d181b086d3c1339002240e", "source_ref": ""},
     {"item_id": "PA-25", "title": "Reply to Sahil Nawal (UT Austin)", "type": "task", "status": "open", "priority": "high", "due_date": "2026-04-23", "person": "Sahil Nawal", "notion_page_id": "3441e69629d181da9817c86e7b49f7bd", "source_ref": ""},
     {"item_id": "PA-23", "title": "Reply to Anthony Marotta (M-Squared Advisory)", "type": "task", "status": "open", "priority": "high", "due_date": "2026-04-23", "person": "Anthony Marotta", "notion_page_id": "3441e69629d181f1b702e5e7376720be", "source_ref": ""},
+    {"item_id": "PA-102", "title": "Call Matt Fishman re logistics company", "type": "task", "status": "open", "priority": "medium", "due_date": "2026-04-24", "person": "Matt Fishman", "notion_page_id": "3471e69629d181d7887dc8c7c631107a", "source_ref": ""},
     {"item_id": "PA-93", "title": "Finish outline and article for Sidecar website about Anthropic", "type": "task", "status": "open", "priority": "medium", "due_date": "2026-04-24", "person": "", "notion_page_id": "3461e69629d181329374c108dfee536a", "source_ref": ""},
     {"item_id": "PA-87", "title": "Ship Download as PDF button on Sidecar Capital Partners blog posts", "type": "task", "status": "open", "priority": "medium", "due_date": "2026-04-24", "person": "", "notion_page_id": "3461e69629d18155bb61e298ee3c745e", "source_ref": ""},
     {"item_id": "PA-78", "title": "Gershon to create corporate GoDaddy account and transfer Loyalty domain ownership", "type": "commitment_theirs", "status": "open", "priority": "medium", "due_date": "2026-04-24", "person": "Gershon Hurwen", "notion_page_id": "3451e69629d18193a5a8f17abb7aa545", "source_ref": "3451e69629d181be9e33dbab21e49879"},
