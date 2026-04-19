@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-04-19T10:57:00Z",
+  "synced_at": "2026-04-19T10:58:00Z",
   "items": [
     {"item_id":"PA-38","title":"Email Dr. Rezmovitz re: Propecia and chiro symptoms","type":"task","status":"open","priority":"high","due_date":"2026-04-19","person":"","notion_page_id":"3441e69629d1810fb950e6d5c5322667","source_ref":""},
     {"item_id":"PA-16","title":"Email Jordan (JNH Capital) — stale 25 days at Offer stage","type":"task","status":"open","priority":"high","due_date":"2026-04-19","person":"Jordan (JNH Capital)","notion_page_id":"3441e69629d1814d9706d03f11add797","source_ref":""},
@@ -69,6 +69,6 @@
     {"item_id":"PA-51","title":"Build first Notion agent (blog posts, lead outreach)","type":"task","status":"open","priority":"low","due_date":null,"person":"","notion_page_id":"3441e69629d181da8346cc757ad64a85","source_ref":""},
     {"item_id":"PA-11","title":"Watch for Mauro Folco response re: Leadout Capital intro offer","type":"follow_up","status":"open","priority":"low","due_date":null,"person":"Mauro Folco","notion_page_id":"3441e69629d181449622ed674debf361","source_ref":"19d9312fed6b504f"},
     {"item_id":"PA-4","title":"John Furtado to share progress on 8 acquisition targets","type":"commitment_theirs","status":"open","priority":"medium","due_date":null,"person":"John Furtado","notion_page_id":"3441e69629d181be982dfdfe70672ca3","source_ref":"19d9238829ec627b"},
-    {"item_id":"PA-7","title":"Review Project Link CIM and send assessment back to Rob","type":"task","status":"open","priority":"high","due_date":"2026-04-16","person":"Robert Handelman","notion_page_id":"3441e69629d181cfb238ffd054f3179d","source_ref":"19d92b221b8c81be"}
+    {"item_id":"PA-7","title":"Review Project Link CIM and send assessment back to Rob","type":"task","status":"open","priority":"high","due_date":null,"person":"Robert Handelman","notion_page_id":"3441e69629d181cfb238ffd054f3179d","source_ref":"19d92b221b8c81be"}
   ]
 }
