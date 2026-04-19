@@ -18,9 +18,9 @@ You run autonomously — Jeremy does not see your output. Emit tool calls, not e
 
 - **Step 8 (write new/updated items to Notion):** After the extraction output is produced, emit `notion-create-pages` / `notion-update-page` calls back to back. No prose enumerating what you're about to create. One call per item.
 - **Step 13 (update flagged items):** Same — emit the `notion-update-page` calls back to back after Step 12's evaluation. No narration between them.
-- **Step 15 (cache resync Write):** After `notion-query-database-view` returns, emit the `Write` on `vault/task-cache.json` immediately. No narration, no re-read, no intermediate file. Same transform as `prompts/reconcile.md` step 5.
+- **Step 15 (cache snapshot Write):** Step 15 does NOT re-query Notion. Immediately after Step 13's last `notion-update-page` acknowledgement (or after Step 12 if no updates were flagged), emit the `Write` on `vault/task-cache.json` by transforming the Step 11 response you're holding. No narration, no re-read, no intermediate file, no second `notion-query-database-view` call. Same transform as `prompts/reconcile.md` step 5.
 - **Step 16 (daily journal append):** The `Write` (or `Edit`) on `vault/daily/{YYYY-MM-DD}.md` is the very next thing after Step 15's cache write acknowledgement. No preview of the section text.
-- **Do NOT parallelize boot-sync's cache resync with Part A's email scan.** Boot-sync is a hard prerequisite; finish it (including its commit/push) before starting Part A.
+- **Single heavy Notion query per run:** boot-sync Phase B step 7 is skipped (see Step 0 below) and Step 15 reuses Step 11's response. Exactly one `notion-query-database-view` call lands in a healthy run — in Step 11. If you catch yourself about to emit a second one, stop and re-read Step 15.
 
 If you catch yourself generating prose between an upstream tool result and the next tool call for any of these steps, stop and emit the tool call.
 
@@ -40,7 +40,7 @@ The complete extraction rules, classification guidance, few-shot examples, and o
 
 ### Part A: Obligation Extraction
 
-0. **Boot-sync.** Run the boot-sync sequence from `prompts/boot-sync.md`: pull, drain `vault/cloud-actions.jsonl` into Notion, resync cache if stale. Ensures any cloud-captured state is reflected before dedup.
+0. **Boot-sync.** Run the boot-sync sequence from `prompts/boot-sync.md`: Phase A (pull + pivot-to-main) and Phase B steps 5–6 (drain `vault/cloud-actions.jsonl` into Notion). **SKIP boot-sync Phase B step 7 (cache resync) when invoked from scan-and-check** — step 15 below is the authoritative cache refresh for this routine. Dedup in step 7 below is keyed on `source_ref` (Gmail message ID, unique) with a title+person fuzzy fallback within 48h; a cache up to 3 hours old is fine for both. Running the resync here would waste a heavy `notion-query-database-view` call on data we're about to re-query anyway, and every extra query compounds stream-idle risk. Still commit/push any cloud-action drain (boot-sync step 8) before proceeding.
 1. Clone repo. Read `vault/task-cache.json` for dedup. Read `vault/key-relationships.md`.
 2. Read scan timestamp from Notion: Query PA Tracker (database `3d5f82fd5c4b41bdbbf437402b18390c`, data source `collection://b3e39150-8cf2-491f-b65f-f13f38fae886`) for Type = config, Title = "Last Scan Marker". Parse ISO timestamp from Notes field.
 3. Load HubSpot deal context: `search_crm_objects` (objectType: "deals", active deals). Build contact email -> deal lookup.
@@ -54,7 +54,7 @@ The complete extraction rules, classification guidance, few-shot examples, and o
 
 ### Part B: Crack-Check
 
-11. Query all active items from Notion: call `notion-query-database-view` with `view_url: https://www.notion.so/3441e69629d1815b9a43c156cad7fc34?v=3441e69629d181ac84aa000cd656c691` (the Active Items view — use this exact URL string; `notion://...` and `view://...` shorthands are rejected with `validation_error`).
+11. Query all active items from Notion: call `notion-query-database-view` with `view_url: https://www.notion.so/3441e69629d1815b9a43c156cad7fc34?v=3441e69629d181ac84aa000cd656c691` (the Active Items view — use this exact URL string; `notion://...` and `view://...` shorthands are rejected with `validation_error`). **This is the single authoritative query for this routine — hold the response in context; step 15 reuses it for the cache snapshot rather than re-querying.**
 12. Evaluate each item:
 
 | Condition | Action |
@@ -76,7 +76,7 @@ The complete extraction rules, classification guidance, few-shot examples, and o
 
 ### Finalize
 
-15. Snapshot active items to `vault/task-cache.json`: call `notion-query-database-view` with `view_url: https://www.notion.so/3441e69629d1815b9a43c156cad7fc34?v=3441e69629d181ac84aa000cd656c691` (same URL as Step 11) and write using the slim schema in `prompts/reconcile.md` step 5.
+15. Snapshot active items to `vault/task-cache.json`: **do NOT re-query Notion.** Transform the held Step 11 response directly into the slim schema and emit a single `Write` call to `vault/task-cache.json`. Use the exact 9-field transform in [prompts/reconcile.md](reconcile.md) step 5. Tradeoff: the cache reflects state as of Step 11 — it will not include Step 13's priority bumps, stale flags, or auto-resolved conflicts. The next scan-and-check run (≤3h later) reconciles. Accepted to keep this routine to a single heavy Notion query.
 16. Append to `vault/daily/{YYYY-MM-DD}.md`:
 
 ```markdown
