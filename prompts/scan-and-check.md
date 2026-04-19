@@ -1,7 +1,7 @@
 # Scan & Check Routine Prompt
 
 **Schedule:** `23 9,12,15,18 * * 1-5` (9:23am, 12:23pm, 3:23pm, 6:23pm ET weekdays)
-**Model:** Opus
+**Model:** Sonnet
 **Fallback:** If comma syntax rejected, create 4 separate triggers: `23 9 * * 1-5`, `23 12 * * 1-5`, `23 15 * * 1-5`, `23 18 * * 1-5`
 
 ---
