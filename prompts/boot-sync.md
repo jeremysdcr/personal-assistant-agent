@@ -63,6 +63,15 @@ Skip this step if ALL of:
 
 Otherwise: query `notion-query-database-view` on `view://3441e696-29d1-81ac-84aa-000cd656c691`, overwrite `vault/task-cache.json` using the slim schema defined in `prompts/reconcile.md` step 5 (single source of truth).
 
+**Output discipline (hard rules — prior runs have violated these and hit `Stream idle timeout - partial response received`; the canonical version lives in `prompts/reconcile.md` step 5):**
+
+1. After the `notion-query-database-view` tool-result arrives, the **very next thing** in your response must be the `Write` tool call for `vault/task-cache.json`. No text before it. No reasoning. No count. No narration like "Now I'll write the cache" or "The query returned N items."
+2. Do **not** paste the raw query response into any other file. Do **not** write an intermediate file. Transform into the slim schema inline and emit one `Write` call.
+3. Do **not** re-read the file you just wrote. The `Write` tool's success acknowledgement is sufficient. Self-verification burns the remaining turn budget and has caused idle timeouts.
+4. If you find yourself generating prose between the MCP tool-result and the `Write` call, you are violating this rule — stop and emit the `Write` call immediately.
+
+The transform is mechanical: take each object in `results`, extract exactly `{item_id, title, type, status, priority, due_date, person, notion_page_id, source_ref}` — prefix `Item ID` with `PA-`; map `date:Due Date:start` → `due_date` with null fallback; strip dashes from the 32-char hex in the page URL for `notion_page_id`. Emit `{"synced_at": "<current UTC ISO>", "items": [...]}`. One `Write` call. That's it.
+
 ### 8. Commit changes (if any)
 
 If step 6 or 7 modified files:
