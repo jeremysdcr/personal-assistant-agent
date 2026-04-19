@@ -18,7 +18,7 @@ You run autonomously — Jeremy does not see your output. Emit tool calls, not e
 
 - **Step 8 (write new/updated items to Notion):** After the extraction output is produced, emit `notion-create-pages` / `notion-update-page` calls back to back. No prose enumerating what you're about to create. One call per item.
 - **Step 13 (update flagged items):** Same — emit the `notion-update-page` calls back to back after Step 12's evaluation. No narration between them.
-- **Step 15 (cache snapshot Write):** Step 15 does NOT re-query Notion. Immediately after Step 13's last `notion-update-page` acknowledgement (or after Step 12 if no updates were flagged), emit the `Write` on `vault/task-cache.json` by transforming the Step 11 response you're holding. No narration, no re-read, no intermediate file, no second `notion-query-database-view` call. Same transform as `prompts/reconcile.md` step 5.
+- **Step 15 (cache snapshot via shell):** Step 15 does NOT re-query Notion AND does NOT transform in-model. Prior runs stream-idle-timed-out exactly here — Sonnet silently enumerating all ~60 items to produce slim JSON blows the idle budget. Immediately after Step 13's last `notion-update-page` ack (or after Step 12 if no updates were flagged), emit two tool calls back-to-back: (a) `Write` the verbatim Step 11 response to `vault/.cache-raw.json` — a pure byte copy, no per-item reasoning; then (b) `Bash` with the `jq` one-liner from Step 15 to project the 9 slim fields into `vault/task-cache.json` and delete the raw file. The model is no longer in the transform loop; the shell is.
 - **Step 16 (daily journal append):** The `Write` (or `Edit`) on `vault/daily/{YYYY-MM-DD}.md` is the very next thing after Step 15's cache write acknowledgement. No preview of the section text.
 - **Single heavy Notion query per run:** boot-sync Phase B step 7 is skipped (see Step 0 below) and Step 15 reuses Step 11's response. Exactly one `notion-query-database-view` call lands in a healthy run — in Step 11. If you catch yourself about to emit a second one, stop and re-read Step 15.
 
@@ -49,7 +49,7 @@ The complete extraction rules, classification guidance, few-shot examples, and o
 6. Apply extraction framework. Produce structured JSON output.
 7. Deduplicate against cache by source_ref and title+person similarity within 48h.
 8. Write to Notion: `notion-create-pages` for new items, `notion-update-page` for updates.
-9. Create draft replies: `gmail_create_draft` with threadId for each draft_reply entry.
+9. Create draft replies: `gmail_create_draft` for each draft_reply entry. **The Gmail MCP tool does NOT accept `threadId`** — passing it returns `Unknown name "threadId": Cannot find field.` Omit the field and accept that drafts land as standalone. Compensate by (i) setting `subject` to `Re: <original subject>` and (ii) opening the body with a one-line context anchor (e.g. `Re your note from Fri re: the Q2 roll — ...`) so Jeremy can orient when reviewing in Drafts.
 10. Update scan timestamp: `notion-update-page` on config page `3441e696-29d1-8184-a93f-ddcf3ffb4df3`, set Notes to current ISO timestamp.
 
 ### Part B: Crack-Check
@@ -60,9 +60,9 @@ The complete extraction rules, classification guidance, few-shot examples, and o
 | Condition | Action |
 |-----------|--------|
 | due_date < today AND status != done | Bump priority to urgent, add note "OVERDUE as of {today}" |
-| due_date within 2 days AND priority < high | Bump priority to high |
+| due_date within 2 days AND priority < high | Bump **one notch** only: low→medium, medium→high. Do NOT leap low→high or medium→urgent. Rationale: a blanket bump-to-high on every item due inside 48h fires 15+ times on a normal weekday and flattens the signal — a soft escalation preserves the distinction between "attention this week" and "stop everything." |
 | No due_date AND status = open AND created > 7 days ago AND no updates in 5 days | Set status to stale |
-| type = commitment_theirs AND open > 5 days | Draft follow-up nudge via `gmail_create_draft` with threadId (if source_ref is Gmail), add note "Follow-up draft created {today}" |
+| type = commitment_theirs AND open > 5 days | Draft follow-up nudge via `gmail_create_draft` (NO `threadId` — see Step 9; compensate with `Re: <subject>` and a context anchor), add note "Follow-up draft created {today}" |
 | source = calendar AND source_ref starts with `conflict:` | Re-check the event pair via `gcal_list_events` using the two event IDs in the source_ref. If either event is gone, declined, marked transparent, or the pair no longer overlaps / is no longer a tight transition, set status = `done` and append to Notes: `Auto-resolved {YYYY-MM-DD}: conflict cleared`. Do NOT create new conflict items here — creation happens only in the morning brief sweep. |
 
 13. Update flagged items in Notion via `notion-update-page`.
@@ -76,7 +76,17 @@ The complete extraction rules, classification guidance, few-shot examples, and o
 
 ### Finalize
 
-15. Snapshot active items to `vault/task-cache.json`: **do NOT re-query Notion.** Transform the held Step 11 response directly into the slim schema and emit a single `Write` call to `vault/task-cache.json`. Use the exact 9-field transform in [prompts/reconcile.md](reconcile.md) step 5. Tradeoff: the cache reflects state as of Step 11 — it will not include Step 13's priority bumps, stale flags, or auto-resolved conflicts. The next scan-and-check run (≤3h later) reconciles. Accepted to keep this routine to a single heavy Notion query.
+15. Snapshot active items to `vault/task-cache.json` via a shell transform. **Do NOT re-query Notion. Do NOT project the slim schema inside the model** — prior runs stream-idle-timed-out with Sonnet silently enumerating ~60 items to produce the JSON. Emit two tool calls back-to-back, no prose between:
+
+    **15a.** `Write` to `vault/.cache-raw.json` with the Step 11 MCP tool result verbatim — the object containing `results` and `has_more`. This is a pure byte copy: no transform, no filtering, no reasoning about items.
+
+    **15b.** `Bash` with exactly this one-liner (`jq` 1.6+ is available on routine infra):
+
+    ```
+    jq --arg ts "$(date -u +%Y-%m-%dT%H:%M:%SZ)" '{synced_at: $ts, items: [.results[] | {item_id: ("PA-" + (."Item ID"|tostring)), title: .Title, type: .Type, status: .Status, priority: .Priority, due_date: (."date:Due Date:start" // null), person: (.Person // ""), notion_page_id: (.url | split("/") | last | split("?")[0] | gsub("-";"")), source_ref: (."Source Ref" // "")}]}' vault/.cache-raw.json > vault/task-cache.json && rm vault/.cache-raw.json
+    ```
+
+    The 9-field projection is the canonical one from [prompts/reconcile.md](reconcile.md) step 5, now expressed as a shell transform so no model reasoning is required per item. Tradeoff unchanged: cache reflects state as of Step 11, not Step 13's bumps — next run reconciles.
 16. Append to `vault/daily/{YYYY-MM-DD}.md`:
 
 ```markdown

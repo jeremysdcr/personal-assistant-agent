@@ -147,7 +147,7 @@ All connectors are configured at the account level and available in Surface A (C
 - **Database ID:** 3d5f82fd5c4b41bdbbf437402b18390c
 - **Data source:** collection://b3e39150-8cf2-491f-b65f-f13f38fae886
 - **Daily Brief page ID:** 3441e696-29d1-815b-9a43-c156cad7fc34
-- **Config page (Last Scan Marker):** 3441e696-29d1-8184-a93f-ddcf3ffb4df3
+- **Config page (Last Scan Marker):** 3471e696-29d1-8131-ba38-c79027a3b722 *(recreated 2026-04-19 after the original `3441e696-29d1-8184-a93f-ddcf3ffb4df3` was archived; scan-and-check step 10 writes the current scan timestamp to the `Notes` field on this page)*
 
 ### Views
 - **Active Items:** view id `3441e696-29d1-81ac-84aa-000cd656c691`
