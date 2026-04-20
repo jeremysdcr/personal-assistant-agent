@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-04-20T21:27:00Z",
+  "synced_at": "2026-04-20T22:10:10Z",
   "items": [
     {
       "item_id": "PA-101",
@@ -242,6 +242,28 @@
       "person": "John Furtado",
       "notion_page_id": "3441e69629d1814fb031f67d45eb9a0d",
       "source_ref": "19d93d8be8352599"
+    },
+    {
+      "item_id": "PA-122",
+      "title": "Send invoice to Loyalty Markets for Plooto receivables",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-22",
+      "person": "Loyalty Markets",
+      "notion_page_id": "3481e69629d1818aabecd9e3af9ab6e1",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-120",
+      "title": "Send Micah the 'Seven term sheet clauses that matter more than valuation' article",
+      "type": "commitment_mine",
+      "status": "waiting",
+      "priority": "medium",
+      "due_date": "2026-04-22",
+      "person": "Micah (HVE Healthcare)",
+      "notion_page_id": "3481e69629d181818454cd5447e98b3a",
+      "source_ref": "3481e69629d181dab612db619e45b454"
     },
     {
       "item_id": "PA-119",
@@ -618,6 +640,17 @@
       "source_ref": ""
     },
     {
+      "item_id": "PA-121",
+      "title": "Prepare partnership model sketch for HVE Healthcare",
+      "type": "commitment_mine",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-05-07",
+      "person": "Micah (HVE Healthcare)",
+      "notion_page_id": "3481e69629d181aaa26deb7583e12115",
+      "source_ref": "3481e69629d181dab612db619e45b454"
+    },
+    {
       "item_id": "PA-114",
       "title": "Draft Loyalty Markets case study for Sidecar website",
       "type": "task",
@@ -913,28 +946,6 @@
       "person": "Robert Handelman",
       "notion_page_id": "3441e69629d181cfb238ffd054f3179d",
       "source_ref": "19d92b221b8c81be"
-    },
-    {
-      "item_id": "PA-120",
-      "title": "Send Micah the Seven term sheet clauses that matter more than valuation article",
-      "type": "commitment_mine",
-      "status": "waiting",
-      "priority": "medium",
-      "due_date": "2026-04-22",
-      "person": "Micah (HVE Healthcare)",
-      "notion_page_id": "3481e69629d181818454cd5447e98b3a",
-      "source_ref": "3481e69629d181dab612db619e45b454"
-    },
-    {
-      "item_id": "PA-121",
-      "title": "Prepare partnership model sketch for HVE Healthcare",
-      "type": "commitment_mine",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-05-07",
-      "person": "Micah (HVE Healthcare)",
-      "notion_page_id": "3481e69629d181aaa26deb7583e12115",
-      "source_ref": "3481e69629d181dab612db619e45b454"
     }
   ]
 }
