@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-04-20T15:55:00Z",
+  "synced_at": "2026-04-20T16:35:57Z",
   "items": [
     {
       "item_id": "PA-101",
@@ -310,21 +310,21 @@
       "source_ref": ""
     },
     {
-      "item_id": "PA-22",
-      "title": "Email Dan Israelsohn re: Loyalty",
-      "type": "follow_up",
+      "item_id": "PA-109",
+      "title": "Joshua Kramer to authorize Plooto PAD for SCP advisory fees",
+      "type": "commitment_theirs",
       "status": "waiting",
       "priority": "high",
-      "due_date": "2026-04-22",
-      "person": "Dan Israelsohn",
-      "notion_page_id": "3441e69629d181e3863cffa27ff3f385",
-      "source_ref": "19dab98ea0ded8f4"
+      "due_date": "2026-04-23",
+      "person": "Joshua Kramer",
+      "notion_page_id": "3481e69629d181109fdcfb0783d73eda",
+      "source_ref": "19dab9195b8c43f7"
     },
     {
       "item_id": "PA-103",
       "title": "Reply to Mike Masse intro — schedule food/cleaning services meeting",
       "type": "task",
-      "status": "open",
+      "status": "waiting",
       "priority": "high",
       "due_date": "2026-04-23",
       "person": "Mike Masse / Richard Roos",
@@ -618,6 +618,28 @@
       "source_ref": ""
     },
     {
+      "item_id": "PA-110",
+      "title": "Review Canteen and Mister Coffee vendor agreements (forwarded by Gershon)",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": null,
+      "person": "Gershon Hurwen",
+      "notion_page_id": "3481e69629d18107bea9cb43a432a777",
+      "source_ref": "19dab94b5d109a19"
+    },
+    {
+      "item_id": "PA-108",
+      "title": "Revisit: Gmail threaded send-on-approval (Option 2)",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": null,
+      "person": "",
+      "notion_page_id": "3481e69629d1810692e3e6841af2a324",
+      "source_ref": ""
+    },
+    {
       "item_id": "PA-92",
       "title": "Hoist discipline rules into UI prompts for morning-brief, eod-review, scan-and-check routines",
       "type": "task",
@@ -803,28 +825,6 @@
       "person": "Robert Handelman",
       "notion_page_id": "3441e69629d181cfb238ffd054f3179d",
       "source_ref": "19d92b221b8c81be"
-    },
-    {
-      "item_id": "PA-108",
-      "title": "Revisit: Gmail threaded send-on-approval (Option 2)",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": null,
-      "person": "",
-      "notion_page_id": "3481e69629d1810692e3e6841af2a324",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-109",
-      "title": "Joshua Kramer to authorize Plooto PAD for SCP advisory fees",
-      "type": "commitment_theirs",
-      "status": "waiting",
-      "priority": "high",
-      "due_date": "2026-04-23",
-      "person": "Joshua Kramer",
-      "notion_page_id": "3481e69629d181109fdcfb0783d73eda",
-      "source_ref": "19dab9195b8c43f7"
     }
   ]
 }
