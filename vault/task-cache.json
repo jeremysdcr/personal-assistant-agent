@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-04-20T15:47:30Z",
+  "synced_at": "2026-04-20T15:55:00Z",
   "items": [
     {
       "item_id": "PA-101",
@@ -312,13 +312,13 @@
     {
       "item_id": "PA-22",
       "title": "Email Dan Israelsohn re: Loyalty",
-      "type": "task",
-      "status": "open",
+      "type": "follow_up",
+      "status": "waiting",
       "priority": "high",
       "due_date": "2026-04-22",
       "person": "Dan Israelsohn",
       "notion_page_id": "3441e69629d181e3863cffa27ff3f385",
-      "source_ref": ""
+      "source_ref": "19dab98ea0ded8f4"
     },
     {
       "item_id": "PA-103",
