@@ -61,16 +61,29 @@ Skip this step if ALL of:
 - `synced_at` in `vault/task-cache.json` is within the last 15 minutes
 - Phase A did not pull any new commits (if it did, main may have newer cache state worth reading but not re-querying)
 
-Otherwise: call `notion-query-database-view` with `view_url: https://www.notion.so/3441e69629d1815b9a43c156cad7fc34?v=3441e69629d181ac84aa000cd656c691` (the Active Items view — use this exact URL string; `notion://...` and `view://...` shorthands are rejected with `validation_error`), overwrite `vault/task-cache.json` using the slim schema defined in `prompts/reconcile.md` step 5 (single source of truth).
+Otherwise: call `notion-query-database-view` with `view_url: https://www.notion.so/3441e69629d1815b9a43c156cad7fc34?v=3441e69629d181ac84aa000cd656c691` (the Active Items view — use this exact URL string; `notion://...` and `view://...` shorthands are rejected with `validation_error`), then snapshot to `vault/task-cache.json` via the shell-offload pattern below. The slim schema is defined authoritatively in `prompts/reconcile.md` step 5.
 
-**Output discipline (hard rules — prior runs have violated these and hit `Stream idle timeout - partial response received`; the canonical version lives in `prompts/reconcile.md` step 5):**
+**Retry on timeout.** The Active Items view returns a heavy payload (~50KB+, all Notes blobs included regardless of view column visibility — see PA-98) and the MCP transport intermittently times out. If the `notion-query-database-view` call returns `API Error`, `Request timed out`, or any equivalent transport failure, retry it **once** after a 30-second pause (`sleep 30` via Bash). Do not retry more than once.
 
-1. After the `notion-query-database-view` tool-result arrives, the **very next thing** in your response must be the `Write` tool call for `vault/task-cache.json`. No text before it. No reasoning. No count. No narration like "Now I'll write the cache" or "The query returned N items."
-2. Do **not** paste the raw query response into any other file. Do **not** write an intermediate file. Transform into the slim schema inline and emit one `Write` call.
-3. Do **not** re-read the file you just wrote. The `Write` tool's success acknowledgement is sufficient. Self-verification burns the remaining turn budget and has caused idle timeouts.
-4. If you find yourself generating prose between the MCP tool-result and the `Write` call, you are violating this rule — stop and emit the `Write` call immediately.
+**If both attempts fail:** do not write the cache. Emit a `notion-create-comment` on the Daily Brief page `3441e696-29d1-815b-9a43-c156cad7fc34` with body `"Boot-sync: cache resync failed — Notion query timed out twice. Cache last refreshed {synced_at from existing vault/task-cache.json}. Routine continuing with stale cache."`. Then continue to step 8. A stale cache is degraded but workable for one routine pass; the next run will retry.
 
-The transform is mechanical: take each object in `results`, extract exactly `{item_id, title, type, status, priority, due_date, person, notion_page_id, source_ref}` — prefix `Item ID` with `PA-`; map `date:Due Date:start` → `due_date` with null fallback; strip dashes from the 32-char hex in the page URL for `notion_page_id`. Emit `{"synced_at": "<current UTC ISO>", "items": [...]}`. One `Write` call. That's it.
+**On success — shell-offload pattern.** Mirror `prompts/scan-and-check.md` step 15 exactly. Emit two tool calls back-to-back, no prose between:
+
+**7a.** `Write` to `vault/.cache-raw.json` with the `notion-query-database-view` tool result verbatim — the object containing `results` and `has_more`. This is a pure byte copy: no transform, no filtering, no reasoning about items.
+
+**7b.** `Bash` with exactly this one-liner (`jq` 1.6+ is available on routine infra):
+
+```
+jq --arg ts "$(date -u +%Y-%m-%dT%H:%M:%SZ)" '{synced_at: $ts, items: [.results[] | {item_id: ("PA-" + (."Item ID"|tostring)), title: .Title, type: .Type, status: .Status, priority: .Priority, due_date: (."date:Due Date:start" // null), person: (.Person // ""), notion_page_id: (.url | split("/") | last | split("?")[0] | gsub("-";"")), source_ref: (."Source Ref" // "")}]}' vault/.cache-raw.json > vault/task-cache.json && rm vault/.cache-raw.json
+```
+
+The 9-field projection is the canonical one from [prompts/reconcile.md](reconcile.md) step 5, expressed as a shell transform so no model reasoning is required per item. Tradeoff: same as scan-and-check — cache reflects state as of the query response, not later in-turn writes; next run reconciles.
+
+**Output discipline (hard rules — prior runs have violated these and hit `Stream idle timeout - partial response received`):**
+
+1. After the `notion-query-database-view` tool-result arrives, the **very next thing** in your response must be the `Write` call for `vault/.cache-raw.json` (step 7a), immediately followed by the `Bash` jq call (step 7b). No text between, no narration, no count, no enumeration of items.
+2. Do **not** re-read `vault/task-cache.json` after step 7b. The shell command's success exit is sufficient. Self-verification burns the remaining turn budget and has caused idle timeouts.
+3. If you find yourself generating prose between the MCP tool-result and step 7a, or between 7a and 7b, you are violating this rule — stop and emit the next tool call immediately.
 
 ### 8. Commit changes (if any)
 
