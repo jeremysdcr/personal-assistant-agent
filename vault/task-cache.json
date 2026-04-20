@@ -825,6 +825,17 @@
       "person": "Robert Handelman",
       "notion_page_id": "3441e69629d181cfb238ffd054f3179d",
       "source_ref": "19d92b221b8c81be"
+    },
+    {
+      "item_id": "PA-108",
+      "title": "Revisit: Gmail threaded send-on-approval (Option 2)",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": null,
+      "person": "",
+      "notion_page_id": "3481e69629d1810692e3e6841af2a324",
+      "source_ref": ""
     }
   ]
 }
