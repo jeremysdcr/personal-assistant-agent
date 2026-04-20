@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-04-20T14:56:00Z",
+  "synced_at": "2026-04-20T15:47:30Z",
   "items": [
     {
       "item_id": "PA-101",
@@ -87,17 +87,6 @@
       "due_date": "2026-04-20",
       "person": "Jennifer Hennings",
       "notion_page_id": "3451e69629d181bbabfad8690c0a2c68",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-76",
-      "title": "Set up invoicing + Plooto mid-month PAD for SCP advisory fees (Loyalty Markets)",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-20",
-      "person": "Gershon Hurwen",
-      "notion_page_id": "3451e69629d18122ac6dd107b23bca90",
       "source_ref": ""
     },
     {
@@ -836,6 +825,17 @@
       "person": "",
       "notion_page_id": "3481e69629d1810692e3e6841af2a324",
       "source_ref": ""
+    },
+    {
+      "item_id": "PA-109",
+      "title": "Joshua Kramer to authorize Plooto PAD for SCP advisory fees",
+      "type": "commitment_theirs",
+      "status": "waiting",
+      "priority": "high",
+      "due_date": "2026-04-23",
+      "person": "Joshua Kramer",
+      "notion_page_id": "3481e69629d181109fdcfb0783d73eda",
+      "source_ref": "19dab9195b8c43f7"
     }
   ]
 }
