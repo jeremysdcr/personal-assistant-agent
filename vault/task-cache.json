@@ -1,6 +1,17 @@
 {
-  "synced_at": "2026-04-20T22:15:57Z",
+  "synced_at": "2026-04-20T22:32:19Z",
   "items": [
+    {
+      "item_id": "PA-123",
+      "title": "Confirm J2J Expo status with Rob — he canceled 'Jewish Business Expo'",
+      "type": "task",
+      "status": "open",
+      "priority": "urgent",
+      "due_date": "2026-04-21",
+      "person": "Robert Handelman",
+      "notion_page_id": "3481e69629d1818ca50fc4f777424c50",
+      "source_ref": "19dac71df2a547f5"
+    },
     {
       "item_id": "PA-101",
       "title": "Confirm meeting date with Leore (during the day, week of 4/20)",
@@ -275,17 +286,6 @@
       "person": "Richard Roos",
       "notion_page_id": "3481e69629d181bc80b1f20cf8ad0040",
       "source_ref": "19dabcc01435ae47"
-    },
-    {
-      "item_id": "PA-104",
-      "title": "Reply to Daniel Gonsenhauser re: Q1 2026 board meeting — confirm May 1",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-22",
-      "person": "Daniel Gonsenhauser",
-      "notion_page_id": "3481e69629d181898bb7f3340f9bcbd2",
-      "source_ref": "19da8bd3922c9246"
     },
     {
       "item_id": "PA-75",
