@@ -365,17 +365,6 @@
       "source_ref": ""
     },
     {
-      "item_id": "PA-25",
-      "title": "Reply to Sahil Nawal (UT Austin)",
-      "type": "task",
-      "status": "waiting",
-      "priority": "high",
-      "due_date": "2026-04-23",
-      "person": "Sahil Nawal",
-      "notion_page_id": "3441e69629d181da9817c86e7b49f7bd",
-      "source_ref": ""
-    },
-    {
       "item_id": "PA-23",
       "title": "Reply to Anthony Marotta (M-Squared Advisory)",
       "type": "task",
