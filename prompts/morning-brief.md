@@ -76,7 +76,7 @@ For each meeting with key relationship attendees:
 - Include a one-line summary
 
 ### 6. Overnight Email
-Use `gmail_search_messages` for emails to/from jeremy@sidecarcapitalpartners.com since yesterday 6pm ET.
+Use `gmail_search_messages` with query `after:{yesterday 6pm ET, epoch seconds} (to:jeremy@sidecarcapitalpartners.com OR from:jeremy@sidecarcapitalpartners.com) -in:drafts`. **The `-in:drafts` is load-bearing: Gmail's `from:` clause otherwise matches unsent drafts, which get narrated as "Jeremy sent / replied" in the brief. See `scan-and-check.md` Step 5 for the full rationale.**
 Classify the top 20 as ACTIONABLE / FYI / SKIP using the extraction framework in `prompts/obligation-extract.md`.
 - Create Notion items for ACTIONABLE emails (use `notion-create-pages` with data source `b3e39150-8cf2-491f-b65f-f13f38fae886`)
 - Highlight emails from key relationships separately

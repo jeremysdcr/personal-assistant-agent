@@ -447,8 +447,8 @@ When running as a Scan & Check routine:
 1. Clone repo. Read `vault/task-cache.json` for dedup context. Read `vault/key-relationships.md`.
 2. Read scan timestamp from Notion: Query PA Tracker for Type = config, Title = "Last Scan Marker". Parse timestamp from Notes field.
 3. Load HubSpot deal context: Query active deals (`search_crm_objects`, objectType: "deals") with associated contacts. Build email -> deal lookup.
-4. Scan inbound: `gmail_search_messages` with query `after:{last_scan_timestamp} to:jeremy@sidecarcapitalpartners.com`. Read each message.
-5. Scan sent: `gmail_search_messages` with query `after:{last_scan_timestamp} from:jeremy@sidecarcapitalpartners.com`. Detect promises.
+4. Scan inbound: `gmail_search_messages` with query `after:{last_scan_timestamp} to:jeremy@sidecarcapitalpartners.com -in:drafts`. Read each message.
+5. Scan sent: `gmail_search_messages` with query `after:{last_scan_timestamp} from:jeremy@sidecarcapitalpartners.com -in:drafts`. Detect promises. **The `-in:drafts` is load-bearing — see scan-and-check.md Step 5 for the full rationale (drafts match `from:` queries and the extraction framework mis-classifies them as sent promises).**
 6. Apply this extraction framework to each email. Produce the structured output above.
 7. Deduplicate against cache by source_ref and title+person similarity.
 8. Write to Notion: `notion-create-pages` for new items, `notion-update-page` for updates.

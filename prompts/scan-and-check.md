@@ -44,8 +44,8 @@ The complete extraction rules, classification guidance, few-shot examples, and o
 1. Clone repo. Read `vault/task-cache.json` for dedup. Read `vault/key-relationships.md`.
 2. Read scan timestamp from Notion: Query PA Tracker (database `3d5f82fd5c4b41bdbbf437402b18390c`, data source `collection://b3e39150-8cf2-491f-b65f-f13f38fae886`) for Type = config, Title = "Last Scan Marker". Parse ISO timestamp from Notes field.
 3. Load HubSpot deal context: `search_crm_objects` (objectType: "deals", active deals). Build contact email -> deal lookup.
-4. Scan inbound: `gmail_search_messages` query `after:{last_scan_time} to:jeremy@sidecarcapitalpartners.com`. Read each via `gmail_read_message`.
-5. Scan sent: `gmail_search_messages` query `after:{last_scan_time} from:jeremy@sidecarcapitalpartners.com`. Detect promises Jeremy made.
+4. Scan inbound: `gmail_search_messages` query `after:{last_scan_time} to:jeremy@sidecarcapitalpartners.com -in:drafts`. Read each via `gmail_read_message`.
+5. Scan sent: `gmail_search_messages` query `after:{last_scan_time} from:jeremy@sidecarcapitalpartners.com -in:drafts`. Detect promises Jeremy made. **The `-in:drafts` is load-bearing: Gmail's `from:` query otherwise matches unsent drafts, which the extraction framework then mis-classifies as promises Jeremy made and narrates as "sent." This is compounded by the fact that this routine itself creates drafts in Step 9/12 — without the exclusion they feed back into the next run as fake sent mail.**
 6. Apply extraction framework. Produce structured JSON output.
 7. Deduplicate against cache by source_ref and title+person similarity within 48h.
 8. Write to Notion: `notion-create-pages` for new items, `notion-update-page` for updates.
