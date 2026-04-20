@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-04-20T17:30:59Z",
+  "synced_at": "2026-04-20T17:36:20Z",
   "items": [
     {
       "item_id": "PA-101",
@@ -310,6 +310,17 @@
       "source_ref": ""
     },
     {
+      "item_id": "PA-116",
+      "title": "Email Gershon to check status on annual returns, minute book cleanup, and Dan's post-close filings",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-23",
+      "person": "Gershon Hurwen",
+      "notion_page_id": "3481e69629d1810785abc0d55b517cae",
+      "source_ref": ""
+    },
+    {
       "item_id": "PA-109",
       "title": "Joshua Kramer to authorize Plooto PAD for SCP advisory fees",
       "type": "commitment_theirs",
@@ -373,6 +384,17 @@
       "due_date": "2026-04-23",
       "person": "Anthony Marotta",
       "notion_page_id": "3441e69629d181f1b702e5e7376720be",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-118",
+      "title": "Rob Handelman to set up Loyalty value-creation working session with Gershon",
+      "type": "commitment_theirs",
+      "status": "waiting",
+      "priority": "medium",
+      "due_date": "2026-04-24",
+      "person": "Robert Handelman",
+      "notion_page_id": "3481e69629d181c0a41cc46030fba50d",
       "source_ref": ""
     },
     {
@@ -563,6 +585,28 @@
       "source_ref": ""
     },
     {
+      "item_id": "PA-113",
+      "title": "Schedule dinner with Loyalty Markets team (Joey's)",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-05-01",
+      "person": "Gershon Hurwen",
+      "notion_page_id": "3481e69629d18136b1d9f197b053da14",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-117",
+      "title": "Work with Josh on monthly financial reporting package for Loyalty Markets",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-05-01",
+      "person": "Josh",
+      "notion_page_id": "3481e69629d181feb750d08e5281a8f9",
+      "source_ref": ""
+    },
+    {
       "item_id": "PA-39",
       "title": "Buy suit for Shelley and Mitch's wedding (May 10)",
       "type": "task",
@@ -571,6 +615,17 @@
       "due_date": "2026-05-01",
       "person": "",
       "notion_page_id": "3441e69629d18145acf5ff629857cbe2",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-114",
+      "title": "Draft Loyalty Markets case study for Sidecar website",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-05-08",
+      "person": "",
+      "notion_page_id": "3481e69629d18141b7c7e0d3558ae61a",
       "source_ref": ""
     },
     {
@@ -593,6 +648,17 @@
       "due_date": "2026-05-15",
       "person": "Adam Buzanis",
       "notion_page_id": "3481e69629d181e49695fb8ea5233c1e",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-115",
+      "title": "Reach out to 3–5 strategic contacts to intro to Loyalty Markets",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-05-22",
+      "person": "",
+      "notion_page_id": "3481e69629d1816b9cd5dbe0b9df04a3",
       "source_ref": ""
     },
     {
