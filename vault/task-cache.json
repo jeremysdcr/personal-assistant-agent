@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-04-20T22:10:10Z",
+  "synced_at": "2026-04-20T22:15:57Z",
   "items": [
     {
       "item_id": "PA-101",
@@ -7,185 +7,9 @@
       "type": "task",
       "status": "open",
       "priority": "high",
-      "due_date": "2026-04-20",
+      "due_date": "2026-04-21",
       "person": "Leore",
       "notion_page_id": "3471e69629d18159a993fb0be3ded29e",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-98",
-      "title": "Resolve morning-brief + eod-review routine timeouts (stream idle)",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-20",
-      "person": "",
-      "notion_page_id": "3471e69629d18143b92edea5e90e0fd7",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-96",
-      "title": "Pick up J2J Expo print materials from AE Printing on Monday",
-      "type": "task",
-      "status": "open",
-      "priority": "urgent",
-      "due_date": "2026-04-20",
-      "person": "",
-      "notion_page_id": "3471e69629d1814790a1c4916b832054",
-      "source_ref": "19d9d15761713a18"
-    },
-    {
-      "item_id": "PA-97",
-      "title": "Review bulk condo deck forwarded by Rob (Frieberg/Strub)",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-20",
-      "person": "Robert Handelman",
-      "notion_page_id": "3471e69629d1817c9bd7dc8ce1c581d5",
-      "source_ref": "19d9d67bb87c9e26"
-    },
-    {
-      "item_id": "PA-86",
-      "title": "Give Max a path to read personal email",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-20",
-      "person": "",
-      "notion_page_id": "3461e69629d181548bf9f76068351d74",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-85",
-      "title": "Give Max access to Meeting Notes database in Notion and wire it up as a new surface",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-20",
-      "person": "",
-      "notion_page_id": "3461e69629d1813faad3e162e5f9d133",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-84",
-      "title": "Message Mike and Lior (ConnectCPA) re: referral, book quick fit call",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-20",
-      "person": "Mike and Lior (ConnectCPA)",
-      "notion_page_id": "3451e69629d18158b324f06ab328fe36",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-80",
-      "title": "Jen Hennings to post Loyalty Markets team announcement to Sidecar website",
-      "type": "commitment_theirs",
-      "status": "waiting",
-      "priority": "high",
-      "due_date": "2026-04-20",
-      "person": "Jennifer Hennings",
-      "notion_page_id": "3451e69629d181bbabfad8690c0a2c68",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-72",
-      "title": "Analyze Bezede's Project Elevate responses (1-hr block)",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-20",
-      "person": "Robert Bezede",
-      "notion_page_id": "3451e69629d18137b17fd34f9c19dfa1",
-      "source_ref": "19d93258acd33a40"
-    },
-    {
-      "item_id": "PA-66",
-      "title": "Email Ash at Climate Door re: potential PE intros — send investment criteria",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-20",
-      "person": "Ash (Climate Door)",
-      "notion_page_id": "3451e69629d18115a367f7c994430b70",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-32",
-      "title": "Pay MNP invoices (open since Mar 24)",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-20",
-      "person": "",
-      "notion_page_id": "3441e69629d1811887bcd7fb4e861278",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-28",
-      "title": "Send Operational Partner Database — committed to multiple people",
-      "type": "commitment_mine",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-20",
-      "person": "",
-      "notion_page_id": "3441e69629d181358feaf159cba4cacd",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-16",
-      "title": "Email Jordan (JNH Capital) — stale 25 days at Offer stage",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-20",
-      "person": "Jordan (JNH Capital)",
-      "notion_page_id": "3441e69629d1814d9706d03f11add797",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-35",
-      "title": "Confirm JR Holdings distribution amount; pay down credit line",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-20",
-      "person": "",
-      "notion_page_id": "3441e69629d18154bee4f9436379dd52",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-21",
-      "title": "J2J Expo prep — finalize materials and logistics",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-20",
-      "person": "Rob Handelman / Yossi Braun",
-      "notion_page_id": "3441e69629d1816783fdeda0b5eba831",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-29",
-      "title": "David Metzler (IDFWO) to confirm call time",
-      "type": "commitment_theirs",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-20",
-      "person": "David Metzler",
-      "notion_page_id": "3441e69629d1816b876adea06e63ff12",
-      "source_ref": "19d8cf2c7b37d10a"
-    },
-    {
-      "item_id": "PA-52",
-      "title": "Eterna — confirm invoice payment received",
-      "type": "follow_up",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-20",
-      "person": "Eterna",
-      "notion_page_id": "3441e69629d181dcb829c5a43de9de6d",
       "source_ref": ""
     },
     {
@@ -200,6 +24,94 @@
       "source_ref": "19da3b6d684cde90"
     },
     {
+      "item_id": "PA-98",
+      "title": "Resolve morning-brief + eod-review routine timeouts (stream idle)",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-21",
+      "person": "",
+      "notion_page_id": "3471e69629d18143b92edea5e90e0fd7",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-96",
+      "title": "Pick up J2J Expo print materials from AE Printing on Monday",
+      "type": "task",
+      "status": "open",
+      "priority": "urgent",
+      "due_date": "2026-04-21",
+      "person": "",
+      "notion_page_id": "3471e69629d1814790a1c4916b832054",
+      "source_ref": "19d9d15761713a18"
+    },
+    {
+      "item_id": "PA-97",
+      "title": "Review bulk condo deck forwarded by Rob (Frieberg/Strub)",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-21",
+      "person": "Robert Handelman",
+      "notion_page_id": "3471e69629d1817c9bd7dc8ce1c581d5",
+      "source_ref": "19d9d67bb87c9e26"
+    },
+    {
+      "item_id": "PA-86",
+      "title": "Give Max a path to read personal email",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-21",
+      "person": "",
+      "notion_page_id": "3461e69629d181548bf9f76068351d74",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-85",
+      "title": "Give Max access to Meeting Notes database in Notion and wire it up as a new surface",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-21",
+      "person": "",
+      "notion_page_id": "3461e69629d1813faad3e162e5f9d133",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-84",
+      "title": "Message Mike and Lior (ConnectCPA) re: referral, book quick fit call",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-21",
+      "person": "Mike and Lior (ConnectCPA)",
+      "notion_page_id": "3451e69629d18158b324f06ab328fe36",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-80",
+      "title": "Jen Hennings to post Loyalty Markets team announcement to Sidecar website",
+      "type": "commitment_theirs",
+      "status": "waiting",
+      "priority": "high",
+      "due_date": "2026-04-21",
+      "person": "Jennifer Hennings",
+      "notion_page_id": "3451e69629d181bbabfad8690c0a2c68",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-72",
+      "title": "Analyze Bezede's Project Elevate responses (1-hr block)",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-21",
+      "person": "Robert Bezede",
+      "notion_page_id": "3451e69629d18137b17fd34f9c19dfa1",
+      "source_ref": "19d93258acd33a40"
+    },
+    {
       "item_id": "PA-70",
       "title": "Conflict: 04/21 10:45 — J2J Expo 2026 ↔ Prospecting and Prospect Follow-Ups",
       "type": "follow_up",
@@ -209,6 +121,17 @@
       "person": "",
       "notion_page_id": "3451e69629d181c98d63f18e4043ea96",
       "source_ref": "conflict:01146dd5911b44efa2b594d33e369dad_20260421T144500Z:ugh5fdeud38i3vb8pk61el7t4o"
+    },
+    {
+      "item_id": "PA-66",
+      "title": "Email Ash at Climate Door re: potential PE intros — send investment criteria",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-21",
+      "person": "Ash (Climate Door)",
+      "notion_page_id": "3451e69629d18115a367f7c994430b70",
+      "source_ref": ""
     },
     {
       "item_id": "PA-63",
@@ -222,6 +145,72 @@
       "source_ref": ""
     },
     {
+      "item_id": "PA-32",
+      "title": "Pay MNP invoices (open since Mar 24)",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-21",
+      "person": "",
+      "notion_page_id": "3441e69629d1811887bcd7fb4e861278",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-28",
+      "title": "Send Operational Partner Database — committed to multiple people",
+      "type": "commitment_mine",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-21",
+      "person": "",
+      "notion_page_id": "3441e69629d181358feaf159cba4cacd",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-16",
+      "title": "Email Jordan (JNH Capital) — stale 25 days at Offer stage",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-21",
+      "person": "Jordan (JNH Capital)",
+      "notion_page_id": "3441e69629d1814d9706d03f11add797",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-35",
+      "title": "Confirm JR Holdings distribution amount; pay down credit line",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-21",
+      "person": "",
+      "notion_page_id": "3441e69629d18154bee4f9436379dd52",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-21",
+      "title": "J2J Expo prep — finalize materials and logistics",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-21",
+      "person": "Rob Handelman / Yossi Braun",
+      "notion_page_id": "3441e69629d1816783fdeda0b5eba831",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-29",
+      "title": "David Metzler (IDFWO) to confirm call time",
+      "type": "commitment_theirs",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-21",
+      "person": "David Metzler",
+      "notion_page_id": "3441e69629d1816b876adea06e63ff12",
+      "source_ref": "19d8cf2c7b37d10a"
+    },
+    {
       "item_id": "PA-17",
       "title": "Probe John Furtado on Casey pass — look for a wedge to reopen",
       "type": "task",
@@ -230,6 +219,17 @@
       "due_date": "2026-04-21",
       "person": "John Furtado",
       "notion_page_id": "3441e69629d1817fb086f0fc951f9d38",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-52",
+      "title": "Eterna — confirm invoice payment received",
+      "type": "follow_up",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-21",
+      "person": "Eterna",
+      "notion_page_id": "3441e69629d181dcb829c5a43de9de6d",
       "source_ref": ""
     },
     {
