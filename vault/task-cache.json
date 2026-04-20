@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-04-20T19:33:52Z",
+  "synced_at": "2026-04-20T20:08:01Z",
   "items": [
     {
       "item_id": "PA-101",
@@ -248,7 +248,7 @@
       "title": "Reply to Richard Roos and connect Sahil Nawal for Venterra intro call",
       "type": "task",
       "status": "open",
-      "priority": "medium",
+      "priority": "high",
       "due_date": "2026-04-22",
       "person": "Richard Roos",
       "notion_page_id": "3481e69629d181bc80b1f20cf8ad0040",
