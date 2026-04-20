@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-04-20T16:35:57Z",
+  "synced_at": "2026-04-20T17:30:59Z",
   "items": [
     {
       "item_id": "PA-101",
@@ -259,7 +259,7 @@
       "title": "Post LinkedIn announcement for Loyalty Markets partnership",
       "type": "task",
       "status": "waiting",
-      "priority": "medium",
+      "priority": "high",
       "due_date": "2026-04-22",
       "person": "Jennifer Hennings",
       "notion_page_id": "3451e69629d1816cb612db2c6cf9feec",
@@ -281,7 +281,7 @@
       "title": "CDA filings — check status JR PQMLP Holdings 2025; notify MNP re 2026",
       "type": "task",
       "status": "open",
-      "priority": "medium",
+      "priority": "high",
       "due_date": "2026-04-22",
       "person": "",
       "notion_page_id": "3441e69629d181638d63f752ae1eb866",
@@ -541,6 +541,17 @@
       "source_ref": "19d93258acd33a40"
     },
     {
+      "item_id": "PA-111",
+      "title": "Review network for referrals to Krystyn's Apr 28 due-diligence event",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-04-27",
+      "person": "Krystyn Harrison",
+      "notion_page_id": "3481e69629d181d7a9defcb423cad9e9",
+      "source_ref": ""
+    },
+    {
       "item_id": "PA-31",
       "title": "File personal taxes for Jeremy and Leore — deadline April 30",
       "type": "task",
@@ -615,6 +626,17 @@
       "due_date": "2026-11-02",
       "person": "",
       "notion_page_id": "3451e69629d18166ba25e32c74d55395",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-112",
+      "title": "Krystyn Harrison to send pre-call times for content collab",
+      "type": "follow_up",
+      "status": "waiting",
+      "priority": "medium",
+      "due_date": null,
+      "person": "Krystyn Harrison",
+      "notion_page_id": "3481e69629d181bdaf01f70c73cdba09",
       "source_ref": ""
     },
     {
