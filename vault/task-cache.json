@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-04-20T16:10:00Z",
+  "synced_at": "2026-04-20T18:03:01Z",
   "items": [
     {
       "item_id": "PA-101",
@@ -310,17 +310,6 @@
       "source_ref": ""
     },
     {
-      "item_id": "PA-116",
-      "title": "Email Gershon to check status on annual returns, minute book cleanup, and Dan's post-close filings",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-27",
-      "person": "Gershon Hurwen",
-      "notion_page_id": "3481e69629d1810785abc0d55b517cae",
-      "source_ref": ""
-    },
-    {
       "item_id": "PA-109",
       "title": "Joshua Kramer to authorize Plooto PAD for SCP advisory fees",
       "type": "commitment_theirs",
@@ -561,6 +550,17 @@
       "person": "Robert Bezede",
       "notion_page_id": "3441e69629d181f59461c8d49121af9a",
       "source_ref": "19d93258acd33a40"
+    },
+    {
+      "item_id": "PA-116",
+      "title": "Email Gershon to check status on annual returns, minute book cleanup, and Dan's post-close filings",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-27",
+      "person": "Gershon Hurwen",
+      "notion_page_id": "3481e69629d1810785abc0d55b517cae",
+      "source_ref": ""
     },
     {
       "item_id": "PA-111",
