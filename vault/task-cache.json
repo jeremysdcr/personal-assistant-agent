@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-04-20T13:07:57Z",
+  "synced_at": "2026-04-20T14:12:38Z",
   "items": [
     {
       "item_id": "PA-101",
@@ -22,17 +22,6 @@
       "person": "",
       "notion_page_id": "3471e69629d18143b92edea5e90e0fd7",
       "source_ref": ""
-    },
-    {
-      "item_id": "PA-94",
-      "title": "Follow up with Richard Roos re: brother-in-law intro",
-      "type": "follow_up",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-20",
-      "person": "Richard Roos",
-      "notion_page_id": "3471e69629d1813b8d02ebc35313566b",
-      "source_ref": "19d97193d6acd484"
     },
     {
       "item_id": "PA-96",
@@ -266,6 +255,17 @@
       "source_ref": "19d93d8be8352599"
     },
     {
+      "item_id": "PA-104",
+      "title": "Reply to Daniel Gonsenhauser re: Q1 2026 board meeting — confirm May 1",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-22",
+      "person": "Daniel Gonsenhauser",
+      "notion_page_id": "3481e69629d181898bb7f3340f9bcbd2",
+      "source_ref": "19da8bd3922c9246"
+    },
+    {
       "item_id": "PA-75",
       "title": "Post LinkedIn announcement for Loyalty Markets partnership",
       "type": "task",
@@ -330,6 +330,17 @@
       "person": "Dan Israelsohn",
       "notion_page_id": "3441e69629d181e3863cffa27ff3f385",
       "source_ref": ""
+    },
+    {
+      "item_id": "PA-103",
+      "title": "Reply to Mike Masse intro — schedule food/cleaning services meeting",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-23",
+      "person": "Mike Masse / Richard Roos",
+      "notion_page_id": "3481e69629d1813c9b1ef51ba7d0eebb",
+      "source_ref": "19da682151e5f212"
     },
     {
       "item_id": "PA-38",
@@ -560,6 +571,17 @@
       "due_date": "2026-05-08",
       "person": "Leore",
       "notion_page_id": "3451e69629d1810ba782ccc1ba002991",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-105",
+      "title": "Send Adam Buzanis a note to catch up",
+      "type": "task",
+      "status": "open",
+      "priority": "low",
+      "due_date": "2026-05-15",
+      "person": "Adam Buzanis",
+      "notion_page_id": "3481e69629d181e49695fb8ea5233c1e",
       "source_ref": ""
     },
     {
