@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-04-20T14:12:38Z",
+  "synced_at": "2026-04-20T14:56:00Z",
   "items": [
     {
       "item_id": "PA-101",
@@ -379,7 +379,7 @@
       "item_id": "PA-25",
       "title": "Reply to Sahil Nawal (UT Austin)",
       "type": "task",
-      "status": "open",
+      "status": "waiting",
       "priority": "high",
       "due_date": "2026-04-23",
       "person": "Sahil Nawal",
@@ -396,6 +396,28 @@
       "person": "Anthony Marotta",
       "notion_page_id": "3441e69629d181f1b702e5e7376720be",
       "source_ref": ""
+    },
+    {
+      "item_id": "PA-106",
+      "title": "Richard Roos to share services roll-up pitch deck",
+      "type": "commitment_theirs",
+      "status": "waiting",
+      "priority": "medium",
+      "due_date": "2026-04-24",
+      "person": "Richard Roos",
+      "notion_page_id": "3481e69629d1813d960ce77dfb4d91b0",
+      "source_ref": "19d98117d5af3a48"
+    },
+    {
+      "item_id": "PA-107",
+      "title": "Richard Roos to respond on Venterra intro for Sahil Nawal",
+      "type": "follow_up",
+      "status": "waiting",
+      "priority": "medium",
+      "due_date": "2026-04-24",
+      "person": "Richard Roos",
+      "notion_page_id": "3481e69629d181d3958fc1d41c357dfc",
+      "source_ref": "19dab5bdee5b604c"
     },
     {
       "item_id": "PA-102",
