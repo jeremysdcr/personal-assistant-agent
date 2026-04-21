@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-04-21T19:30:36Z",
+  "synced_at": "2026-04-21T20:07:48Z",
   "items": [
     {
       "item_id": "PA-126",
@@ -121,17 +121,6 @@
       "person": "Robert Bezede",
       "notion_page_id": "3451e69629d18137b17fd34f9c19dfa1",
       "source_ref": "19d93258acd33a40"
-    },
-    {
-      "item_id": "PA-70",
-      "title": "Conflict: 04/21 10:45 — J2J Expo 2026 ↔ Prospecting and Prospect Follow-Ups",
-      "type": "follow_up",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-21",
-      "person": "",
-      "notion_page_id": "3451e69629d181c98d63f18e4043ea96",
-      "source_ref": "conflict:01146dd5911b44efa2b594d33e369dad_20260421T144500Z:ugh5fdeud38i3vb8pk61el7t4o"
     },
     {
       "item_id": "PA-66",
@@ -347,7 +336,7 @@
       "title": "Reply to Jonathan Draycott intro — connect re: janitorial investment thesis",
       "type": "follow_up",
       "status": "open",
-      "priority": "medium",
+      "priority": "high",
       "due_date": "2026-04-23",
       "person": "Jonathan Draycott",
       "notion_page_id": "3491e69629d181319492cbdd678ec9ee",
@@ -358,7 +347,7 @@
       "title": "Reply to Raj Uttamchandani intro — connect re: cleaning/janitorial space",
       "type": "follow_up",
       "status": "open",
-      "priority": "medium",
+      "priority": "high",
       "due_date": "2026-04-23",
       "person": "Raj Uttamchandani",
       "notion_page_id": "3491e69629d181bdb2d6e5a43f156af8",
