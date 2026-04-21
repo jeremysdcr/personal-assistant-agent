@@ -1,6 +1,17 @@
 {
-  "synced_at": "2026-04-21T10:58:31Z",
+  "synced_at": "2026-04-21T11:07:04Z",
   "items": [
+    {
+      "item_id": "PA-124",
+      "title": "Conflict: 04/21 16:00 — J2J Expo 2026 ↔ John Furtado/Rob/Jeremy meeting",
+      "type": "follow_up",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-21",
+      "person": "",
+      "notion_page_id": "3491e69629d181f7b608e1b1ab48530f",
+      "source_ref": "conflict:0i1sht497fgsgjm4b23q5ocquc:ugh5fdeud38i3vb8pk61el7t4o"
+    },
     {
       "item_id": "PA-123",
       "title": "Confirm J2J Expo status with Rob — he canceled 'Jewish Business Expo'",
