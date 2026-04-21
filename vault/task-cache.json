@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-04-21T13:39:26Z",
+  "synced_at": "2026-04-21T14:24:50Z",
   "items": [
     {
       "item_id": "PA-126",
@@ -248,7 +248,7 @@
       "title": "Pay Rob Handelman $625 (half of $1,250) for J2J expo",
       "type": "task",
       "status": "open",
-      "priority": "medium",
+      "priority": "high",
       "due_date": "2026-04-22",
       "person": "Rob Handelman",
       "notion_page_id": "3491e69629d181f5a6b0dd9cc60c7334",
@@ -369,7 +369,7 @@
       "title": "Schedule EFI on-site visit once Mario's terms come back",
       "type": "follow_up",
       "status": "open",
-      "priority": "medium",
+      "priority": "high",
       "due_date": "2026-04-23",
       "person": "Mario",
       "notion_page_id": "3441e69629d1812f986bd4bcc0aa67ed",
