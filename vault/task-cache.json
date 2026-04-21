@@ -1,6 +1,17 @@
 {
-  "synced_at": "2026-04-21T11:07:04Z",
+  "synced_at": "2026-04-21T13:39:26Z",
   "items": [
+    {
+      "item_id": "PA-126",
+      "title": "Walk through Project Link full analysis with Rob Handelman",
+      "type": "commitment_mine",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-21",
+      "person": "Robert Handelman",
+      "notion_page_id": "3491e69629d18113b556d28ae95ae6e5",
+      "source_ref": "19dadef1dbc091a3"
+    },
     {
       "item_id": "PA-124",
       "title": "Conflict: 04/21 16:00 — J2J Expo 2026 ↔ John Furtado/Rob/Jeremy meeting",
@@ -11,17 +22,6 @@
       "person": "",
       "notion_page_id": "3491e69629d181f7b608e1b1ab48530f",
       "source_ref": "conflict:0i1sht497fgsgjm4b23q5ocquc:ugh5fdeud38i3vb8pk61el7t4o"
-    },
-    {
-      "item_id": "PA-123",
-      "title": "Confirm J2J Expo status with Rob — he canceled 'Jewish Business Expo'",
-      "type": "task",
-      "status": "open",
-      "priority": "urgent",
-      "due_date": "2026-04-21",
-      "person": "Robert Handelman",
-      "notion_page_id": "3481e69629d1818ca50fc4f777424c50",
-      "source_ref": "19dac71df2a547f5"
     },
     {
       "item_id": "PA-101",
@@ -55,17 +55,6 @@
       "person": "",
       "notion_page_id": "3471e69629d18143b92edea5e90e0fd7",
       "source_ref": ""
-    },
-    {
-      "item_id": "PA-96",
-      "title": "Pick up J2J Expo print materials from AE Printing on Monday",
-      "type": "task",
-      "status": "open",
-      "priority": "urgent",
-      "due_date": "2026-04-21",
-      "person": "",
-      "notion_page_id": "3471e69629d1814790a1c4916b832054",
-      "source_ref": "19d9d15761713a18"
     },
     {
       "item_id": "PA-97",
@@ -153,17 +142,6 @@
       "due_date": "2026-04-21",
       "person": "Ash (Climate Door)",
       "notion_page_id": "3451e69629d18115a367f7c994430b70",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-63",
-      "title": "Carole/Samara to reply on VCP contract sent",
-      "type": "follow_up",
-      "status": "waiting",
-      "priority": "high",
-      "due_date": "2026-04-21",
-      "person": "Carole Piovesan / Samara Starkman",
-      "notion_page_id": "3451e69629d1817589e8e2fb480d6066",
       "source_ref": ""
     },
     {
@@ -266,6 +244,17 @@
       "source_ref": "19d93d8be8352599"
     },
     {
+      "item_id": "PA-125",
+      "title": "Pay Rob Handelman $625 (half of $1,250) for J2J expo",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-04-22",
+      "person": "Rob Handelman",
+      "notion_page_id": "3491e69629d181f5a6b0dd9cc60c7334",
+      "source_ref": ""
+    },
+    {
       "item_id": "PA-122",
       "title": "Send invoice to Loyalty Markets for Plooto receivables",
       "type": "task",
@@ -275,17 +264,6 @@
       "person": "Loyalty Markets",
       "notion_page_id": "3481e69629d1818aabecd9e3af9ab6e1",
       "source_ref": ""
-    },
-    {
-      "item_id": "PA-120",
-      "title": "Send Micah the 'Seven term sheet clauses that matter more than valuation' article",
-      "type": "commitment_mine",
-      "status": "waiting",
-      "priority": "high",
-      "due_date": "2026-04-22",
-      "person": "Micah (HVE Healthcare)",
-      "notion_page_id": "3481e69629d181818454cd5447e98b3a",
-      "source_ref": "3481e69629d181dab612db619e45b454"
     },
     {
       "item_id": "PA-119",
@@ -508,6 +486,17 @@
       "source_ref": ""
     },
     {
+      "item_id": "PA-63",
+      "title": "Carole/Samara to reply on VCP contract sent",
+      "type": "follow_up",
+      "status": "waiting",
+      "priority": "high",
+      "due_date": "2026-04-24",
+      "person": "Carole Piovesan / Samara Starkman",
+      "notion_page_id": "3451e69629d1817589e8e2fb480d6066",
+      "source_ref": ""
+    },
+    {
       "item_id": "PA-56",
       "title": "Gershon/David Dansky team to send proposal",
       "type": "commitment_theirs",
@@ -607,6 +596,17 @@
       "source_ref": ""
     },
     {
+      "item_id": "PA-128",
+      "title": "Micah Vernon (HVE) to send 3 years of financials for partnership model",
+      "type": "commitment_theirs",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-04-28",
+      "person": "Micah Vernon",
+      "notion_page_id": "3491e69629d1817fac49d7c92008fd91",
+      "source_ref": "19dae200536e89d1"
+    },
+    {
       "item_id": "PA-31",
       "title": "File personal taxes for Jeremy and Leore — deadline April 30",
       "type": "task",
@@ -616,6 +616,17 @@
       "person": "Leore",
       "notion_page_id": "3441e69629d1817eaa00c0bb140fd930",
       "source_ref": ""
+    },
+    {
+      "item_id": "PA-127",
+      "title": "Attend Swift/ADS Q1 2026 board meeting (May 1)",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-05-01",
+      "person": "Daniel Gonsenhauser",
+      "notion_page_id": "3491e69629d181b08f69f60300a189e1",
+      "source_ref": "19dab22ad78fd423"
     },
     {
       "item_id": "PA-113",
@@ -737,6 +748,17 @@
       "person": "",
       "notion_page_id": "3451e69629d18166ba25e32c74d55395",
       "source_ref": ""
+    },
+    {
+      "item_id": "PA-129",
+      "title": "Reply to Simon at Xvision re investor intro request",
+      "type": "task",
+      "status": "open",
+      "priority": "low",
+      "due_date": null,
+      "person": "Simon (Xvision)",
+      "notion_page_id": "3491e69629d181f29dccd3651a0f0f29",
+      "source_ref": "19db0255f043acfe"
     },
     {
       "item_id": "PA-112",
@@ -946,17 +968,6 @@
       "person": "John Furtado",
       "notion_page_id": "3441e69629d181be982dfdfe70672ca3",
       "source_ref": "19d9238829ec627b"
-    },
-    {
-      "item_id": "PA-7",
-      "title": "Review Project Link CIM and send assessment back to Rob",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": null,
-      "person": "Robert Handelman",
-      "notion_page_id": "3441e69629d181cfb238ffd054f3179d",
-      "source_ref": "19d92b221b8c81be"
     }
   ]
 }
