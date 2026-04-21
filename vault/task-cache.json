@@ -1,237 +1,6 @@
 {
-  "synced_at": "2026-04-21T20:07:48Z",
+  "synced_at": "2026-04-21T22:15:17Z",
   "items": [
-    {
-      "item_id": "PA-126",
-      "title": "Walk through Project Link full analysis with Rob Handelman",
-      "type": "commitment_mine",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-21",
-      "person": "Robert Handelman",
-      "notion_page_id": "3491e69629d18113b556d28ae95ae6e5",
-      "source_ref": "19dadef1dbc091a3"
-    },
-    {
-      "item_id": "PA-124",
-      "title": "Conflict: 04/21 16:00 — J2J Expo 2026 ↔ John Furtado/Rob/Jeremy meeting",
-      "type": "follow_up",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-21",
-      "person": "",
-      "notion_page_id": "3491e69629d181f7b608e1b1ab48530f",
-      "source_ref": "conflict:0i1sht497fgsgjm4b23q5ocquc:ugh5fdeud38i3vb8pk61el7t4o"
-    },
-    {
-      "item_id": "PA-101",
-      "title": "Confirm meeting date with Leore (during the day, week of 4/20)",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-21",
-      "person": "Leore",
-      "notion_page_id": "3471e69629d18159a993fb0be3ded29e",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-99",
-      "title": "Call Kessler re: Ian Rosmarin — Tue Apr 21 at 9pm ET",
-      "type": "commitment_mine",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-21",
-      "person": "Ian Rosmarin / Kessler",
-      "notion_page_id": "3471e69629d18194a489d33518df9e77",
-      "source_ref": "19da3b6d684cde90"
-    },
-    {
-      "item_id": "PA-98",
-      "title": "Resolve morning-brief + eod-review routine timeouts (stream idle)",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-21",
-      "person": "",
-      "notion_page_id": "3471e69629d18143b92edea5e90e0fd7",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-97",
-      "title": "Review bulk condo deck forwarded by Rob (Frieberg/Strub)",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-21",
-      "person": "Robert Handelman",
-      "notion_page_id": "3471e69629d1817c9bd7dc8ce1c581d5",
-      "source_ref": "19d9d67bb87c9e26"
-    },
-    {
-      "item_id": "PA-86",
-      "title": "Give Max a path to read personal email",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-21",
-      "person": "",
-      "notion_page_id": "3461e69629d181548bf9f76068351d74",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-85",
-      "title": "Give Max access to Meeting Notes database in Notion and wire it up as a new surface",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-21",
-      "person": "",
-      "notion_page_id": "3461e69629d1813faad3e162e5f9d133",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-84",
-      "title": "Message Mike and Lior (ConnectCPA) re: referral, book quick fit call",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-21",
-      "person": "Mike and Lior (ConnectCPA)",
-      "notion_page_id": "3451e69629d18158b324f06ab328fe36",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-80",
-      "title": "Jen Hennings to post Loyalty Markets team announcement to Sidecar website",
-      "type": "commitment_theirs",
-      "status": "waiting",
-      "priority": "high",
-      "due_date": "2026-04-21",
-      "person": "Jennifer Hennings",
-      "notion_page_id": "3451e69629d181bbabfad8690c0a2c68",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-72",
-      "title": "Analyze Bezede's Project Elevate responses (1-hr block)",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-21",
-      "person": "Robert Bezede",
-      "notion_page_id": "3451e69629d18137b17fd34f9c19dfa1",
-      "source_ref": "19d93258acd33a40"
-    },
-    {
-      "item_id": "PA-66",
-      "title": "Email Ash at Climate Door re: potential PE intros — send investment criteria",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-21",
-      "person": "Ash (Climate Door)",
-      "notion_page_id": "3451e69629d18115a367f7c994430b70",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-32",
-      "title": "Pay MNP invoices (open since Mar 24)",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-21",
-      "person": "",
-      "notion_page_id": "3441e69629d1811887bcd7fb4e861278",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-28",
-      "title": "Send Operational Partner Database — committed to multiple people",
-      "type": "commitment_mine",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-21",
-      "person": "",
-      "notion_page_id": "3441e69629d181358feaf159cba4cacd",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-16",
-      "title": "Email Jordan (JNH Capital) — stale 25 days at Offer stage",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-21",
-      "person": "Jordan (JNH Capital)",
-      "notion_page_id": "3441e69629d1814d9706d03f11add797",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-35",
-      "title": "Confirm JR Holdings distribution amount; pay down credit line",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-21",
-      "person": "",
-      "notion_page_id": "3441e69629d18154bee4f9436379dd52",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-21",
-      "title": "J2J Expo prep — finalize materials and logistics",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-21",
-      "person": "Rob Handelman / Yossi Braun",
-      "notion_page_id": "3441e69629d1816783fdeda0b5eba831",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-29",
-      "title": "David Metzler (IDFWO) to confirm call time",
-      "type": "commitment_theirs",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-21",
-      "person": "David Metzler",
-      "notion_page_id": "3441e69629d1816b876adea06e63ff12",
-      "source_ref": "19d8cf2c7b37d10a"
-    },
-    {
-      "item_id": "PA-17",
-      "title": "Probe John Furtado on Casey pass — look for a wedge to reopen",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-21",
-      "person": "John Furtado",
-      "notion_page_id": "3441e69629d1817fb086f0fc951f9d38",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-52",
-      "title": "Eterna — confirm invoice payment received",
-      "type": "follow_up",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-21",
-      "person": "Eterna",
-      "notion_page_id": "3441e69629d181dcb829c5a43de9de6d",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-3",
-      "title": "Prep for John Furtado meeting — M&A target criteria discussion",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-21",
-      "person": "John Furtado",
-      "notion_page_id": "3441e69629d1814fb031f67d45eb9a0d",
-      "source_ref": "19d93d8be8352599"
-    },
     {
       "item_id": "PA-132",
       "title": "Pay Jeremy Reinbolt (Videre) April invoice — confirm payment method",
@@ -244,6 +13,17 @@
       "source_ref": "19db12df72f86608"
     },
     {
+      "item_id": "PA-126",
+      "title": "Walk through Project Link full analysis with Rob Handelman",
+      "type": "commitment_mine",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-22",
+      "person": "Robert Handelman",
+      "notion_page_id": "3491e69629d18113b556d28ae95ae6e5",
+      "source_ref": "19dadef1dbc091a3"
+    },
+    {
       "item_id": "PA-125",
       "title": "Pay Rob Handelman $625 (half of $1,250) for J2J expo",
       "type": "task",
@@ -253,6 +33,17 @@
       "person": "Rob Handelman",
       "notion_page_id": "3491e69629d181f5a6b0dd9cc60c7334",
       "source_ref": ""
+    },
+    {
+      "item_id": "PA-124",
+      "title": "Conflict: 04/21 16:00 — J2J Expo 2026 ↔ John Furtado/Rob/Jeremy meeting",
+      "type": "follow_up",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-22",
+      "person": "",
+      "notion_page_id": "3491e69629d181f7b608e1b1ab48530f",
+      "source_ref": "conflict:0i1sht497fgsgjm4b23q5ocquc:ugh5fdeud38i3vb8pk61el7t4o"
     },
     {
       "item_id": "PA-122",
@@ -277,6 +68,94 @@
       "source_ref": "19dabcc01435ae47"
     },
     {
+      "item_id": "PA-101",
+      "title": "Confirm meeting date with Leore (during the day, week of 4/20)",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-22",
+      "person": "Leore",
+      "notion_page_id": "3471e69629d18159a993fb0be3ded29e",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-99",
+      "title": "Call Kessler re: Ian Rosmarin — Tue Apr 21 at 9pm ET",
+      "type": "commitment_mine",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-22",
+      "person": "Ian Rosmarin / Kessler",
+      "notion_page_id": "3471e69629d18194a489d33518df9e77",
+      "source_ref": "19da3b6d684cde90"
+    },
+    {
+      "item_id": "PA-98",
+      "title": "Resolve morning-brief + eod-review routine timeouts (stream idle)",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-22",
+      "person": "",
+      "notion_page_id": "3471e69629d18143b92edea5e90e0fd7",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-97",
+      "title": "Review bulk condo deck forwarded by Rob (Frieberg/Strub)",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-22",
+      "person": "Robert Handelman",
+      "notion_page_id": "3471e69629d1817c9bd7dc8ce1c581d5",
+      "source_ref": "19d9d67bb87c9e26"
+    },
+    {
+      "item_id": "PA-86",
+      "title": "Give Max a path to read personal email",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-22",
+      "person": "",
+      "notion_page_id": "3461e69629d181548bf9f76068351d74",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-85",
+      "title": "Give Max access to Meeting Notes database in Notion and wire it up as a new surface",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-22",
+      "person": "",
+      "notion_page_id": "3461e69629d1813faad3e162e5f9d133",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-84",
+      "title": "Message Mike and Lior (ConnectCPA) re: referral, book quick fit call",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-22",
+      "person": "Mike and Lior (ConnectCPA)",
+      "notion_page_id": "3451e69629d18158b324f06ab328fe36",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-80",
+      "title": "Jen Hennings to post Loyalty Markets team announcement to Sidecar website",
+      "type": "commitment_theirs",
+      "status": "waiting",
+      "priority": "high",
+      "due_date": "2026-04-22",
+      "person": "Jennifer Hennings",
+      "notion_page_id": "3451e69629d181bbabfad8690c0a2c68",
+      "source_ref": ""
+    },
+    {
       "item_id": "PA-75",
       "title": "Post LinkedIn announcement for Loyalty Markets partnership",
       "type": "task",
@@ -285,6 +164,28 @@
       "due_date": "2026-04-22",
       "person": "Jennifer Hennings",
       "notion_page_id": "3451e69629d1816cb612db2c6cf9feec",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-72",
+      "title": "Analyze Bezede's Project Elevate responses (1-hr block)",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-22",
+      "person": "Robert Bezede",
+      "notion_page_id": "3451e69629d18137b17fd34f9c19dfa1",
+      "source_ref": "19d93258acd33a40"
+    },
+    {
+      "item_id": "PA-66",
+      "title": "Email Ash at Climate Door re: potential PE intros — send investment criteria",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-22",
+      "person": "Ash (Climate Door)",
+      "notion_page_id": "3451e69629d18115a367f7c994430b70",
       "source_ref": ""
     },
     {
@@ -299,6 +200,50 @@
       "source_ref": ""
     },
     {
+      "item_id": "PA-32",
+      "title": "Pay MNP invoices (open since Mar 24)",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-22",
+      "person": "",
+      "notion_page_id": "3441e69629d1811887bcd7fb4e861278",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-28",
+      "title": "Send Operational Partner Database — committed to multiple people",
+      "type": "commitment_mine",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-22",
+      "person": "",
+      "notion_page_id": "3441e69629d181358feaf159cba4cacd",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-16",
+      "title": "Email Jordan (JNH Capital) — stale 25 days at Offer stage",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-22",
+      "person": "Jordan (JNH Capital)",
+      "notion_page_id": "3441e69629d1814d9706d03f11add797",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-35",
+      "title": "Confirm JR Holdings distribution amount; pay down credit line",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-22",
+      "person": "",
+      "notion_page_id": "3441e69629d18154bee4f9436379dd52",
+      "source_ref": ""
+    },
+    {
       "item_id": "PA-33",
       "title": "CDA filings — check status JR PQMLP Holdings 2025; notify MNP re 2026",
       "type": "task",
@@ -307,6 +252,39 @@
       "due_date": "2026-04-22",
       "person": "",
       "notion_page_id": "3441e69629d181638d63f752ae1eb866",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-21",
+      "title": "J2J Expo prep — finalize materials and logistics",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-22",
+      "person": "Rob Handelman / Yossi Braun",
+      "notion_page_id": "3441e69629d1816783fdeda0b5eba831",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-29",
+      "title": "David Metzler (IDFWO) to confirm call time",
+      "type": "commitment_theirs",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-22",
+      "person": "David Metzler",
+      "notion_page_id": "3441e69629d1816b876adea06e63ff12",
+      "source_ref": "19d8cf2c7b37d10a"
+    },
+    {
+      "item_id": "PA-17",
+      "title": "Probe John Furtado on Casey pass — look for a wedge to reopen",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-22",
+      "person": "John Furtado",
+      "notion_page_id": "3441e69629d1817fb086f0fc951f9d38",
       "source_ref": ""
     },
     {
@@ -330,6 +308,28 @@
       "person": "Danielle",
       "notion_page_id": "3441e69629d1819ca193c1dad7378ab4",
       "source_ref": ""
+    },
+    {
+      "item_id": "PA-52",
+      "title": "Eterna — confirm invoice payment received",
+      "type": "follow_up",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-22",
+      "person": "Eterna",
+      "notion_page_id": "3441e69629d181dcb829c5a43de9de6d",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-3",
+      "title": "Prep for John Furtado meeting — M&A target criteria discussion",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-22",
+      "person": "John Furtado",
+      "notion_page_id": "3441e69629d1814fb031f67d45eb9a0d",
+      "source_ref": "19d93d8be8352599"
     },
     {
       "item_id": "PA-130",
