@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-04-20T22:32:19Z",
+  "synced_at": "2026-04-21T02:04:11Z",
   "items": [
     {
       "item_id": "PA-123",
@@ -270,7 +270,7 @@
       "title": "Send Micah the 'Seven term sheet clauses that matter more than valuation' article",
       "type": "commitment_mine",
       "status": "waiting",
-      "priority": "medium",
+      "priority": "high",
       "due_date": "2026-04-22",
       "person": "Micah (HVE Healthcare)",
       "notion_page_id": "3481e69629d181818454cd5447e98b3a",
