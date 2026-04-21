@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-04-21T18:03:48Z",
+  "synced_at": "2026-04-21T19:30:36Z",
   "items": [
     {
       "item_id": "PA-126",
@@ -244,6 +244,17 @@
       "source_ref": "19d93d8be8352599"
     },
     {
+      "item_id": "PA-132",
+      "title": "Pay Jeremy Reinbolt (Videre) April invoice — confirm payment method",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-22",
+      "person": "Jeremy Reinbolt / Videre",
+      "notion_page_id": "3491e69629d18133b634f8a610cf5468",
+      "source_ref": "19db12df72f86608"
+    },
+    {
       "item_id": "PA-125",
       "title": "Pay Rob Handelman $625 (half of $1,250) for J2J expo",
       "type": "task",
@@ -332,6 +343,28 @@
       "source_ref": ""
     },
     {
+      "item_id": "PA-130",
+      "title": "Reply to Jonathan Draycott intro — connect re: janitorial investment thesis",
+      "type": "follow_up",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-04-23",
+      "person": "Jonathan Draycott",
+      "notion_page_id": "3491e69629d181319492cbdd678ec9ee",
+      "source_ref": "19db141963ae308c"
+    },
+    {
+      "item_id": "PA-131",
+      "title": "Reply to Raj Uttamchandani intro — connect re: cleaning/janitorial space",
+      "type": "follow_up",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-04-23",
+      "person": "Raj Uttamchandani",
+      "notion_page_id": "3491e69629d181bdb2d6e5a43f156af8",
+      "source_ref": "19db13e3d329698a"
+    },
+    {
       "item_id": "PA-109",
       "title": "Joshua Kramer to authorize Plooto PAD for SCP advisory fees",
       "type": "commitment_theirs",
@@ -346,7 +379,7 @@
       "item_id": "PA-103",
       "title": "Reply to Mike Masse intro — schedule food/cleaning services meeting",
       "type": "task",
-      "status": "waiting",
+      "status": "open",
       "priority": "high",
       "due_date": "2026-04-23",
       "person": "Mike Masse / Richard Roos",
