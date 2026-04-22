@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-04-22T19:30:34Z",
+  "synced_at": "2026-04-22T20:17:40Z",
   "items": [
     {
       "item_id": "PA-138",
@@ -11,17 +11,6 @@
       "person": "",
       "notion_page_id": "34a1e69629d18140b10beef5a6b9fd7e",
       "source_ref": "conflict:hme7kq63di62rr3ftkebj6mqv8:psvuk94lv90tvqibdgbae35kf0_20260423T004500Z"
-    },
-    {
-      "item_id": "PA-137",
-      "title": "Conflict: 04/22 09:00 — Respond to intros from Dan ↔ Personal tax filings prep block",
-      "type": "follow_up",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-22",
-      "person": "",
-      "notion_page_id": "34a1e69629d181a0bfa4f97ca27c362d",
-      "source_ref": "conflict:ht3jp9330nlf71b4352trlc4us:oi6eld2pkv9528j84fvm8eh3t4"
     },
     {
       "item_id": "PA-132",
