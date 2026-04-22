@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-04-22T18:24:50Z",
+  "synced_at": "2026-04-22T19:30:34Z",
   "items": [
     {
       "item_id": "PA-138",
@@ -574,6 +574,17 @@
       "source_ref": ""
     },
     {
+      "item_id": "PA-145",
+      "title": "Nicholas Wong (MNP) to confirm CDA T2054 filing and T5 picture for 2025 return",
+      "type": "commitment_theirs",
+      "status": "open",
+      "priority": "urgent",
+      "due_date": "2026-04-25",
+      "person": "Nicholas Wong",
+      "notion_page_id": "34a1e69629d18111be35d22326aa8ec5",
+      "source_ref": "19db63622a1116d7"
+    },
+    {
       "item_id": "PA-143",
       "title": "Evaluate and respond to Rick Naor (Liquid Capital) re: TJN event factoring intro",
       "type": "follow_up",
@@ -671,6 +682,17 @@
       "person": "Micah Vernon",
       "notion_page_id": "3491e69629d1817fac49d7c92008fd91",
       "source_ref": "19dae200536e89d1"
+    },
+    {
+      "item_id": "PA-144",
+      "title": "Schedule lunch with David Goldberg (TD Commercial Banking) re: J2J connection",
+      "type": "follow_up",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-04-30",
+      "person": "David Goldberg",
+      "notion_page_id": "34a1e69629d1817489fbd8d87ebc622a",
+      "source_ref": "19db65ac6e4c3a23"
     },
     {
       "item_id": "PA-31",
