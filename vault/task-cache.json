@@ -1052,7 +1052,7 @@
       "type": "task",
       "status": "open",
       "priority": "medium",
-      "due_date": null,
+      "due_date": "2026-04-27",
       "person": "",
       "notion_page_id": "34a1e69629d181fa90e6f4d1036d2b20",
       "source_ref": ""
