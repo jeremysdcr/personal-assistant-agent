@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-04-21T22:31:03Z",
+  "synced_at": "2026-04-22T02:21:06Z",
   "items": [
     {
       "item_id": "PA-132",
@@ -33,17 +33,6 @@
       "person": "Rob Handelman",
       "notion_page_id": "3491e69629d181f5a6b0dd9cc60c7334",
       "source_ref": ""
-    },
-    {
-      "item_id": "PA-124",
-      "title": "Conflict: 04/21 16:00 — J2J Expo 2026 ↔ John Furtado/Rob/Jeremy meeting",
-      "type": "follow_up",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-22",
-      "person": "",
-      "notion_page_id": "3491e69629d181f7b608e1b1ab48530f",
-      "source_ref": "conflict:0i1sht497fgsgjm4b23q5ocquc:ugh5fdeud38i3vb8pk61el7t4o"
     },
     {
       "item_id": "PA-122",
@@ -769,6 +758,17 @@
       "due_date": "2026-11-02",
       "person": "",
       "notion_page_id": "3451e69629d18166ba25e32c74d55395",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-133",
+      "title": "Research and enforce Sidecar trademark against Mark Cressman's business",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": null,
+      "person": "Mark Cressman",
+      "notion_page_id": "34a1e69629d181beb096d54622585cd8",
       "source_ref": ""
     },
     {
