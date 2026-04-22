@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-04-22T11:06:56Z",
+  "synced_at": "2026-04-22T13:37:49Z",
   "items": [
     {
       "item_id": "PA-138",
@@ -38,7 +38,7 @@
       "item_id": "PA-126",
       "title": "Walk through Project Link full analysis with Rob Handelman",
       "type": "commitment_mine",
-      "status": "open",
+      "status": "waiting",
       "priority": "high",
       "due_date": "2026-04-22",
       "person": "Robert Handelman",
@@ -354,17 +354,6 @@
       "source_ref": ""
     },
     {
-      "item_id": "PA-130",
-      "title": "Reply to Jonathan Draycott intro — connect re: janitorial investment thesis",
-      "type": "follow_up",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-23",
-      "person": "Jonathan Draycott",
-      "notion_page_id": "3491e69629d181319492cbdd678ec9ee",
-      "source_ref": "19db141963ae308c"
-    },
-    {
       "item_id": "PA-131",
       "title": "Reply to Raj Uttamchandani intro — connect re: cleaning/janitorial space",
       "type": "follow_up",
@@ -583,6 +572,17 @@
       "person": "",
       "notion_page_id": "3441e69629d181a5ba6fdfdb10f14f38",
       "source_ref": ""
+    },
+    {
+      "item_id": "PA-130",
+      "title": "Reply to Jonathan Draycott intro — connect re: janitorial investment thesis",
+      "type": "follow_up",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-25",
+      "person": "Jonathan Draycott",
+      "notion_page_id": "3491e69629d181319492cbdd678ec9ee",
+      "source_ref": "19db141963ae308c"
     },
     {
       "item_id": "PA-41",
