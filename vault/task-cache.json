@@ -1,6 +1,28 @@
 {
-  "synced_at": "2026-04-22T10:59:08Z",
+  "synced_at": "2026-04-22T11:06:56Z",
   "items": [
+    {
+      "item_id": "PA-138",
+      "title": "Conflict: 04/22 20:45 — Plan your day tomorrow ↔ Catch-up call: Jeremy and Ian Kessler",
+      "type": "follow_up",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-22",
+      "person": "",
+      "notion_page_id": "34a1e69629d18140b10beef5a6b9fd7e",
+      "source_ref": "conflict:hme7kq63di62rr3ftkebj6mqv8:psvuk94lv90tvqibdgbae35kf0_20260423T004500Z"
+    },
+    {
+      "item_id": "PA-137",
+      "title": "Conflict: 04/22 09:00 — Respond to intros from Dan ↔ Personal tax filings prep block",
+      "type": "follow_up",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-22",
+      "person": "",
+      "notion_page_id": "34a1e69629d181a0bfa4f97ca27c362d",
+      "source_ref": "conflict:ht3jp9330nlf71b4352trlc4us:oi6eld2pkv9528j84fvm8eh3t4"
+    },
     {
       "item_id": "PA-132",
       "title": "Pay Jeremy Reinbolt (Videre) April invoice — confirm payment method",
@@ -770,6 +792,17 @@
       "person": "",
       "notion_page_id": "3451e69629d18166ba25e32c74d55395",
       "source_ref": ""
+    },
+    {
+      "item_id": "PA-139",
+      "title": "Review and assign HubSpot enriched data delete request",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": null,
+      "person": "",
+      "notion_page_id": "34a1e69629d181eb9084f1f6bc8cb2a2",
+      "source_ref": "19db451675e23404"
     },
     {
       "item_id": "PA-136",
