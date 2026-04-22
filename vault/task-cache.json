@@ -1045,6 +1045,17 @@
       "person": "John Furtado",
       "notion_page_id": "3441e69629d181be982dfdfe70672ca3",
       "source_ref": "19d9238829ec627b"
+    },
+    {
+      "item_id": "PA-NEW",
+      "title": "Pick up screw at Home Depot to fix toilet paper holder in Ayala & Yoav's bathroom",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": null,
+      "person": "",
+      "notion_page_id": "34a1e69629d181fa90e6f4d1036d2b20",
+      "source_ref": ""
     }
   ]
 }
