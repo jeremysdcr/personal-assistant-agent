@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-04-22T02:21:06Z",
+  "synced_at": "2026-04-22T10:59:08Z",
   "items": [
     {
       "item_id": "PA-132",
@@ -319,6 +319,17 @@
       "person": "John Furtado",
       "notion_page_id": "3441e69629d1814fb031f67d45eb9a0d",
       "source_ref": "19d93d8be8352599"
+    },
+    {
+      "item_id": "PA-134",
+      "title": "Follow up with individuals for sponsorships of Chris McKenna smartphone event",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-23",
+      "person": "",
+      "notion_page_id": "34a1e69629d181b683d7d06e49007483",
+      "source_ref": ""
     },
     {
       "item_id": "PA-130",
@@ -761,14 +772,25 @@
       "source_ref": ""
     },
     {
-      "item_id": "PA-133",
-      "title": "Research and enforce Sidecar trademark against Mark Cressman's business",
+      "item_id": "PA-136",
+      "title": "Decide enforcement path on Sidecar trademark vs Mark Cressman",
       "type": "task",
       "status": "open",
       "priority": "medium",
       "due_date": null,
       "person": "Mark Cressman",
-      "notion_page_id": "34a1e69629d181beb096d54622585cd8",
+      "notion_page_id": "34a1e69629d1812db58ff9b2d7487b36",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-135",
+      "title": "Research Sidecar trademark status and Mark Cressman's use",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": null,
+      "person": "Mark Cressman",
+      "notion_page_id": "34a1e69629d1815f9e59cab25f90348a",
       "source_ref": ""
     },
     {
