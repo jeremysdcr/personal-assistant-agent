@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-04-22T14:35:23Z",
+  "synced_at": "2026-04-22T17:00:36Z",
   "items": [
     {
       "item_id": "PA-138",
@@ -431,6 +431,17 @@
       "source_ref": ""
     },
     {
+      "item_id": "PA-142",
+      "title": "Update Sidecar-INQ agreement per Carole's edits (Sections 6 and 16)",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-24",
+      "person": "Carole Piovesan",
+      "notion_page_id": "34a1e69629d181fbaea8dacbc420ee94",
+      "source_ref": "19db5d6e357ad0fd"
+    },
+    {
       "item_id": "PA-118",
       "title": "Rob Handelman to set up Loyalty value-creation working session with Gershon",
       "type": "commitment_theirs",
@@ -519,17 +530,6 @@
       "source_ref": ""
     },
     {
-      "item_id": "PA-63",
-      "title": "Carole/Samara to reply on VCP contract sent",
-      "type": "follow_up",
-      "status": "waiting",
-      "priority": "high",
-      "due_date": "2026-04-24",
-      "person": "Carole Piovesan / Samara Starkman",
-      "notion_page_id": "3451e69629d1817589e8e2fb480d6066",
-      "source_ref": ""
-    },
-    {
       "item_id": "PA-56",
       "title": "Gershon/David Dansky team to send proposal",
       "type": "commitment_theirs",
@@ -574,6 +574,17 @@
       "source_ref": ""
     },
     {
+      "item_id": "PA-143",
+      "title": "Evaluate and respond to Rick Naor (Liquid Capital) re: TJN event factoring intro",
+      "type": "follow_up",
+      "status": "open",
+      "priority": "low",
+      "due_date": "2026-04-25",
+      "person": "Rick Naor",
+      "notion_page_id": "34a1e69629d181e1af49d70d9a823dab",
+      "source_ref": "19db58b1730a9980"
+    },
+    {
       "item_id": "PA-130",
       "title": "Reply to Jonathan Draycott intro — connect re: janitorial investment thesis",
       "type": "follow_up",
@@ -616,6 +627,17 @@
       "person": "Robert Bezede",
       "notion_page_id": "3441e69629d181f59461c8d49121af9a",
       "source_ref": "19d93258acd33a40"
+    },
+    {
+      "item_id": "PA-140",
+      "title": "Pick up screw at Home Depot to fix toilet paper holder in Ayala & Yoav's bathroom",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-04-27",
+      "person": "",
+      "notion_page_id": "34a1e69629d181fa90e6f4d1036d2b20",
+      "source_ref": ""
     },
     {
       "item_id": "PA-116",
@@ -791,6 +813,17 @@
       "due_date": "2026-11-02",
       "person": "",
       "notion_page_id": "3451e69629d18166ba25e32c74d55395",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-141",
+      "title": "Decide and implement analytics path for Sidecar website (connect GSC to Ahrefs OR export GSC+GA4 last 6-12 months)",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": null,
+      "person": "",
+      "notion_page_id": "34a1e69629d181f8b00acd064c485b3f",
       "source_ref": ""
     },
     {
@@ -1045,17 +1078,6 @@
       "person": "John Furtado",
       "notion_page_id": "3441e69629d181be982dfdfe70672ca3",
       "source_ref": "19d9238829ec627b"
-    },
-    {
-      "item_id": "PA-NEW",
-      "title": "Pick up screw at Home Depot to fix toilet paper holder in Ayala & Yoav's bathroom",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": "2026-04-27",
-      "person": "",
-      "notion_page_id": "34a1e69629d181fa90e6f4d1036d2b20",
-      "source_ref": ""
     }
   ]
 }
