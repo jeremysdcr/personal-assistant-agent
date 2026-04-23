@@ -13,7 +13,7 @@ When Jeremy opens a conversation here, start by running the boot sequence before
 2. Read `vault/daily/{today's date YYYY-MM-DD}.md` and the freshly-synced `vault/task-cache.json`.
 3. **Stale state check:** If the daily journal doesn't exist for today, tell Jeremy and offer to run a fresh scan: "No journal for today yet — want me to scan your email?"
 4. **Source-of-truth precedence.** The journal is a point-in-time morning snapshot; the cache (and Notion behind it) is live. When a task appears in both, **cache wins for `status`, `due_date`, `priority`, and `type`** — these fields drift the moment Jeremy reschedules, reclassifies, or closes something mid-day, and the journal does not get rewritten. Use the journal only for narrative context (hidden constraints, tone, reasoning, "coordinate passcode with Leore first," etc.). If cache and journal disagree on a status-sensitive field, surface the disagreement ("journal said today, cache says Monday — cache wins") rather than silently picking one.
-5. Summarize: today's schedule, calendar conflicts in the next 7 days, attention-required items, new items since last check, crack-check flags, draft replies waiting in Gmail. **Only surface items with status=open, in_progress, waiting, or stale** — never include done or cancelled items in a briefing, even if they appear in the cache.
+5. Summarize: today's schedule, calendar conflicts in the next 7 days, attention-required items, new items since last check, crack-check flags, pending drafts in PA Drafts DB. **Only surface items with status=open, in_progress, waiting, or stale** — never include done or cancelled items in a briefing, even if they appear in the cache.
 6. If Jeremy says "catch me up," "what's going on," or similar — this is the flow.
 
 ## Email
@@ -142,8 +142,11 @@ All connectors are configured at the account level and available in Surface A (C
 - `get_user_details` — get current user details
 - `tool_guidance` — get usage instructions for HubSpot tools
 
-## Notion PA Tracker
+## Notion Databases
 
+Three databases live under the Daily Brief page (`3441e696-29d1-815b-9a43-c156cad7fc34`):
+
+### PA Tracker
 - **Database ID:** 3d5f82fd5c4b41bdbbf437402b18390c
 - **Data source:** collection://b3e39150-8cf2-491f-b65f-f13f38fae886
 - **Daily Brief page ID:** 3441e696-29d1-815b-9a43-c156cad7fc34
@@ -189,6 +192,38 @@ Use `notion-query-database-view` with the Active Items view to sync the cache. T
 ### Auto-managed calendar conflicts
 Items with Source = `calendar` and Source Ref starting with `conflict:` are created and resolved automatically by the conflict detector. The morning brief sweep (`prompts/morning-brief.md` Step 2.5) scans 7 days ahead and creates one item per detected conflict pair; scan-and-check (`prompts/scan-and-check.md` Part B) auto-resolves items whose underlying events no longer conflict. Jeremy can dismiss a conflict early by marking the item `done` — the source_ref dedup ensures it will not be recreated.
 
+### Daily Briefs
+- **Database ID:** d7858fd6ab9741af89baee5caaf121cc
+- **Data source:** collection://d0bdbd5f-8310-4fcb-98cf-71c9040b61b9
+- **Purpose:** Archived morning brief output. One row per day, full brief markdown in page body. Written by `prompts/morning-brief.md` Step 11 (replaces the former Gmail-draft copy).
+
+#### Schema
+| Field | Type | Values |
+|-------|------|--------|
+| Title | Title | `Daily Brief — Month DD, YYYY` |
+| Date | Date | ISO date for today |
+| (page body) | Blocks | Full briefing markdown from the journal |
+
+### PA Drafts
+- **Database ID:** 1dacf3f85bbd4b65a7e02c8de1487dbc
+- **Data source:** collection://0bf9dfc4-2607-4154-8afc-7cc14d3b3910
+- **Purpose:** Autonomous reply/nudge draft outputs. Written by `prompts/scan-and-check.md` Step 9 (replies) and Step 12 (nudges). Jeremy reviews in Notion and sends manually from Gmail; the agent never creates a downstream Gmail draft from a stored PA Drafts row.
+
+#### Schema
+| Field | Type | Values |
+|-------|------|--------|
+| Title | Title | `Reply to {person} — Re: {subject}` or `Nudge {person} — Re: {subject}` |
+| Type | Select | `reply`, `nudge` |
+| Status | Select | `pending_review` (default), `dismissed` |
+| Recipient | Rich Text | Email address (for quick copy when composing in Gmail) |
+| Source Ref | Rich Text | Gmail message ID of the triggering email — dedup key |
+| Created | Created Time | Auto |
+| (page body) | Blocks | Draft body text |
+
+#### Dedup
+- **Reply drafts:** source_ref (Gmail message_id) unique. Extraction emits `action=update` for existing PA items — Step 9 skips draft creation in that case, so re-scans don't stack duplicate replies on the same thread.
+- **Nudge drafts:** the PA item's Notes field gets stamped `Follow-up draft created {today}` (existing pre-change behavior, preserved). If Jeremy dismisses a nudge and wants it re-drafted later, he clears the note manually.
+
 ## Natural Language Commands
 
 Jeremy will say things like:
@@ -205,8 +240,10 @@ Jeremy will say things like:
 | "what's on my calendar [today/tomorrow/this week]" | Query Google Calendar |
 | "any conflicts" / "what conflicts this week" / "check my schedule" | Query Notion for open items with Source = calendar AND Source Ref starting `conflict:`, group by due date |
 | "dismiss conflict [description]" | Find the matching open conflict item in Notion, mark Status = done with note "Dismissed by Jeremy {YYYY-MM-DD}" |
-| "draft a reply to [person/subject]" | Find email thread, create draft via gmail_create_draft with threadId |
-| "nudge [person] about [topic]" | Find thread, draft a follow-up in Gmail |
+| "draft a reply to [person/subject]" | Find email thread, create Gmail draft via `gmail_create_draft` (on-demand only — autonomous routines no longer create Gmail drafts; see Standing Instructions) |
+| "nudge [person] about [topic]" | Find thread, create Gmail draft via `gmail_create_draft` (on-demand only) |
+| "show me pending drafts" / "what drafts are waiting" | Query PA Drafts DB filtered by Status=pending_review, group by Type |
+| "dismiss draft [id/description]" | Find matching PA Drafts row, update Status=dismissed |
 | "reschedule [item] to [date]" | Update due_date in Notion |
 | "show me the email about [topic]" | Search Gmail |
 | "what happened with [person/company]" | Search Gmail + Notion + Drive |
@@ -235,6 +272,7 @@ Jeremy will say things like:
 - **Tone and stance:** Read `vault/soul.md` at the start of any session (CLI, cloud interactive, or routine) before producing user-facing output. It defines how I show up — stance, voice, pushback, proactivity, decision rights, cadence. Applies across all surfaces.
 - **Loyalty Markets weekly meetings:** Jeremy does not need agenda review or prep tasks created for recurring weekly Loyalty Markets team meetings. Do not extract these as obligations during email scans.
 - **No em dashes in email drafts:** Never use em dashes (—) when drafting emails on Jeremy's behalf (Gmail drafts, nudges, follow-ups, any outbound sent from his accounts). Jeremy does not use em dashes in his own writing and wants drafts to match his voice. Substitute with a period, comma, semicolon, or parentheses depending on context. Review every draft before presenting or saving and strip any em dash that slipped in, including any copied from quoted text that ends up in your new prose. Scope is outbound emails; em dashes in internal repo text, journals, or briefings to Jeremy are fine.
+- **Never create Gmail drafts autonomously.** Autonomous routines (`prompts/morning-brief.md`, `prompts/scan-and-check.md`) write all draft output to the Notion databases (Daily Briefs, PA Drafts). `gmail_create_draft` is reserved for explicit user commands — "draft a reply to...", "nudge..." — issued in a CLI session. This rule supersedes any per-prompt instructions that predate it. Rationale: Jeremy does not track the Gmail Drafts folder, and unthreaded autonomous drafts (Gmail MCP rejects `threadId`) render oddly in the inbox. Notion is the single review surface.
 
 ## Conventions
 
@@ -243,6 +281,6 @@ Jeremy will say things like:
 - **Never delete items** — mark them as cancelled instead
 - **Timezone:** America/New_York (Eastern)
 - **Default new task:** status=open, priority=medium, source=manual
-- **Draft replies** go to Gmail Drafts — never auto-sent. Jeremy reviews before sending.
+- **Draft replies.** Autonomous routines write reply/nudge drafts to the PA Drafts Notion database; Jeremy reviews there and sends manually from Gmail. Explicit user commands ("draft a reply to...") create Gmail drafts which also stay as drafts — never auto-sent.
 - **HubSpot writes** always require confirmation from Jeremy before executing
 - **Commit messages:** descriptive, e.g., "add task: call dentist by Friday" or "mark PA-42 done". Prefix `cloud:` for Surface B commits, `reconcile:` for routine commits, `boot-sync:` for CLI boot-sync commits.

@@ -129,7 +129,7 @@ For ACTIONABLE emails that need a response from Jeremy, also generate a draft re
 - **Brief**: 2-4 sentences maximum
 - **Jeremy's voice**: Professional but direct, not overly formal. No "I hope this email finds you well."
 - **Honest timelines**: If you don't know when Jeremy will complete something, say "will get back to you this week" rather than committing to a specific date
-- **Never auto-send**: These are always drafts. Jeremy reviews before sending.
+- **Never auto-send and never autonomously create Gmail drafts**: These draft entries land in the PA Drafts Notion database for Jeremy's review. He copies the body and sends manually from Gmail if he chooses. `gmail_create_draft` is called only by explicit user commands in a CLI session — never by the scan routine. (See CLAUDE.md Standing Instructions.)
 
 ## Section 6: Deduplication Rules
 
@@ -195,9 +195,9 @@ Best, Sarah
 **Draft reply** (if Sarah is a key relationship):
 ```json
 {
-  "thread_id": "{gmail_thread_id}",
+  "source_ref": "{message_id}",
   "to": "sarah.chen@acme.com",
-  "body": "Hi Sarah, thanks — will have the updated term sheet over to you by EOW. Looking forward to seeing the redlines from your counsel.",
+  "body": "Hi Sarah, thanks, will have the updated term sheet over to you by EOW. Looking forward to seeing the redlines from your counsel.",
   "reason": "Sarah asked for term sheet by EOW, brief acknowledgment confirms the commitment"
 }
 ```
@@ -412,17 +412,17 @@ After processing all emails, produce a JSON object:
   ],
   "draft_replies": [
     {
-      "thread_id": "{gmail_thread_id}",
+      "source_ref": "{message_id}",
       "to": "sarah.chen@acme.com",
-      "body": "Hi Sarah, thanks — will have the updated term sheet over to you by EOW.",
+      "body": "Hi Sarah, thanks, will have the updated term sheet over to you by EOW.",
       "reason": "Sarah asked for term sheet by EOW, brief acknowledgment confirms commitment"
     }
   ],
   "follow_up_drafts": [
     {
-      "thread_id": "{gmail_thread_id}",
+      "source_ref": "{original_message_id}",
       "to": "mario@dealco.com",
-      "body": "Hi Mario, just circling back on the redlines — any updates from your side?",
+      "body": "Hi Mario, just circling back on the redlines, any updates from your side?",
       "reason": "commitment_theirs PA-38, open 6 days, overdue",
       "related_item_id": "PA-38"
     }
@@ -452,7 +452,7 @@ When running as a Scan & Check routine:
 6. Apply this extraction framework to each email. Produce the structured output above.
 7. Deduplicate against cache by source_ref and title+person similarity.
 8. Write to Notion: `notion-create-pages` for new items, `notion-update-page` for updates.
-9. Create draft replies: `gmail_create_draft` with threadId for each draft_reply entry.
+9. Create PA Drafts rows: `notion-create-pages` on the PA Drafts DB (data source `collection://0bf9dfc4-2607-4154-8afc-7cc14d3b3910`) for each `draft_reply` entry. Set Type=`reply`, Status=`pending_review`, Recipient=`to`, Source Ref=the entry's `source_ref`. Page body = `body`. Skip if the corresponding `items[]` entry was `action: update`. Do NOT call `gmail_create_draft`.
 10. Update scan timestamp in Notion: Update the config page Notes field with current timestamp.
 
 ### Part B: Crack-Check
@@ -462,7 +462,7 @@ When running as a Scan & Check routine:
     - **OVERDUE**: due_date < today AND status != done → bump priority to urgent, add note
     - **APPROACHING**: due_date within 2 days AND priority < high → bump to high
     - **STALE**: no due_date AND status = open AND created > 7 days ago AND no updates in 5 days → mark status stale
-    - **WAITING TOO LONG**: type = commitment_theirs AND open > 5 days → create follow-up nudge draft via gmail_create_draft, add note
+    - **WAITING TOO LONG**: type = commitment_theirs AND open > 5 days AND Notes field does not contain "Follow-up draft created" → create PA Drafts row (Type=`nudge`, Status=`pending_review`) via `notion-create-pages`, then add note "Follow-up draft created {today}" to the PA item. Do NOT call `gmail_create_draft`.
 13. Update flagged items in Notion.
 
 ### Part C: Urgent Push (conditional)

@@ -12,6 +12,7 @@ You are generating the morning briefing for Jeremy Rosmarin, who runs Sidecar Ca
 You run autonomously — Jeremy does not see your output. Emit tool calls, not explanations. Never narrate what you're about to do; do it. The reconciler's step 5 (`prompts/reconcile.md`) is the canonical version of this discipline; the steps below carry the same hazard and must be treated the same way:
 
 - **Step 9 (daily journal Write):** After the last upstream read (gmail/gcal/HubSpot/Notion), the very next thing in your response must be the `Write` tool call for `vault/daily/{today}.md`. No preview of the brief, no enumerating items/meetings/attendees/deals in prose, no re-reading files first.
+- **Step 11 (Notion Daily Briefs Archive):** After the Step 10 `notion-create-comment` ack, the very next thing must be the `notion-create-pages` call to the Daily Briefs database. No prose preview of the brief body between the comment ack and the create call.
 - **Step 12 (cache resync Write):** After `notion-query-database-view` returns, emit the `Write` on `vault/task-cache.json` immediately. No narration, no re-read, no intermediate file. Same transform as `prompts/reconcile.md` step 5.
 - **Do NOT parallelize boot-sync's cache resync with Step 2's calendar fetch.** Boot-sync is a hard prerequisite; finish it (including its commit/push) before starting Step 1. Combining a failed cache resync with a 50KB+ calendar response in the same turn is the exact recovery scenario that blows the stream-idle budget.
 
@@ -138,11 +139,13 @@ Create a Notion comment on the Daily Brief page (ID: `3441e696-29d1-815b-9a43-c1
 - **If any HARD OVERLAP was newly created this sweep within the next 48h, lead with it.** (e.g. "⚠️ New conflict: Tue 2pm Acme ↔ Tue 2:30pm Smith")
 - Keep it concise — this is what Jeremy sees on his phone lock screen
 
-### 11. Gmail Draft
-Create a draft email to jeremy@sidecarcapitalpartners.com via `gmail_create_draft`:
-- Subject: "Daily Brief — {Month DD, YYYY}"
-- Body: the full briefing text
-- This is a reference copy in Gmail (does not push-notify)
+### 11. Notion Daily Briefs Archive
+Create a page in the Daily Briefs database via `notion-create-pages` (data source `collection://d0bdbd5f-8310-4fcb-98cf-71c9040b61b9`):
+- Title: `Daily Brief — {Month DD, YYYY}`
+- `date:Date:start`: today's ISO date
+- Page body: the briefing markdown written in Step 9, rendered as Notion blocks
+
+This is Jeremy's searchable archive — he reviews briefs in Notion, not Gmail. **Do not create a Gmail draft** (autonomous Gmail drafting was removed 2026-04-22; see CLAUDE.md Standing Instructions). If `notion-create-pages` rejects for block-size on a long brief, create the page with the first ~90 blocks and append the remainder via `notion-update-page`; otherwise one call.
 
 ### 12. Update Cache
 Call `notion-query-database-view` with `view_url: https://www.notion.so/3441e69629d1815b9a43c156cad7fc34?v=3441e69629d181ac84aa000cd656c691` (same URL as Step 8), write to `vault/task-cache.json` using the slim schema in `prompts/reconcile.md` step 5.

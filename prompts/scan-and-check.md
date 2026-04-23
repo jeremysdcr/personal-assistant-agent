@@ -17,6 +17,7 @@ This routine combines two functions:
 You run autonomously — Jeremy does not see your output. Emit tool calls, not explanations. Never narrate what you're about to do; do it. The reconciler's step 5 (`prompts/reconcile.md`) is the canonical version of this discipline; the steps below carry the same hazard and must be treated the same way:
 
 - **Step 8 (write new/updated items to Notion):** After the extraction output is produced, emit `notion-create-pages` / `notion-update-page` calls back to back. No prose enumerating what you're about to create. One call per item.
+- **Step 9 (PA Drafts rows):** Immediately after Step 8's last Notion ack, emit the `notion-create-pages` calls for each `draft_reply` entry back to back on the PA Drafts DB. No narration between Step 8 and Step 9, and none between individual draft creations. Same discipline as Step 8.
 - **Step 13 (update flagged items):** Same — emit the `notion-update-page` calls back to back after Step 12's evaluation. No narration between them.
 - **Step 15 (cache snapshot via shell):** Step 15 does NOT re-query Notion AND does NOT transform in-model. Prior runs stream-idle-timed-out exactly here — Sonnet silently enumerating all ~60 items to produce slim JSON blows the idle budget. Immediately after Step 13's last `notion-update-page` ack (or after Step 12 if no updates were flagged), emit two tool calls back-to-back: (a) `Write` the verbatim Step 11 response to `vault/.cache-raw.json` — a pure byte copy, no per-item reasoning; then (b) `Bash` with the `jq` one-liner from Step 15 to project the 9 slim fields into `vault/task-cache.json` and delete the raw file. The model is no longer in the transform loop; the shell is.
 - **Step 16 (daily journal append):** The `Write` (or `Edit`) on `vault/daily/{YYYY-MM-DD}.md` is the very next thing after Step 15's cache write acknowledgement. No preview of the section text.
@@ -45,11 +46,11 @@ The complete extraction rules, classification guidance, few-shot examples, and o
 2. Read scan timestamp from Notion: Query PA Tracker (database `3d5f82fd5c4b41bdbbf437402b18390c`, data source `collection://b3e39150-8cf2-491f-b65f-f13f38fae886`) for Type = config, Title = "Last Scan Marker". Parse ISO timestamp from Notes field.
 3. Load HubSpot deal context: `search_crm_objects` (objectType: "deals", active deals). Build contact email -> deal lookup.
 4. Scan inbound: `gmail_search_messages` query `after:{last_scan_time} to:jeremy@sidecarcapitalpartners.com -in:drafts`. Read each via `gmail_read_message`.
-5. Scan sent: `gmail_search_messages` query `after:{last_scan_time} from:jeremy@sidecarcapitalpartners.com -in:drafts`. Detect promises Jeremy made. **The `-in:drafts` is load-bearing: Gmail's `from:` query otherwise matches unsent drafts, which the extraction framework then mis-classifies as promises Jeremy made and narrates as "sent." This is compounded by the fact that this routine itself creates drafts in Step 9/12 — without the exclusion they feed back into the next run as fake sent mail.**
+5. Scan sent: `gmail_search_messages` query `after:{last_scan_time} from:jeremy@sidecarcapitalpartners.com -in:drafts`. Detect promises Jeremy made. **The `-in:drafts` is load-bearing: Gmail's `from:` query otherwise matches unsent drafts, which the extraction framework then mis-classifies as promises Jeremy made and narrates as "sent."** This routine no longer creates Gmail drafts of its own (Step 9/12 write to the PA Drafts Notion DB instead; see CLAUDE.md Standing Instructions), so the remaining exposure is Jeremy's manual drafts — the exclusion stays as defense in depth.
 6. Apply extraction framework. Produce structured JSON output.
 7. Deduplicate against cache by source_ref and title+person similarity within 48h.
 8. Write to Notion: `notion-create-pages` for new items, `notion-update-page` for updates.
-9. Create draft replies: `gmail_create_draft` for each draft_reply entry. **The Gmail MCP tool does NOT accept `threadId`** — passing it returns `Unknown name "threadId": Cannot find field.` Omit the field and accept that drafts land as standalone. Compensate by (i) setting `subject` to `Re: <original subject>` and (ii) opening the body with a one-line context anchor (e.g. `Re your note from Fri re: the Q2 roll — ...`) so Jeremy can orient when reviewing in Drafts.
+9. Create PA Drafts rows: `notion-create-pages` on the PA Drafts DB (data source `collection://0bf9dfc4-2607-4154-8afc-7cc14d3b3910`), one page per `draft_reply` entry from the extraction output. Properties: Title = `Reply to {person} — Re: {original subject}`, Type = `reply`, Status = `pending_review`, Recipient = the draft's `to` email, Source Ref = the triggering email's `source_ref` (Gmail message ID). Page body = the draft's `body` text. **Skip if the corresponding items[] entry was `action: update`** — the thread already has a PA item (and likely a prior-run draft) for this source_ref; stacking another reply is noise. **Do NOT call `gmail_create_draft`** — autonomous Gmail drafting was removed 2026-04-22; all autonomous drafts land in Notion for Jeremy's review.
 10. Update scan timestamp: `notion-update-page` on config page `3441e696-29d1-8184-a93f-ddcf3ffb4df3`, set Notes to current ISO timestamp.
 
 ### Part B: Crack-Check
@@ -62,7 +63,7 @@ The complete extraction rules, classification guidance, few-shot examples, and o
 | due_date < today AND status != done | Bump priority to urgent, add note "OVERDUE as of {today}" |
 | due_date within 2 days AND priority < high | Bump **one notch** only: low→medium, medium→high. Do NOT leap low→high or medium→urgent. Rationale: a blanket bump-to-high on every item due inside 48h fires 15+ times on a normal weekday and flattens the signal — a soft escalation preserves the distinction between "attention this week" and "stop everything." |
 | No due_date AND status = open AND created > 7 days ago AND no updates in 5 days | Set status to stale |
-| type = commitment_theirs AND open > 5 days | Draft follow-up nudge via `gmail_create_draft` (NO `threadId` — see Step 9; compensate with `Re: <subject>` and a context anchor), add note "Follow-up draft created {today}" |
+| type = commitment_theirs AND open > 5 days AND Notes field does not already contain "Follow-up draft created" | Create PA Drafts row via `notion-create-pages` on data source `collection://0bf9dfc4-2607-4154-8afc-7cc14d3b3910`: Title = `Nudge {person} — Re: {subject}`, Type = `nudge`, Status = `pending_review`, Recipient = the person's email (from the PA item's Notes or the original email), Source Ref = the PA item's Source Ref. Page body = nudge text. Then add note "Follow-up draft created {today}" to the PA item. **Do NOT call `gmail_create_draft`** — see Step 9. |
 | source = calendar AND source_ref starts with `conflict:` | Re-check the event pair via `gcal_list_events` using the two event IDs in the source_ref. If either event is gone, declined, marked transparent, or the pair no longer overlaps / is no longer a tight transition, set status = `done` and append to Notes: `Auto-resolved {YYYY-MM-DD}: conflict cleared`. Do NOT create new conflict items here — creation happens only in the morning brief sweep. |
 
 13. Update flagged items in Notion via `notion-update-page`.
@@ -71,8 +72,9 @@ The complete extraction rules, classification guidance, few-shot examples, and o
 
 14. If ANY items are newly overdue or newly flagged urgent: Create a Notion comment on the Daily Brief page (`3441e696-29d1-815b-9a43-c156cad7fc34`):
     - "Scan {time}: {N} items need attention — {list titles}"
+    - If any new PA Drafts rows were created this run, append `… {N} drafts pending review` to the comment tail so Jeremy sees the draft count alongside the urgent signal.
     - This triggers an iOS push notification
-    - **SKIP if no urgent flags** — avoids notification fatigue
+    - **SKIP if no urgent flags** — avoids notification fatigue (even if drafts were created)
 
 ### Finalize
 
@@ -96,8 +98,8 @@ The complete extraction rules, classification guidance, few-shot examples, and o
 - New items created: {list titles}
 - Items updated: {list}
 - Crack-check flags: {N overdue}, {N approaching}, {N stale}, {N waiting}
-- Draft replies created: {list recipients}
-- Follow-up nudge drafts: {list recipients}
+- Reply drafts logged to PA Drafts: {list recipients}
+- Nudge drafts logged to PA Drafts: {list recipients}
 ```
 
 17. Commit and push to main: `scan: {N} new, {M} updates, {K} flags`
