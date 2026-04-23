@@ -15,6 +15,7 @@ You run autonomously — Jeremy does not see your output. Emit tool calls, not e
 - **Step 11 (Notion Daily Briefs Archive):** After the Step 10 `notion-create-comment` ack, the very next thing must be the `notion-create-pages` call to the Daily Briefs database. No prose preview of the brief body between the comment ack and the create call.
 - **Step 12 (cache resync Write):** After `notion-query-database-view` returns, emit the `Write` on `vault/task-cache.json` immediately. No narration, no re-read, no intermediate file. Same transform as `prompts/reconcile.md` step 5.
 - **Do NOT parallelize boot-sync's cache resync with Step 2's calendar fetch.** Boot-sync is a hard prerequisite; finish it (including its commit/push) before starting Step 1. Combining a failed cache resync with a 50KB+ calendar response in the same turn is the exact recovery scenario that blows the stream-idle budget.
+- **Step 6b (Email Digests fetch):** small payloads — 1 `notion-query-database-view` on the Email Digests DB + 0–2 `notion-fetch` calls on digest pages (🗄️/⏭️ subtrees skipped). Merge any resulting items into the same Step 6 `notion-create-pages` batch — no separate write call. If the digest query fails (transport error), log it in the journal and proceed without digest data rather than retrying; personal-email ingest can catch up on the next scan-and-check run.
 
 If you catch yourself generating prose between an upstream tool result and the next tool call for any of these steps, stop and emit the tool call.
 
@@ -82,6 +83,14 @@ Classify the top 20 as ACTIONABLE / FYI / SKIP using the extraction framework in
 - Create Notion items for ACTIONABLE emails (use `notion-create-pages` with data source `b3e39150-8cf2-491f-b65f-f13f38fae886`)
 - Highlight emails from key relationships separately
 
+### 6b. Overnight Personal Digest
+Covers `jeremyrosmarin@gmail.com` via the Notion Email Digests DB (not directly connected to Gmail MCP). See [obligation-extract.md](obligation-extract.md) Section 2.5 for field-extraction rules.
+- Call `notion-query-database-view` with `view_url: https://www.notion.so/3211e69629d180dcb1ded8e99489231b?v=3211e69629d180589406000c5d9cb5d3` (Email Digests DB, default table view). Filter returned rows client-side to `Created time >= yesterday 18:00 ET`.
+- For each matching row, call `notion-fetch` on the page ID and parse the block tree. Extract table rows under the 🔴 and 🟡 sections only — skip the 🗄️ and ⏭️ subtrees entirely.
+- Apply [obligation-extract.md](obligation-extract.md) Section 2.5 (trust upstream labels; 🟡 → FYI unless sender matches `vault/key-relationships.md` Personal section → `follow_up` medium) plus Section 4. Create PA Tracker items with `Source=email` and `source_ref=digest:{local}:{slug}:{YYYY-MM-DD}` via the same `notion-create-pages` batch used for Step 6.
+- Personal 🔴 items flow into the brief's **Attention Required** and **Key Relationship Emails** sections alongside business items. Personal 🟡 items flow into the **FYI** / **Overnight Email Summary** sections.
+- **Do NOT call `gmail_create_draft`** for personal items. If a 🔴 row warrants a reply draft, create a PA Drafts row with the manual-send banner (see `scan-and-check.md` Step 9 personal-email branch for the schema — same here).
+
 ### 7. Active Deals Snapshot
 Query HubSpot for active deals (`search_crm_objects`, objectType: "deals", filter: deal stage not in closed stages).
 Summarize: deal count by stage, any deals with recent stage changes.
@@ -125,7 +134,7 @@ Where `{id}` is the thread ID or message ID from `gmail_search_messages` / `gmai
 {Emails from key contacts — highlighted separately}
 
 ## Overnight Email Summary
-{Remaining actionable and FYI items}
+{Remaining actionable and FYI items. When Step 6b processed any digest rows, prefix this section with a single summary line: `Personal digest: {N_rows} rows, {A} actionable, {F} FYI`. Omit the line entirely if no digest rows were scanned.}
 
 ## Active Commitments
 ### I Owe

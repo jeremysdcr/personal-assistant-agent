@@ -29,4 +29,5 @@ treat even soft signals ("sounds good", "let's touch base") as follow-up items.
 <!-- Add LP contacts here as relevant -->
 
 ## Personal (high-priority)
-<!-- Add family members, attorney, accountant, etc. as relevant -->
+<!-- Add family members, attorney, accountant, etc. as relevant. -->
+<!-- Entries here bump personal-email digest 🟡 rows to ACTIONABLE follow_ups. See CLAUDE.md → Email Digests → Consumption rules. -->

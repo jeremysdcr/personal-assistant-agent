@@ -18,9 +18,11 @@ When Jeremy opens a conversation here, start by running the boot sequence before
 
 ## Email
 
-Jeremy's business email: jeremy@sidecarcapitalpartners.com
-This is the only account connected via Gmail MCP (single-account connector).
-Personal obligations (dentist, school, errands) enter via manual capture through Drafts/Cowork, not email scanning.
+Jeremy's business email: jeremy@sidecarcapitalpartners.com — the only account connected via Gmail MCP (single-account connector).
+
+Personal email (`jeremyrosmarin@gmail.com`) is **not** directly connected to Gmail MCP. It flows in via the Notion **Email Digests** DB (read-only from the PA's perspective — an upstream automation publishes the rows). Morning brief and scan-and-check ingest new digest rows and fold personal-email obligations into the same PA Tracker flow as business-email ones, distinguishing personal items by `source_ref` prefix `digest:` rather than a new Source enum value.
+
+Non-email personal tasks (dentist, school, errands) continue to enter via manual Drafts/Cowork capture (see next section).
 
 ## Drafts / Cowork Capture Path
 
@@ -192,6 +194,24 @@ Use `notion-query-database-view` with the Active Items view to sync the cache. T
 ### Auto-managed calendar conflicts
 Items with Source = `calendar` and Source Ref starting with `conflict:` are created and resolved automatically by the conflict detector. The morning brief sweep (`prompts/morning-brief.md` Step 2.5) scans 7 days ahead and creates one item per detected conflict pair; scan-and-check (`prompts/scan-and-check.md` Part B) auto-resolves items whose underlying events no longer conflict. Jeremy can dismiss a conflict early by marking the item `done` — the source_ref dedup ensures it will not be recreated.
 
+### Email Digests
+- **Database ID:** 3211e696-29d1-80dc-b1de-d8e99489231b
+- **Data source:** collection://3211e696-29d1-80e7-b3fc-000b2a693e4d
+- **Purpose:** Read-only personal-email feed. An upstream automation publishes ~2 rows/day (morning ~9am ET, afternoon ~1pm ET) covering `jeremyrosmarin@gmail.com`. Each row is a digest page whose body contains categorized tables of email summaries. The PA consumes these rows during morning brief (Step 6b) and scan-and-check (Step 5.5) to extract personal-email obligations; it never writes to this DB.
+
+#### Schema
+| Field | Type | Values |
+|-------|------|--------|
+| Name | Title | Digest title, e.g. `📧 Email Digest — Thu Apr 23, 2026 (Morning)` |
+| Created time | Created Time | Auto — used as the freshness watermark; the PA compares against the Last Scan Marker |
+| (page body) | Blocks | Categorized tables: 🔴 Keep in Inbox — Needs Reply / 🟡 Keep in Inbox — No Immediate Action / 🗄️ Archived — No Action Required / ⏭️ Previously Archived (Skipped) |
+
+#### Consumption rules
+- **Trust the upstream classifier.** Map 🔴 → ACTIONABLE, 🟡 → FYI (create a PA item only if sender is in `vault/key-relationships.md`'s Personal section — then `follow_up`, priority=medium), 🗄️ + ⏭️ → SKIP. Do not re-run the ACTIONABLE/FYI/SKIP classifier on the Summary prose.
+- **Source tagging.** Personal-email PA Tracker items use `Source = email` (not a new enum) and `source_ref = digest:{sender_email_local}:{subject_slug_40ch}:{YYYY-MM-DD}` — mirrors the `conflict:` prefix convention for auto-managed calendar items. A Notes tag `Personal email (from digest {date} {morning|afternoon})` marks them for Jeremy-facing legibility.
+- **Draft replies and nudges** for personal items land in PA Drafts with a leading banner telling Jeremy to copy and send manually from his personal Gmail. `gmail_create_draft` is never called on personal items (it can only target the business account anyway).
+- **Watermark.** The same "Last Scan Marker" timestamp used for Gmail `after:` queries is used here — compared against each digest row's `Created time`. Both sources advance in lockstep.
+
 ### Daily Briefs
 - **Database ID:** d7858fd6ab9741af89baee5caaf121cc
 - **Data source:** collection://d0bdbd5f-8310-4fcb-98cf-71c9040b61b9
@@ -236,7 +256,9 @@ Jeremy will say things like:
 | "what am I waiting on" | Split into two buckets: (A) counterparty owes Jeremy — commitment_theirs + follow_up; (B) Jeremy's tasks currently blocked on someone else (status=waiting OR title/notes indicate a dependency). Label each bucket explicitly so nudge-vs-park is clear. |
 | "add task: [description]" | Create in Notion PA Tracker, source = manual |
 | "mark [item] done" | Update status in Notion + cache |
-| "scan my email" | Run obligation extraction interactively against recent Gmail |
+| "scan my email" | Run obligation extraction interactively against recent Gmail + any new Email Digest rows (personal email). Advances the shared scan watermark. |
+| "scan my personal email" / "what's in today's personal digest" | Query Email Digests DB for today's rows, fetch the latest, summarize the 🔴 and 🟡 sections. Read-only — does not write to PA Tracker. |
+| "what am I waiting on (personal)" | Filter cache for items where `source_ref` starts with `digest:`. |
 | "what's on my calendar [today/tomorrow/this week]" | Query Google Calendar |
 | "any conflicts" / "what conflicts this week" / "check my schedule" | Query Notion for open items with Source = calendar AND Source Ref starting `conflict:`, group by due date |
 | "dismiss conflict [description]" | Find the matching open conflict item in Notion, mark Status = done with note "Dismissed by Jeremy {YYYY-MM-DD}" |
@@ -273,6 +295,7 @@ Jeremy will say things like:
 - **Loyalty Markets weekly meetings:** Jeremy does not need agenda review or prep tasks created for recurring weekly Loyalty Markets team meetings. Do not extract these as obligations during email scans.
 - **No em dashes in email drafts:** Never use em dashes (—) when drafting emails on Jeremy's behalf (Gmail drafts, nudges, follow-ups, any outbound sent from his accounts). Jeremy does not use em dashes in his own writing and wants drafts to match his voice. Substitute with a period, comma, semicolon, or parentheses depending on context. Review every draft before presenting or saving and strip any em dash that slipped in, including any copied from quoted text that ends up in your new prose. Scope is outbound emails; em dashes in internal repo text, journals, or briefings to Jeremy are fine.
 - **Never create Gmail drafts autonomously.** Autonomous routines (`prompts/morning-brief.md`, `prompts/scan-and-check.md`) write all draft output to the Notion databases (Daily Briefs, PA Drafts). `gmail_create_draft` is reserved for explicit user commands — "draft a reply to...", "nudge..." — issued in a CLI session. This rule supersedes any per-prompt instructions that predate it. Rationale: Jeremy does not track the Gmail Drafts folder, and unthreaded autonomous drafts (Gmail MCP rejects `threadId`) render oddly in the inbox. Notion is the single review surface.
+- **No autonomous drafts for personal Gmail (ever).** Personal email flows through the Email Digests DB, not through Gmail MCP — `gmail_create_draft` can only target the business account. Personal reply/nudge drafts land in PA Drafts with a leading banner telling Jeremy to copy the body and send manually from `jeremyrosmarin@gmail.com`. Applies to both autonomous routines and explicit CLI commands.
 
 ## Conventions
 
