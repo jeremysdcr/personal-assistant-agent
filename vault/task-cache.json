@@ -60,7 +60,7 @@
       "item_id": "PA-125",
       "title": "Pay Rob Handelman $625 (half of $1,250) for J2J expo",
       "type": "task",
-      "status": "open",
+      "status": "waiting",
       "priority": "high",
       "due_date": "2026-04-23",
       "person": "Rob Handelman",
