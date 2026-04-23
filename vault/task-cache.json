@@ -1,17 +1,6 @@
 {
-  "synced_at": "2026-04-23T19:24:48Z",
+  "synced_at": "2026-04-23T19:31:09Z",
   "items": [
-    {
-      "item_id": "PA-163",
-      "title": "Forward Apr 24 demo calendar invites to Daniel Cashman and Ryan (Changes on the Fly)",
-      "type": "task",
-      "status": "open",
-      "priority": "urgent",
-      "due_date": "2026-04-23",
-      "person": "Daniel Cashman",
-      "notion_page_id": "34b1e69629d181aabcecf771c6fb4256",
-      "source_ref": "19dbaf4c8cd32704"
-    },
     {
       "item_id": "PA-134",
       "title": "Follow up with individuals for sponsorships of Chris McKenna smartphone event",
@@ -486,6 +475,17 @@
       "source_ref": ""
     },
     {
+      "item_id": "PA-183",
+      "title": "Follow up with Abe Lerman if 2025 RBC-DS tax slips don't arrive",
+      "type": "follow_up",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-25",
+      "person": "Abe Lerman",
+      "notion_page_id": "34b1e69629d1814b9e2efb1949fbc785",
+      "source_ref": "digest:abeelitewf:re-2025-tax-returns:2026-04-23"
+    },
+    {
       "item_id": "PA-143",
       "title": "Evaluate and respond to Rick Naor (Liquid Capital) re: TJN event factoring intro",
       "type": "follow_up",
@@ -605,6 +605,17 @@
       "person": "Krystyn Harrison",
       "notion_page_id": "3481e69629d181d7a9defcb423cad9e9",
       "source_ref": ""
+    },
+    {
+      "item_id": "PA-182",
+      "title": "Review Leore's 2024 tax return PDF from Abe Lerman",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-28",
+      "person": "Abe Lerman",
+      "notion_page_id": "34b1e69629d181a9b8fff9604d19f90a",
+      "source_ref": "digest:abeelitewf:leore-2024-tax-return:2026-04-23"
     },
     {
       "item_id": "PA-128",
@@ -737,6 +748,17 @@
       "person": "Micah (HVE Healthcare)",
       "notion_page_id": "3481e69629d181aaa26deb7583e12115",
       "source_ref": "3481e69629d181dab612db619e45b454"
+    },
+    {
+      "item_id": "PA-181",
+      "title": "Meet for coffee on May 8th at 11:00 AM at Cafe Landwehr to continue the discussion",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-05-08",
+      "person": "Micah",
+      "notion_page_id": "34b1e69629d1811ea365f9b3ee616367",
+      "source_ref": "meeting:3481e69629d181dab612db619e45b454:meet-for-coffee-on-may-8th-at-11-00-am-a"
     },
     {
       "item_id": "PA-114",
@@ -926,6 +948,105 @@
       "source_ref": ""
     },
     {
+      "item_id": "PA-172",
+      "title": "Create a deck by early next week detailing the opportunity (market, strategy, team), but without specific term sheets",
+      "type": "commitment_theirs",
+      "status": "open",
+      "priority": "medium",
+      "due_date": null,
+      "person": "Kubby Mano",
+      "notion_page_id": "34b1e69629d1810593e3dd596b436e98",
+      "source_ref": "meeting:34b1e69629d1819bafd5e19bf959a3df:create-a-deck-by-early-next-week-detaili"
+    },
+    {
+      "item_id": "PA-174",
+      "title": "After receiving the deck, contact a healthcare-focused group to gauge their interest in the childcare space",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": null,
+      "person": "Kubby Mano",
+      "notion_page_id": "34b1e69629d181119982d41dd2d8fb7c",
+      "source_ref": "meeting:34b1e69629d1819bafd5e19bf959a3df:after-receiving-the-deck-contact-a-heal"
+    },
+    {
+      "item_id": "PA-176",
+      "title": "Introduce Cyber Capital to Rajiv (Modern) and Avi Steinberg (GDI Business Services) for sector insights",
+      "type": "commitment_theirs",
+      "status": "open",
+      "priority": "medium",
+      "due_date": null,
+      "person": "Avi Steinberg",
+      "notion_page_id": "34b1e69629d1813183b9f7e07bad86b8",
+      "source_ref": "meeting:3481e69629d18159b676eacdf44dedb5:introduce-cyber-capital-to-rajiv-modern"
+    },
+    {
+      "item_id": "PA-178",
+      "title": "Share a 55-page research report on the Ontario facilities cleaning industry with Snowden",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": null,
+      "person": "Avi Steinberg",
+      "notion_page_id": "34b1e69629d1814388b6ed2216d7a871",
+      "source_ref": "meeting:3481e69629d18159b676eacdf44dedb5:share-a-55-page-research-report-on-the-o"
+    },
+    {
+      "item_id": "PA-180",
+      "title": "Prepare a \"sketch\" of a potential partnership model for HVE",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": null,
+      "person": "Micah",
+      "notion_page_id": "34b1e69629d18177bc78dc5b8033c0e7",
+      "source_ref": "meeting:3481e69629d181dab612db619e45b454:prepare-a-sketch-of-a-potential-partne"
+    },
+    {
+      "item_id": "PA-179",
+      "title": "Send Micah the article \"Seven term sheet clauses that matter more than valuation\"",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": null,
+      "person": "Micah",
+      "notion_page_id": "34b1e69629d181a0915ccbabaa61de80",
+      "source_ref": "meeting:3481e69629d181dab612db619e45b454:send-micah-the-article-seven-term-sheet"
+    },
+    {
+      "item_id": "PA-177",
+      "title": "Connect Cyber Capital with Adam for an overview of Snowden's advisor-led origination playbook",
+      "type": "commitment_theirs",
+      "status": "open",
+      "priority": "medium",
+      "due_date": null,
+      "person": "Avi Steinberg",
+      "notion_page_id": "34b1e69629d181a6b023daa864509a6a",
+      "source_ref": "meeting:3481e69629d18159b676eacdf44dedb5:connect-cyber-capital-with-adam-for-an-o"
+    },
+    {
+      "item_id": "PA-175",
+      "title": "Send Cyber Capital a one-pager with investment criteria ($3M+ EBITDA, control)",
+      "type": "commitment_theirs",
+      "status": "open",
+      "priority": "medium",
+      "due_date": null,
+      "person": "Avi Steinberg",
+      "notion_page_id": "34b1e69629d181cca6bcd77c727ceda0",
+      "source_ref": "meeting:3481e69629d18159b676eacdf44dedb5:send-cyber-capital-a-one-pager-with-inve"
+    },
+    {
+      "item_id": "PA-173",
+      "title": "Discuss the opportunity with a contact who owns a school",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": null,
+      "person": "Kubby Mano",
+      "notion_page_id": "34b1e69629d181f38724fc2b35e1b522",
+      "source_ref": "meeting:34b1e69629d1819bafd5e19bf959a3df:discuss-the-opportunity-with-a-contact-w"
+    },
+    {
       "item_id": "PA-170",
       "title": "Ryan Hamid to pick a new time via Calendly",
       "type": "commitment_theirs",
@@ -978,127 +1099,6 @@
       "due_date": null,
       "person": "Mark Cressman",
       "notion_page_id": "34a1e69629d1812db58ff9b2d7487b36",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-135",
-      "title": "Research Sidecar trademark status and Mark Cressman's use",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": null,
-      "person": "Mark Cressman",
-      "notion_page_id": "34a1e69629d1815f9e59cab25f90348a",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-129",
-      "title": "Reply to Simon at Xvision re investor intro request",
-      "type": "task",
-      "status": "open",
-      "priority": "low",
-      "due_date": null,
-      "person": "Simon (Xvision)",
-      "notion_page_id": "3491e69629d181f29dccd3651a0f0f29",
-      "source_ref": "19db0255f043acfe"
-    },
-    {
-      "item_id": "PA-112",
-      "title": "Krystyn Harrison to send pre-call times for content collab",
-      "type": "follow_up",
-      "status": "waiting",
-      "priority": "medium",
-      "due_date": null,
-      "person": "Krystyn Harrison",
-      "notion_page_id": "3481e69629d181bdaf01f70c73cdba09",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-110",
-      "title": "Review Canteen and Mister Coffee vendor agreements (forwarded by Gershon)",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": null,
-      "person": "Gershon Hurwen",
-      "notion_page_id": "3481e69629d18107bea9cb43a432a777",
-      "source_ref": "19dab94b5d109a19"
-    },
-    {
-      "item_id": "PA-108",
-      "title": "Revisit: Gmail threaded send-on-approval (Option 2)",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": null,
-      "person": "",
-      "notion_page_id": "3481e69629d1810692e3e6841af2a324",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-92",
-      "title": "Hoist discipline rules into UI prompts for morning-brief, eod-review, scan-and-check routines",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": null,
-      "person": "",
-      "notion_page_id": "3461e69629d18169bd09fdf3308f25de",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-71",
-      "title": "Update PA agent to capture personal email via Notion pages",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": null,
-      "person": "",
-      "notion_page_id": "3451e69629d18189878ad7ff433eb3ba",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-44",
-      "title": "Confirm Leore's visa transactions and statements on RBC portal",
-      "type": "task",
-      "status": "open",
-      "priority": "low",
-      "due_date": null,
-      "person": "Leore",
-      "notion_page_id": "3441e69629d1810ab31eecd62e780a7b",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-34",
-      "title": "Finalize personal budget 2026; share with Leore",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": null,
-      "person": "Leore",
-      "notion_page_id": "3441e69629d181569348d2e1fbac4839",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-48",
-      "title": "Book weekly dates with Leore",
-      "type": "task",
-      "status": "open",
-      "priority": "low",
-      "due_date": null,
-      "person": "Leore",
-      "notion_page_id": "3441e69629d181578adbdeae1379124b",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-47",
-      "title": "Book camp site for summer",
-      "type": "task",
-      "status": "open",
-      "priority": "low",
-      "due_date": null,
-      "person": "",
-      "notion_page_id": "3441e69629d181678941c466627638c3",
       "source_ref": ""
     }
   ]
