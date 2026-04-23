@@ -2,17 +2,6 @@
   "synced_at": "2026-04-23T14:52:48Z",
   "items": [
     {
-      "item_id": "PA-146",
-      "title": "Send previous Vidiere invoices to Frankie",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-23",
-      "person": "Frankie",
-      "notion_page_id": "34a1e69629d181e79a55e2524b52ea22",
-      "source_ref": ""
-    },
-    {
       "item_id": "PA-134",
       "title": "Follow up with individuals for sponsorships of Chris McKenna smartphone event",
       "type": "task",
@@ -25,7 +14,7 @@
     },
     {
       "item_id": "PA-132",
-      "title": "Pay Jeremy Reinbolt (Videre) April invoice — confirm payment method",
+      "title": "Pay Jeremy Reinbolt (Videre) April invoice \u2014 confirm payment method",
       "type": "task",
       "status": "open",
       "priority": "high",
@@ -36,7 +25,7 @@
     },
     {
       "item_id": "PA-131",
-      "title": "Reply to Raj Uttamchandani intro — connect re: cleaning/janitorial space",
+      "title": "Reply to Raj Uttamchandani intro \u2014 connect re: cleaning/janitorial space",
       "type": "follow_up",
       "status": "waiting",
       "priority": "high",
@@ -102,7 +91,7 @@
     },
     {
       "item_id": "PA-103",
-      "title": "Reply to Mike Masse intro — schedule food/cleaning services meeting",
+      "title": "Reply to Mike Masse intro \u2014 schedule food/cleaning services meeting",
       "type": "task",
       "status": "open",
       "priority": "high",
@@ -201,7 +190,7 @@
     },
     {
       "item_id": "PA-66",
-      "title": "Email Ash at Climate Door re: potential PE intros — send investment criteria",
+      "title": "Email Ash at Climate Door re: potential PE intros \u2014 send investment criteria",
       "type": "task",
       "status": "open",
       "priority": "high",
@@ -212,7 +201,7 @@
     },
     {
       "item_id": "PA-62",
-      "title": "Complete Phase 3 — dry-run and register scan-and-check routine",
+      "title": "Complete Phase 3 \u2014 dry-run and register scan-and-check routine",
       "type": "task",
       "status": "open",
       "priority": "high",
@@ -256,7 +245,7 @@
     },
     {
       "item_id": "PA-28",
-      "title": "Send Operational Partner Database — committed to multiple people",
+      "title": "Send Operational Partner Database \u2014 committed to multiple people",
       "type": "commitment_mine",
       "status": "open",
       "priority": "high",
@@ -267,7 +256,7 @@
     },
     {
       "item_id": "PA-16",
-      "title": "Email Jordan (JNH Capital) — stale 25 days at Offer stage",
+      "title": "Email Jordan (JNH Capital) \u2014 stale 25 days at Offer stage",
       "type": "task",
       "status": "open",
       "priority": "high",
@@ -300,7 +289,7 @@
     },
     {
       "item_id": "PA-24",
-      "title": "Reply to Sunny Ray — decide on podcast appearance",
+      "title": "Reply to Sunny Ray \u2014 decide on podcast appearance",
       "type": "task",
       "status": "open",
       "priority": "high",
@@ -311,7 +300,7 @@
     },
     {
       "item_id": "PA-27",
-      "title": "Email Danielle — follow through on commitment",
+      "title": "Email Danielle \u2014 follow through on commitment",
       "type": "commitment_mine",
       "status": "open",
       "priority": "high",
@@ -333,7 +322,7 @@
     },
     {
       "item_id": "PA-52",
-      "title": "Eterna — confirm invoice payment received",
+      "title": "Eterna \u2014 confirm invoice payment received",
       "type": "follow_up",
       "status": "open",
       "priority": "high",
@@ -454,7 +443,7 @@
     },
     {
       "item_id": "PA-26",
-      "title": "Bad Timing re-engagement — pick 2 from Royal Fire, Atlantic Growth, ConnectCPA",
+      "title": "Bad Timing re-engagement \u2014 pick 2 from Royal Fire, Atlantic Growth, ConnectCPA",
       "type": "task",
       "status": "open",
       "priority": "high",
@@ -465,7 +454,7 @@
     },
     {
       "item_id": "PA-19",
-      "title": "Predictive Success — final outreach or close lost",
+      "title": "Predictive Success \u2014 final outreach or close lost",
       "type": "task",
       "status": "open",
       "priority": "high",
@@ -509,7 +498,7 @@
     },
     {
       "item_id": "PA-130",
-      "title": "Reply to Jonathan Draycott intro — connect re: janitorial investment thesis",
+      "title": "Reply to Jonathan Draycott intro \u2014 connect re: janitorial investment thesis",
       "type": "follow_up",
       "status": "waiting",
       "priority": "high",
@@ -520,7 +509,7 @@
     },
     {
       "item_id": "PA-41",
-      "title": "Book Disney trip — August family vacation",
+      "title": "Book Disney trip \u2014 August family vacation",
       "type": "task",
       "status": "open",
       "priority": "high",
@@ -619,7 +608,7 @@
     },
     {
       "item_id": "PA-31",
-      "title": "File personal taxes for Jeremy and Leore — deadline April 30",
+      "title": "File personal taxes for Jeremy and Leore \u2014 deadline April 30",
       "type": "task",
       "status": "open",
       "priority": "urgent",
@@ -751,7 +740,7 @@
     },
     {
       "item_id": "PA-115",
-      "title": "Reach out to 3–5 strategic contacts to intro to Loyalty Markets",
+      "title": "Reach out to 3\u20135 strategic contacts to intro to Loyalty Markets",
       "type": "task",
       "status": "open",
       "priority": "medium",
@@ -872,7 +861,7 @@
     },
     {
       "item_id": "PA-73",
-      "title": "Flip all routine crons EDT→EST (DST ends Nov 1, 2026)",
+      "title": "Flip all routine crons EDT\u2192EST (DST ends Nov 1, 2026)",
       "type": "task",
       "status": "open",
       "priority": "medium",
