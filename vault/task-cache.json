@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-04-23T16:59:21Z",
+  "synced_at": "2026-04-23T18:11:19Z",
   "items": [
     {
       "item_id": "PA-163",
@@ -541,6 +541,17 @@
       "source_ref": "19d93258acd33a40"
     },
     {
+      "item_id": "PA-169",
+      "title": "Schedule Sidecar Capital advisory board meeting",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-27",
+      "person": "",
+      "notion_page_id": "34b1e69629d18129b72dc272b55654bc",
+      "source_ref": ""
+    },
+    {
       "item_id": "PA-162",
       "title": "INQ engagement kickoff — coordinate scheduling with Ashley Novak for week of Apr 27",
       "type": "commitment_theirs",
@@ -605,6 +616,17 @@
       "person": "Micah Vernon",
       "notion_page_id": "3491e69629d1817fac49d7c92008fd91",
       "source_ref": "19dae200536e89d1"
+    },
+    {
+      "item_id": "PA-168",
+      "title": "Rob Handelman to decide whether to engage formally on Project Link acquisition",
+      "type": "commitment_theirs",
+      "status": "waiting",
+      "priority": "high",
+      "due_date": "2026-04-30",
+      "person": "Robert Handelman",
+      "notion_page_id": "34b1e69629d181f2a45be34b5f7d93a1",
+      "source_ref": "19db2a9eea694750"
     },
     {
       "item_id": "PA-144",
@@ -1078,28 +1100,6 @@
       "person": "",
       "notion_page_id": "3441e69629d181888409c8230ee0c114",
       "source_ref": ""
-    },
-    {
-      "item_id": "PA-43",
-      "title": "Get back to Alyssa Banach re: will questions",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": null,
-      "person": "Alyssa Banach",
-      "notion_page_id": "3441e69629d18190a6ceccfc63debadf",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-168",
-      "title": "Rob Handelman to decide whether to engage formally on Project Link acquisition",
-      "type": "commitment_theirs",
-      "status": "waiting",
-      "priority": "high",
-      "due_date": "2026-04-30",
-      "person": "Robert Handelman",
-      "notion_page_id": "34b1e69629d181f2a45be34b5f7d93a1",
-      "source_ref": "19db2a9eea694750"
     }
   ]
 }
