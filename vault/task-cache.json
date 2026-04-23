@@ -2,17 +2,6 @@
   "synced_at": "2026-04-23T15:46:12Z",
   "items": [
     {
-      "item_id": "PA-142",
-      "title": "Update Sidecar-INQ agreement per Carole's edits (Sections 6 and 16)",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-23",
-      "person": "Carole Piovesan",
-      "notion_page_id": "34a1e69629d181fbaea8dacbc420ee94",
-      "source_ref": "19db5d6e357ad0fd"
-    },
-    {
       "item_id": "PA-134",
       "title": "Follow up with individuals for sponsorships of Chris McKenna smartphone event",
       "type": "task",
@@ -1088,6 +1077,17 @@
       "due_date": null,
       "person": "",
       "notion_page_id": "3441e69629d181ab8dc9d65b2721836c",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-161",
+      "title": "Carole Piovesan to sign Sidecar-INQ Advisory Agreement",
+      "type": "commitment_theirs",
+      "status": "waiting",
+      "priority": "high",
+      "due_date": "2026-04-27",
+      "person": "Carole Piovesan",
+      "notion_page_id": "34b1e69629d181cf9728e522e2b12b5b",
       "source_ref": ""
     }
   ]
