@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-04-23T20:01:26Z",
+  "synced_at": "2026-04-23T20:02:58Z",
   "items": [
     {
       "item_id": "PA-134",
@@ -752,7 +752,7 @@
     {
       "item_id": "PA-181",
       "title": "Meet for coffee on May 8th at 11:00 AM at Cafe Landwehr to continue the discussion",
-      "type": "task",
+      "type": "commitment_mine",
       "status": "open",
       "priority": "medium",
       "due_date": "2026-05-08",
@@ -961,7 +961,7 @@
     {
       "item_id": "PA-174",
       "title": "After receiving the deck, contact a healthcare-focused group to gauge their interest in the childcare space",
-      "type": "task",
+      "type": "commitment_mine",
       "status": "open",
       "priority": "medium",
       "due_date": null,
@@ -983,35 +983,13 @@
     {
       "item_id": "PA-178",
       "title": "Share a 55-page research report on the Ontario facilities cleaning industry with Snowden",
-      "type": "task",
+      "type": "commitment_mine",
       "status": "open",
       "priority": "medium",
       "due_date": null,
       "person": "Avi Steinberg",
       "notion_page_id": "34b1e69629d1814388b6ed2216d7a871",
       "source_ref": "meeting:3481e69629d18159b676eacdf44dedb5:share-a-55-page-research-report-on-the-o"
-    },
-    {
-      "item_id": "PA-180",
-      "title": "Prepare a \"sketch\" of a potential partnership model for HVE",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": null,
-      "person": "Micah",
-      "notion_page_id": "34b1e69629d18177bc78dc5b8033c0e7",
-      "source_ref": "meeting:3481e69629d181dab612db619e45b454:prepare-a-sketch-of-a-potential-partne"
-    },
-    {
-      "item_id": "PA-179",
-      "title": "Send Micah the article \"Seven term sheet clauses that matter more than valuation\"",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": null,
-      "person": "Micah",
-      "notion_page_id": "34b1e69629d181a0915ccbabaa61de80",
-      "source_ref": "meeting:3481e69629d181dab612db619e45b454:send-micah-the-article-seven-term-sheet"
     },
     {
       "item_id": "PA-177",
@@ -1038,7 +1016,7 @@
     {
       "item_id": "PA-173",
       "title": "Discuss the opportunity with a contact who owns a school",
-      "type": "task",
+      "type": "commitment_mine",
       "status": "open",
       "priority": "medium",
       "due_date": null,
@@ -1100,6 +1078,28 @@
       "person": "Mark Cressman",
       "notion_page_id": "34a1e69629d1812db58ff9b2d7487b36",
       "source_ref": ""
+    },
+    {
+      "item_id": "PA-135",
+      "title": "Research Sidecar trademark status and Mark Cressman's use",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": null,
+      "person": "Mark Cressman",
+      "notion_page_id": "34a1e69629d1815f9e59cab25f90348a",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-129",
+      "title": "Reply to Simon at Xvision re investor intro request",
+      "type": "task",
+      "status": "open",
+      "priority": "low",
+      "due_date": null,
+      "person": "Simon (Xvision)",
+      "notion_page_id": "3491e69629d181f29dccd3651a0f0f29",
+      "source_ref": "19db0255f043acfe"
     }
   ]
 }
