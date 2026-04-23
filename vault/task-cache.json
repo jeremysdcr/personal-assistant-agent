@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-04-23T11:05:53Z",
+  "synced_at": "2026-04-23T13:39:01Z",
   "items": [
     {
       "item_id": "PA-146",
@@ -825,6 +825,17 @@
       "person": "",
       "notion_page_id": "3451e69629d18166ba25e32c74d55395",
       "source_ref": ""
+    },
+    {
+      "item_id": "PA-147",
+      "title": "Schedule Claude lead-scraping demo for Daniel and team (Changes on the Fly)",
+      "type": "commitment_mine",
+      "status": "open",
+      "priority": "medium",
+      "due_date": null,
+      "person": "Daniel Cashman",
+      "notion_page_id": "34b1e69629d181dbaaebc0d4b70ffea4",
+      "source_ref": "19dba70ac9600e4f"
     },
     {
       "item_id": "PA-141",
