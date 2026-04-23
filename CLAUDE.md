@@ -153,6 +153,7 @@ Three databases live under the Daily Brief page (`3441e696-29d1-815b-9a43-c156ca
 - **Data source:** collection://b3e39150-8cf2-491f-b65f-f13f38fae886
 - **Daily Brief page ID:** 3441e696-29d1-815b-9a43-c156cad7fc34
 - **Config page (Last Scan Marker):** 3471e696-29d1-8131-ba38-c79027a3b722 *(recreated 2026-04-19 after the original `3441e696-29d1-8184-a93f-ddcf3ffb4df3` was archived; scan-and-check step 10 writes the current scan timestamp to the `Notes` field on this page)*
+- **Config page (Meeting Notes Scan Marker):** 34b1e69629d181e98338f30a989170fa *(created 2026-04-23; eod-review Step 3.5 reads/writes the ISO timestamp of the last meeting-notes mirror to the `Notes` field)*
 
 ### Views
 - **Active Items:** view id `3441e696-29d1-81ac-84aa-000cd656c691`
@@ -244,6 +245,38 @@ Items with Source = `calendar` and Source Ref starting with `conflict:` are crea
 - **Reply drafts:** Source Ref URL (contains the Gmail message_id) is unique per email. Extraction emits `action=update` for existing PA items — Step 9 skips draft creation in that case, so re-scans don't stack duplicate replies on the same thread.
 - **Nudge drafts:** the PA item's Notes field gets stamped `Follow-up draft created {today}` (existing pre-change behavior, preserved). If Jeremy dismisses a nudge and wants it re-drafted later, he clears the note manually.
 
+### Meeting Notes DB
+- **Database ID:** e4a5c5d64a70418f9ae22b6c80e79d56
+- **Data source:** collection://60599af5-c13a-4031-8807-e3be545433fb
+- **Purpose:** Upstream record of Jeremy's meetings. Rows are created by his meeting-capture workflow (Notion AI Meetings or similar). Consumed read-only by the PA: action-item checkboxes in the page body are mirrored into PA Tracker by `prompts/eod-review.md` Step 3.5. The PA never writes to this DB and ignores the `Tasks DB` relation entirely (that DB is legacy and deprecating in favor of PA Tracker).
+
+#### Schema (consumption-relevant fields)
+| Field | Type | Use by PA |
+|-------|------|-----------|
+| Meeting | Title | → PA `Source Subject` |
+| Date | Date | Included in PA `Notes` |
+| Event Link | URL | Included in PA `Notes` as clickable |
+| Attendee Emails | Email | Informational (often empty); Person is derived from heading suffix or Attendees-section bullets |
+| Summary | Text | Not parsed — action items live in the page body, not in this field |
+| `last_edited_time` | system | Watermark field for incremental pulls |
+| Tasks DB | Relation | **Ignored** — Jeremy is deprecating Tasks DB; PA reads action items directly from the page body |
+
+#### Body parsing rules (authoritative — `prompts/eod-review.md` Step 3.5 embeds this)
+- **Action-signaling headings** (`###` or `##`, case-insensitive):
+  - `^next actions?(\s*\([^)]+\))?$`
+  - `^action items?$`
+  - `^follow[- ]?ups?(\s+expected)?(\s*\([^)]+\))?$`
+  - `^waiting on\s+.+$`
+  - `^items? to send to\s+.+$`
+  - `^to[- ]?dos?$`
+- Under matching headings, collect only `- [ ]` (unchecked) lines. Skip `- [x]` (in-meeting completions) and plain `- {text}` bullets (not action items). Stop at the next `###`/`##` heading.
+- **Counterparty name:** from heading's `(Name)` suffix or text after `to`/`on`; fallback to first non-Jeremy attendee.
+- **Jeremy identity:** mention-user UUID `4a7abf1f-ee23-4258-9b7a-5f449176a348` (pinned in the Step 3.5 prompt). Other `<mention-user …/>` tags contribute nothing to Person (unresolved without `notion-get-users`).
+- **Dedup key:** `source_ref = meeting:{meeting_page_id_no_dashes}:{slug}` where slug = lowercased slugified first 40 chars of checkbox text. Stable across reordering and small edits; brittle only to heavy rewording.
+
+#### Watermark
+A PA Tracker config row named `Meeting Notes Scan Marker` (Type = `config`, Notes = ISO timestamp) holds the last-run timestamp. Mirrors the `Last Scan Marker` pattern used by email extraction. Lazy-init: Step 3.5 defaults to 24h-ago if the row is absent and creates it at step end.
+
 ## Natural Language Commands
 
 Jeremy will say things like:
@@ -270,6 +303,7 @@ Jeremy will say things like:
 | "show me the email about [topic]" | Search Gmail |
 | "what happened with [person/company]" | Search Gmail + Notion + Drive |
 | "prep me for my [meeting] meeting" | Pull calendar details, open items for attendees, HubSpot deal context, recent Drive docs |
+| "tasks from [meeting]" / "what did I commit to in [meeting]" | Filter PA Tracker where Source = meeting_notes AND Source Subject contains [meeting] |
 | "how's extraction doing?" | Analyze last 7 days of journals for false positive/negative patterns |
 | "add [name] to key relationships" | Update vault/key-relationships.md, commit |
 | "show me active deals" / "deal pipeline" | Query HubSpot deals by stage |

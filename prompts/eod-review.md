@@ -9,8 +9,9 @@ You are generating the end-of-day review for Jeremy Rosmarin (Sidecar Capital Pa
 
 ## Output discipline (hard rules — prior runs have hit `Stream idle timeout - partial response received`)
 
-You run autonomously — Jeremy does not see your output. Emit tool calls, not explanations. Never narrate what you're about to do; do it. The reconciler's step 5 (`prompts/reconcile.md`) is the canonical version of this discipline; three steps below carry the same hazard and must be treated the same way:
+You run autonomously — Jeremy does not see your output. Emit tool calls, not explanations. Never narrate what you're about to do; do it. The reconciler's step 5 (`prompts/reconcile.md`) is the canonical version of this discipline; four steps below carry the same hazard and must be treated the same way:
 
+- **Step 3.5 (meeting-notes create loop):** After the per-meeting parse and payload enumeration is done, the very next thing in your response must be the first `notion-create-pages` call on the PA Tracker data source. No prose listing what you're about to create. One call per item, back to back. Do not narrate between them.
 - **Step 4 (carry-forward loop):** After querying Notion for items with `due_date = today AND status != done`, the very next thing in your response must be the first `notion-update-page` call. No prose enumerating what you're about to update. One tool call per carry-forward, back to back. Do not narrate between them.
 - **Step 7 (EOD section Write):** After the last upstream read (gcal/Notion counts), the very next thing in your response must be the `Write` tool call appending to `vault/daily/{today}.md`. No preview of the text, no draft, no re-reading the file first.
 - **Step 9 (cache resync Write):** After `notion-query-database-view` returns, emit the `Write` on `vault/task-cache.json` immediately. No narration, no re-read, no intermediate file. Same transform as `prompts/reconcile.md` step 5.
@@ -33,6 +34,60 @@ From the Notion PA Tracker, count:
 - Items completed today (status = done AND Updated = today)
 - Items created today (Created = today)
 - Items still open
+
+### 3.5. Mirror Meeting-Notes Action Items
+
+Pull unchecked action items from recent Meeting Notes DB rows into PA Tracker so briefs, carry-forward, and crack-check include them. One-way create-only mirror — no writeback to Meeting Notes DB, no updates after create.
+
+**Read watermark.** Fetch the Meeting Notes Scan Marker config page directly: `notion-fetch` on page ID `34b1e69629d181e98338f30a989170fa`. Parse ISO timestamp from the `Notes` property. If the fetch fails (page archived/missing), fall back to querying PA Tracker data source `collection://b3e39150-8cf2-491f-b65f-f13f38fae886` for Type = `config`, Title = `Meeting Notes Scan Marker`. If still absent, default watermark to 24h ago and re-create the row at the end of this step.
+
+**Query new/edited meeting notes.** Call `notion-query-meeting-notes` with a single property filter:
+
+```
+{"property": "last_edited_time", "filter": {"operator": "date_is_after", "value": {"type": "exact", "value": "{watermark ISO string}"}}}
+```
+
+The tool defaults to Jeremy-as-attendee/creator — no extra scoping needed.
+
+**Per meeting note, fetch and parse the body.** Call `notion-fetch` on the page ID. In the returned `<content>` block, scan for `###`- or `##`-level headings. Action-signaling headings (case-insensitive regex):
+
+| Heading pattern | PA `Type` | Person |
+|---|---|---|
+| `^next actions?(\s*\((?P<who>[^)]+)\))?$` | `task` if `who` is Jeremy/empty, else `commitment_theirs` | `who` if not Jeremy, else first non-Jeremy attendee, else blank |
+| `^action items?$` | `task` | first non-Jeremy attendee, else blank |
+| `^follow[- ]?ups?(\s+expected)?(\s*\((?P<who>[^)]+)\))?$` | `follow_up` | `who` if present, else first non-Jeremy attendee |
+| `^waiting on\s+(?P<who>.+)$` | `follow_up` | `who` |
+| `^items? to send to\s+(?P<who>.+)$` | `task` | `who` |
+| `^to[- ]?dos?$` | `task` | first non-Jeremy attendee, else blank |
+
+Under a matching heading, collect only `- [ ] {text}` lines (unchecked). Skip `- [x]` (in-meeting completions) and plain `- {text}` bullets. Stop at the next `###`/`##` heading.
+
+**Attendees.** Parse the `### Attendees` section. Plain-text bullets are names; `<mention-user url="user://4a7abf1f-ee23-4258-9b7a-5f449176a348"/>` is Jeremy (pin this UUID). Other `<mention-user …/>` tags are counterparties with no resolvable name — ignore for Person derivation. `Attendee Emails` page property is a further fallback (often empty).
+
+**Build payloads.** For each collected checkbox:
+
+- `slug = lowercase(first_40_chars(text)).replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')`
+- `source_ref = "meeting:" + meeting_page_id_no_dashes + ":" + slug`
+- If `source_ref` matches any `source_ref` in `vault/task-cache.json` (loaded in Step 1), SKIP.
+- Skip if checkbox text is empty/whitespace-only.
+
+PA Tracker payload:
+- Title: checkbox text, trimmed, trailing period stripped, truncated to 80 chars
+- Type: per heading table
+- Status: `open`
+- Priority: `high` if text contains `urgent`, `today`, or `ASAP` (case-insensitive), else `medium`
+- Due Date: today's date if text contains `today`; parsed ISO date if text has `by {weekday}` / `next {weekday}`; else null
+- Person: per heading table
+- Source: `meeting_notes`
+- Source Ref: as computed above
+- Source Subject: parent meeting's `Meeting` property
+- Notes: `From meeting: [{Meeting title}]({meeting_url}) ({Date})` — use the clickable permalink form `https://www.notion.so/{meeting_page_id_no_dashes}`
+
+**Write to Notion.** After the full enumeration across all fetched meeting notes is complete, emit `notion-create-pages` on PA Tracker data source `collection://b3e39150-8cf2-491f-b65f-f13f38fae886` back-to-back, one page per item. No prose between calls — see the output discipline section above (this step is on the same hazard list as Step 4).
+
+**Advance watermark.** After the last create (or immediately if zero items were generated), `notion-update-page` on page ID `34b1e69629d181e98338f30a989170fa` with command = `update_properties`, properties = `{"Notes": "<current ISO timestamp>"}`. If that page was missing at the start of the step, `notion-create-pages` on the PA Tracker data source instead, with Title = `Meeting Notes Scan Marker`, Type = `config`, Status = `open`, Priority = `low`, Source = `manual`, Notes = current ISO timestamp.
+
+**Stage journal output for Step 7.** Remember the count of mirrored items and their titles — they go into a new `### Mirrored From Meetings` subsection (only if non-zero) and a `Meeting-notes tasks mirrored: {N}` line under `### Stats` (omit if zero).
 
 ### 4. Carry Forward
 Find items where due_date = today AND status != done:
@@ -64,6 +119,9 @@ Append to `vault/daily/{YYYY-MM-DD}.md`:
 ### Carried Forward
 {Items due today but not done — with new due dates}
 
+### Mirrored From Meetings
+{Step 3.5 items — omit section entirely if zero}
+
 ### Tomorrow Preview
 {Tomorrow's calendar + items due tomorrow + any open conflict items due tomorrow}
 
@@ -73,6 +131,7 @@ Append to `vault/daily/{YYYY-MM-DD}.md`:
 - Open: {N}
 - Overdue: {N}
 - Carried forward: {N}
+- Meeting-notes tasks mirrored: {N}  (omit line if zero)
 
 ### Extraction Quality
 {False positive notes if any, otherwise "No same-day cancellations."}
