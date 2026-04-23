@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-04-23T16:56:59Z",
+  "synced_at": "2026-04-23T16:59:21Z",
   "items": [
     {
       "item_id": "PA-163",
@@ -44,17 +44,6 @@
       "person": "Raj Uttamchandani",
       "notion_page_id": "3491e69629d181bdb2d6e5a43f156af8",
       "source_ref": "19db13e3d329698a"
-    },
-    {
-      "item_id": "PA-126",
-      "title": "Walk through Project Link full analysis with Rob Handelman",
-      "type": "commitment_mine",
-      "status": "waiting",
-      "priority": "high",
-      "due_date": "2026-04-23",
-      "person": "Robert Handelman",
-      "notion_page_id": "3491e69629d18113b556d28ae95ae6e5",
-      "source_ref": "19dadef1dbc091a3"
     },
     {
       "item_id": "PA-125",
@@ -1100,6 +1089,17 @@
       "person": "Alyssa Banach",
       "notion_page_id": "3441e69629d18190a6ceccfc63debadf",
       "source_ref": ""
+    },
+    {
+      "item_id": "PA-168",
+      "title": "Rob Handelman to decide whether to engage formally on Project Link acquisition",
+      "type": "commitment_theirs",
+      "status": "waiting",
+      "priority": "high",
+      "due_date": "2026-04-30",
+      "person": "Robert Handelman",
+      "notion_page_id": "34b1e69629d181f2a45be34b5f7d93a1",
+      "source_ref": "19db2a9eea694750"
     }
   ]
 }
