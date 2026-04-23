@@ -96,7 +96,15 @@ Group into:
 - Waiting on others (type = commitment_theirs or follow_up)
 
 ### 9. Write Daily Journal
-Write `vault/daily/{YYYY-MM-DD}.md`:
+Write `vault/daily/{YYYY-MM-DD}.md`.
+
+**Gmail reference rule (applies to the entire brief):** never emit a bare thread ID or message ID in user-facing prose. Whenever you'd reference a Gmail thread or message, render it as a clickable Markdown link using the Gmail permalink format:
+
+```
+[{short label}](https://mail.google.com/mail/u/0/#all/{id})
+```
+
+Where `{id}` is the thread ID or message ID from `gmail_search_messages` / `gmail_read_message` / `gmail_read_thread` (the `#all/` path works for both, and for archived threads). For Key Relationship Emails, replace "thread 19db5d6e357ad0fd" style with a link like `[open thread](https://mail.google.com/mail/u/0/#all/19db5d6e357ad0fd)`.
 
 ```markdown
 # Daily Brief — {Day of Week, Month DD, YYYY}
