@@ -35,17 +35,6 @@
       "source_ref": "19db13e3d329698a"
     },
     {
-      "item_id": "PA-125",
-      "title": "Pay Rob Handelman $625 (half of $1,250) for J2J expo",
-      "type": "task",
-      "status": "waiting",
-      "priority": "high",
-      "due_date": "2026-04-23",
-      "person": "Rob Handelman",
-      "notion_page_id": "3491e69629d181f5a6b0dd9cc60c7334",
-      "source_ref": ""
-    },
-    {
       "item_id": "PA-122",
       "title": "Send invoice to Loyalty Markets for Plooto receivables",
       "type": "task",
