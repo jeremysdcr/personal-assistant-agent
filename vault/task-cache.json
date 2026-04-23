@@ -112,28 +112,6 @@
       "source_ref": "19da682151e5f212"
     },
     {
-      "item_id": "PA-101",
-      "title": "Confirm meeting date with Leore (during the day, week of 4/20)",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-23",
-      "person": "Leore",
-      "notion_page_id": "3471e69629d18159a993fb0be3ded29e",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-99",
-      "title": "Call Kessler re: Ian Rosmarin — Tue Apr 21 at 9pm ET",
-      "type": "commitment_mine",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-23",
-      "person": "Ian Rosmarin / Kessler",
-      "notion_page_id": "3471e69629d18194a489d33518df9e77",
-      "source_ref": "19da3b6d684cde90"
-    },
-    {
       "item_id": "PA-98",
       "title": "Resolve morning-brief + eod-review routine timeouts (stream idle)",
       "type": "task",
@@ -310,28 +288,6 @@
       "source_ref": ""
     },
     {
-      "item_id": "PA-33",
-      "title": "CDA filings — check status JR PQMLP Holdings 2025; notify MNP re 2026",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-23",
-      "person": "",
-      "notion_page_id": "3441e69629d181638d63f752ae1eb866",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-21",
-      "title": "J2J Expo prep — finalize materials and logistics",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-23",
-      "person": "Rob Handelman / Yossi Braun",
-      "notion_page_id": "3441e69629d1816783fdeda0b5eba831",
-      "source_ref": ""
-    },
-    {
       "item_id": "PA-29",
       "title": "David Metzler (IDFWO) to confirm call time",
       "type": "commitment_theirs",
@@ -341,17 +297,6 @@
       "person": "David Metzler",
       "notion_page_id": "3441e69629d1816b876adea06e63ff12",
       "source_ref": "19d8cf2c7b37d10a"
-    },
-    {
-      "item_id": "PA-17",
-      "title": "Probe John Furtado on Casey pass — look for a wedge to reopen",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-23",
-      "person": "John Furtado",
-      "notion_page_id": "3441e69629d1817fb086f0fc951f9d38",
-      "source_ref": ""
     },
     {
       "item_id": "PA-24",
@@ -407,17 +352,6 @@
       "person": "Anthony Marotta",
       "notion_page_id": "3441e69629d181f1b702e5e7376720be",
       "source_ref": ""
-    },
-    {
-      "item_id": "PA-3",
-      "title": "Prep for John Furtado meeting — M&A target criteria discussion",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-23",
-      "person": "John Furtado",
-      "notion_page_id": "3441e69629d1814fb031f67d45eb9a0d",
-      "source_ref": "19d93d8be8352599"
     },
     {
       "item_id": "PA-142",
