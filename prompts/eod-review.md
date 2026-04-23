@@ -49,20 +49,34 @@ Pull unchecked action items from recent Meeting Notes DB rows into PA Tracker so
 
 The tool defaults to Jeremy-as-attendee/creator — no extra scoping needed.
 
-**Per meeting note, fetch and parse the body.** Call `notion-fetch` on the page ID. In the returned `<content>` block, scan for `###`- or `##`-level headings. Action-signaling headings (case-insensitive regex):
+**Per meeting note, fetch and parse the body.** Call `notion-fetch` on the page ID. In the returned `<content>` block, normalize `<br>` → `\n` (Fathom-formatted notes use `<br>` as the line separator). Then apply two parsing strategies and collect items from both into the same pool — dedup is by slug-based source_ref, so any overlap is a no-op.
 
-| Heading pattern | PA `Type` | Person |
+**Strategy A — Fathom "Next Steps" format (primary for recent notes).** Look for a line matching `^Next Steps\s*$` (case-insensitive). If found, treat all lines after it as the action region (Fathom puts Next Steps at the tail of the body). Within that region, recognize two sub-styles that may coexist in the same note:
+
+- **Hierarchical (Style A):** a line matching `^\s{2}- (?P<who>[^:]+):\s*$` (no text after the colon) opens a person block. Following lines matching `^\s{4,}- (?P<text>.+)$` (deeper indent) are actions for that person. Block ends at the next Style A header or a dedent to `^\s{2}- `.
+- **Flat with prefix (Style B):** a line matching `^\s{2}- (?P<who>[^:]+):\s+(?P<text>.+)$` (text after the colon) is a single action for that person.
+
+**Strategy B — Markdown / `###`-heading format (fallback for hand-structured notes).** Scan for `###`- or `##`-level headings matching the action-signaling regex set below (case-insensitive):
+
+| Heading pattern | PA `Type` | Person override |
 |---|---|---|
-| `^next actions?(\s*\((?P<who>[^)]+)\))?$` | `task` if `who` is Jeremy/empty, else `commitment_theirs` | `who` if not Jeremy, else first non-Jeremy attendee, else blank |
-| `^action items?$` | `task` | first non-Jeremy attendee, else blank |
-| `^follow[- ]?ups?(\s+expected)?(\s*\((?P<who>[^)]+)\))?$` | `follow_up` | `who` if present, else first non-Jeremy attendee |
+| `^next actions?(\s*\((?P<who>[^)]+)\))?$` | `task` if `who` ≈ Jeremy/empty, else `commitment_theirs` | `who` if not Jeremy |
+| `^action items?$` | `task` | — |
+| `^follow[- ]?ups?(\s+expected)?(\s*\((?P<who>[^)]+)\))?$` | `follow_up` | `who` if present |
 | `^waiting on\s+(?P<who>.+)$` | `follow_up` | `who` |
 | `^items? to send to\s+(?P<who>.+)$` | `task` | `who` |
-| `^to[- ]?dos?$` | `task` | first non-Jeremy attendee, else blank |
+| `^to[- ]?dos?$` | `task` | — |
 
 Under a matching heading, collect only `- [ ] {text}` lines (unchecked). Skip `- [x]` (in-meeting completions) and plain `- {text}` bullets. Stop at the next `###`/`##` heading.
 
-**Attendees.** Parse the `### Attendees` section. Plain-text bullets are names; `<mention-user url="user://4a7abf1f-ee23-4258-9b7a-5f449176a348"/>` is Jeremy (pin this UUID). Other `<mention-user …/>` tags are counterparties with no resolvable name — ignore for Person derivation. `Attendee Emails` page property is a further fallback (often empty).
+**Jeremy-identity synonyms (case-insensitive).** Any of these in the `who` slot means the action is Jeremy's: `Jeremy`, `Jeremy Rosmarin`, `Sidecar`, `Sidecar Capital`, `Sidecar Capital Partners`, `Cyber Capital`, `Cyber Capital Partners`, `Both`. All other `who` values are counterparty-owed.
+
+**Type assignment.** Jeremy-owned → `task`. Counterparty-owed → `commitment_theirs`. Strategy B follow-up/waiting headings keep their native `follow_up` mapping.
+
+**Person field (counterparty on the PA item).**
+- For Jeremy-owned items: extract from the meeting title. Split off the ` - {date}` suffix, then take the first name-like token that isn't Jeremy. For titles like `X and Y and Jeremy Rosmarin`, this yields `X`. For ambiguous group titles (`John, Rob and the CEO`), take the first token (`John`). Skip generic descriptors (`the founder`, `the CEO`, `the capital partner`, `the group`).
+- For counterparty-owed items: the `who` name from the block.
+- Fallback to blank if nothing else works.
 
 **Build payloads.** For each collected checkbox:
 

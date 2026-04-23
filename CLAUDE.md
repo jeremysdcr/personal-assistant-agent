@@ -262,17 +262,27 @@ Items with Source = `calendar` and Source Ref starting with `conflict:` are crea
 | Tasks DB | Relation | **Ignored** — Jeremy is deprecating Tasks DB; PA reads action items directly from the page body |
 
 #### Body parsing rules (authoritative — `prompts/eod-review.md` Step 3.5 embeds this)
-- **Action-signaling headings** (`###` or `##`, case-insensitive):
-  - `^next actions?(\s*\([^)]+\))?$`
-  - `^action items?$`
-  - `^follow[- ]?ups?(\s+expected)?(\s*\([^)]+\))?$`
-  - `^waiting on\s+.+$`
-  - `^items? to send to\s+.+$`
-  - `^to[- ]?dos?$`
-- Under matching headings, collect only `- [ ]` (unchecked) lines. Skip `- [x]` (in-meeting completions) and plain `- {text}` bullets (not action items). Stop at the next `###`/`##` heading.
-- **Counterparty name:** from heading's `(Name)` suffix or text after `to`/`on`; fallback to first non-Jeremy attendee.
-- **Jeremy identity:** mention-user UUID `4a7abf1f-ee23-4258-9b7a-5f449176a348` (pinned in the Step 3.5 prompt). Other `<mention-user …/>` tags contribute nothing to Person (unresolved without `notion-get-users`).
-- **Dedup key:** `source_ref = meeting:{meeting_page_id_no_dashes}:{slug}` where slug = lowercased slugified first 40 chars of checkbox text. Stable across reordering and small edits; brittle only to heavy rewording.
+The parser runs two strategies in parallel and merges results via slug-based dedup.
+
+**Strategy A — Fathom "Next Steps" format (primary for recent notes).** Normalize `<br>` → `\n`. Find a line matching `^Next Steps\s*$` and treat everything after it as the action region. Two sub-styles coexist:
+- Hierarchical: `  - {Person}:` (no text after colon) opens a block; `      - {action}` lines under it are that person's actions until the next `  - {Person}:` or dedent.
+- Flat with prefix: `  - {Person}: {action}` — single action for that person.
+
+**Strategy B — Markdown / `###`-heading format (fallback for hand-structured notes).** Action-signaling headings at `###`/`##` level (case-insensitive):
+- `^next actions?(\s*\([^)]+\))?$`
+- `^action items?$`
+- `^follow[- ]?ups?(\s+expected)?(\s*\([^)]+\))?$`
+- `^waiting on\s+.+$`
+- `^items? to send to\s+.+$`
+- `^to[- ]?dos?$`
+
+Under matching headings, collect only `- [ ]` (unchecked) lines. Skip `- [x]` and plain bullets. Stop at the next `###`/`##` heading.
+
+**Jeremy synonyms** (case-insensitive; any of these means the action is Jeremy's): `Jeremy`, `Jeremy Rosmarin`, `Sidecar`, `Sidecar Capital`, `Sidecar Capital Partners`, `Cyber Capital`, `Cyber Capital Partners`, `Both`. Others → counterparty-owed (`commitment_theirs`).
+
+**Person field.** Jeremy-owned → first non-Jeremy token from meeting title (strip ` - {date}` suffix; skip generic descriptors like `the founder`/`the CEO`). Counterparty-owed → the `who` name from the block.
+
+**Dedup key.** `source_ref = meeting:{meeting_page_id_no_dashes}:{slug}` where slug = lowercased slugified first 40 chars of action text. Format-agnostic; an item extracted by Strategy A and the same item extracted by Strategy B produce the same slug.
 
 #### Watermark
 A PA Tracker config row named `Meeting Notes Scan Marker` (Type = `config`, Notes = ISO timestamp) holds the last-run timestamp. Mirrors the `Last Scan Marker` pattern used by email extraction. Lazy-init: Step 3.5 defaults to 24h-ago if the row is absent and creates it at step end.
