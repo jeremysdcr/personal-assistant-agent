@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-04-23T10:58:31Z",
+  "synced_at": "2026-04-23T11:05:53Z",
   "items": [
     {
       "item_id": "PA-146",
@@ -11,17 +11,6 @@
       "person": "Frankie",
       "notion_page_id": "34a1e69629d181e79a55e2524b52ea22",
       "source_ref": ""
-    },
-    {
-      "item_id": "PA-138",
-      "title": "Conflict: 04/22 20:45 — Plan your day tomorrow ↔ Catch-up call: Jeremy and Ian Kessler",
-      "type": "follow_up",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-23",
-      "person": "",
-      "notion_page_id": "34a1e69629d18140b10beef5a6b9fd7e",
-      "source_ref": "conflict:hme7kq63di62rr3ftkebj6mqv8:psvuk94lv90tvqibdgbae35kf0_20260423T004500Z"
     },
     {
       "item_id": "PA-134",
