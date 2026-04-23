@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-04-23T18:11:19Z",
+  "synced_at": "2026-04-23T19:22:04Z",
   "items": [
     {
       "item_id": "PA-163",
@@ -915,6 +915,17 @@
       "source_ref": ""
     },
     {
+      "item_id": "PA-170",
+      "title": "Ryan Hamid to pick a new time via Calendly",
+      "type": "commitment_theirs",
+      "status": "waiting",
+      "priority": "medium",
+      "due_date": null,
+      "person": "Ryan Hamid",
+      "notion_page_id": "34b1e69629d181b8a0bfd2e4794782d9",
+      "source_ref": "19dbbb0173250802"
+    },
+    {
       "item_id": "PA-164",
       "title": "Fix robots.txt blocking sidecarcapitalpartners.com pages from Google indexing",
       "type": "task",
@@ -1088,17 +1099,6 @@
       "due_date": null,
       "person": "",
       "notion_page_id": "3441e69629d18172864ccb428b117b9a",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-49",
-      "title": "Update Ayala's and Eden's MP3 player with ABBA",
-      "type": "task",
-      "status": "open",
-      "priority": "low",
-      "due_date": null,
-      "person": "",
-      "notion_page_id": "3441e69629d181888409c8230ee0c114",
       "source_ref": ""
     }
   ]
