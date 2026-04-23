@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-04-23T16:36:24Z",
+  "synced_at": "2026-04-23T16:40:54Z",
   "items": [
     {
       "item_id": "PA-163",
@@ -354,11 +354,22 @@
       "source_ref": ""
     },
     {
+      "item_id": "PA-165",
+      "title": "Send Carole INQ onboarding next steps",
+      "type": "commitment_mine",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-24",
+      "person": "Carole Piovesan",
+      "notion_page_id": "34b1e69629d1815fa0a5ce9c0ff4e3b1",
+      "source_ref": ""
+    },
+    {
       "item_id": "PA-147",
       "title": "Schedule Claude lead-scraping demo for Daniel and team (Changes on the Fly)",
       "type": "commitment_mine",
       "status": "open",
-      "priority": "medium",
+      "priority": "high",
       "due_date": "2026-04-24",
       "person": "Daniel Cashman",
       "notion_page_id": "34b1e69629d181dbaaebc0d4b70ffea4",
@@ -501,7 +512,7 @@
       "title": "Evaluate and respond to Rick Naor (Liquid Capital) re: TJN event factoring intro",
       "type": "follow_up",
       "status": "open",
-      "priority": "medium",
+      "priority": "high",
       "due_date": "2026-04-25",
       "person": "Rick Naor",
       "notion_page_id": "34a1e69629d181e1af49d70d9a823dab",
@@ -1088,17 +1099,6 @@
       "due_date": null,
       "person": "Alyssa Banach",
       "notion_page_id": "3441e69629d18190a6ceccfc63debadf",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-42",
-      "title": "Research IRAP/SRED eligibility for Sidecar activities",
-      "type": "task",
-      "status": "open",
-      "priority": "low",
-      "due_date": null,
-      "person": "",
-      "notion_page_id": "3441e69629d18197827fde6a2f391bf3",
       "source_ref": ""
     }
   ]
