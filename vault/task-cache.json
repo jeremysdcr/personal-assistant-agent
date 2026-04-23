@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-04-23T16:40:54Z",
+  "synced_at": "2026-04-23T16:56:59Z",
   "items": [
     {
       "item_id": "PA-163",
@@ -497,17 +497,6 @@
       "source_ref": ""
     },
     {
-      "item_id": "PA-145",
-      "title": "Nicholas Wong (MNP) to confirm CDA T2054 filing and T5 picture for 2025 return",
-      "type": "commitment_theirs",
-      "status": "open",
-      "priority": "urgent",
-      "due_date": "2026-04-25",
-      "person": "Nicholas Wong",
-      "notion_page_id": "34a1e69629d18111be35d22326aa8ec5",
-      "source_ref": "19db63622a1116d7"
-    },
-    {
       "item_id": "PA-143",
       "title": "Evaluate and respond to Rick Naor (Liquid Capital) re: TJN event factoring intro",
       "type": "follow_up",
@@ -704,6 +693,17 @@
       "person": "Leore",
       "notion_page_id": "34b1e69629d18178ab91f224a6d8e82c",
       "source_ref": ""
+    },
+    {
+      "item_id": "PA-167",
+      "title": "Decide CDA path with MNP: recalc reserve after 2025 PQ receipts OR file June 30 2025 year-end now",
+      "type": "commitment_mine",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-05-07",
+      "person": "Howard Colton",
+      "notion_page_id": "34b1e69629d181e88138f2c490691047",
+      "source_ref": "19db63622a1116d7"
     },
     {
       "item_id": "PA-121",
