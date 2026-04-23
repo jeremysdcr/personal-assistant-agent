@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-04-23T14:46:08Z",
+  "synced_at": "2026-04-23T14:52:48Z",
   "items": [
     {
       "item_id": "PA-146",
@@ -409,17 +409,6 @@
       "source_ref": ""
     },
     {
-      "item_id": "PA-87",
-      "title": "Ship Download as PDF button on Sidecar Capital Partners blog posts",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-24",
-      "person": "",
-      "notion_page_id": "3461e69629d18155bb61e298ee3c745e",
-      "source_ref": ""
-    },
-    {
       "item_id": "PA-78",
       "title": "Gershon to create corporate GoDaddy account and transfer Loyalty domain ownership",
       "type": "commitment_theirs",
@@ -563,6 +552,17 @@
       "source_ref": "19d93258acd33a40"
     },
     {
+      "item_id": "PA-148",
+      "title": "Date with Leore",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-04-27",
+      "person": "Leore",
+      "notion_page_id": "34b1e69629d18181b851db58a248c320",
+      "source_ref": ""
+    },
+    {
       "item_id": "PA-140",
       "title": "Pick up screw at Home Depot to fix toilet paper holder in Ayala & Yoav's bathroom",
       "type": "task",
@@ -673,6 +673,17 @@
       "source_ref": ""
     },
     {
+      "item_id": "PA-149",
+      "title": "Date with Leore",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-05-04",
+      "person": "Leore",
+      "notion_page_id": "34b1e69629d18178ab91f224a6d8e82c",
+      "source_ref": ""
+    },
+    {
       "item_id": "PA-121",
       "title": "Prepare partnership model sketch for HVE Healthcare",
       "type": "commitment_mine",
@@ -706,6 +717,17 @@
       "source_ref": ""
     },
     {
+      "item_id": "PA-150",
+      "title": "Date with Leore",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-05-11",
+      "person": "Leore",
+      "notion_page_id": "34b1e69629d18138a9f1eae904a53fda",
+      "source_ref": ""
+    },
+    {
       "item_id": "PA-105",
       "title": "Send Adam Buzanis a note to catch up",
       "type": "task",
@@ -714,6 +736,17 @@
       "due_date": "2026-05-15",
       "person": "Adam Buzanis",
       "notion_page_id": "3481e69629d181e49695fb8ea5233c1e",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-151",
+      "title": "Date with Leore",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-05-18",
+      "person": "Leore",
+      "notion_page_id": "34b1e69629d1814c9dadcf55dff6208c",
       "source_ref": ""
     },
     {
@@ -728,6 +761,39 @@
       "source_ref": ""
     },
     {
+      "item_id": "PA-152",
+      "title": "Date with Leore",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-05-25",
+      "person": "Leore",
+      "notion_page_id": "34b1e69629d1818a95c6f0db192a9462",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-153",
+      "title": "Date with Leore",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-06-01",
+      "person": "Leore",
+      "notion_page_id": "34b1e69629d181069409fc3f03dab572",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-154",
+      "title": "Date with Leore",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-06-08",
+      "person": "Leore",
+      "notion_page_id": "34b1e69629d181c6aa82e9f47d0e3bc5",
+      "source_ref": ""
+    },
+    {
       "item_id": "PA-83",
       "title": "Work with Josh to prepare Loyalty Markets board package",
       "type": "commitment_mine",
@@ -739,6 +805,17 @@
       "source_ref": ""
     },
     {
+      "item_id": "PA-155",
+      "title": "Date with Leore",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-06-15",
+      "person": "Leore",
+      "notion_page_id": "34b1e69629d181278a8ef75ec8a34985",
+      "source_ref": ""
+    },
+    {
       "item_id": "PA-74",
       "title": "Circulate agenda for Loyalty Markets board meeting (Wed 6/24)",
       "type": "task",
@@ -747,6 +824,50 @@
       "due_date": "2026-06-19",
       "person": "John Chidiac / Rob Handelman / Gershon Hurwen",
       "notion_page_id": "3451e69629d181d99555e55f40749c95",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-156",
+      "title": "Date with Leore",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-06-22",
+      "person": "Leore",
+      "notion_page_id": "34b1e69629d181d3bda9ef8eab6a16a1",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-157",
+      "title": "Date with Leore",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-06-29",
+      "person": "Leore",
+      "notion_page_id": "34b1e69629d1817d8603d35557b835a7",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-158",
+      "title": "Date with Leore",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-07-06",
+      "person": "Leore",
+      "notion_page_id": "34b1e69629d181edabd5da790b7ec731",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-159",
+      "title": "Date with Leore",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-07-13",
+      "person": "Leore",
+      "notion_page_id": "34b1e69629d1815290a2e4d8efcbca42",
       "source_ref": ""
     },
     {
@@ -979,61 +1100,6 @@
       "person": "",
       "notion_page_id": "3441e69629d181ab8dc9d65b2721836c",
       "source_ref": ""
-    },
-    {
-      "item_id": "PA-46",
-      "title": "Check back with Ira Goldstein re: transaction progress",
-      "type": "task",
-      "status": "open",
-      "priority": "low",
-      "due_date": null,
-      "person": "Ira Goldstein",
-      "notion_page_id": "3441e69629d181b0b433e8a75b1d1c1c",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-45",
-      "title": "Email Chris Volpe + set up recurring check-in",
-      "type": "task",
-      "status": "open",
-      "priority": "low",
-      "due_date": null,
-      "person": "Chris Volpe",
-      "notion_page_id": "3441e69629d181bb8285e2b573538050",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-51",
-      "title": "Build first Notion agent (blog posts, lead outreach)",
-      "type": "task",
-      "status": "open",
-      "priority": "low",
-      "due_date": null,
-      "person": "",
-      "notion_page_id": "3441e69629d181da8346cc757ad64a85",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-11",
-      "title": "Watch for Mauro Folco response re: Leadout Capital intro offer",
-      "type": "follow_up",
-      "status": "open",
-      "priority": "low",
-      "due_date": null,
-      "person": "Mauro Folco",
-      "notion_page_id": "3441e69629d181449622ed674debf361",
-      "source_ref": "19d9312fed6b504f"
-    },
-    {
-      "item_id": "PA-4",
-      "title": "John Furtado to share progress on 8 acquisition targets",
-      "type": "commitment_theirs",
-      "status": "open",
-      "priority": "medium",
-      "due_date": null,
-      "person": "John Furtado",
-      "notion_page_id": "3441e69629d181be982dfdfe70672ca3",
-      "source_ref": "19d9238829ec627b"
     }
   ]
 }
