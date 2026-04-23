@@ -216,12 +216,12 @@ Items with Source = `calendar` and Source Ref starting with `conflict:` are crea
 | Type | Select | `reply`, `nudge` |
 | Status | Select | `pending_review` (default), `dismissed` |
 | Recipient | Rich Text | Email address (for quick copy when composing in Gmail) |
-| Source Ref | Rich Text | Gmail message ID of the triggering email — dedup key |
+| Source Ref | URL | Gmail permalink to the triggering email, format `https://mail.google.com/mail/u/0/#all/{message_id}`. Clickable in Notion; opens the thread directly. Doubles as the dedup key (unique per message). |
 | Created | Created Time | Auto |
 | (page body) | Blocks | Draft body text |
 
 #### Dedup
-- **Reply drafts:** source_ref (Gmail message_id) unique. Extraction emits `action=update` for existing PA items — Step 9 skips draft creation in that case, so re-scans don't stack duplicate replies on the same thread.
+- **Reply drafts:** Source Ref URL (contains the Gmail message_id) is unique per email. Extraction emits `action=update` for existing PA items — Step 9 skips draft creation in that case, so re-scans don't stack duplicate replies on the same thread.
 - **Nudge drafts:** the PA item's Notes field gets stamped `Follow-up draft created {today}` (existing pre-change behavior, preserved). If Jeremy dismisses a nudge and wants it re-drafted later, he clears the note manually.
 
 ## Natural Language Commands

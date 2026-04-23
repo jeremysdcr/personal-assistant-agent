@@ -452,7 +452,7 @@ When running as a Scan & Check routine:
 6. Apply this extraction framework to each email. Produce the structured output above.
 7. Deduplicate against cache by source_ref and title+person similarity.
 8. Write to Notion: `notion-create-pages` for new items, `notion-update-page` for updates.
-9. Create PA Drafts rows: `notion-create-pages` on the PA Drafts DB (data source `collection://0bf9dfc4-2607-4154-8afc-7cc14d3b3910`) for each `draft_reply` entry. Set Type=`reply`, Status=`pending_review`, Recipient=`to`, Source Ref=the entry's `source_ref`. Page body = `body`. Skip if the corresponding `items[]` entry was `action: update`. Do NOT call `gmail_create_draft`.
+9. Create PA Drafts rows: `notion-create-pages` on the PA Drafts DB (data source `collection://0bf9dfc4-2607-4154-8afc-7cc14d3b3910`) for each `draft_reply` entry. Set Type=`reply`, Status=`pending_review`, Recipient=`to`, Source Ref=`https://mail.google.com/mail/u/0/#all/{source_ref}` (URL-type property; the bare `source_ref` is the Gmail message ID, wrap it in the Gmail permalink prefix so Jeremy can click to open the email). Page body = `body`. Skip if the corresponding `items[]` entry was `action: update`. Do NOT call `gmail_create_draft`.
 10. Update scan timestamp in Notion: Update the config page Notes field with current timestamp.
 
 ### Part B: Crack-Check
