@@ -111,7 +111,7 @@ Write `vault/daily/{YYYY-MM-DD}.md`:
 {Active deals by stage, recent stage changes}
 
 ## Attention Required
-{Overdue items, items due today, urgent items}
+{Overdue items, items due today, urgent items. **Render every line item in this section as a to-do block using Notion Markdown syntax `- [ ] ...` (not plain `- ...`)** so Jeremy can check items off directly in the Notion brief. Applies to all subsections — DUE TODAY, DUE TOMORROW, URGENT, etc. Other sections (Today's Schedule, Active Commitments, Open Tasks, FYI) stay as plain bullets.}
 
 ## Key Relationship Emails
 {Emails from key contacts — highlighted separately}
