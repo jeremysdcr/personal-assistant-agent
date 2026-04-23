@@ -71,31 +71,33 @@ Under a matching heading, collect only `- [ ] {text}` lines (unchecked). Skip `-
 
 **Jeremy-identity synonyms (case-insensitive).** Any of these in the `who` slot means the action is Jeremy's: `Jeremy`, `Jeremy Rosmarin`, `Sidecar`, `Sidecar Capital`, `Sidecar Capital Partners`, `Cyber Capital`, `Cyber Capital Partners`, `Both`. All other `who` values are counterparty-owed.
 
-**Type assignment.** Jeremy-owned → `task`. Counterparty-owed → `commitment_theirs`. Strategy B follow-up/waiting headings keep their native `follow_up` mapping.
+**Type assignment.** Jeremy-owned with a named counterparty → `commitment_mine` (this is the "what do I owe [person]" bucket queryable per CLAUDE.md). Jeremy-owned without a counterparty (rare for meeting notes) → `task`. Counterparty-owed → `commitment_theirs`. Strategy B follow-up/waiting headings keep their native `follow_up` mapping.
 
 **Person field (counterparty on the PA item).**
 - For Jeremy-owned items: extract from the meeting title. Split off the ` - {date}` suffix, then take the first name-like token that isn't Jeremy. For titles like `X and Y and Jeremy Rosmarin`, this yields `X`. For ambiguous group titles (`John, Rob and the CEO`), take the first token (`John`). Skip generic descriptors (`the founder`, `the CEO`, `the capital partner`, `the group`).
 - For counterparty-owed items: the `who` name from the block.
 - Fallback to blank if nothing else works.
 
-**Build payloads.** For each collected checkbox:
+**Build payloads.** For each collected checkbox / action line:
 
 - `slug = lowercase(first_40_chars(text)).replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')`
 - `source_ref = "meeting:" + meeting_page_id_no_dashes + ":" + slug`
-- If `source_ref` matches any `source_ref` in `vault/task-cache.json` (loaded in Step 1), SKIP.
-- Skip if checkbox text is empty/whitespace-only.
+- Skip if action text is empty/whitespace-only.
+- **Dedup check (two-pass).** For each cached PA item (from `vault/task-cache.json`), SKIP the candidate if any of the following match:
+  1. Exact match: cached `source_ref == candidate source_ref` (new format).
+  2. **Legacy fallback (belt-and-suspenders):** cached `source_ref` contains `meeting_page_id_no_dashes` (handles pre-convention items that stored just the bare page ID, e.g. `Source Ref = "3481e69629d181dab612db619e45b454"` on PA-120/121) **AND** the candidate's slug is a prefix-or-suffix substring of the cached item's title's slugified first 40 chars. This catches duplicate meeting items created by prior ad-hoc extraction paths that pre-date the `meeting:{id}:{slug}` convention.
 
 PA Tracker payload:
-- Title: checkbox text, trimmed, trailing period stripped, truncated to 80 chars
-- Type: per heading table
+- Title: action text, trimmed, trailing period stripped, truncated to 80 chars
+- Type: per heading table (Jeremy-owned with counterparty → `commitment_mine`)
 - Status: `open`
 - Priority: `high` if text contains `urgent`, `today`, or `ASAP` (case-insensitive), else `medium`
-- Due Date: today's date if text contains `today`; parsed ISO date if text has `by {weekday}` / `next {weekday}`; else null
+- Due Date: today's date if text contains `today`; parsed ISO date if text has `by {weekday}` / `next {weekday}` / explicit `Month Dth`; else null
 - Person: per heading table
 - Source: `meeting_notes`
 - Source Ref: as computed above
 - Source Subject: parent meeting's `Meeting` property
-- Notes: `From meeting: [{Meeting title}]({meeting_url}) ({Date})` — use the clickable permalink form `https://www.notion.so/{meeting_page_id_no_dashes}`
+- Notes: `From meeting: [{Meeting title}]({meeting_url}) ({Date})` using the clickable permalink `https://www.notion.so/{meeting_page_id_no_dashes}`. **If the meeting's `Summary` page property is non-empty, append two newlines and then the Summary text verbatim** — this gives downstream briefings enough context to disambiguate a terse action title.
 
 **Write to Notion.** After the full enumeration across all fetched meeting notes is complete, emit `notion-create-pages` on PA Tracker data source `collection://b3e39150-8cf2-491f-b65f-f13f38fae886` back-to-back, one page per item. No prose between calls — see the output discipline section above (this step is on the same hazard list as Step 4).
 

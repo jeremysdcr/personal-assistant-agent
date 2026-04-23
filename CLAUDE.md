@@ -280,9 +280,15 @@ Under matching headings, collect only `- [ ]` (unchecked) lines. Skip `- [x]` an
 
 **Jeremy synonyms** (case-insensitive; any of these means the action is Jeremy's): `Jeremy`, `Jeremy Rosmarin`, `Sidecar`, `Sidecar Capital`, `Sidecar Capital Partners`, `Cyber Capital`, `Cyber Capital Partners`, `Both`. Others → counterparty-owed (`commitment_theirs`).
 
+**Type assignment.** Jeremy-owned with a named counterparty → `commitment_mine` (matches the "what do I owe [person]" command). Jeremy-owned without a counterparty → `task`. Counterparty-owed → `commitment_theirs`.
+
 **Person field.** Jeremy-owned → first non-Jeremy token from meeting title (strip ` - {date}` suffix; skip generic descriptors like `the founder`/`the CEO`). Counterparty-owed → the `who` name from the block.
 
+**Notes field.** `From meeting: [{Meeting title}]({meeting_url}) ({Date})` — if the meeting row's `Summary` property is non-empty, append a blank line and then the Summary verbatim for downstream briefing context.
+
 **Dedup key.** `source_ref = meeting:{meeting_page_id_no_dashes}:{slug}` where slug = lowercased slugified first 40 chars of action text. Format-agnostic; an item extracted by Strategy A and the same item extracted by Strategy B produce the same slug.
+
+**Legacy-format fallback.** A second dedup check catches items created before the `meeting:{id}:{slug}` convention (e.g., PA-120/121 which stored `Source Ref = {bare_page_id}`). During Step 3.5's dedup pass, also skip the candidate if any cached item's `source_ref` contains the meeting page ID AND the cached item's title-slug overlaps the candidate's slug. Prevents re-creating items that a prior extraction path already tracked.
 
 #### Watermark
 A PA Tracker config row named `Meeting Notes Scan Marker` (Type = `config`, Notes = ISO timestamp) holds the last-run timestamp. Mirrors the `Last Scan Marker` pattern used by email extraction. Lazy-init: Step 3.5 defaults to 24h-ago if the row is absent and creates it at step end.
