@@ -1,6 +1,17 @@
 {
-  "synced_at": "2026-04-23T15:46:12Z",
+  "synced_at": "2026-04-23T16:36:24Z",
   "items": [
+    {
+      "item_id": "PA-163",
+      "title": "Forward Apr 24 demo calendar invites to Daniel Cashman and Ryan (Changes on the Fly)",
+      "type": "task",
+      "status": "open",
+      "priority": "urgent",
+      "due_date": "2026-04-23",
+      "person": "Daniel Cashman",
+      "notion_page_id": "34b1e69629d181aabcecf771c6fb4256",
+      "source_ref": "19dbaf4c8cd32704"
+    },
     {
       "item_id": "PA-134",
       "title": "Follow up with individuals for sponsorships of Chris McKenna smartphone event",
@@ -16,7 +27,7 @@
       "item_id": "PA-132",
       "title": "Pay Jeremy Reinbolt (Videre) April invoice — confirm payment method",
       "type": "task",
-      "status": "open",
+      "status": "waiting",
       "priority": "high",
       "due_date": "2026-04-23",
       "person": "Jeremy Reinbolt / Videre",
@@ -343,6 +354,17 @@
       "source_ref": ""
     },
     {
+      "item_id": "PA-147",
+      "title": "Schedule Claude lead-scraping demo for Daniel and team (Changes on the Fly)",
+      "type": "commitment_mine",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-04-24",
+      "person": "Daniel Cashman",
+      "notion_page_id": "34b1e69629d181dbaaebc0d4b70ffea4",
+      "source_ref": "19dba70ac9600e4f"
+    },
+    {
       "item_id": "PA-118",
       "title": "Rob Handelman to set up Loyalty value-creation working session with Gershon",
       "type": "commitment_theirs",
@@ -528,6 +550,17 @@
       "person": "Robert Bezede",
       "notion_page_id": "3441e69629d181f59461c8d49121af9a",
       "source_ref": "19d93258acd33a40"
+    },
+    {
+      "item_id": "PA-162",
+      "title": "INQ engagement kickoff — coordinate scheduling with Ashley Novak for week of Apr 27",
+      "type": "commitment_theirs",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-27",
+      "person": "Carole Piovesan",
+      "notion_page_id": "34b1e69629d181938309f7ed2cf72a95",
+      "source_ref": "19dbb2200ca57f7e"
     },
     {
       "item_id": "PA-148",
@@ -860,15 +893,15 @@
       "source_ref": ""
     },
     {
-      "item_id": "PA-147",
-      "title": "Schedule Claude lead-scraping demo for Daniel and team (Changes on the Fly)",
-      "type": "commitment_mine",
+      "item_id": "PA-164",
+      "title": "Fix robots.txt blocking sidecarcapitalpartners.com pages from Google indexing",
+      "type": "task",
       "status": "open",
       "priority": "medium",
       "due_date": null,
-      "person": "Daniel Cashman",
-      "notion_page_id": "34b1e69629d181dbaaebc0d4b70ffea4",
-      "source_ref": "19dba70ac9600e4f"
+      "person": "",
+      "notion_page_id": "34b1e69629d18136a48ecd3701e9a477",
+      "source_ref": "19dbaa031f677e09"
     },
     {
       "item_id": "PA-141",
@@ -1066,28 +1099,6 @@
       "due_date": null,
       "person": "",
       "notion_page_id": "3441e69629d18197827fde6a2f391bf3",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-53",
-      "title": "Confirm whether Backstreet Boys ticket was paid last summer",
-      "type": "task",
-      "status": "open",
-      "priority": "low",
-      "due_date": null,
-      "person": "",
-      "notion_page_id": "3441e69629d181ab8dc9d65b2721836c",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-161",
-      "title": "Carole Piovesan to sign Sidecar-INQ Advisory Agreement",
-      "type": "commitment_theirs",
-      "status": "waiting",
-      "priority": "high",
-      "due_date": "2026-04-27",
-      "person": "Carole Piovesan",
-      "notion_page_id": "34b1e69629d181cf9728e522e2b12b5b",
       "source_ref": ""
     }
   ]
