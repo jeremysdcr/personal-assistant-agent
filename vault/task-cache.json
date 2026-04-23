@@ -1,12 +1,12 @@
 {
-  "synced_at": "2026-04-22T22:37:53Z",
+  "synced_at": "2026-04-23T02:20:59Z",
   "items": [
     {
       "item_id": "PA-146",
       "title": "Send previous Vidiere invoices to Frankie",
       "type": "task",
       "status": "open",
-      "priority": "medium",
+      "priority": "high",
       "due_date": "2026-04-23",
       "person": "Frankie",
       "notion_page_id": "34a1e69629d181e79a55e2524b52ea22",
@@ -545,7 +545,7 @@
       "title": "Bad Timing re-engagement — pick 2 from Royal Fire, Atlantic Growth, ConnectCPA",
       "type": "task",
       "status": "open",
-      "priority": "medium",
+      "priority": "high",
       "due_date": "2026-04-24",
       "person": "",
       "notion_page_id": "3441e69629d18130ba7ed03ee6a72a9e",
@@ -556,7 +556,7 @@
       "title": "Predictive Success — final outreach or close lost",
       "type": "task",
       "status": "open",
-      "priority": "medium",
+      "priority": "high",
       "due_date": "2026-04-24",
       "person": "Predictive Success",
       "notion_page_id": "3441e69629d18183817ee9f493a130fb",
