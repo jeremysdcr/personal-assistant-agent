@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-04-23T19:22:04Z",
+  "synced_at": "2026-04-23T19:24:48Z",
   "items": [
     {
       "item_id": "PA-163",
@@ -651,6 +651,17 @@
       "source_ref": ""
     },
     {
+      "item_id": "PA-171",
+      "title": "Nudge Ryan Hamid if he hasn't rebooked via Calendly",
+      "type": "follow_up",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-05-01",
+      "person": "Ryan Hamid",
+      "notion_page_id": "34b1e69629d18184b9a7de526ef9f7cb",
+      "source_ref": ""
+    },
+    {
       "item_id": "PA-127",
       "title": "Attend Swift/ADS Q1 2026 board meeting (May 1)",
       "type": "task",
@@ -1088,17 +1099,6 @@
       "due_date": null,
       "person": "",
       "notion_page_id": "3441e69629d181678941c466627638c3",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-50",
-      "title": "Create LinkedIn recurring task automations",
-      "type": "task",
-      "status": "open",
-      "priority": "low",
-      "due_date": null,
-      "person": "",
-      "notion_page_id": "3441e69629d18172864ccb428b117b9a",
       "source_ref": ""
     }
   ]
