@@ -1,70 +1,16 @@
 {
+  "synced_at": "2026-04-24T16:40:00Z",
   "items": [
     {
-      "item_id": "PA-191",
-      "title": "INQ Phase 1 data & documents (financial, org, strategic, commercial, client, interview list)",
-      "type": "commitment_theirs",
-      "status": "waiting",
-      "priority": "medium",
-      "due_date": "2026-05-01",
-      "person": "Carole Piovesan / Samara Starkman",
-      "notion_page_id": "34c1e696-29d1-8167-8488-ecadc81d380a",
-      "source_ref": "19dc0457e943def1"
-    },
-    {
-      "item_id": "PA-190",
-      "title": "Prep VCP kickoff walkthrough for Apr 28 in-person",
+      "item_id": "PA-192",
+      "title": "Review LoyaltyOS proposal and discuss with Gershon and Oren",
       "type": "task",
       "status": "open",
       "priority": "high",
-      "due_date": "2026-04-27",
-      "person": "Carole Piovesan / Samara Starkman",
-      "notion_page_id": "34c1e696-29d1-8115-81b3-ef60c8017318",
-      "source_ref": "19dc0457e943def1"
-    },
-    {
-      "item_id": "PA-189",
-      "title": "Send INQ first invoice (CAD $9,000 + HST)",
-      "type": "commitment_mine",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-27",
-      "person": "Carole Piovesan / Samara Starkman",
-      "notion_page_id": "34c1e696-29d1-814b-94a5-c10ab626953e",
-      "source_ref": "19dc0457e943def1"
-    },
-    {
-      "item_id": "PA-188",
-      "title": "Execute equity option docs for Robert Mill (Aucctus board)",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": null,
-      "person": "Caitlin Carey / Rick Ekstein",
-      "notion_page_id": "34c1e696-29d1-8158-9f40-df5611fe9f72",
-      "source_ref": "digest:caitlincarey:re-ext-board-follow-ups:2026-04-24"
-    },
-    {
-      "item_id": "PA-187",
-      "title": "Complete estate planning — respond to Elissa Banach re 6 outstanding items",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": null,
-      "person": "Elissa Banach",
-      "notion_page_id": "34c1e696-29d1-8103-96f1-cf36a00525f5",
-      "source_ref": "digest:leorerasm:re-jeremy-and-leore-rosmarin-estate-plann:2026-04-24"
-    },
-    {
-      "item_id": "PA-186",
-      "title": "Confirm Grandslam LP capital call election — $3,500 due May 1",
-      "type": "task",
-      "status": "open",
-      "priority": "urgent",
-      "due_date": "2026-05-01",
-      "person": "Ricky Dogon",
-      "notion_page_id": "34c1e696-29d1-8130-b119-c9b883ac48d0",
-      "source_ref": "digest:rickydogon:mandatory-funding-notice-grandslam-lp-a:2026-04-24"
+      "due_date": "2026-04-24",
+      "person": "Gershon Hurwen",
+      "notion_page_id": "34c1e69629d181d0b8b5ea2cabd9e3fb",
+      "source_ref": "19dbfc8c219c9d86"
     },
     {
       "item_id": "PA-185",
@@ -74,7 +20,7 @@
       "priority": "high",
       "due_date": "2026-04-24",
       "person": "Mario (EFI Engineering)",
-      "notion_page_id": "34c1e696-29d1-8127-ada2-cc22222a75a7",
+      "notion_page_id": "34c1e69629d18127ada2cc22222a75a7",
       "source_ref": "19dbd6362ae21933"
     },
     {
@@ -85,371 +31,8 @@
       "priority": "high",
       "due_date": "2026-04-24",
       "person": "Gershon Hurwen",
-      "notion_page_id": "34c1e696-29d1-8141-9dbb-cb165795f6ea",
+      "notion_page_id": "34c1e69629d181419dbbcb165795f6ea",
       "source_ref": "19dbc70db0a1a187"
-    },
-    {
-      "item_id": "PA-183",
-      "title": "Follow up with Abe Lerman if 2025 RBC-DS tax slips don't arrive",
-      "type": "follow_up",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-25",
-      "person": "Abe Lerman",
-      "notion_page_id": "34b1e696-29d1-814b-9e2e-fb1949fbc785",
-      "source_ref": "digest:abeelitewf:re-2025-tax-returns:2026-04-23"
-    },
-    {
-      "item_id": "PA-182",
-      "title": "Review Leore's 2024 tax return PDF from Abe Lerman",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-28",
-      "person": "Abe Lerman",
-      "notion_page_id": "34b1e696-29d1-81a9-b8ff-f9604d19f90a",
-      "source_ref": "digest:abeelitewf:leore-2024-tax-return:2026-04-23"
-    },
-    {
-      "item_id": "PA-181",
-      "title": "Meet for coffee on May 8th at 11:00 AM at Cafe Landwehr to continue the discussion",
-      "type": "commitment_mine",
-      "status": "open",
-      "priority": "medium",
-      "due_date": "2026-05-08",
-      "person": "Micah",
-      "notion_page_id": "34b1e696-29d1-811e-a365-f9b3ee616367",
-      "source_ref": "meeting:3481e69629d181dab612db619e45b454:meet-for-coffee-on-may-8th-at-11-00-am-a"
-    },
-    {
-      "item_id": "PA-178",
-      "title": "Share a 55-page research report on the Ontario facilities cleaning industry with Snowden",
-      "type": "commitment_mine",
-      "status": "open",
-      "priority": "medium",
-      "due_date": null,
-      "person": "Avi Steinberg",
-      "notion_page_id": "34b1e696-29d1-8143-88b6-ed2216d7a871",
-      "source_ref": "meeting:3481e69629d18159b676eacdf44dedb5:share-a-55-page-research-report-on-the-o"
-    },
-    {
-      "item_id": "PA-177",
-      "title": "Connect Cyber Capital with Adam for an overview of Snowden's advisor-led origination playbook",
-      "type": "commitment_theirs",
-      "status": "open",
-      "priority": "medium",
-      "due_date": null,
-      "person": "Avi Steinberg",
-      "notion_page_id": "34b1e696-29d1-81a6-b023-daa864509a6a",
-      "source_ref": "meeting:3481e69629d18159b676eacdf44dedb5:connect-cyber-capital-with-adam-for-an-o"
-    },
-    {
-      "item_id": "PA-176",
-      "title": "Introduce Cyber Capital to Rajiv (Modern) and Avi Steinberg (GDI Business Services) for sector insights",
-      "type": "commitment_theirs",
-      "status": "open",
-      "priority": "medium",
-      "due_date": null,
-      "person": "Avi Steinberg",
-      "notion_page_id": "34b1e696-29d1-8131-83b9-f7e07bad86b8",
-      "source_ref": "meeting:3481e69629d18159b676eacdf44dedb5:introduce-cyber-capital-to-rajiv-modern"
-    },
-    {
-      "item_id": "PA-175",
-      "title": "Send Cyber Capital a one-pager with investment criteria ($3M+ EBITDA, control)",
-      "type": "commitment_theirs",
-      "status": "open",
-      "priority": "medium",
-      "due_date": null,
-      "person": "Avi Steinberg",
-      "notion_page_id": "34b1e696-29d1-81cc-a6bc-d77c727ceda0",
-      "source_ref": "meeting:3481e69629d18159b676eacdf44dedb5:send-cyber-capital-a-one-pager-with-inve"
-    },
-    {
-      "item_id": "PA-174",
-      "title": "After receiving the deck, contact a healthcare-focused group to gauge their interest in the childcare space",
-      "type": "commitment_mine",
-      "status": "open",
-      "priority": "medium",
-      "due_date": null,
-      "person": "Kubby Mano",
-      "notion_page_id": "34b1e696-29d1-8111-9982-d41dd2d8fb7c",
-      "source_ref": "meeting:34b1e69629d1819bafd5e19bf959a3df:after-receiving-the-deck-contact-a-heal"
-    },
-    {
-      "item_id": "PA-173",
-      "title": "Discuss the opportunity with a contact who owns a school",
-      "type": "commitment_mine",
-      "status": "open",
-      "priority": "medium",
-      "due_date": null,
-      "person": "Kubby Mano",
-      "notion_page_id": "34b1e696-29d1-81f3-8724-fc2b35e1b522",
-      "source_ref": "meeting:34b1e69629d1819bafd5e19bf959a3df:discuss-the-opportunity-with-a-contact-w"
-    },
-    {
-      "item_id": "PA-172",
-      "title": "Create a deck by early next week detailing the opportunity (market, strategy, team), but without specific term sheets",
-      "type": "commitment_theirs",
-      "status": "open",
-      "priority": "medium",
-      "due_date": null,
-      "person": "Kubby Mano",
-      "notion_page_id": "34b1e696-29d1-8105-93e3-dd596b436e98",
-      "source_ref": "meeting:34b1e69629d1819bafd5e19bf959a3df:create-a-deck-by-early-next-week-detaili"
-    },
-    {
-      "item_id": "PA-171",
-      "title": "Nudge Ryan Hamid if he hasn't rebooked via Calendly",
-      "type": "follow_up",
-      "status": "open",
-      "priority": "medium",
-      "due_date": "2026-05-01",
-      "person": "Ryan Hamid",
-      "notion_page_id": "34b1e696-29d1-8184-b9a7-de526ef9f7cb",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-170",
-      "title": "Ryan Hamid to pick a new time via Calendly",
-      "type": "commitment_theirs",
-      "status": "waiting",
-      "priority": "medium",
-      "due_date": null,
-      "person": "Ryan Hamid",
-      "notion_page_id": "34b1e696-29d1-81b8-a0bf-d2e4794782d9",
-      "source_ref": "19dbbb0173250802"
-    },
-    {
-      "item_id": "PA-169",
-      "title": "Schedule Sidecar Capital advisory board meeting",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-27",
-      "person": "",
-      "notion_page_id": "34b1e696-29d1-8129-b72d-c272b55654bc",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-168",
-      "title": "Rob Handelman to decide whether to engage formally on Project Link acquisition",
-      "type": "commitment_theirs",
-      "status": "waiting",
-      "priority": "high",
-      "due_date": "2026-04-30",
-      "person": "Robert Handelman",
-      "notion_page_id": "34b1e696-29d1-81f2-a45b-e34b5f7d93a1",
-      "source_ref": "19db2a9eea694750"
-    },
-    {
-      "item_id": "PA-167",
-      "title": "Decide CDA path with MNP: recalc reserve after 2025 PQ receipts OR file June 30 2025 year-end now",
-      "type": "commitment_mine",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-05-07",
-      "person": "Howard Colton",
-      "notion_page_id": "34b1e696-29d1-81e8-8138-f2c490691047",
-      "source_ref": "19db63622a1116d7"
-    },
-    {
-      "item_id": "PA-164",
-      "title": "Fix robots.txt blocking sidecarcapitalpartners.com pages from Google indexing",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": null,
-      "person": "",
-      "notion_page_id": "34b1e696-29d1-8136-a48e-cd3701e9a477",
-      "source_ref": "19dbaa031f677e09"
-    },
-    {
-      "item_id": "PA-159",
-      "title": "Date with Leore",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": "2026-07-13",
-      "person": "Leore",
-      "notion_page_id": "34b1e696-29d1-8152-90a2-e4d8efcbca42",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-158",
-      "title": "Date with Leore",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": "2026-07-06",
-      "person": "Leore",
-      "notion_page_id": "34b1e696-29d1-81ed-abd5-da790b7ec731",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-157",
-      "title": "Date with Leore",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": "2026-06-29",
-      "person": "Leore",
-      "notion_page_id": "34b1e696-29d1-817d-8603-d35557b835a7",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-156",
-      "title": "Date with Leore",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": "2026-06-22",
-      "person": "Leore",
-      "notion_page_id": "34b1e696-29d1-81d3-bda9-ef8eab6a16a1",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-155",
-      "title": "Date with Leore",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": "2026-06-15",
-      "person": "Leore",
-      "notion_page_id": "34b1e696-29d1-8127-8a8e-f75ec8a34985",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-154",
-      "title": "Date with Leore",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": "2026-06-08",
-      "person": "Leore",
-      "notion_page_id": "34b1e696-29d1-81c6-aa82-e9f47d0e3bc5",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-153",
-      "title": "Date with Leore",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": "2026-06-01",
-      "person": "Leore",
-      "notion_page_id": "34b1e696-29d1-8106-9409-fc3f03dab572",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-152",
-      "title": "Date with Leore",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": "2026-05-25",
-      "person": "Leore",
-      "notion_page_id": "34b1e696-29d1-818a-95c6-f0db192a9462",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-151",
-      "title": "Date with Leore",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": "2026-05-18",
-      "person": "Leore",
-      "notion_page_id": "34b1e696-29d1-814c-9dad-cf55dff6208c",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-150",
-      "title": "Date with Leore",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": "2026-05-11",
-      "person": "Leore",
-      "notion_page_id": "34b1e696-29d1-8138-a9f1-eae904a53fda",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-149",
-      "title": "Date with Leore",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": "2026-05-04",
-      "person": "Leore",
-      "notion_page_id": "34b1e696-29d1-8178-ab91-f224a6d8e82c",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-148",
-      "title": "Date with Leore",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": "2026-04-27",
-      "person": "Leore",
-      "notion_page_id": "34b1e696-29d1-8181-b851-db58a248c320",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-144",
-      "title": "Schedule lunch with David Goldberg (TD Commercial Banking) re: J2J connection",
-      "type": "follow_up",
-      "status": "open",
-      "priority": "medium",
-      "due_date": "2026-04-30",
-      "person": "David Goldberg",
-      "notion_page_id": "34a1e696-29d1-8174-89fb-d8d87ebc622a",
-      "source_ref": "19db65ac6e4c3a23"
-    },
-    {
-      "item_id": "PA-143",
-      "title": "Evaluate and respond to Rick Naor (Liquid Capital) re: TJN event factoring intro",
-      "type": "follow_up",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-25",
-      "person": "Rick Naor",
-      "notion_page_id": "34a1e696-29d1-81e1-af49-d70d9a823dab",
-      "source_ref": "19db58b1730a9980"
-    },
-    {
-      "item_id": "PA-141",
-      "title": "Decide and implement analytics path for Sidecar website (connect GSC to Ahrefs OR export GSC+GA4 last 6-12 months)",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": null,
-      "person": "",
-      "notion_page_id": "34a1e696-29d1-81f8-b00a-cd064c485b3f",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-140",
-      "title": "Pick up screw at Home Depot to fix toilet paper holder in Ayala & Yoav's bathroom",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": "2026-04-27",
-      "person": "",
-      "notion_page_id": "34a1e696-29d1-81fa-90e6-f4d1036d2b20",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-139",
-      "title": "Review and assign HubSpot enriched data delete request",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": null,
-      "person": "",
-      "notion_page_id": "34a1e696-29d1-81eb-9084-f1f6bc8cb2a2",
-      "source_ref": "19db451675e23404"
     },
     {
       "item_id": "PA-134",
@@ -459,7 +42,7 @@
       "priority": "high",
       "due_date": "2026-04-24",
       "person": "",
-      "notion_page_id": "34a1e696-29d1-81b6-83d7-d06e49007483",
+      "notion_page_id": "34a1e69629d181b683d7d06e49007483",
       "source_ref": ""
     },
     {
@@ -470,7 +53,7 @@
       "priority": "high",
       "due_date": "2026-04-24",
       "person": "Jeremy Reinbolt / Videre",
-      "notion_page_id": "3491e696-29d1-8133-b634-f8a610cf5468",
+      "notion_page_id": "3491e69629d18133b634f8a610cf5468",
       "source_ref": "19db12df72f86608"
     },
     {
@@ -481,30 +64,8 @@
       "priority": "high",
       "due_date": "2026-04-24",
       "person": "Raj Uttamchandani",
-      "notion_page_id": "3491e696-29d1-81bd-b2d6-e5a43f156af8",
+      "notion_page_id": "3491e69629d181bdb2d6e5a43f156af8",
       "source_ref": "19db13e3d329698a"
-    },
-    {
-      "item_id": "PA-130",
-      "title": "Reply to Jonathan Draycott intro — connect re: janitorial investment thesis",
-      "type": "follow_up",
-      "status": "waiting",
-      "priority": "high",
-      "due_date": "2026-04-25",
-      "person": "Jonathan Draycott",
-      "notion_page_id": "3491e696-29d1-8131-9492-cbdd678ec9ee",
-      "source_ref": "19db141963ae308c"
-    },
-    {
-      "item_id": "PA-127",
-      "title": "Attend Swift/ADS Q1 2026 board meeting (May 1)",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": "2026-05-01",
-      "person": "Daniel Gonsenhauser",
-      "notion_page_id": "3491e696-29d1-81b0-8f69-f60300a189e1",
-      "source_ref": "19dab22ad78fd423"
     },
     {
       "item_id": "PA-122",
@@ -514,19 +75,8 @@
       "priority": "high",
       "due_date": "2026-04-24",
       "person": "Loyalty Markets",
-      "notion_page_id": "3481e696-29d1-818a-abec-d9e3af9ab6e1",
+      "notion_page_id": "3481e69629d1818aabecd9e3af9ab6e1",
       "source_ref": ""
-    },
-    {
-      "item_id": "PA-121",
-      "title": "Prepare partnership model sketch for HVE Healthcare",
-      "type": "commitment_mine",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-05-07",
-      "person": "Micah (HVE Healthcare)",
-      "notion_page_id": "3481e696-29d1-81aa-a26d-eb7583e12115",
-      "source_ref": "3481e69629d181dab612db619e45b454"
     },
     {
       "item_id": "PA-119",
@@ -536,7 +86,7 @@
       "priority": "high",
       "due_date": "2026-04-24",
       "person": "Richard Roos",
-      "notion_page_id": "3481e696-29d1-81bc-80b1-f20cf8ad0040",
+      "notion_page_id": "3481e69629d181bc80b1f20cf8ad0040",
       "source_ref": "19dabcc01435ae47"
     },
     {
@@ -547,73 +97,7 @@
       "priority": "high",
       "due_date": "2026-04-24",
       "person": "Robert Handelman",
-      "notion_page_id": "3481e696-29d1-81c0-a41c-c46030fba50d",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-117",
-      "title": "Work with Josh on monthly financial reporting package for Loyalty Markets",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-05-01",
-      "person": "Josh",
-      "notion_page_id": "3481e696-29d1-81fe-b750-d08e5281a8f9",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-116",
-      "title": "Email Gershon to check status on annual returns, minute book cleanup, and Dan's post-close filings",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-27",
-      "person": "Gershon Hurwen",
-      "notion_page_id": "3481e696-29d1-8107-85ab-c0d55b517cae",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-115",
-      "title": "Reach out to 3–5 strategic contacts to intro to Loyalty Markets",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": "2026-05-22",
-      "person": "",
-      "notion_page_id": "3481e696-29d1-816b-9cd5-dbe0b9df04a3",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-114",
-      "title": "Draft Loyalty Markets case study for Sidecar website",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": "2026-05-08",
-      "person": "",
-      "notion_page_id": "3481e696-29d1-8141-b7c7-e0d3558ae61a",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-113",
-      "title": "Schedule dinner with Loyalty Markets team (Joey's)",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": "2026-05-01",
-      "person": "Gershon Hurwen",
-      "notion_page_id": "3481e696-29d1-8136-b1d9-f197b053da14",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-111",
-      "title": "Review network for referrals to Krystyn's Apr 28 due-diligence event",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": "2026-04-27",
-      "person": "Krystyn Harrison",
-      "notion_page_id": "3481e696-29d1-81d7-a9de-fcb423cad9e9",
+      "notion_page_id": "3481e69629d181c0a41cc46030fba50d",
       "source_ref": ""
     },
     {
@@ -624,7 +108,7 @@
       "priority": "high",
       "due_date": "2026-04-24",
       "person": "Joshua Kramer",
-      "notion_page_id": "3481e696-29d1-8110-9fdc-fb0783d73eda",
+      "notion_page_id": "3481e69629d181109fdcfb0783d73eda",
       "source_ref": "19dab9195b8c43f7"
     },
     {
@@ -635,30 +119,8 @@
       "priority": "high",
       "due_date": "2026-04-24",
       "person": "Richard Roos",
-      "notion_page_id": "3481e696-29d1-813d-960c-e77dfb4d91b0",
+      "notion_page_id": "3481e69629d1813d960ce77dfb4d91b0",
       "source_ref": "19d98117d5af3a48"
-    },
-    {
-      "item_id": "PA-105",
-      "title": "Send Adam Buzanis a note to catch up",
-      "type": "task",
-      "status": "open",
-      "priority": "low",
-      "due_date": "2026-05-15",
-      "person": "Adam Buzanis",
-      "notion_page_id": "3481e696-29d1-81e4-9695-fb8ea5233c1e",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-103",
-      "title": "Reply to Mike Masse intro — schedule food/cleaning services meeting",
-      "type": "task",
-      "status": "waiting",
-      "priority": "high",
-      "due_date": "2026-04-29",
-      "person": "Mike Masse / Richard Roos",
-      "notion_page_id": "3481e696-29d1-813c-9b1e-f51ba7d0eebb",
-      "source_ref": "19da682151e5f212"
     },
     {
       "item_id": "PA-102",
@@ -668,7 +130,7 @@
       "priority": "high",
       "due_date": "2026-04-24",
       "person": "Matt Fishman",
-      "notion_page_id": "3471e696-29d1-81d7-887d-c8c7c631107a",
+      "notion_page_id": "3471e69629d181d7887dc8c7c631107a",
       "source_ref": ""
     },
     {
@@ -679,7 +141,7 @@
       "priority": "high",
       "due_date": "2026-04-24",
       "person": "",
-      "notion_page_id": "3471e696-29d1-8143-b92e-dea5e90e0fd7",
+      "notion_page_id": "3471e69629d18143b92edea5e90e0fd7",
       "source_ref": ""
     },
     {
@@ -690,7 +152,7 @@
       "priority": "high",
       "due_date": "2026-04-24",
       "person": "Robert Handelman",
-      "notion_page_id": "3471e696-29d1-817c-9bd7-dc8ce1c581d5",
+      "notion_page_id": "3471e69629d1817c9bd7dc8ce1c581d5",
       "source_ref": "19d9d67bb87c9e26"
     },
     {
@@ -701,7 +163,7 @@
       "priority": "high",
       "due_date": "2026-04-24",
       "person": "",
-      "notion_page_id": "3461e696-29d1-8154-8bf9-f76068351d74",
+      "notion_page_id": "3461e69629d181548bf9f76068351d74",
       "source_ref": ""
     },
     {
@@ -712,7 +174,7 @@
       "priority": "high",
       "due_date": "2026-04-24",
       "person": "",
-      "notion_page_id": "3461e696-29d1-813f-aad3-e162e5f9d133",
+      "notion_page_id": "3461e69629d1813faad3e162e5f9d133",
       "source_ref": ""
     },
     {
@@ -723,18 +185,7 @@
       "priority": "high",
       "due_date": "2026-04-24",
       "person": "Mike and Lior (ConnectCPA)",
-      "notion_page_id": "3451e696-29d1-8158-b324-f06ab328fe36",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-83",
-      "title": "Work with Josh to prepare Loyalty Markets board package",
-      "type": "commitment_mine",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-06-10",
-      "person": "Josh",
-      "notion_page_id": "3451e696-29d1-8106-b66c-da77947d977b",
+      "notion_page_id": "3451e69629d18158b324f06ab328fe36",
       "source_ref": ""
     },
     {
@@ -745,30 +196,8 @@
       "priority": "high",
       "due_date": "2026-04-24",
       "person": "Jennifer Hennings",
-      "notion_page_id": "3451e696-29d1-81bb-abfa-d8690c0a2c68",
+      "notion_page_id": "3451e69629d181bbabfad8690c0a2c68",
       "source_ref": ""
-    },
-    {
-      "item_id": "PA-79",
-      "title": "Gershon to confirm final HST balance for Loyalty Markets",
-      "type": "commitment_theirs",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-24",
-      "person": "Gershon Hurwen",
-      "notion_page_id": "3451e696-29d1-81cb-9c61-f7ade1406de1",
-      "source_ref": "3451e69629d181be9e33dbab21e49879"
-    },
-    {
-      "item_id": "PA-78",
-      "title": "Gershon to create corporate GoDaddy account and transfer Loyalty domain ownership",
-      "type": "commitment_theirs",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-24",
-      "person": "Gershon Hurwen",
-      "notion_page_id": "3451e696-29d1-8193-a5a8-f17abb7aa545",
-      "source_ref": "3451e69629d181be9e33dbab21e49879"
     },
     {
       "item_id": "PA-75",
@@ -778,30 +207,30 @@
       "priority": "high",
       "due_date": "2026-04-24",
       "person": "Jennifer Hennings",
-      "notion_page_id": "3451e696-29d1-816c-b612-db2c6cf9feec",
+      "notion_page_id": "3451e69629d1816cb612db2c6cf9feec",
       "source_ref": ""
     },
     {
-      "item_id": "PA-74",
-      "title": "Circulate agenda for Loyalty Markets board meeting (Wed 6/24)",
-      "type": "task",
+      "item_id": "PA-78",
+      "title": "Gershon to create corporate GoDaddy account and transfer Loyalty domain ownership",
+      "type": "commitment_theirs",
       "status": "open",
-      "priority": "medium",
-      "due_date": "2026-06-19",
-      "person": "John Chidiac / Rob Handelman / Gershon Hurwen",
-      "notion_page_id": "3451e696-29d1-81d9-9555-e55f40749c95",
-      "source_ref": ""
+      "priority": "high",
+      "due_date": "2026-04-24",
+      "person": "Gershon Hurwen",
+      "notion_page_id": "3451e69629d18193a5a8f17abb7aa545",
+      "source_ref": "3451e69629d181be9e33dbab21e49879"
     },
     {
-      "item_id": "PA-73",
-      "title": "Flip all routine crons EDT→EST (DST ends Nov 1, 2026)",
-      "type": "task",
+      "item_id": "PA-79",
+      "title": "Gershon to confirm final HST balance for Loyalty Markets",
+      "type": "commitment_theirs",
       "status": "open",
-      "priority": "medium",
-      "due_date": "2026-11-02",
-      "person": "",
-      "notion_page_id": "3451e696-29d1-8166-ba25-e32c74d55395",
-      "source_ref": ""
+      "priority": "high",
+      "due_date": "2026-04-24",
+      "person": "Gershon Hurwen",
+      "notion_page_id": "3451e69629d181cb9c61f7ade1406de1",
+      "source_ref": "3451e69629d181be9e33dbab21e49879"
     },
     {
       "item_id": "PA-72",
@@ -811,19 +240,8 @@
       "priority": "high",
       "due_date": "2026-04-24",
       "person": "Robert Bezede",
-      "notion_page_id": "3451e696-29d1-8137-b17f-d34f9c19dfa1",
+      "notion_page_id": "3451e69629d18137b17fd34f9c19dfa1",
       "source_ref": "19d93258acd33a40"
-    },
-    {
-      "item_id": "PA-68",
-      "title": "Ask Leore about taking JSN protector course",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": "2026-05-08",
-      "person": "Leore",
-      "notion_page_id": "3451e696-29d1-810b-a782-ccc1ba002991",
-      "source_ref": ""
     },
     {
       "item_id": "PA-67",
@@ -833,7 +251,7 @@
       "priority": "high",
       "due_date": "2026-04-24",
       "person": "",
-      "notion_page_id": "3451e696-29d1-8113-b8a8-e5438d55ff57",
+      "notion_page_id": "3451e69629d18113b8a8e5438d55ff57",
       "source_ref": ""
     },
     {
@@ -844,7 +262,7 @@
       "priority": "high",
       "due_date": "2026-04-24",
       "person": "Ash (Climate Door)",
-      "notion_page_id": "3451e696-29d1-8115-a367-f7c994430b70",
+      "notion_page_id": "3451e69629d18115a367f7c994430b70",
       "source_ref": ""
     },
     {
@@ -855,7 +273,7 @@
       "priority": "high",
       "due_date": "2026-04-24",
       "person": "",
-      "notion_page_id": "3441e696-29d1-8187-a12a-cce4a0201895",
+      "notion_page_id": "3441e69629d18187a12acce4a0201895",
       "source_ref": ""
     },
     {
@@ -866,40 +284,7 @@
       "priority": "high",
       "due_date": "2026-04-24",
       "person": "Gershon / David Dansky",
-      "notion_page_id": "3441e696-29d1-8189-b9eb-f8dc45b75c8a",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-52",
-      "title": "Eterna — confirm invoice payment received",
-      "type": "follow_up",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-24",
-      "person": "Eterna",
-      "notion_page_id": "3441e696-29d1-81dc-b829-c5a43de9de6d",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-41",
-      "title": "Book Disney trip — August family vacation",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-25",
-      "person": "Leore",
-      "notion_page_id": "3441e696-29d1-8112-af24-fedf36b56f47",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-39",
-      "title": "Buy suit for Shelley and Mitch's wedding (May 10)",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": "2026-05-01",
-      "person": "",
-      "notion_page_id": "3441e696-29d1-8145-acf5-ff629857cbe2",
+      "notion_page_id": "3441e69629d18189b9ebf8dc45b75c8a",
       "source_ref": ""
     },
     {
@@ -910,29 +295,7 @@
       "priority": "high",
       "due_date": "2026-04-24",
       "person": "",
-      "notion_page_id": "3441e696-29d1-810f-b950-e6d5c5322667",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-37",
-      "title": "Schedule blood test (open since Mar 23)",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-24",
-      "person": "",
-      "notion_page_id": "3441e696-29d1-81a5-ba6f-dfdb10f14f38",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-35",
-      "title": "Confirm JR Holdings distribution amount; pay down credit line",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-24",
-      "person": "",
-      "notion_page_id": "3441e696-29d1-8154-bee4-f9436379dd52",
+      "notion_page_id": "3441e69629d1810fb950e6d5c5322667",
       "source_ref": ""
     },
     {
@@ -943,106 +306,7 @@
       "priority": "high",
       "due_date": "2026-04-24",
       "person": "",
-      "notion_page_id": "3441e696-29d1-8118-87bc-d7fb4e861278",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-31",
-      "title": "File personal taxes for Jeremy and Leore — deadline April 30",
-      "type": "task",
-      "status": "open",
-      "priority": "urgent",
-      "due_date": "2026-04-30",
-      "person": "Leore",
-      "notion_page_id": "3441e696-29d1-817e-aa00-c0bb140fd930",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-29",
-      "title": "David Metzler (IDFWO) to confirm call time",
-      "type": "commitment_theirs",
-      "status": "waiting",
-      "priority": "high",
-      "due_date": "2026-04-24",
-      "person": "David Metzler",
-      "notion_page_id": "3441e696-29d1-816b-876a-dea06e63ff12",
-      "source_ref": "19d8cf2c7b37d10a"
-    },
-    {
-      "item_id": "PA-28",
-      "title": "Send Operational Partner Database — committed to multiple people",
-      "type": "commitment_mine",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-24",
-      "person": "",
-      "notion_page_id": "3441e696-29d1-8135-8fea-f159cba4cacd",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-27",
-      "title": "Email Danielle — follow through on commitment",
-      "type": "commitment_mine",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-24",
-      "person": "Danielle",
-      "notion_page_id": "3441e696-29d1-819c-a193-c1dad7378ab4",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-26",
-      "title": "Bad Timing re-engagement — pick 2 from Royal Fire, Atlantic Growth, ConnectCPA",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-24",
-      "person": "",
-      "notion_page_id": "3441e696-29d1-8130-ba7e-d03ee6a72a9e",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-24",
-      "title": "Reply to Sunny Ray — decide on podcast appearance",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-24",
-      "person": "Sunny Ray",
-      "notion_page_id": "3441e696-29d1-8181-85a3-d13d6d10b790",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-23",
-      "title": "Reply to Anthony Marotta (M-Squared Advisory)",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-24",
-      "person": "Anthony Marotta",
-      "notion_page_id": "3441e696-29d1-81f1-b702-e5e7376720be",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-19",
-      "title": "Predictive Success — final outreach or close lost",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-24",
-      "person": "Predictive Success",
-      "notion_page_id": "3441e696-29d1-8183-817e-e9f493a130fb",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-16",
-      "title": "Email Jordan (JNH Capital) — stale 25 days at Offer stage",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-24",
-      "person": "Jordan (JNH Capital)",
-      "notion_page_id": "3441e696-29d1-814d-9706-d03f11add797",
+      "notion_page_id": "3441e69629d1811887bcd7fb4e861278",
       "source_ref": ""
     },
     {
@@ -1053,7 +317,106 @@
       "priority": "high",
       "due_date": "2026-04-24",
       "person": "Mario",
-      "notion_page_id": "3441e696-29d1-812f-986b-d4bcc0aa67ed",
+      "notion_page_id": "3441e69629d1812f986bd4bcc0aa67ed",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-26",
+      "title": "Bad Timing re-engagement — pick 2 from Royal Fire, Atlantic Growth, ConnectCPA",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-24",
+      "person": "",
+      "notion_page_id": "3441e69629d18130ba7ed03ee6a72a9e",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-28",
+      "title": "Send Operational Partner Database — committed to multiple people",
+      "type": "commitment_mine",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-24",
+      "person": "",
+      "notion_page_id": "3441e69629d181358feaf159cba4cacd",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-16",
+      "title": "Email Jordan (JNH Capital) — stale 25 days at Offer stage",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-24",
+      "person": "Jordan (JNH Capital)",
+      "notion_page_id": "3441e69629d1814d9706d03f11add797",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-35",
+      "title": "Confirm JR Holdings distribution amount; pay down credit line",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-24",
+      "person": "",
+      "notion_page_id": "3441e69629d18154bee4f9436379dd52",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-29",
+      "title": "David Metzler (IDFWO) to confirm call time",
+      "type": "commitment_theirs",
+      "status": "waiting",
+      "priority": "high",
+      "due_date": "2026-04-24",
+      "person": "David Metzler",
+      "notion_page_id": "3441e69629d1816b876adea06e63ff12",
+      "source_ref": "19d8cf2c7b37d10a"
+    },
+    {
+      "item_id": "PA-24",
+      "title": "Reply to Sunny Ray — decide on podcast appearance",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-24",
+      "person": "Sunny Ray",
+      "notion_page_id": "3441e69629d1818185a3d13d6d10b790",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-19",
+      "title": "Predictive Success — final outreach or close lost",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-24",
+      "person": "Predictive Success",
+      "notion_page_id": "3441e69629d18183817ee9f493a130fb",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-27",
+      "title": "Email Danielle — follow through on commitment",
+      "type": "commitment_mine",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-24",
+      "person": "Danielle",
+      "notion_page_id": "3441e69629d1819ca193c1dad7378ab4",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-37",
+      "title": "Schedule blood test (open since Mar 23)",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-24",
+      "person": "",
+      "notion_page_id": "3441e69629d181a5ba6fdfdb10f14f38",
       "source_ref": ""
     },
     {
@@ -1064,7 +427,359 @@
       "priority": "high",
       "due_date": "2026-04-24",
       "person": "Mario",
-      "notion_page_id": "3441e696-29d1-81b0-86d3-c1339002240e",
+      "notion_page_id": "3441e69629d181b086d3c1339002240e",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-52",
+      "title": "Eterna — confirm invoice payment received",
+      "type": "follow_up",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-24",
+      "person": "Eterna",
+      "notion_page_id": "3441e69629d181dcb829c5a43de9de6d",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-23",
+      "title": "Reply to Anthony Marotta (M-Squared Advisory)",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-24",
+      "person": "Anthony Marotta",
+      "notion_page_id": "3441e69629d181f1b702e5e7376720be",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-183",
+      "title": "Follow up with Abe Lerman if 2025 RBC-DS tax slips don't arrive",
+      "type": "follow_up",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-25",
+      "person": "Abe Lerman",
+      "notion_page_id": "34b1e69629d1814b9e2efb1949fbc785",
+      "source_ref": "digest:abeelitewf:re-2025-tax-returns:2026-04-23"
+    },
+    {
+      "item_id": "PA-143",
+      "title": "Evaluate and respond to Rick Naor (Liquid Capital) re: TJN event factoring intro",
+      "type": "follow_up",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-25",
+      "person": "Rick Naor",
+      "notion_page_id": "34a1e69629d181e1af49d70d9a823dab",
+      "source_ref": "19db58b1730a9980"
+    },
+    {
+      "item_id": "PA-130",
+      "title": "Reply to Jonathan Draycott intro — connect re: janitorial investment thesis",
+      "type": "follow_up",
+      "status": "waiting",
+      "priority": "high",
+      "due_date": "2026-04-25",
+      "person": "Jonathan Draycott",
+      "notion_page_id": "3491e69629d181319492cbdd678ec9ee",
+      "source_ref": "19db141963ae308c"
+    },
+    {
+      "item_id": "PA-41",
+      "title": "Book Disney trip — August family vacation",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-25",
+      "person": "Leore",
+      "notion_page_id": "3441e69629d18112af24fedf36b56f47",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-190",
+      "title": "Prep VCP kickoff walkthrough for Apr 28 in-person",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-27",
+      "person": "Carole Piovesan / Samara Starkman",
+      "notion_page_id": "34c1e69629d1811581b3ef60c8017318",
+      "source_ref": "19dc0457e943def1"
+    },
+    {
+      "item_id": "PA-189",
+      "title": "Send INQ first invoice (CAD $9,000 + HST)",
+      "type": "commitment_mine",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-27",
+      "person": "Carole Piovesan / Samara Starkman",
+      "notion_page_id": "34c1e69629d1814b94a5c10ab626953e",
+      "source_ref": "19dc0457e943def1"
+    },
+    {
+      "item_id": "PA-169",
+      "title": "Schedule Sidecar Capital advisory board meeting",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-27",
+      "person": "",
+      "notion_page_id": "34b1e69629d18129b72dc272b55654bc",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-148",
+      "title": "Date with Leore",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-04-27",
+      "person": "Leore",
+      "notion_page_id": "34b1e69629d18181b851db58a248c320",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-140",
+      "title": "Pick up screw at Home Depot to fix toilet paper holder in Ayala & Yoav's bathroom",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-04-27",
+      "person": "",
+      "notion_page_id": "34a1e69629d181fa90e6f4d1036d2b20",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-116",
+      "title": "Email Gershon to check status on annual returns, minute book cleanup, and Dan's post-close filings",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-27",
+      "person": "Gershon Hurwen",
+      "notion_page_id": "3481e69629d1810785abc0d55b517cae",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-111",
+      "title": "Review network for referrals to Krystyn's Apr 28 due-diligence event",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-04-27",
+      "person": "Krystyn Harrison",
+      "notion_page_id": "3481e69629d181d7a9defcb423cad9e9",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-182",
+      "title": "Review Leore's 2024 tax return PDF from Abe Lerman",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-28",
+      "person": "Abe Lerman",
+      "notion_page_id": "34b1e69629d181a9b8fff9604d19f90a",
+      "source_ref": "digest:abeelitewf:leore-2024-tax-return:2026-04-23"
+    },
+    {
+      "item_id": "PA-103",
+      "title": "Reply to Mike Masse intro — schedule food/cleaning services meeting",
+      "type": "task",
+      "status": "waiting",
+      "priority": "high",
+      "due_date": "2026-04-29",
+      "person": "Mike Masse / Richard Roos",
+      "notion_page_id": "3481e69629d1813c9b1ef51ba7d0eebb",
+      "source_ref": "19da682151e5f212"
+    },
+    {
+      "item_id": "PA-168",
+      "title": "Rob Handelman to decide whether to engage formally on Project Link acquisition",
+      "type": "commitment_theirs",
+      "status": "waiting",
+      "priority": "high",
+      "due_date": "2026-04-30",
+      "person": "Robert Handelman",
+      "notion_page_id": "34b1e69629d181f2a45be34b5f7d93a1",
+      "source_ref": "19db2a9eea694750"
+    },
+    {
+      "item_id": "PA-144",
+      "title": "Schedule lunch with David Goldberg (TD Commercial Banking) re: J2J connection",
+      "type": "follow_up",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-04-30",
+      "person": "David Goldberg",
+      "notion_page_id": "34a1e69629d1817489fbd8d87ebc622a",
+      "source_ref": "19db65ac6e4c3a23"
+    },
+    {
+      "item_id": "PA-31",
+      "title": "File personal taxes for Jeremy and Leore — deadline April 30",
+      "type": "task",
+      "status": "open",
+      "priority": "urgent",
+      "due_date": "2026-04-30",
+      "person": "Leore",
+      "notion_page_id": "3441e69629d1817eaa00c0bb140fd930",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-191",
+      "title": "INQ Phase 1 data & documents (financial, org, strategic, commercial, client, interview list)",
+      "type": "commitment_theirs",
+      "status": "waiting",
+      "priority": "medium",
+      "due_date": "2026-05-01",
+      "person": "Carole Piovesan / Samara Starkman",
+      "notion_page_id": "34c1e69629d181678488ecadc81d380a",
+      "source_ref": "19dc0457e943def1"
+    },
+    {
+      "item_id": "PA-186",
+      "title": "Confirm Grandslam LP capital call election — $3,500 due May 1",
+      "type": "task",
+      "status": "open",
+      "priority": "urgent",
+      "due_date": "2026-05-01",
+      "person": "Ricky Dogon",
+      "notion_page_id": "34c1e69629d18130b119c9b883ac48d0",
+      "source_ref": "digest:rickydogon:mandatory-funding-notice-grandslam-lp-a:2026-04-24"
+    },
+    {
+      "item_id": "PA-171",
+      "title": "Nudge Ryan Hamid if he hasn't rebooked via Calendly",
+      "type": "follow_up",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-05-01",
+      "person": "Ryan Hamid",
+      "notion_page_id": "34b1e69629d18184b9a7de526ef9f7cb",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-127",
+      "title": "Attend Swift/ADS Q1 2026 board meeting (May 1)",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-05-01",
+      "person": "Daniel Gonsenhauser",
+      "notion_page_id": "3491e69629d181b08f69f60300a189e1",
+      "source_ref": "19dab22ad78fd423"
+    },
+    {
+      "item_id": "PA-113",
+      "title": "Schedule dinner with Loyalty Markets team (Joey's)",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-05-01",
+      "person": "Gershon Hurwen",
+      "notion_page_id": "3481e69629d18136b1d9f197b053da14",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-117",
+      "title": "Work with Josh on monthly financial reporting package for Loyalty Markets",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-05-01",
+      "person": "Josh",
+      "notion_page_id": "3481e69629d181feb750d08e5281a8f9",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-39",
+      "title": "Buy suit for Shelley and Mitch's wedding (May 10)",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-05-01",
+      "person": "",
+      "notion_page_id": "3441e69629d18145acf5ff629857cbe2",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-149",
+      "title": "Date with Leore",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-05-04",
+      "person": "Leore",
+      "notion_page_id": "34b1e69629d18178ab91f224a6d8e82c",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-167",
+      "title": "Decide CDA path with MNP: recalc reserve after 2025 PQ receipts OR file June 30 2025 year-end now",
+      "type": "commitment_mine",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-05-07",
+      "person": "Howard Colton",
+      "notion_page_id": "34b1e69629d181e88138f2c490691047",
+      "source_ref": "19db63622a1116d7"
+    },
+    {
+      "item_id": "PA-121",
+      "title": "Prepare partnership model sketch for HVE Healthcare",
+      "type": "commitment_mine",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-05-07",
+      "person": "Micah (HVE Healthcare)",
+      "notion_page_id": "3481e69629d181aaa26deb7583e12115",
+      "source_ref": "3481e69629d181dab612db619e45b454"
+    },
+    {
+      "item_id": "PA-181",
+      "title": "Meet for coffee on May 8th at 11:00 AM at Cafe Landwehr to continue the discussion",
+      "type": "commitment_mine",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-05-08",
+      "person": "Micah",
+      "notion_page_id": "34b1e69629d1811ea365f9b3ee616367",
+      "source_ref": "meeting:3481e69629d181dab612db619e45b454:meet-for-coffee-on-may-8th-at-11-00-am-a"
+    },
+    {
+      "item_id": "PA-114",
+      "title": "Draft Loyalty Markets case study for Sidecar website",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-05-08",
+      "person": "",
+      "notion_page_id": "3481e69629d18141b7c7e0d3558ae61a",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-68",
+      "title": "Ask Leore about taking JSN protector course",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-05-08",
+      "person": "Leore",
+      "notion_page_id": "3451e69629d1810ba782ccc1ba002991",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-150",
+      "title": "Date with Leore",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-05-11",
+      "person": "Leore",
+      "notion_page_id": "34b1e69629d18138a9f1eae904a53fda",
       "source_ref": ""
     },
     {
@@ -1075,8 +790,316 @@
       "priority": "high",
       "due_date": "2026-05-13",
       "person": "Robert Bezede",
-      "notion_page_id": "3441e696-29d1-8184-bc27-f46739cccc1a",
+      "notion_page_id": "3441e69629d18184bc27f46739cccc1a",
       "source_ref": "19d93258acd33a40"
+    },
+    {
+      "item_id": "PA-105",
+      "title": "Send Adam Buzanis a note to catch up",
+      "type": "task",
+      "status": "open",
+      "priority": "low",
+      "due_date": "2026-05-15",
+      "person": "Adam Buzanis",
+      "notion_page_id": "3481e69629d181e49695fb8ea5233c1e",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-151",
+      "title": "Date with Leore",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-05-18",
+      "person": "Leore",
+      "notion_page_id": "34b1e69629d1814c9dadcf55dff6208c",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-115",
+      "title": "Reach out to 3–5 strategic contacts to intro to Loyalty Markets",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-05-22",
+      "person": "",
+      "notion_page_id": "3481e69629d1816b9cd5dbe0b9df04a3",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-152",
+      "title": "Date with Leore",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-05-25",
+      "person": "Leore",
+      "notion_page_id": "34b1e69629d1818a95c6f0db192a9462",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-153",
+      "title": "Date with Leore",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-06-01",
+      "person": "Leore",
+      "notion_page_id": "34b1e69629d181069409fc3f03dab572",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-154",
+      "title": "Date with Leore",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-06-08",
+      "person": "Leore",
+      "notion_page_id": "34b1e69629d181c6aa82e9f47d0e3bc5",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-83",
+      "title": "Work with Josh to prepare Loyalty Markets board package",
+      "type": "commitment_mine",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-06-10",
+      "person": "Josh",
+      "notion_page_id": "3451e69629d18106b66cda77947d977b",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-155",
+      "title": "Date with Leore",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-06-15",
+      "person": "Leore",
+      "notion_page_id": "34b1e69629d181278a8ef75ec8a34985",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-74",
+      "title": "Circulate agenda for Loyalty Markets board meeting (Wed 6/24)",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-06-19",
+      "person": "John Chidiac / Rob Handelman / Gershon Hurwen",
+      "notion_page_id": "3451e69629d181d99555e55f40749c95",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-156",
+      "title": "Date with Leore",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-06-22",
+      "person": "Leore",
+      "notion_page_id": "34b1e69629d181d3bda9ef8eab6a16a1",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-157",
+      "title": "Date with Leore",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-06-29",
+      "person": "Leore",
+      "notion_page_id": "34b1e69629d1817d8603d35557b835a7",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-158",
+      "title": "Date with Leore",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-07-06",
+      "person": "Leore",
+      "notion_page_id": "34b1e69629d181edabd5da790b7ec731",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-159",
+      "title": "Date with Leore",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-07-13",
+      "person": "Leore",
+      "notion_page_id": "34b1e69629d1815290a2e4d8efcbca42",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-73",
+      "title": "Flip all routine crons EDT→EST (DST ends Nov 1, 2026)",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-11-02",
+      "person": "",
+      "notion_page_id": "3451e69629d18166ba25e32c74d55395",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-187",
+      "title": "Complete estate planning — respond to Elissa Banach re 6 outstanding items",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": null,
+      "person": "Elissa Banach",
+      "notion_page_id": "34c1e69629d1810396f1cf36a00525f5",
+      "source_ref": "digest:leorerasm:re-jeremy-and-leore-rosmarin-estate-plann:2026-04-24"
+    },
+    {
+      "item_id": "PA-188",
+      "title": "Execute equity option docs for Robert Mill (Aucctus board)",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": null,
+      "person": "Caitlin Carey / Rick Ekstein",
+      "notion_page_id": "34c1e69629d181589f40df5611fe9f72",
+      "source_ref": "digest:caitlincarey:re-ext-board-follow-ups:2026-04-24"
+    },
+    {
+      "item_id": "PA-172",
+      "title": "Create a deck by early next week detailing the opportunity (market, strategy, team), but without specific term sheets",
+      "type": "commitment_theirs",
+      "status": "open",
+      "priority": "medium",
+      "due_date": null,
+      "person": "Kubby Mano",
+      "notion_page_id": "34b1e69629d1810593e3dd596b436e98",
+      "source_ref": "meeting:34b1e69629d1819bafd5e19bf959a3df:create-a-deck-by-early-next-week-detaili"
+    },
+    {
+      "item_id": "PA-174",
+      "title": "After receiving the deck, contact a healthcare-focused group to gauge their interest in the childcare space",
+      "type": "commitment_mine",
+      "status": "open",
+      "priority": "medium",
+      "due_date": null,
+      "person": "Kubby Mano",
+      "notion_page_id": "34b1e69629d181119982d41dd2d8fb7c",
+      "source_ref": "meeting:34b1e69629d1819bafd5e19bf959a3df:after-receiving-the-deck-contact-a-heal"
+    },
+    {
+      "item_id": "PA-176",
+      "title": "Introduce Cyber Capital to Rajiv (Modern) and Avi Steinberg (GDI Business Services) for sector insights",
+      "type": "commitment_theirs",
+      "status": "open",
+      "priority": "medium",
+      "due_date": null,
+      "person": "Avi Steinberg",
+      "notion_page_id": "34b1e69629d1813183b9f7e07bad86b8",
+      "source_ref": "meeting:3481e69629d18159b676eacdf44dedb5:introduce-cyber-capital-to-rajiv-modern"
+    },
+    {
+      "item_id": "PA-178",
+      "title": "Share a 55-page research report on the Ontario facilities cleaning industry with Snowden",
+      "type": "commitment_mine",
+      "status": "open",
+      "priority": "medium",
+      "due_date": null,
+      "person": "Avi Steinberg",
+      "notion_page_id": "34b1e69629d1814388b6ed2216d7a871",
+      "source_ref": "meeting:3481e69629d18159b676eacdf44dedb5:share-a-55-page-research-report-on-the-o"
+    },
+    {
+      "item_id": "PA-177",
+      "title": "Connect Cyber Capital with Adam for an overview of Snowden's advisor-led origination playbook",
+      "type": "commitment_theirs",
+      "status": "open",
+      "priority": "medium",
+      "due_date": null,
+      "person": "Avi Steinberg",
+      "notion_page_id": "34b1e69629d181a6b023daa864509a6a",
+      "source_ref": "meeting:3481e69629d18159b676eacdf44dedb5:connect-cyber-capital-with-adam-for-an-o"
+    },
+    {
+      "item_id": "PA-175",
+      "title": "Send Cyber Capital a one-pager with investment criteria ($3M+ EBITDA, control)",
+      "type": "commitment_theirs",
+      "status": "open",
+      "priority": "medium",
+      "due_date": null,
+      "person": "Avi Steinberg",
+      "notion_page_id": "34b1e69629d181cca6bcd77c727ceda0",
+      "source_ref": "meeting:3481e69629d18159b676eacdf44dedb5:send-cyber-capital-a-one-pager-with-inve"
+    },
+    {
+      "item_id": "PA-173",
+      "title": "Discuss the opportunity with a contact who owns a school",
+      "type": "commitment_mine",
+      "status": "open",
+      "priority": "medium",
+      "due_date": null,
+      "person": "Kubby Mano",
+      "notion_page_id": "34b1e69629d181f38724fc2b35e1b522",
+      "source_ref": "meeting:34b1e69629d1819bafd5e19bf959a3df:discuss-the-opportunity-with-a-contact-w"
+    },
+    {
+      "item_id": "PA-170",
+      "title": "Ryan Hamid to pick a new time via Calendly",
+      "type": "commitment_theirs",
+      "status": "waiting",
+      "priority": "medium",
+      "due_date": null,
+      "person": "Ryan Hamid",
+      "notion_page_id": "34b1e69629d181b8a0bfd2e4794782d9",
+      "source_ref": "19dbbb0173250802"
+    },
+    {
+      "item_id": "PA-164",
+      "title": "Fix robots.txt blocking sidecarcapitalpartners.com pages from Google indexing",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": null,
+      "person": "",
+      "notion_page_id": "34b1e69629d18136a48ecd3701e9a477",
+      "source_ref": "19dbaa031f677e09"
+    },
+    {
+      "item_id": "PA-141",
+      "title": "Decide and implement analytics path for Sidecar website (connect GSC to Ahrefs OR export GSC+GA4 last 6-12 months)",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": null,
+      "person": "",
+      "notion_page_id": "34a1e69629d181f8b00acd064c485b3f",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-139",
+      "title": "Review and assign HubSpot enriched data delete request",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": null,
+      "person": "",
+      "notion_page_id": "34a1e69629d181eb9084f1f6bc8cb2a2",
+      "source_ref": "19db451675e23404"
+    },
+    {
+      "item_id": "PA-136",
+      "title": "Decide enforcement path on Sidecar trademark vs Mark Cressman",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": null,
+      "person": "Mark Cressman",
+      "notion_page_id": "34a1e69629d1812db58ff9b2d7487b36",
+      "source_ref": ""
     }
   ]
 }
