@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-04-24T18:19:23Z",
+  "synced_at": "2026-04-24T18:20:18Z",
   "items": [
     {
       "item_id": "PA-192",
@@ -585,6 +585,17 @@
       "source_ref": "digest:abeelitewf:leore-2024-tax-return:2026-04-23"
     },
     {
+      "item_id": "PA-193",
+      "title": "Take car in for service + check hand brake light",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-04-29",
+      "person": "",
+      "notion_page_id": "34c1e69629d181a387bceab8fedac7b3",
+      "source_ref": ""
+    },
+    {
       "item_id": "PA-103",
       "title": "Reply to Mike Masse intro — schedule food/cleaning services meeting",
       "type": "task",
@@ -1089,17 +1100,6 @@
       "person": "",
       "notion_page_id": "34a1e69629d181eb9084f1f6bc8cb2a2",
       "source_ref": "19db451675e23404"
-    },
-    {
-      "item_id": "PA-136",
-      "title": "Decide enforcement path on Sidecar trademark vs Mark Cressman",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": null,
-      "person": "Mark Cressman",
-      "notion_page_id": "34a1e69629d1812db58ff9b2d7487b36",
-      "source_ref": ""
     }
   ]
 }
