@@ -694,17 +694,6 @@
       "source_ref": "19d9d67bb87c9e26"
     },
     {
-      "item_id": "PA-93",
-      "title": "Finish outline and article for Sidecar website about Anthropic",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-24",
-      "person": "",
-      "notion_page_id": "3461e696-29d1-8132-9374-c108dfee536a",
-      "source_ref": ""
-    },
-    {
       "item_id": "PA-86",
       "title": "Give Max a path to read personal email",
       "type": "task",
