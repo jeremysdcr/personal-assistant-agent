@@ -1,6 +1,17 @@
 {
-  "synced_at": "2026-04-24T13:45:36Z",
+  "synced_at": "2026-04-24T14:28:48Z",
   "items": [
+    {
+      "item_id": "PA-185",
+      "title": "Call Mario (EFI Engineering) back re strategic conversation",
+      "type": "commitment_mine",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-24",
+      "person": "Mario (EFI Engineering)",
+      "notion_page_id": "34c1e69629d18127ada2cc22222a75a7",
+      "source_ref": "19dbd6362ae21933"
+    },
     {
       "item_id": "PA-184",
       "title": "Review and respond to Gershon's 2026 NAMA Show Recap (board email)",
@@ -651,6 +662,17 @@
       "source_ref": ""
     },
     {
+      "item_id": "PA-186",
+      "title": "Confirm Grandslam LP capital call election — $3,500 due May 1",
+      "type": "task",
+      "status": "open",
+      "priority": "urgent",
+      "due_date": "2026-05-01",
+      "person": "Ricky Dogon",
+      "notion_page_id": "34c1e69629d18130b119c9b883ac48d0",
+      "source_ref": "digest:rickydogon:mandatory-funding-notice-grandslam-lp-a:2026-04-24"
+    },
+    {
       "item_id": "PA-171",
       "title": "Nudge Ryan Hamid if he hasn't rebooked via Calendly",
       "type": "follow_up",
@@ -937,6 +959,28 @@
       "source_ref": ""
     },
     {
+      "item_id": "PA-187",
+      "title": "Complete estate planning — respond to Elissa Banach re 6 outstanding items",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": null,
+      "person": "Elissa Banach",
+      "notion_page_id": "34c1e69629d1810396f1cf36a00525f5",
+      "source_ref": "digest:leorerasm:re-jeremy-and-leore-rosmarin-estate-plann:2026-04-24"
+    },
+    {
+      "item_id": "PA-188",
+      "title": "Execute equity option docs for Robert Mill (Aucctus board)",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": null,
+      "person": "Caitlin Carey / Rick Ekstein",
+      "notion_page_id": "34c1e69629d181589f40df5611fe9f72",
+      "source_ref": "digest:caitlincarey:re-ext-board-follow-ups:2026-04-24"
+    },
+    {
       "item_id": "PA-172",
       "title": "Create a deck by early next week detailing the opportunity (market, strategy, team), but without specific term sheets",
       "type": "commitment_theirs",
@@ -1056,50 +1100,6 @@
       "person": "",
       "notion_page_id": "34a1e69629d181eb9084f1f6bc8cb2a2",
       "source_ref": "19db451675e23404"
-    },
-    {
-      "item_id": "PA-136",
-      "title": "Decide enforcement path on Sidecar trademark vs Mark Cressman",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": null,
-      "person": "Mark Cressman",
-      "notion_page_id": "34a1e69629d1812db58ff9b2d7487b36",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-135",
-      "title": "Research Sidecar trademark status and Mark Cressman's use",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": null,
-      "person": "Mark Cressman",
-      "notion_page_id": "34a1e69629d1815f9e59cab25f90348a",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-129",
-      "title": "Reply to Simon at Xvision re investor intro request",
-      "type": "task",
-      "status": "open",
-      "priority": "low",
-      "due_date": null,
-      "person": "Simon (Xvision)",
-      "notion_page_id": "3491e69629d181f29dccd3651a0f0f29",
-      "source_ref": "19db0255f043acfe"
-    },
-    {
-      "item_id": "PA-112",
-      "title": "Krystyn Harrison to send pre-call times for content collab",
-      "type": "follow_up",
-      "status": "waiting",
-      "priority": "medium",
-      "due_date": null,
-      "person": "Krystyn Harrison",
-      "notion_page_id": "3481e69629d181bdaf01f70c73cdba09",
-      "source_ref": ""
     }
   ]
 }
