@@ -35,17 +35,6 @@
       "source_ref": ""
     },
     {
-      "item_id": "PA-147",
-      "title": "Schedule Claude lead-scraping demo for Daniel and team (Changes on the Fly)",
-      "type": "commitment_mine",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-24",
-      "person": "Daniel Cashman",
-      "notion_page_id": "34b1e69629d181dbaaebc0d4b70ffea4",
-      "source_ref": "19dba70ac9600e4f"
-    },
-    {
       "item_id": "PA-134",
       "title": "Follow up with individuals for sponsorships of Chris McKenna smartphone event",
       "type": "task",
@@ -137,7 +126,7 @@
       "item_id": "PA-103",
       "title": "Reply to Mike Masse intro — schedule food/cleaning services meeting",
       "type": "task",
-      "status": "open",
+      "status": "waiting",
       "priority": "high",
       "due_date": "2026-04-24",
       "person": "Mike Masse / Richard Roos",
@@ -401,7 +390,7 @@
       "item_id": "PA-29",
       "title": "David Metzler (IDFWO) to confirm call time",
       "type": "commitment_theirs",
-      "status": "open",
+      "status": "waiting",
       "priority": "high",
       "due_date": "2026-04-24",
       "person": "David Metzler",
@@ -616,17 +605,6 @@
       "person": "Abe Lerman",
       "notion_page_id": "34b1e69629d181a9b8fff9604d19f90a",
       "source_ref": "digest:abeelitewf:leore-2024-tax-return:2026-04-23"
-    },
-    {
-      "item_id": "PA-128",
-      "title": "Micah Vernon (HVE) to send 3 years of financials for partnership model",
-      "type": "commitment_theirs",
-      "status": "waiting",
-      "priority": "medium",
-      "due_date": "2026-04-28",
-      "person": "Micah Vernon",
-      "notion_page_id": "3491e69629d1817fac49d7c92008fd91",
-      "source_ref": "19dae200536e89d1"
     },
     {
       "item_id": "PA-168",
