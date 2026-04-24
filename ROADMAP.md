@@ -123,6 +123,20 @@ Append to Step 14 push notification if `N > 18`. Same treatment for "due today" 
 
 ---
 
+### 7. "Promise + follow-through" detection in scan-and-check — `proposed`
+
+**Location:** [prompts/obligation-extract.md](prompts/obligation-extract.md) Section 6 (dedup rules) or a new section
+
+**Problem:** When Jeremy promises "I'll send X shortly" in one thread and then delivers X in a separate email to the same recipients minutes later, the extraction framework creates a `commitment_mine` for the promise but doesn't detect the follow-through. Concrete example: 2026-04-24 — Jeremy replied at 12:01 PM ET "For documentation, I will email you all shortly," then sent the full Phase 1 doc list at 12:14 PM ET in a new thread to the same recipients (Carole + Sam). The 15:34 scan created PA-195 (closed same day as false positive).
+
+**Proposed change:** When extracting a `commitment_mine` from Jeremy's sent mail that contains forward-promise language ("will send", "will email", "I'll get back to you", "shortly", etc.), check for any subsequent sent mail from Jeremy to the same recipient set within a 2-hour window where the subject/body plausibly delivers on the promise. If found, downgrade to `type=follow_up` at `status=done` (or skip entirely — design call) with a note referencing both message IDs. Keep the conservative default: on ambiguity, create the item so the crack-check doesn't miss a real promise.
+
+**Why it matters beyond this one item:** Jeremy batches sends. The "promise-then-deliver minutes later" pattern is common for him (the 13-min INQ example is representative). Without this check, every such pattern creates a phantom open item that has to be manually closed.
+
+**Priority:** seventh. Discover-rate TBD but likely 1–3/week based on Jeremy's sending pattern.
+
+---
+
 ## Done
 
 _(none yet)_

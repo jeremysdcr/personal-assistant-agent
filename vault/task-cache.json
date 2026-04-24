@@ -2,17 +2,6 @@
   "synced_at": "2026-04-24T20:06:28Z",
   "items": [
     {
-      "item_id": "PA-195",
-      "title": "Email INQ documentation list for kickoff",
-      "type": "commitment_mine",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-24",
-      "person": "Samara Starkman",
-      "notion_page_id": "34c1e69629d181949817f03adf46da81",
-      "source_ref": "19dc039a6172873e"
-    },
-    {
       "item_id": "PA-192",
       "title": "Review LoyaltyOS proposal and discuss with Gershon and Oren",
       "type": "task",
