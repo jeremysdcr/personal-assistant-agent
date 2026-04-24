@@ -1,6 +1,17 @@
 {
-  "synced_at": "2026-04-24T18:21:23Z",
+  "synced_at": "2026-04-24T19:34:12Z",
   "items": [
+    {
+      "item_id": "PA-195",
+      "title": "Email INQ documentation list for kickoff",
+      "type": "commitment_mine",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-24",
+      "person": "Samara Starkman",
+      "notion_page_id": "34c1e69629d181949817f03adf46da81",
+      "source_ref": "19dc039a6172873e"
+    },
     {
       "item_id": "PA-192",
       "title": "Review LoyaltyOS proposal and discuss with Gershon and Oren",
@@ -131,7 +142,7 @@
       "due_date": "2026-04-24",
       "person": "Matt Fishman",
       "notion_page_id": "3471e69629d181d7887dc8c7c631107a",
-      "source_ref": ""
+      "source_ref": "19dbfdc7385ba3f1"
     },
     {
       "item_id": "PA-98",
@@ -307,7 +318,7 @@
       "due_date": "2026-04-24",
       "person": "",
       "notion_page_id": "3441e69629d1811887bcd7fb4e861278",
-      "source_ref": ""
+      "source_ref": "digest:ashleylombardi:re-follow-up-re-invoices-from-mnp:2026-04-24"
     },
     {
       "item_id": "PA-15",
@@ -761,6 +772,17 @@
       "source_ref": "3481e69629d181dab612db619e45b454"
     },
     {
+      "item_id": "PA-196",
+      "title": "Reconnect with Brian Hefter — schedule coffee",
+      "type": "follow_up",
+      "status": "open",
+      "priority": "low",
+      "due_date": "2026-05-08",
+      "person": "Brian Hefter",
+      "notion_page_id": "34c1e69629d18186b8cfdb1c6791ceae",
+      "source_ref": "19dc0038680d23c6"
+    },
+    {
       "item_id": "PA-181",
       "title": "Meet for coffee on May 8th at 11:00 AM at Cafe Landwehr to continue the discussion",
       "type": "commitment_mine",
@@ -1078,28 +1100,6 @@
       "person": "Ryan Hamid",
       "notion_page_id": "34b1e69629d181b8a0bfd2e4794782d9",
       "source_ref": "19dbbb0173250802"
-    },
-    {
-      "item_id": "PA-164",
-      "title": "Fix robots.txt blocking sidecarcapitalpartners.com pages from Google indexing",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": null,
-      "person": "",
-      "notion_page_id": "34b1e69629d18136a48ecd3701e9a477",
-      "source_ref": "19dbaa031f677e09"
-    },
-    {
-      "item_id": "PA-141",
-      "title": "Decide and implement analytics path for Sidecar website (connect GSC to Ahrefs OR export GSC+GA4 last 6-12 months)",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": null,
-      "person": "",
-      "notion_page_id": "34a1e69629d181f8b00acd064c485b3f",
-      "source_ref": ""
     }
   ]
 }
