@@ -1068,23 +1068,12 @@
       "source_ref": ""
     },
     {
-      "item_id": "PA-6",
-      "title": "Bezede to provide CFO answers on Q6 and Q15 (Project Elevate)",
-      "type": "commitment_theirs",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-25",
-      "person": "Robert Bezede",
-      "notion_page_id": "3441e696-29d1-81f5-9461-c8d49121af9a",
-      "source_ref": "19d93258acd33a40"
-    },
-    {
       "item_id": "PA-5",
       "title": "Review Bezede's Project Elevate answers and decide on EOI",
       "type": "task",
       "status": "open",
       "priority": "high",
-      "due_date": "2026-04-25",
+      "due_date": "2026-05-13",
       "person": "Robert Bezede",
       "notion_page_id": "3441e696-29d1-8184-bc27-f46739cccc1a",
       "source_ref": "19d93258acd33a40"
