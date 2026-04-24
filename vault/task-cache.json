@@ -1,6 +1,17 @@
 {
-  "synced_at": "2026-04-24T10:59:00Z",
+  "synced_at": "2026-04-24T11:06:19Z",
   "items": [
+    {
+      "item_id": "PA-184",
+      "title": "Review and respond to Gershon's 2026 NAMA Show Recap (board email)",
+      "type": "follow_up",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-24",
+      "person": "Gershon Hurwen",
+      "notion_page_id": "34c1e69629d181419dbbcb165795f6ea",
+      "source_ref": "19dbc70db0a1a187"
+    },
     {
       "item_id": "PA-165",
       "title": "Send Carole INQ onboarding next steps",
@@ -1089,17 +1100,6 @@
       "person": "Krystyn Harrison",
       "notion_page_id": "3481e69629d181bdaf01f70c73cdba09",
       "source_ref": ""
-    },
-    {
-      "item_id": "PA-110",
-      "title": "Review Canteen and Mister Coffee vendor agreements (forwarded by Gershon)",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": null,
-      "person": "Gershon Hurwen",
-      "notion_page_id": "3481e69629d18107bea9cb43a432a777",
-      "source_ref": "19dab94b5d109a19"
     }
   ]
 }
