@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-04-24T18:20:18Z",
+  "synced_at": "2026-04-24T18:21:23Z",
   "items": [
     {
       "item_id": "PA-192",
@@ -494,6 +494,17 @@
       "due_date": "2026-04-25",
       "person": "Leore",
       "notion_page_id": "3441e69629d18112af24fedf36b56f47",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-194",
+      "title": "Set up the backyard",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-04-27",
+      "person": "",
+      "notion_page_id": "34c1e69629d181fbb61edf334a907d0c",
       "source_ref": ""
     },
     {
@@ -1089,17 +1100,6 @@
       "person": "",
       "notion_page_id": "34a1e69629d181f8b00acd064c485b3f",
       "source_ref": ""
-    },
-    {
-      "item_id": "PA-139",
-      "title": "Review and assign HubSpot enriched data delete request",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": null,
-      "person": "",
-      "notion_page_id": "34a1e69629d181eb9084f1f6bc8cb2a2",
-      "source_ref": "19db451675e23404"
     }
   ]
 }
