@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-04-24T22:37:59Z",
+  "synced_at": "2026-04-25T02:12:07Z",
   "items": [
     {
       "item_id": "PA-192",
@@ -484,17 +484,6 @@
       "person": "Leore",
       "notion_page_id": "3441e69629d18112af24fedf36b56f47",
       "source_ref": ""
-    },
-    {
-      "item_id": "PA-199",
-      "title": "Send INQ team documentation list needed for Phase 1",
-      "type": "commitment_mine",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-27",
-      "person": "Samara Starkman",
-      "notion_page_id": "34c1e69629d181da9da0fed668cf8f3c",
-      "source_ref": "19dc039a6172873e"
     },
     {
       "item_id": "PA-198",
@@ -1100,6 +1089,17 @@
       "person": "Kubby Mano",
       "notion_page_id": "34b1e69629d181f38724fc2b35e1b522",
       "source_ref": "meeting:34b1e69629d1819bafd5e19bf959a3df:discuss-the-opportunity-with-a-contact-w"
+    },
+    {
+      "item_id": "PA-170",
+      "title": "Ryan Hamid to pick a new time via Calendly",
+      "type": "commitment_theirs",
+      "status": "waiting",
+      "priority": "medium",
+      "due_date": null,
+      "person": "Ryan Hamid",
+      "notion_page_id": "34b1e69629d181b8a0bfd2e4794782d9",
+      "source_ref": "19dbbb0173250802"
     }
   ]
 }
