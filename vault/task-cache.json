@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-04-25T10:58:39Z",
+  "synced_at": "2026-04-25T14:05:31Z",
   "items": [
     {
       "item_id": "PA-192",
@@ -440,6 +440,17 @@
       "person": "Anthony Marotta",
       "notion_page_id": "3441e69629d181f1b702e5e7376720be",
       "source_ref": ""
+    },
+    {
+      "item_id": "PA-200",
+      "title": "Review Gershon's VDI 2.0 and smart cooler tech brief (Loyalty Markets)",
+      "type": "follow_up",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-25",
+      "person": "Gershon Hurwen",
+      "notion_page_id": "34d1e69629d1810b85f0cdb4c321bbeb",
+      "source_ref": "19dc2abc71c974de"
     },
     {
       "item_id": "PA-183",
@@ -1089,17 +1100,6 @@
       "person": "Kubby Mano",
       "notion_page_id": "34b1e69629d181f38724fc2b35e1b522",
       "source_ref": "meeting:34b1e69629d1819bafd5e19bf959a3df:discuss-the-opportunity-with-a-contact-w"
-    },
-    {
-      "item_id": "PA-170",
-      "title": "Ryan Hamid to pick a new time via Calendly",
-      "type": "commitment_theirs",
-      "status": "waiting",
-      "priority": "medium",
-      "due_date": null,
-      "person": "Ryan Hamid",
-      "notion_page_id": "34b1e69629d181b8a0bfd2e4794782d9",
-      "source_ref": "19dbbb0173250802"
     }
   ]
 }
