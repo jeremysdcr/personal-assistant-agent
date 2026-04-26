@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-04-26T15:06:48Z",
+  "synced_at": "2026-04-26T15:31:41Z",
   "items": [
     {
       "item_id": "PA-192",
@@ -673,6 +673,17 @@
       "source_ref": ""
     },
     {
+      "item_id": "PA-202",
+      "title": "Confirm Ikai and Ayala have everything they need for baseball start",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-05-01",
+      "person": "",
+      "notion_page_id": "34e1e69629d1819fbdd6fb78f88ab8da",
+      "source_ref": ""
+    },
+    {
       "item_id": "PA-191",
       "title": "INQ Phase 1 data & documents (financial, org, strategic, commercial, client, interview list)",
       "type": "commitment_theirs",
@@ -1089,17 +1100,6 @@
       "person": "Avi Steinberg",
       "notion_page_id": "34b1e69629d181a6b023daa864509a6a",
       "source_ref": "meeting:3481e69629d18159b676eacdf44dedb5:connect-cyber-capital-with-adam-for-an-o"
-    },
-    {
-      "item_id": "PA-175",
-      "title": "Send Cyber Capital a one-pager with investment criteria ($3M+ EBITDA, control)",
-      "type": "commitment_theirs",
-      "status": "open",
-      "priority": "medium",
-      "due_date": null,
-      "person": "Avi Steinberg",
-      "notion_page_id": "34b1e69629d181cca6bcd77c727ceda0",
-      "source_ref": "meeting:3481e69629d18159b676eacdf44dedb5:send-cyber-capital-a-one-pager-with-inve"
     }
   ]
 }
