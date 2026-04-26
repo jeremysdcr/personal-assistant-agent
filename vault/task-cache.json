@@ -3,7 +3,7 @@
   "items": [
     {
       "item_id": "PA-201",
-      "title": "Reissue uncashed CRA cheque ($4,428) via form PW GCS 535",
+      "title": "Reissue 2 uncashed CRA cheques ($4,428 + $1,569 = $5,997) via form PW GCS 535",
       "type": "task",
       "status": "open",
       "priority": "medium",
