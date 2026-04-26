@@ -1,17 +1,6 @@
 {
-  "synced_at": "2026-04-25T20:05:51Z",
+  "synced_at": "2026-04-26T02:13:07Z",
   "items": [
-    {
-      "item_id": "PA-201",
-      "title": "Reissue 2 uncashed CRA cheques ($4,428 + $1,569 = $5,997) via form PW GCS 535",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": null,
-      "person": null,
-      "notion_page_id": "34e1e69629d18145b180ee50e076f558",
-      "source_ref": null
-    },
     {
       "item_id": "PA-192",
       "title": "Review LoyaltyOS proposal and discuss with Gershon and Oren",
@@ -1014,6 +1003,17 @@
       "source_ref": ""
     },
     {
+      "item_id": "PA-201",
+      "title": "Reissue 2 uncashed CRA cheques ($4,428 + $1,569 = $5,997) via form PW GCS 535",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": null,
+      "person": "",
+      "notion_page_id": "34e1e69629d18145b180ee50e076f558",
+      "source_ref": ""
+    },
+    {
       "item_id": "PA-187",
       "title": "Complete estate planning — respond to Elissa Banach re 6 outstanding items",
       "type": "task",
@@ -1100,17 +1100,6 @@
       "person": "Avi Steinberg",
       "notion_page_id": "34b1e69629d181cca6bcd77c727ceda0",
       "source_ref": "meeting:3481e69629d18159b676eacdf44dedb5:send-cyber-capital-a-one-pager-with-inve"
-    },
-    {
-      "item_id": "PA-173",
-      "title": "Discuss the opportunity with a contact who owns a school",
-      "type": "commitment_mine",
-      "status": "open",
-      "priority": "medium",
-      "due_date": null,
-      "person": "Kubby Mano",
-      "notion_page_id": "34b1e69629d181f38724fc2b35e1b522",
-      "source_ref": "meeting:34b1e69629d1819bafd5e19bf959a3df:discuss-the-opportunity-with-a-contact-w"
     }
   ]
 }
