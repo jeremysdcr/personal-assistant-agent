@@ -123,8 +123,63 @@ Group into:
 - My commitments to others (type = commitment_mine)
 - Waiting on others (type = commitment_theirs or follow_up)
 
+### 8.5. Compute Top 3 + Single-Render Index
+
+Before writing the journal, build two derived structures from the data gathered in Steps 1–8. These exist only in working memory; they are not persisted anywhere.
+
+**Top 3 Today — synthesized, opinionated, where Max takes a stance.**
+
+Score every active item from the cache + Notion query against this rubric:
+
+- +3 if `priority == urgent`
+- +3 if `due_date == today`
+- +2 if `due_date < today` (overdue), bumped +1 per additional week stale
+- +2 if today's calendar contains a meeting whose attendee Person matches the item's Person field
+- +2 if today's calendar contains a self-block whose title references this item by ID (e.g. "PA-72 work block")
+- +2 if the item is a deadline-chain trigger for another due-soon item (look in Notes for references to other PA-N IDs that are due within 7 days)
+- +1 if `priority == high` and not already counted above
+
+Pick the top 3 by score. Tie-break: more recently updated wins.
+
+If the highest score is < 3 (genuinely quiet day — no urgents, no due-today, no relevant meetings), do NOT manufacture three items. Render a single line instead: `Today is open — best use: {one suggestion based on ambient state — e.g. "clear the OVERDUE backlog", "prep for tomorrow's [meeting]", "draft the Anthropic article (PA-93)"}`.
+
+For each Top 3 entry, write one sentence. Lead with the PA ID + action verb, then the *why* (deadline pressure, meeting dependency, blocks downstream item, capital at risk). Example: `PA-189 — Send INQ first invoice ($9K CAD + HST) before tomorrow's in-person kickoff with Carole and Samara.`
+
+**Single-render index** (in-memory map `pa_id → section_assigned`).
+
+Walk the section precedence in this exact order. Each item is assigned to the first section it matches; subsequent sections skip already-assigned items. **Each PA item appears in exactly one body section per brief.**
+
+1. **`top_3`** — the 3 (or 1) items chosen above.
+2. **`today_schedule_inline`** — for every event in today's calendar (`_calendar_role ∈ {primary, personal}`) with at least one attendee whose name appears in a PA Tracker `Person` field, the matching open items are assigned here. They render as sub-bullets under the calendar event.
+3. **`attention_urgent`** — `priority == urgent` (hard urgent flag).
+4. **`attention_today_tomorrow`** — `due_date == today` OR `due_date == tomorrow`.
+5. **`attention_overdue`** — `due_date < today`.
+6. **`attention_high_no_due`** — `priority == high` AND no due date AND `status != waiting` (carry-the-flame items that have nowhere else to land).
+7. **`awaiting_others`** — `type ∈ {commitment_theirs, follow_up}` OR `status == waiting`.
+8. **`week_ahead_inline`** — only if Week Ahead Preview will render this brief (see heavy-day predicate below). Same logic as `today_schedule_inline`, applied to events in the next 7 days excluding today.
+
+Items matching no bucket are dropped from the brief silently — they live in Notion's Active Items view; the brief is not a complete enumeration.
+
+**Heavy-day predicate** (gates whether Week Ahead Preview renders).
+
+Render Week Ahead Preview if **any** of:
+
+- Today is Sunday (the planning view).
+- Any event in the next 7 days has `location` non-empty AND not matching `(?i)zoom|teams|meet\.google|^https?:`. (Real physical address.)
+- Any event in the next 7 days has a title matching `(?i)\b(board|kickoff|capital call|in.?person|on.?site|launch)\b`.
+
+Otherwise omit Week Ahead Preview entirely (no header, no content).
+
 ### 9. Write Daily Journal
 Write `vault/daily/{YYYY-MM-DD}.md`.
+
+**Render rules (apply throughout):**
+
+- **Single-render.** Apply the single-render index from Step 8.5. Each PA item appears in exactly one body section. Lower-precedence sections may use a stub like `(see Top 3 #2)` to point Jeremy back, but never re-list the full item line.
+- **Drop empty sections.** Never render a section header followed by "No items," "None overnight," "No conflicts detected," etc. If a section has nothing, omit the header entirely. Holiday banner, Top 3, Today's Schedule, Attention Required, Awaiting Others, Deal Pipeline Pulse, Overnight Email, Week Ahead Preview, FYI — every one of these is conditional on having content.
+- **Inline cap + toggle for overflow.** Each Attention Required subsection caps at 5 inline items. Awaiting Others caps at 7 inline items per counterparty group. Overflow renders as a Notion `<details>` toggle block. Hard cap inside any toggle: 15 items; past 15, the toggle's last line is a link to the [Active Items view](https://www.notion.so/3441e69629d1815b9a43c156cad7fc34?v=3441e69629d181ac84aa000cd656c691).
+- **Drop redundant priority tags.** No `[HIGH]` / `[URGENT]` tags inside a section that's already filtered by priority (e.g. inside URGENT or OVERDUE the tag is noise).
+- **Concise lines.** Format each item line as `PA-N — title — Person — context` where context is ≤ 8 words. Strip filler like "high", "open since".
 
 **Gmail reference rule (applies to the entire brief):** never emit a bare thread ID or message ID in user-facing prose. Whenever you'd reference a Gmail thread or message, render it as a clickable Markdown link using the Gmail permalink format:
 
@@ -132,7 +187,21 @@ Write `vault/daily/{YYYY-MM-DD}.md`.
 [{short label}](https://mail.google.com/mail/u/0/#all/{id})
 ```
 
-Where `{id}` is the thread ID or message ID from `gmail_search_messages` / `gmail_read_message` / `gmail_read_thread` (the `#all/` path works for both, and for archived threads). For Key Relationship Emails, replace "thread 19db5d6e357ad0fd" style with a link like `[open thread](https://mail.google.com/mail/u/0/#all/19db5d6e357ad0fd)`.
+Where `{id}` is the thread ID or message ID from `gmail_search_messages` / `gmail_read_message` / `gmail_read_thread` (the `#all/` path works for both, and for archived threads). For email references, replace "thread 19db5d6e357ad0fd" style with a link like `[open thread](https://mail.google.com/mail/u/0/#all/19db5d6e357ad0fd)`.
+
+**Toggle block syntax (Notion-flavored Markdown — verified via `notion://docs/enhanced-markdown-spec`):**
+
+```
+<details>
+<summary>+12 more overdue (priority + age order)</summary>
+	- [ ] PA-N — title — Person — context
+	- [ ] PA-N — title — Person — context
+</details>
+```
+
+Children inside `<details>` MUST be indented with **tabs** (not spaces) for Notion to nest them inside the toggle.
+
+**Schema:**
 
 ```markdown
 # Daily Brief — {Day of Week, Month DD, YYYY}
@@ -142,41 +211,102 @@ Where `{id}` is the thread ID or message ID from `gmail_search_messages` / `gmai
 - Upcoming this week: `📅 This week: {holiday title} ({Day, MM/DD})` (one line per upcoming holiday in the 7-day window)
 Omit the banner entirely if no holiday events fall in the window.}
 
+## Top 3 Today
+{From Step 8.5. Numbered list, one sentence per item:
+1. PA-N — {action} — {why: deadline / meeting dependency / blocks downstream}
+2. PA-N — {action} — {why}
+3. PA-N — {action} — {why}
+
+OR, if Step 8.5 chose the quiet-day fallback, a single line: `Today is open — best use: {suggestion}`.
+
+This section always renders.}
+
 ## Today's Schedule
-{Events with `_calendar_role: primary` for today, with times, attendees, deal context, Drive docs, and correlated open items. For any event carrying an `_family_overlap` annotation from Step 2.6, render the annotation as an indented line directly beneath the event, prefixed with `⚠️ overlaps`. Example:
-- `9:00–10:00 AM — Acme Q2 sync (Tom Halligan, Stripe deal $250K)`
-- `    ⚠️ overlaps [Family] Eitan piano lesson 9:30–10:00 — confirm if attending`}
+{Events from `_calendar_role ∈ {primary, personal}` for today, in chronological order. Personal events tagged inline with `[Personal]`. For each event:
+- `HH:MM–HH:MM — Title` (with attendees inline if relevant)
+- Sub-bullet (only if data exists): open PA items linked to attendees from the `today_schedule_inline` assignment
+- Sub-bullet (only if data exists): HubSpot deal context, Drive doc reference
+- Sub-bullet (only if `_family_overlap` annotation present): `⚠️ overlaps [Family] {family event} {HH:MM–HH:MM}`
 
-## Personal & Family
-{Today's events with `_calendar_role: personal` or `_calendar_role: family`, prefixed with `[Personal]` or `[Family]` and time. Omit the section entirely if no events. Holiday events do NOT go here — they're in the header banner.}
+If a Top 3 item is also tied to a meeting today, the schedule line may end with ` — see Top 3 #N` rather than re-listing the PA item.
 
-## Calendar Conflicts (next 7 days)
-{All open conflict items (source_ref starts with `conflict:`), sorted by due date. Flag newly created ones with `(new)`. Omit this section entirely if no open conflict items exist. Note: only pairs from the {primary ∪ personal} eligibility set ever appear here; family overlaps live inline under the work meeting in "Today's Schedule" instead.}
-
-## Deal Pipeline Snapshot
-{Active deals by stage, recent stage changes}
+For Sundays / no-business-meeting days: one line — "Sunday — no business meetings scheduled" — followed by personal events inline. Omit the entire section ONLY if the day has zero events of any kind.}
 
 ## Attention Required
-{Overdue items, items due today, urgent items. **Render every line item in this section as a to-do block using Notion Markdown syntax `- [ ] ...` (not plain `- ...`)** so Jeremy can check items off directly in the Notion brief. Applies to all subsections — DUE TODAY, DUE TOMORROW, URGENT, etc. Other sections (Today's Schedule, Active Commitments, Open Tasks, FYI) stay as plain bullets.}
+{Up to four subsections, each conditional on having items after the single-render index is applied. Cap each at 5 inline + `<details>` toggle for overflow (≤15 inside toggle; past that, link to the Active Items view).
 
-## Key Relationship Emails
-{Emails from key contacts — highlighted separately}
+Format each line as a Notion to-do: `- [ ] PA-N — title — Person — context (≤8 words)` so Jeremy can check off directly in the Notion archive.}
 
-## Overnight Email Summary
-{Remaining actionable and FYI items. When Step 6b processed any digest rows, prefix this section with a single summary line: `Personal digest: {N_rows} rows, {A} actionable, {F} FYI`. Omit the line entirely if no digest rows were scanned.}
+### URGENT
+{Items from `attention_urgent` assignment. Omit the subsection if none.}
 
-## Active Commitments
-### I Owe
-{commitment_mine items sorted by due date}
+### DUE TODAY / TOMORROW
+{Items from `attention_today_tomorrow`. Tag each line with `(today)` or `(tomorrow)`. Omit the subsection if none.}
 
-### Waiting On
-{commitment_theirs and follow_up items sorted by due date}
+### OVERDUE
+{Items from `attention_overdue`, sorted priority desc then age desc. Omit the subsection if none.
 
-## Open Tasks
-{Remaining open tasks by priority}
+The toggle's `<summary>` for OVERDUE should always include the link: `+N more overdue — see [Active Items view](https://www.notion.so/3441e69629d1815b9a43c156cad7fc34?v=3441e69629d181ac84aa000cd656c691) for the complete backlog`.}
+
+### HIGH / NO DUE DATE
+{Items from `attention_high_no_due` — high-priority items with no scheduled date that would otherwise vanish. Cap 5 inline + toggle. Omit the subsection if none.}
+
+## Awaiting Others
+{Items from `awaiting_others`. Group by counterparty (one block per Person). Within each group, sort by age desc.
+
+**{Counterparty Name}**
+- PA-N — {action} — {due or age annotation}
+- PA-N — {action} — {due or age annotation}
+
+Cap 7 items inline per counterparty; overflow per counterparty in a `<details>` toggle. If a nudge draft exists in PA Drafts for an item (Notes contains "Follow-up draft created"), append `— nudge ready in PA Drafts`.
+
+Omit the section entirely if zero items.}
+
+## Deal Pipeline Pulse
+{Compressed snapshot — 3–6 lines max on weekdays. Lead each line with the deal group, then specifics:
+- Active Advisory: {N} ({INQ kickoff Tue, Eterna invoice waiting, ...})
+- Partner Diligence: {N} ({Project Elevate EOI ~May 1, EFI awaiting Mario terms, ...})
+- Notable: {anything that moved this week, anything stalled >14 days}
+
+**On Sundays only:** replace the compressed pulse with the full pipeline breakdown (Active Advisory / Partner Diligence / Portfolio / Sourcing / Passed) — same format as prior Sunday briefs.
+
+Omit the section if no active deals at all.}
+
+## Overnight Email
+{Merged section: business email + key relationship signals + personal digest summary, in one place.
+
+Format: `Sender — Subject — disposition` (one line per item).
+
+Disposition values:
+- `tracked PA-N` for items that became / updated PA Tracker entries (those entries appear in Attention Required already — single-render rule)
+- `FYI` for items that don't warrant action but Jeremy should be aware of
+- Skipped items roll up into a single tail line: `+12 LinkedIn / newsletter / DMARC — skipped`
+
+If Step 6b scanned digest rows, prefix the section with one line: `Personal digest: {N_rows} rows scanned, {A} actionable, {F} FYI`. Omit the prefix line if no digest rows were processed.
+
+Omit the entire section if there are zero non-skipped items to mention (i.e. the only thing to say would be the skip-summary line).}
+
+## Week Ahead Preview
+{Render ONLY if Step 8.5's heavy-day predicate fired. Otherwise omit the section entirely (no header, no content).
+
+Format (unchanged from prior Sunday briefs):
+- Day-by-day block: **Mon Apr 27** / **Tue Apr 28** / ...
+- Each meeting: time range, title, attendees, location/link
+- Sub-bullet: open PA items linked per attendee — these are the `week_ahead_inline` assignments and they appear ONLY here
+- Sub-bullet: HubSpot deal context per meeting where relevant
+- Bold any in-person, board, kickoff, capital call meeting
+
+Heavy capital-call / board / kickoff days warrant a `**KEY DATE**` annotation on that day's header.}
 
 ## FYI
-{Notable informational items}
+{Render ONLY if there's a real signal worth Jeremy's attention. Real signals:
+- An auto-resolved conflict that closed today (e.g. "PA-138 conflict auto-resolved — both events in past")
+- A system observation Jeremy needs to act on (e.g. "extraction caught 3 false-positives this week")
+- A cross-link or pattern Jeremy might miss otherwise
+
+DROP forever (do NOT render): "No significant FYI items," routine LinkedIn acceptance enumerations, "personal digest cadence" meta-commentary, "X of Y total deals shown" counters, restating data already shown above.
+
+Omit the section entirely if no real signal.}
 ```
 
 ### 10. Push Notification
