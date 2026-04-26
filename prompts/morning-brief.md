@@ -151,11 +151,11 @@ Walk the section precedence in this exact order. Each item is assigned to the fi
 
 1. **`top_3`** — the 3 (or 1) items chosen above.
 2. **`today_schedule_inline`** — for every event in today's calendar (`_calendar_role ∈ {primary, personal}`) with at least one attendee whose name appears in a PA Tracker `Person` field, the matching open items are assigned here. They render as sub-bullets under the calendar event.
-3. **`attention_urgent`** — `priority == urgent` (hard urgent flag).
-4. **`attention_today_tomorrow`** — `due_date == today` OR `due_date == tomorrow`.
-5. **`attention_overdue`** — `due_date < today`.
-6. **`attention_high_no_due`** — `priority == high` AND no due date AND `status != waiting` (carry-the-flame items that have nowhere else to land).
-7. **`awaiting_others`** — `type ∈ {commitment_theirs, follow_up}` OR `status == waiting`.
+3. **`awaiting_others`** — `type ∈ {commitment_theirs, follow_up}` OR `status == waiting`. **This bucket comes before the attention buckets on purpose**: a counterparty-blocked item is never Jeremy's next-mover, even if it's overdue or urgent — listing it under OVERDUE with a `- [ ]` checkbox would falsely suggest Jeremy can act on it. The right action there is a nudge, which lives in PA Drafts, not the brief.
+4. **`attention_urgent`** — `priority == urgent` (and not already assigned above).
+5. **`attention_today_tomorrow`** — `due_date == today` OR `due_date == tomorrow`.
+6. **`attention_overdue`** — `due_date < today`.
+7. **`attention_high_no_due`** — `priority == high` AND no due date (carry-the-flame items that have nowhere else to land).
 8. **`week_ahead_inline`** — only if Week Ahead Preview will render this brief (see heavy-day predicate below). Same logic as `today_schedule_inline`, applied to events in the next 7 days excluding today.
 
 Items matching no bucket are dropped from the brief silently — they live in Notion's Active Items view; the brief is not a complete enumeration.
@@ -252,7 +252,7 @@ The toggle's `<summary>` for OVERDUE should always include the link: `+N more ov
 {Items from `attention_high_no_due` — high-priority items with no scheduled date that would otherwise vanish. Cap 5 inline + toggle. Omit the subsection if none.}
 
 ## Awaiting Others
-{Items from `awaiting_others`. Group by counterparty (one block per Person). Within each group, sort by age desc.
+{Items from `awaiting_others`. Group by counterparty (one block per Person). Within each group, sort by age desc. **Every counterparty — even one with a single item — gets its own bold header. Do NOT create an "Other counterparties" catch-all bucket; that hides which person owes what.**
 
 **{Counterparty Name}**
 - PA-N — {action} — {due or age annotation}
@@ -269,6 +269,8 @@ Omit the section entirely if zero items.}
 - Notable: {anything that moved this week, anything stalled >14 days}
 
 **On Sundays only:** replace the compressed pulse with the full pipeline breakdown (Active Advisory / Partner Diligence / Portfolio / Sourcing / Passed) — same format as prior Sunday briefs.
+
+**Do NOT cite PA-N item IDs in this section.** Deal Pipeline is the deal lens; describe deal status in plain language ("Eterna invoice payment outstanding"). PA items live in their own bucket — citing them here creates the cross-section duplication the redesign was meant to eliminate.
 
 Omit the section if no active deals at all.}
 
@@ -292,7 +294,7 @@ Omit the entire section if there are zero non-skipped items to mention (i.e. the
 Format (unchanged from prior Sunday briefs):
 - Day-by-day block: **Mon Apr 27** / **Tue Apr 28** / ...
 - Each meeting: time range, title, attendees, location/link
-- Sub-bullet: open PA items linked per attendee — these are the `week_ahead_inline` assignments and they appear ONLY here
+- Sub-bullet: PA items linked per attendee. **For items already assigned to a higher-precedence section (Top 3 / Attention Required / Awaiting Others), use a stub reference: `(PA-N — see Top 3)` or `(PA-N — see Awaiting Others / Gershon)`. For items not yet assigned, render them inline (those are the `week_ahead_inline` assignments).** This preserves the "see the whole week as one picture" value of Sunday's view without violating single-render.
 - Sub-bullet: HubSpot deal context per meeting where relevant
 - Bold any in-person, board, kickoff, capital call meeting
 
