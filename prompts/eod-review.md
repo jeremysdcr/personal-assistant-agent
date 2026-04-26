@@ -27,7 +27,12 @@ Run the boot-sync sequence from `prompts/boot-sync.md` before counting completio
 Clone repo. Read `vault/daily/{YYYY-MM-DD}.md` (today's accumulated journal). Read `vault/task-cache.json`.
 
 ### 2. Calendar Review
-Use `gcal_list_events` for today. Note which meetings happened. Cross-reference with open items — were any items related to today's meetings completed? Also note any HARD OVERLAPs or TIGHT TRANSITIONs that actually occurred today (retrospective pattern signal — useful for catching recurring conflict types).
+Fetch today's events from the 4-calendar set defined in CLAUDE.md → MCP Tools → Google Calendar → "Calendar set". Emit 4 `gcal_list_events` calls in parallel (one per calendar role: `primary`, `personal`, `family`, `holidays`); tag each event with its `_calendar_role` and merge.
+
+- **Primary events** — note which meetings happened. Cross-reference with open items — were any items related to today's meetings completed? Also note any HARD OVERLAPs or TIGHT TRANSITIONs that actually occurred today between {primary ∪ personal} (retrospective pattern signal — useful for catching recurring conflict types).
+- **Personal events** — note which happened (folds into Step 7's recap if Jeremy wants to look back).
+- **Family events** — informational only; if any overlapped a primary/personal meeting, note as a soft flag in Step 7 ("⚠️ today's 3pm Acme overlapped [Family] Eitan soccer — did you attend the family event?").
+- **Holiday events** — if today was a Jewish holiday, note it in Step 7's banner.
 
 ### 3. Day Summary
 From the Notion PA Tracker, count:
@@ -112,10 +117,11 @@ Find items where due_date = today AND status != done:
 - These items need explicit attention tomorrow
 
 ### 5. Tomorrow Preview
-Use `gcal_list_events` for tomorrow.
+Fetch tomorrow's events from the 4-calendar set (CLAUDE.md "Calendar set"). 4 parallel `gcal_list_events` calls, tag with `_calendar_role`, merge.
 Query Notion for items due tomorrow.
 Also query Notion for open conflict items (Source = `calendar`, Source Ref starts with `conflict:`, Status in (open, in_progress, waiting, stale)) with Due Date = tomorrow. Do NOT run a fresh conflict sweep — the morning brief is the sole creator; this step only surfaces already-tracked conflicts so Jeremy sees them the night before instead of at 7am.
-List tomorrow's meetings, conflicts, and due items.
+Compute the same family-overlap awareness annotations as morning-brief Step 2.6 against tomorrow's primary/personal events for journal display.
+List tomorrow's meetings (split by role), conflicts, due items, and any holiday landing on tomorrow.
 
 ### 6. False Positive Check
 Count items created today that were already cancelled (status = cancelled AND Created = today).
@@ -139,7 +145,10 @@ Append to `vault/daily/{YYYY-MM-DD}.md`:
 {Step 3.5 items — omit section entirely if zero}
 
 ### Tomorrow Preview
-{Tomorrow's calendar + items due tomorrow + any open conflict items due tomorrow}
+{Holiday banner — `📅 Tomorrow: {holiday title}` if any `holidays`-role event covers tomorrow; omit otherwise.}
+{Primary events for tomorrow with times. For any event carrying a family-overlap annotation, render an indented `⚠️ overlaps [Family] {event} {HH:MM–HH:MM}` line beneath it (same convention as morning-brief Step 9).}
+{Personal & Family subsection: tomorrow's events with `_calendar_role` ∈ {`personal`, `family`}, prefixed `[Personal]` / `[Family]`. Omit subsection if empty.}
+{Items due tomorrow and any open conflict items due tomorrow.}
 
 ### Stats
 - Completed: {N}

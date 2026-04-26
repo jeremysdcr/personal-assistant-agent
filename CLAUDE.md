@@ -122,6 +122,23 @@ All connectors are configured at the account level and available in Surface A (C
 - `gcal_update_event` — modify events
 - `gcal_find_meeting_times` — find available slots
 
+#### Calendar set (canonical — referenced by every prompt that fetches events)
+
+Jeremy's Google Calendar list contains 6 calendars; the PA reads from 4 of them, each with a specific role:
+
+| Role | Calendar ID | Treatment |
+|---|---|---|
+| `primary` | `jeremy@sidecarcapitalpartners.com` | Sidecar/business schedule. Conflict-eligible. |
+| `personal` | `jeremy.rosmarin@gmail.com` | Personal "must be there" calendar. Conflict-eligible. |
+| `family` | `8754bcc9101f6c406b3bb6336cb966a16fcb2b4fb9e15c6b4d912332506f8788@group.calendar.google.com` | Shared family calendar. **Awareness-only** — Jeremy is not required at every event, so overlaps surface as inline annotations on work meetings, not as auto-managed PA Tracker `conflict:` items. |
+| `holidays` | `5npcs8eoemv7bvhftll90nqljgsua2i6@import.calendar.google.com` | Jewish Holidays subscription. **Header banner only** — render holiday name(s) at the top of briefs (e.g. `📅 Today: Passover (Day 1)`). All-day events; never paired for conflict detection. |
+
+The two calendars not read: `Holidays in Canada` (subscription, not load-bearing for the PA — Jeremy doesn't observe most of them as work-stoppers) and `Sean Duquette Chiropractic Appointments` (subscription, low-stakes single-event reminders).
+
+**Multi-calendar fetch pattern.** `gcal_list_events` takes a single `calendarId`, so prompts call it once per calendar and merge. Tag each event with its source role (`primary` / `personal` / `family` / `holidays`) so downstream display + conflict logic can filter cleanly. The 4 calls are independent — emit them in parallel where the surrounding step allows.
+
+**Conflict-eligibility set:** `primary + personal` only. The morning-brief sweep pairs events across these two; family events are checked separately for awareness annotations; holidays are excluded entirely.
+
 ### Notion
 - `notion-search` — semantic search across workspace
 - `notion-fetch` — get full page/database details

@@ -28,16 +28,25 @@ Before generating the brief, run the boot-sync sequence from `prompts/boot-sync.
 Clone the repo (already done by step 0 if routine; otherwise clone now). Read `vault/task-cache.json` and `vault/key-relationships.md`.
 
 ### 2. Calendar Fetch (today + next 7 days)
-Use `gcal_list_events` with timeMin: today 00:00 ET, timeMax: today + 7 days 23:59 ET.
-For each event, note: time, title, attendees, location/link, response status, transparency.
-Keep today's subset for the schedule section; keep the full 7-day list for Step 2.5.
+
+Fetch from the 4-calendar set defined in CLAUDE.md → MCP Tools → Google Calendar → "Calendar set". Emit 4 `gcal_list_events` calls in parallel, one per calendar (`primary`, `personal`, `family`, `holidays`), each with timeMin: today 00:00 ET, timeMax: today + 7 days 23:59 ET.
+
+Tag each returned event with its `_calendar_role` so downstream steps can filter cleanly. Then merge into one event list.
+
+For each event note: time, title, attendees, location/link, response status, transparency, **`_calendar_role`**.
+
+Slice the merged list:
+- Today's subset → Step 9's "Today's Schedule" + "Personal & Family" sections.
+- Full 7-day list → Step 2.5 conflict sweep + Step 9's "Calendar Conflicts" section.
+- Holiday events → Step 9's header banner (see schema in Step 9).
 
 ### 2.5. Conflict Sweep (7-day window)
-Detect conflicts across the full 7-day event list, then reconcile against existing Notion conflict items.
+
+Pair events from the **conflict-eligibility set** (`_calendar_role` ∈ {`primary`, `personal`} only) and reconcile against existing Notion conflict items. Family events are NOT paired here — they're handled in Step 2.6 below as awareness annotations. Holiday events are excluded entirely (all-day, would generate spurious "conflicts" with every meeting on the day).
 
 **Conflict rules:**
-- **HARD OVERLAP** — two non-all-day events whose times intersect (`A.start < B.end AND B.start < A.end`). Exclude events Jeremy declined or with `transparency: transparent`.
-- **TIGHT TRANSITION** — <5 min gap between consecutive events where at least one has a physical location AND the locations differ (physical↔virtual counts; two different physical addresses count).
+- **HARD OVERLAP** — two non-all-day events from {primary ∪ personal} whose times intersect (`A.start < B.end AND B.start < A.end`). Exclude events Jeremy declined or with `transparency: transparent`.
+- **TIGHT TRANSITION** — <5 min gap between consecutive events from {primary ∪ personal} where at least one has a physical location AND the locations differ (physical↔virtual counts; two different physical addresses count).
 - Ignore all-day events.
 
 **For each detected conflict pair:**
@@ -59,6 +68,16 @@ Detect conflicts across the full 7-day event list, then reconcile against existi
 5. For each, re-check whether the pair still conflicts under the rules above (event IDs still exist, still overlap/tight, not declined). If the conflict no longer exists, `notion-update-page` to set Status = `done` and append to Notes: `Auto-resolved {YYYY-MM-DD}: conflict cleared`.
 
 Track which items are newly created this sweep — the journal and push notification use that to flag `(new)`.
+
+### 2.6. Family-Overlap Awareness Pass (display-only, no PA Tracker writes)
+
+For each event in the 7-day merged list with `_calendar_role` ∈ {`primary`, `personal`}, check whether it overlaps any non-all-day `family` event using the same time-intersect rule as Step 2.5 (`A.start < B.end AND B.start < A.end`). If it does, attach an `_family_overlap` annotation to the work event:
+
+```
+_family_overlap: "[Family] {family event title} {HH:MM–HH:MM}"
+```
+
+Step 9 renders this inline beneath the work meeting line (see schema). **Do not create PA Tracker `conflict:` items for these overlaps** — Jeremy isn't required at every family event, so awareness is enough; auto-creating items would generate noise he'd have to dismiss.
 
 ### 3. Calendar-to-Task Correlation
 For each meeting attendee:
@@ -118,11 +137,21 @@ Where `{id}` is the thread ID or message ID from `gmail_search_messages` / `gmai
 ```markdown
 # Daily Brief — {Day of Week, Month DD, YYYY}
 
+{Holiday banner — render ONLY if any `_calendar_role: holidays` event covers today (all-day match) or is within the next 7 days. Format:
+- Today: `📅 Today: {holiday title}` (one line, before any other section)
+- Upcoming this week: `📅 This week: {holiday title} ({Day, MM/DD})` (one line per upcoming holiday in the 7-day window)
+Omit the banner entirely if no holiday events fall in the window.}
+
 ## Today's Schedule
-{Calendar items with times, attendees, deal context, Drive docs, and correlated open items}
+{Events with `_calendar_role: primary` for today, with times, attendees, deal context, Drive docs, and correlated open items. For any event carrying an `_family_overlap` annotation from Step 2.6, render the annotation as an indented line directly beneath the event, prefixed with `⚠️ overlaps`. Example:
+- `9:00–10:00 AM — Acme Q2 sync (Tom Halligan, Stripe deal $250K)`
+- `    ⚠️ overlaps [Family] Eitan piano lesson 9:30–10:00 — confirm if attending`}
+
+## Personal & Family
+{Today's events with `_calendar_role: personal` or `_calendar_role: family`, prefixed with `[Personal]` or `[Family]` and time. Omit the section entirely if no events. Holiday events do NOT go here — they're in the header banner.}
 
 ## Calendar Conflicts (next 7 days)
-{All open conflict items (source_ref starts with `conflict:`), sorted by due date. Flag newly created ones with `(new)`. Omit this section entirely if no open conflict items exist.}
+{All open conflict items (source_ref starts with `conflict:`), sorted by due date. Flag newly created ones with `(new)`. Omit this section entirely if no open conflict items exist. Note: only pairs from the {primary ∪ personal} eligibility set ever appear here; family overlaps live inline under the work meeting in "Today's Schedule" instead.}
 
 ## Deal Pipeline Snapshot
 {Active deals by stage, recent stage changes}
