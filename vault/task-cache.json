@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-04-27T11:10:42Z",
+  "synced_at": "2026-04-27T13:55:11Z",
   "items": [
     {
       "item_id": "PA-192",
@@ -673,6 +673,17 @@
       "source_ref": ""
     },
     {
+      "item_id": "PA-205",
+      "title": "Send e-transfer to Ivy Day Camp for 2026 installment (due May 1)",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-05-01",
+      "person": "",
+      "notion_page_id": "34f1e69629d18105a158ee7338f5a293",
+      "source_ref": "digest:theivy:ivy-day-camp-2026-credit-card-installment-sc:2026-04-25"
+    },
+    {
       "item_id": "PA-202",
       "title": "Confirm Ikai and Ayala have everything they need for baseball start",
       "type": "task",
@@ -761,6 +772,17 @@
       "source_ref": ""
     },
     {
+      "item_id": "PA-212",
+      "title": "Decide whether to cancel Ahrefs Starter before May 2 auto-renewal ($32.77 CAD)",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": "2026-05-02",
+      "person": "",
+      "notion_page_id": "34f1e69629d181348977f48f5aa76125",
+      "source_ref": "digest:billing:your-subscription-will-renew-soon:2026-04-27"
+    },
+    {
       "item_id": "PA-149",
       "title": "Date with Leore",
       "type": "task",
@@ -770,6 +792,17 @@
       "person": "Leore",
       "notion_page_id": "34b1e69629d18178ab91f224a6d8e82c",
       "source_ref": ""
+    },
+    {
+      "item_id": "PA-210",
+      "title": "Update Questrade investor profile before account access is restricted",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-05-06",
+      "person": "",
+      "notion_page_id": "34f1e69629d1819ea9aae979957ef185",
+      "source_ref": "digest:questrade:just-10-days-left-to-update-your-profile:2026-04-26"
     },
     {
       "item_id": "PA-167",
@@ -1014,92 +1047,59 @@
       "source_ref": ""
     },
     {
-      "item_id": "PA-201",
-      "title": "Reissue 2 uncashed CRA cheques ($4,428 + $1,569 = $5,997) via form PW GCS 535",
+      "item_id": "PA-213",
+      "title": "Review Shekel.ai API docs forwarded by Gershon for Loyalty Markets integration",
+      "type": "follow_up",
+      "status": "open",
+      "priority": "medium",
+      "due_date": null,
+      "person": "Gershon Hurwen",
+      "notion_page_id": "34f1e69629d181048f18f91df563ed3d",
+      "source_ref": "19dcf0feccedd2a3"
+    },
+    {
+      "item_id": "PA-206",
+      "title": "Pay Bennett Jones outstanding invoice — JR PQMLP Holdings (#096190)",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": null,
+      "person": "",
+      "notion_page_id": "34f1e69629d1811da0a8f6cd3e929292",
+      "source_ref": "digest:bennettjoneslar:jr-pqmlp-holdings-inc-096190-reminder-s:2026-04-25"
+    },
+    {
+      "item_id": "PA-204",
+      "title": "Pay Yoav's AHS tuition installment via Blackbaud",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": null,
+      "person": "",
+      "notion_page_id": "34f1e69629d18120bc59c8f550020858",
+      "source_ref": "digest:ossygoldenberg:tuition-payment-due-soon:2026-04-25"
+    },
+    {
+      "item_id": "PA-208",
+      "title": "Pay Enbridge Gas eBill (Apr billing)",
       "type": "task",
       "status": "open",
       "priority": "medium",
       "due_date": null,
       "person": "",
-      "notion_page_id": "34e1e69629d18145b180ee50e076f558",
-      "source_ref": ""
+      "notion_page_id": "34f1e69629d1812cae08c74d330e8638",
+      "source_ref": "digest:enbridge:your-enbridge-gas-ebill-is-ready-for-viewi:2026-04-25"
     },
     {
-      "item_id": "PA-187",
-      "title": "Complete estate planning — respond to Elissa Banach re 6 outstanding items",
+      "item_id": "PA-209",
+      "title": "Debug PositionMonitor Google Apps Script (JavaScript runtime crash)",
       "type": "task",
       "status": "open",
-      "priority": "high",
-      "due_date": null,
-      "person": "Elissa Banach",
-      "notion_page_id": "34c1e69629d1810396f1cf36a00525f5",
-      "source_ref": "digest:leorerasm:re-jeremy-and-leore-rosmarin-estate-plann:2026-04-24"
-    },
-    {
-      "item_id": "PA-188",
-      "title": "Execute equity option docs for Robert Mill (Aucctus board)",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": null,
-      "person": "Caitlin Carey / Rick Ekstein",
-      "notion_page_id": "34c1e69629d181589f40df5611fe9f72",
-      "source_ref": "digest:caitlincarey:re-ext-board-follow-ups:2026-04-24"
-    },
-    {
-      "item_id": "PA-172",
-      "title": "Create a deck by early next week detailing the opportunity (market, strategy, team), but without specific term sheets",
-      "type": "commitment_theirs",
-      "status": "open",
       "priority": "medium",
       "due_date": null,
-      "person": "Kubby Mano",
-      "notion_page_id": "34b1e69629d1810593e3dd596b436e98",
-      "source_ref": "meeting:34b1e69629d1819bafd5e19bf959a3df:create-a-deck-by-early-next-week-detaili"
-    },
-    {
-      "item_id": "PA-174",
-      "title": "After receiving the deck, contact a healthcare-focused group to gauge their interest in the childcare space",
-      "type": "commitment_mine",
-      "status": "open",
-      "priority": "medium",
-      "due_date": null,
-      "person": "Kubby Mano",
-      "notion_page_id": "34b1e69629d181119982d41dd2d8fb7c",
-      "source_ref": "meeting:34b1e69629d1819bafd5e19bf959a3df:after-receiving-the-deck-contact-a-heal"
-    },
-    {
-      "item_id": "PA-176",
-      "title": "Introduce Cyber Capital to Rajiv (Modern) and Avi Steinberg (GDI Business Services) for sector insights",
-      "type": "commitment_theirs",
-      "status": "open",
-      "priority": "medium",
-      "due_date": null,
-      "person": "Avi Steinberg",
-      "notion_page_id": "34b1e69629d1813183b9f7e07bad86b8",
-      "source_ref": "meeting:3481e69629d18159b676eacdf44dedb5:introduce-cyber-capital-to-rajiv-modern"
-    },
-    {
-      "item_id": "PA-178",
-      "title": "Share a 55-page research report on the Ontario facilities cleaning industry with Snowden",
-      "type": "commitment_mine",
-      "status": "open",
-      "priority": "medium",
-      "due_date": null,
-      "person": "Avi Steinberg",
-      "notion_page_id": "34b1e69629d1814388b6ed2216d7a871",
-      "source_ref": "meeting:3481e69629d18159b676eacdf44dedb5:share-a-55-page-research-report-on-the-o"
-    },
-    {
-      "item_id": "PA-177",
-      "title": "Connect Cyber Capital with Adam for an overview of Snowden's advisor-led origination playbook",
-      "type": "commitment_theirs",
-      "status": "open",
-      "priority": "medium",
-      "due_date": null,
-      "person": "Avi Steinberg",
-      "notion_page_id": "34b1e69629d181a6b023daa864509a6a",
-      "source_ref": "meeting:3481e69629d18159b676eacdf44dedb5:connect-cyber-capital-with-adam-for-an-o"
+      "person": "",
+      "notion_page_id": "34f1e69629d1812db473e0b9ea54c603",
+      "source_ref": "digest:noreplyappsscripts:summary-of-failures-for-google-apps-scri:2026-04-26"
     }
   ]
 }
