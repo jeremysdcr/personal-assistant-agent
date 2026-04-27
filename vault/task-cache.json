@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-04-27T10:58:36Z",
+  "synced_at": "2026-04-27T11:10:42Z",
   "items": [
     {
       "item_id": "PA-192",
@@ -99,17 +99,6 @@
       "person": "Joshua Kramer",
       "notion_page_id": "3481e69629d181109fdcfb0783d73eda",
       "source_ref": "19dab9195b8c43f7"
-    },
-    {
-      "item_id": "PA-106",
-      "title": "Richard Roos to share services roll-up pitch deck",
-      "type": "commitment_theirs",
-      "status": "waiting",
-      "priority": "high",
-      "due_date": "2026-04-24",
-      "person": "Richard Roos",
-      "notion_page_id": "3481e69629d1813d960ce77dfb4d91b0",
-      "source_ref": "19d98117d5af3a48"
     },
     {
       "item_id": "PA-102",
@@ -616,6 +605,17 @@
       "person": "Abe Lerman",
       "notion_page_id": "34b1e69629d181a9b8fff9604d19f90a",
       "source_ref": "digest:abeelitewf:leore-2024-tax-return:2026-04-23"
+    },
+    {
+      "item_id": "PA-203",
+      "title": "Review Richard Roos's service business roll-up pitch deck",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-29",
+      "person": "Richard Roos",
+      "notion_page_id": "34f1e69629d18121a26fdf32ea3e84c5",
+      "source_ref": "19dc9e366f2429da"
     },
     {
       "item_id": "PA-193",
