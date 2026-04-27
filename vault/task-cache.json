@@ -1036,17 +1036,6 @@
       "source_ref": "digest:ossygoldenberg:tuition-payment-due-soon:2026-04-25"
     },
     {
-      "item_id": "PA-208",
-      "title": "Pay Enbridge Gas eBill (Apr billing)",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": null,
-      "person": "",
-      "notion_page_id": "34f1e69629d1812cae08c74d330e8638",
-      "source_ref": "digest:enbridge:your-enbridge-gas-ebill-is-ready-for-viewi:2026-04-25"
-    },
-    {
       "item_id": "PA-209",
       "title": "Debug PositionMonitor Google Apps Script (JavaScript runtime crash)",
       "type": "task",
