@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-04-27T22:10:04Z",
+  "synced_at": "2026-04-27T22:22:07Z",
   "items": [
     {
       "item_id": "PA-192",
@@ -447,7 +447,7 @@
       "type": "commitment_mine",
       "status": "open",
       "priority": "high",
-      "due_date": "2026-04-27",
+      "due_date": "2026-04-28",
       "person": "Mario (EFI Engineering)",
       "notion_page_id": "34c1e69629d181479bfef664a3e9b7b1",
       "source_ref": ""
@@ -458,7 +458,7 @@
       "type": "commitment_mine",
       "status": "open",
       "priority": "high",
-      "due_date": "2026-04-27",
+      "due_date": "2026-04-28",
       "person": "Mario (EFI Engineering)",
       "notion_page_id": "34c1e69629d181e395a5d4b47d8cefdc",
       "source_ref": ""
@@ -469,7 +469,7 @@
       "type": "task",
       "status": "open",
       "priority": "high",
-      "due_date": "2026-04-27",
+      "due_date": "2026-04-28",
       "person": "",
       "notion_page_id": "34c1e69629d181fbb61edf334a907d0c",
       "source_ref": ""
@@ -480,7 +480,7 @@
       "type": "task",
       "status": "open",
       "priority": "high",
-      "due_date": "2026-04-27",
+      "due_date": "2026-04-28",
       "person": "Carole Piovesan / Samara Starkman",
       "notion_page_id": "34c1e69629d1811581b3ef60c8017318",
       "source_ref": "19dc0457e943def1"
@@ -491,65 +491,10 @@
       "type": "commitment_mine",
       "status": "open",
       "priority": "high",
-      "due_date": "2026-04-27",
+      "due_date": "2026-04-28",
       "person": "Carole Piovesan / Samara Starkman",
       "notion_page_id": "34c1e69629d1814b94a5c10ab626953e",
       "source_ref": "19dc0457e943def1"
-    },
-    {
-      "item_id": "PA-169",
-      "title": "Schedule Sidecar Capital advisory board meeting",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-27",
-      "person": "",
-      "notion_page_id": "34b1e69629d18129b72dc272b55654bc",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-148",
-      "title": "Date with Leore",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-27",
-      "person": "Leore",
-      "notion_page_id": "34b1e69629d18181b851db58a248c320",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-140",
-      "title": "Pick up screw at Home Depot to fix toilet paper holder in Ayala & Yoav's bathroom",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-27",
-      "person": "",
-      "notion_page_id": "34a1e69629d181fa90e6f4d1036d2b20",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-116",
-      "title": "Email Gershon to check status on annual returns, minute book cleanup, and Dan's post-close filings",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-27",
-      "person": "Gershon Hurwen",
-      "notion_page_id": "3481e69629d1810785abc0d55b517cae",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-111",
-      "title": "Review network for referrals to Krystyn's Apr 28 due-diligence event",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": "2026-04-27",
-      "person": "Krystyn Harrison",
-      "notion_page_id": "3481e69629d181d7a9defcb423cad9e9",
-      "source_ref": ""
     },
     {
       "item_id": "PA-182",
@@ -561,6 +506,61 @@
       "person": "Abe Lerman",
       "notion_page_id": "34b1e69629d181a9b8fff9604d19f90a",
       "source_ref": "digest:abeelitewf:leore-2024-tax-return:2026-04-23"
+    },
+    {
+      "item_id": "PA-169",
+      "title": "Schedule Sidecar Capital advisory board meeting",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-28",
+      "person": "",
+      "notion_page_id": "34b1e69629d18129b72dc272b55654bc",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-148",
+      "title": "Date with Leore",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-28",
+      "person": "Leore",
+      "notion_page_id": "34b1e69629d18181b851db58a248c320",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-140",
+      "title": "Pick up screw at Home Depot to fix toilet paper holder in Ayala & Yoav's bathroom",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-28",
+      "person": "",
+      "notion_page_id": "34a1e69629d181fa90e6f4d1036d2b20",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-116",
+      "title": "Email Gershon to check status on annual returns, minute book cleanup, and Dan's post-close filings",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-28",
+      "person": "Gershon Hurwen",
+      "notion_page_id": "3481e69629d1810785abc0d55b517cae",
+      "source_ref": ""
+    },
+    {
+      "item_id": "PA-111",
+      "title": "Review network for referrals to Krystyn's Apr 28 due-diligence event",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-28",
+      "person": "Krystyn Harrison",
+      "notion_page_id": "3481e69629d181d7a9defcb423cad9e9",
+      "source_ref": ""
     },
     {
       "item_id": "PA-203",
