@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-04-28T14:02:04Z",
+  "synced_at": "2026-04-28T14:15:28Z",
   "items": [
     {
       "item_id": "PA-192",
@@ -442,6 +442,50 @@
       "source_ref": ""
     },
     {
+      "item_id": "PA-220",
+      "title": "Review Gershon forward: Loyalty Markets funds communication from Ron Stevens",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-28",
+      "person": "Gershon Hurwen",
+      "notion_page_id": "3501e69629d181b29ee1fac921211316",
+      "source_ref": "19dd464bf61efe5b"
+    },
+    {
+      "item_id": "PA-218",
+      "title": "Conflict: 04/28 10:45 — Prospecting and Prospect Follow-Ups ↔ Prep for INQ",
+      "type": "follow_up",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-28",
+      "person": "",
+      "notion_page_id": "3501e69629d181069965fd29bcb363bc",
+      "source_ref": "conflict:01146dd5911b44efa2b594d33e369dad_20260428T144500Z:1htdq7s0pspbj6506cs3rbtmj8"
+    },
+    {
+      "item_id": "PA-216",
+      "title": "Review Gershon's forwarded msg re: Loyalty Markets funds (Ron Stevens)",
+      "type": "follow_up",
+      "status": "open",
+      "priority": "urgent",
+      "due_date": "2026-04-28",
+      "person": "Gershon Hurwen",
+      "notion_page_id": "3501e69629d1817b9dc4ffe7f9910fb0",
+      "source_ref": "19dd464bf61efe5b"
+    },
+    {
+      "item_id": "PA-219",
+      "title": "Conflict: 04/28 18:30 — Blue Jays Game ↔ Plan your day tomorrow",
+      "type": "follow_up",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-28",
+      "person": "",
+      "notion_page_id": "3501e69629d181bc8e44fab58001234b",
+      "source_ref": "conflict:pa21me9jt7r9k2fcl1n8gepcps:psvuk94lv90tvqibdgbae35kf0_20260429T004500Z"
+    },
+    {
       "item_id": "PA-198",
       "title": "Speak with Mario (EFI Engineering) — Monday follow-up",
       "type": "commitment_mine",
@@ -561,6 +605,17 @@
       "person": "Krystyn Harrison",
       "notion_page_id": "3481e69629d181d7a9defcb423cad9e9",
       "source_ref": ""
+    },
+    {
+      "item_id": "PA-217",
+      "title": "Review and send Swift Delivery Systems advisory invoice (PandaDoc)",
+      "type": "task",
+      "status": "open",
+      "priority": "high",
+      "due_date": "2026-04-29",
+      "person": "Daniel Gonsenhauser",
+      "notion_page_id": "3501e69629d181a99ce3c3b378700dcf",
+      "source_ref": "19dd335d88598996"
     },
     {
       "item_id": "PA-203",
@@ -1045,61 +1100,6 @@
       "person": "",
       "notion_page_id": "34f1e69629d18120bc59c8f550020858",
       "source_ref": "digest:ossygoldenberg:tuition-payment-due-soon:2026-04-25"
-    },
-    {
-      "item_id": "PA-209",
-      "title": "Debug PositionMonitor Google Apps Script (JavaScript runtime crash)",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": null,
-      "person": "",
-      "notion_page_id": "34f1e69629d1812db473e0b9ea54c603",
-      "source_ref": "digest:noreplyappsscripts:summary-of-failures-for-google-apps-scri:2026-04-26"
-    },
-    {
-      "item_id": "PA-214",
-      "title": "Review Ontario Business Central notice re: Sidecar Capital Inc. corporate matter",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": null,
-      "person": "",
-      "notion_page_id": "34f1e69629d181bcbd74f03bd727441e",
-      "source_ref": "digest:chantel:sidecar-capital-inc:2026-04-25"
-    },
-    {
-      "item_id": "PA-211",
-      "title": "Review Rafi Lipner's May 31 Young Families event invite and forward to contacts",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": null,
-      "person": "Rafi Lipner",
-      "notion_page_id": "34f1e69629d181d5a451caa414d07730",
-      "source_ref": "digest:ravlipner:thank-you-invitation-outreach-for-may-31:2026-04-27"
-    },
-    {
-      "item_id": "PA-201",
-      "title": "Reissue 2 uncashed CRA cheques ($4,428 + $1,569 = $5,997) via form PW GCS 535",
-      "type": "task",
-      "status": "open",
-      "priority": "medium",
-      "due_date": null,
-      "person": "",
-      "notion_page_id": "34e1e69629d18145b180ee50e076f558",
-      "source_ref": ""
-    },
-    {
-      "item_id": "PA-187",
-      "title": "Complete estate planning — respond to Elissa Banach re 6 outstanding items",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": null,
-      "person": "Elissa Banach",
-      "notion_page_id": "34c1e69629d1810396f1cf36a00525f5",
-      "source_ref": "digest:leorerasm:re-jeremy-and-leore-rosmarin-estate-plann:2026-04-24"
     }
   ]
 }
