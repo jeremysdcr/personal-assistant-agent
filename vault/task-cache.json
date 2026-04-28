@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-04-28T02:11:13Z",
+  "synced_at": "2026-04-28T13:42:10Z",
   "items": [
     {
       "item_id": "PA-192",
@@ -1003,6 +1003,17 @@
       "source_ref": ""
     },
     {
+      "item_id": "PA-215",
+      "title": "Review and send monthly Swift Delivery Systems invoice via PandaDoc",
+      "type": "task",
+      "status": "open",
+      "priority": "medium",
+      "due_date": null,
+      "person": "Daniel Gonsenhauser",
+      "notion_page_id": "3501e69629d18157b53cde2523a201ee",
+      "source_ref": "19dd335d88598996"
+    },
+    {
       "item_id": "PA-213",
       "title": "Review Shekel.ai API docs forwarded by Gershon for Loyalty Markets integration",
       "type": "follow_up",
@@ -1089,17 +1100,6 @@
       "person": "Elissa Banach",
       "notion_page_id": "34c1e69629d1810396f1cf36a00525f5",
       "source_ref": "digest:leorerasm:re-jeremy-and-leore-rosmarin-estate-plann:2026-04-24"
-    },
-    {
-      "item_id": "PA-188",
-      "title": "Execute equity option docs for Robert Mill (Aucctus board)",
-      "type": "task",
-      "status": "open",
-      "priority": "high",
-      "due_date": null,
-      "person": "Caitlin Carey / Rick Ekstein",
-      "notion_page_id": "34c1e69629d181589f40df5611fe9f72",
-      "source_ref": "digest:caitlincarey:re-ext-board-follow-ups:2026-04-24"
     }
   ]
 }
